@@ -1,0 +1,339 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<Negocio.Entidades.E_Libros>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no, maximum-scalable=1.0, minimum-scalable=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+
+
+    <title>Editorial Humus</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Recursos/Plantilla/assets/images/logo1.png">
+
+
+
+
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Recursos/PlantillaWeb/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/templatemo-finance-business.css">
+
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/esfil.css">
+
+    @*<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">*@
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/owl.css">
+
+    <link rel="stylesheet" type="text/css" href="~/Content/PagedList.css">
+
+
+    <style>
+    </style>
+
+
+
+    <body>
+
+        <!-- ***** Preloader Start ***** -->
+        <div id="preloader">
+            <div class="jumper">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <!-- ***** Preloader End ***** -->
+        <!-- Header -->
+
+
+
+        <header class="">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="@Url.Action("Inicio", "Editorial")"><h2 style="color: #4DBB6D;">EDITORIAL HUMUS</h2></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Inicio", "Editorial")" style="color: black;">
+                                    <i class="fa fa-home"> Inicio</i>
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Busqueda", "Editorial")" style="color: black;"><i class="fa fa-sliders">   Búsqueda Filtrada</a></i>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="@Url.Action("Titulos", "Editorial")" title="Libros" style="color:black"><i class="fa fa-book"> Libros</i> </a>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Noticias", "Editorial")" style="color: black;"><i class="fa fa-newspaper-o"> Noticias</a></i>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="@Url.Action("Contacto", "Editorial")" style="color: black;"><i class="fa fa-envelope"> Contáctenos</a></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+
+        <!-- Page Content -->
+        <div class="page-heading header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="single-services">
+            <div class="container">
+                <div class="row" id="tabs1">
+                    <div _ngcontent-c2="" class="col-md-12" role="none" style="margin-bottom:-2%">
+                        <center>
+                            <b>
+                                <h2 _ngcontent-c2="" style="color: #4DBB6D;">
+                                    <i _ngcontent-c2="" class="fa fa-book"></i>
+                                    Libros
+                                </h2>
+                            </b>
+                        </center>
+                    </div>
+                </div><br>
+
+                <div class="wrap">
+                    <h1>
+                    </h1>
+
+                    <div class="container-fluid">
+
+
+                        <div class="col-md-12 ">
+
+                            @*class="d-flex justify-content-center"*@
+                          
+                                @*<form style="margin-top:-3%" id="root">*@
+                            <div class="row" style="margin-top:-3%">
+                                <div class="col-md-12" style="margin-bottom:1%">
+                                    <small class="text-muted text-justify"></small>
+                                </div>
+
+                            </div>
+                                <div class="row">
+                                   
+                                    <div class="col-md-4">
+                                        @using (Html.BeginForm("Titulos", "Editorial", FormMethod.Get))
+                                        {
+                                            <input type="hidden" id="tipobusca" name="tipobusca" value="1" />
+                                            <button class="btn btn-outline-success" type="submit" id="search" title="Ver todos los libros" style="padding-left:100px;padding-right:100px" @if ((int)ViewBag.tipo == 1) { @Html.Raw("autofocus") } > Todos los libros</button>
+                                            @*<input class="form-control me-2 " type="search" placeholder="Término a buscar..." aria-label="Search" style="border-color:#4DBB6D" id="buscador" name="buscador" value="@ViewBag.buscador">*@
+                                        }
+                                    </div>
+                                    
+                                  
+                                    <div class="col-md-4">
+                                        @using (Html.BeginForm("Titulos", "Editorial", FormMethod.Get))
+                                        {
+                                            <input type="hidden" id="tipobusca" name="tipobusca" value="2" />
+                                            <button class="btn btn-outline-success" type="submit" id="search" title="Ver libros populares" style="padding-left:100px;padding-right:92px" @if ((int)ViewBag.tipo == 2) { @Html.Raw("autofocus") } >  Libros populares </button>
+                                        }
+                                    </div>
+                                    
+                                   
+                                    <div class="col-md-4">
+                                        @using (Html.BeginForm("Titulos", "Editorial", FormMethod.Get))
+                                        {
+                                            <input type="hidden" id="tipobusca" name="tipobusca" value="3" />
+                                            <button class="btn btn-outline-success" type="submit" id="search" title="Ver libros recientes" style="padding-left:100px;padding-right:100px" @if ((int)ViewBag.tipo == 3) { @Html.Raw("autofocus") } > Libros recientes </button>
+                                        }
+                                    </div>
+                                    
+                                    </div>
+
+                                @*</form>*@
+
+                            
+
+
+
+                        </div>
+
+
+                        <div class="container" style="margin-top:5%">
+
+                       
+
+
+
+
+                            <div class="col-12">
+                                @*<section class='tabs-content '>*@
+
+
+
+                                <article id='tabs-1' style="margin-left:-7%">
+
+
+                                    <section class="products-list tabs-content">
+
+                                        <div class="col-md-12">
+
+                                        
+
+                                            <div class="row">
+                                                @if (Model.Count == 0)
+                                                {
+
+
+                                                    <p>No se han encontrado resultados</p>
+                                                }
+                                                else
+                                                {
+                                                    foreach (var item in Model)
+                                                    {
+                                                        <div class="product-item" category="libro">
+                                                            <a style="background-color: #fff" href="@item.UrlAcceso" title="@item.Titulo" target="_blank">
+                                                                <img src="@item.Portada" alt="">
+                                                            </a>
+
+                                                        </div>
+
+
+                                                    }
+
+                                                }
+
+
+
+                                            </div>
+
+
+
+                                            <div class="row">
+
+                                                <p class="text-primary">Página @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount</p>
+
+                                            </div>
+                                            <div class="row">
+                                                <p class="text-primary">Total de registros @Model.TotalItemCount</p>
+                                            </div>
+                                            <div style="margin-left:-1%">
+
+                                                @Html.PagedListPager(Model, page => Url.Action("Titulos", "Editorial", new { page, PageSize = @ViewBag.pagesize, tipobusca = @ViewBag.tipo }))
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+
+
+                                    </section>
+
+
+                                </article>
+
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>  <br>
+
+
+        <!-- Footer Starts Here -->
+
+
+        <div class="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <small class="col-md-12 text-light">
+
+
+
+                            @{
+                                string date = DateTime.Now.ToString("MM-dd-yyyy");
+                                string year = date.Substring(6, 4);
+
+                            }
+
+                            <img src="~/ImagesWeb/logo.png" alt="user" width="100"> Coordinación General de Investigación - Editorial Humus. © @year.
+
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="~/Recursos/PlantillaWeb/vendor/jquery/jquery.min.js"></script>
+        <script src="~/Recursos/PlantillaWeb/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Additional Scripts -->
+        <script src="~/Recursos/PlantillaWeb/assets/js/custom.js"></script>
+        <script src="~/Recursos/PlantillaWeb/assets/js/owl.js"></script>
+        <script src="~/Recursos/PlantillaWeb/assets/js/slick.js"></script>
+        <script src="~/Recursos/PlantillaWeb/assets/js/accordions.js"></script>
+
+        <script src="~/Recursos/PlantillaWeb/assets/js/script.js"></script>
+
+        <script language="text/Javascript">
+
+            cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+            function clearField(t) {                   //declaring the array outside of the
+                if (!cleared[t.id]) {                      // function makes it static and global
+                    cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                    t.value = '';         // with more chance of typos
+                    t.style.color = '#fff';
+                }
+            }
+        </script>
+
+    </body>
+</html>

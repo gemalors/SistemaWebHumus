@@ -1,0 +1,42 @@
+@media (min-width: 768px)
+.modal .modal-content {
+    box-shadow: none;
+}
+.modal .modal-content {
+    border: 1px solid #4DBB6D;
+    border-radius: 3px;
+    box-shadow: none;
+}
+
+
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: transparent   ;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1pxsolidrgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+
+@media (max-width: 1400px)
+body, p {
+    font-size: 13px;
+    line-height: 20px;
+}
+body{
+    background-image:   url( ../img/logo1.png);
+    background-repeat:  no-repeat   ;
+    background-size:    cover   ;
+}
+

@@ -1,0 +1,770 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+
+
+
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema Web | Humus Editorial</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Recursos/Plantilla/assets/images/logo1.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/distn/css/adminlte.min.css">
+
+    <!-- Toastr -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/toastr/toastr.min.css">
+
+
+    <!-- Custom CSS -->
+    <link href="~/Recursos/Plantilla/dist/css/style.min.css" rel="stylesheet">
+
+
+
+    <!--Sweetalert2-->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Recursos/Plantilla/dist/css/sweetalert2.min.css">
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div >
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 d-flex no-block align-items-center">
+                        <h4 class="page-title"></h4>
+                        <div class="ms-auto text-end">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    @*<li class="breadcrumb-item"><a href="#"></a></li>
+                                <li class="breadcrumb-item active" aria-current="page"></li>*@
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+
+
+            <div style="margin-left:10%;margin-right:10%">
+
+                @if (ViewBag.Est == "Evaluación finalizada")
+                {
+
+
+                    <p class="text-secondary text-center">Esta evaluación ya ha finalizado.</p>
+                }
+                else
+                {
+                    <!--evaluación-->
+                    <div class=" tab-pane" id="evaluacion">
+                        <div class="active tab-pane" id="evaluar">
+                            <div class="card-body">
+
+                                <div class="row">
+
+
+                                    @foreach (var itemc in ViewBag.Cuestionario)
+                                    {
+
+                                        <!-- Main content -->
+                                        <section class="invoice" style="padding-bottom:5%;padding-left:10%;padding-top:10%;padding-right:5%">
+                                            <!-- title row -->
+
+
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <h2 class="page-header text-center">
+                                                        @*<i class="fas fa-globe"></i>*@ @itemc.Nombre
+
+                                                    </h2>
+                                                </div>
+                                                <div class="col-12" id="Midiv">
+
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+
+                                            <div class="row" style="margin-top:2%; margin-bottom:2%">
+                                                <div class="col-12">
+                                                    <div class="text-justify font-18">@Html.Raw(@itemc.Descripcion)</div>
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-12 table-responsive">
+                                                    @foreach (var itemp in ViewBag.Preguntas)
+                                                    {
+                                                        if (itemp.IdentificadorTipoPregunta != 4)
+                                                        {
+
+                                                            <p>@itemp.LeyendaSuperior</p>
+                                                            <div class="form-group row">
+                                                                <label for="inputName" class="col-sm-12 col-form-label font-14 text-black">
+                                                                    <b>@itemp.Orden. @itemp.Descripcion</b>
+                                                                </label>
+                                                            </div>
+
+                                                            //pregunta abierta
+                                                            if (itemp.IdentificadorTipoPregunta == 1)
+                                                            {
+                                                                foreach (var itempa in ViewBag.PreguntaAbierta)
+                                                                {
+                                                                    if (itempa.TipoHtml == "textarea")
+                                                                    {
+                                                                        <div class="form-group row">
+                                                                            <div class="col-sm-12">
+                                                                                <textarea class="form-control" id="Idresp" name="Idresp" placeholder="Escriba aquí su respuesta..." style="height:300px; width:100%" onblur="GuardarRespuestaPregAbierta(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta,@itemc.IDcuestionario)"></textarea>
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <div class="form-group row">
+                                                                            <div class="col-sm-12">
+
+                                                                                <input type="@itempa.TipoHtml" class="form-control" id="Idresp" name="Idresp" placeholder="Escriba aquí su respuesta..." onblur="GuardarRespuestaPregAbierta(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta,@itemc.IDcuestionario)">
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                    }
+                                                                }
+
+                                                            }
+
+                                                            //pregunta selección única
+                                                            if (itemp.IdentificadorTipoPregunta == 2)
+                                                            {
+
+                                                                if (itemp.TiposOpciones == "Opciones y respuestas")
+                                                                {
+
+                                                                    <div class="form-group row">
+
+
+                                                                        <div class="form-check col-sm-12">
+
+                                                                            @foreach (var itemop in ViewBag.PreguntaOpciones)
+                                                                            {
+
+                                                                                if (itemp.IDpregunta == itemop.Idpregunta)
+                                                                                {
+
+                                                                                    <div class="form-check col-sm-12" style="margin-left:-3%">
+                                                                                        <label for="inputName" class="col-sm-12 col-form-label font-14 text-black">
+                                                                                            <b>@itemop.descripOpcpreg</b>
+                                                                                        </label>
+                                                                                    </div>
+
+
+                                                                                    foreach (var itemrp in ViewBag.OpcionesRespuestas)
+                                                                                    {
+                                                                                        if (itemp.IDpregunta == itemrp.Idpreg)
+                                                                                        {
+                                                                                            <div class="form-check col-sm-12" style="margin-left:1%">
+                                                                                                <input type="radio" class="form-check-input"
+                                                                                                       id="Idresp+@itemop.IDopcionPreguntaSeleccion" name="Idresp+@itemop.IDopcionPreguntaSeleccion" onclick="GuardarRespuestaPregOpciones(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta, @itemop.IDopcionPreguntaSeleccion,@itemrp.IDrespuestaopcion,@itemc.IDcuestionario,'@itemp.TiposOpciones')" Selected="">
+
+                                                                                                <label class="form-check-label mb-0 text-secondary" for="customControlValidation1">
+                                                                                                    @itemrp.DescripcionOpcionRespuesta
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        </div>
+
+                                                                    </div>
+
+
+                                                                }
+                                                                if (itemp.TiposOpciones == "Solo respuestas")
+                                                                {
+                                                                    <div class="form-group row">
+
+                                                                        @*//opciones de respuestas selección única - radio boton*@
+
+                                                                        @foreach (var itemrp in ViewBag.OpcionesRespuestas)
+                                                                        {
+                                                                            if (itemp.IDpregunta == itemrp.Idpreg)
+                                                                            {
+
+                                                                                <div class="form-check col-sm-8" style="margin-left:2%">
+                                                                                    <input type="radio" class="form-check-input"
+                                                                                           id="Idresp+@itemp.IDpregunta" name="Idresp+@itemp.IDpregunta" onclick="GuardarRespuestaPregOpcionesR(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta,@itemrp.IDrespuestaopcion,@itemc.IDcuestionario,'@itemp.TiposOpciones')">
+                                                                                    <label class="form-check-label mb-0 text-secondary" for="customControlValidation1">
+                                                                                        @itemrp.DescripcionOpcionRespuesta
+                                                                                    </label>
+                                                                                </div>
+                                                                            }
+                                                                        }
+
+
+
+
+
+                                                                    </div>
+
+                                                                }
+
+
+                                                            }
+
+                                                            //pregunta selección múltiple
+                                                            if (itemp.IdentificadorTipoPregunta == 3)
+                                                            {
+                                                                if (itemp.TiposOpciones == "Opciones y respuestas")
+                                                                {
+                                                                    <div class="form-group row">
+
+
+                                                                        <div class="form-check col-sm-12">
+
+                                                                            @foreach (var itemop in ViewBag.PreguntaOpciones)
+                                                                            {
+
+                                                                                if (itemp.IDpregunta == itemop.Idpregunta)
+                                                                                {
+
+                                                                                    <div class="form-check col-sm-12">
+                                                                                        <label for="inputName" class="col-sm-12 col-form-label font-14 text-black">
+                                                                                            <b>@itemop.descripOpcpreg</b>
+                                                                                        </label>
+                                                                                    </div>
+
+
+                                                                                    foreach (var itemrp in ViewBag.OpcionesRespuestas)
+                                                                                    {
+                                                                                        if (itemp.IDpregunta == itemrp.Idpreg)
+                                                                                        {
+                                                                                            <div class="form-group col-sm-12">
+                                                                                                <div class="custom-control custom-checkbox col-sm-12">
+                                                                                                    <input class="custom-control-input" type="checkbox" id="Idr1" name="Idr1" value="option1" onclick="GuardarRespuestaPregOpciones(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta, @itemop.IDopcionPreguntaSeleccion,@itemrp.IDrespuestaopcion,@itemc.IDcuestionario,'@itemp.TiposOpciones')">
+                                                                                                    <label for="Idr1" class="custom-control-label">@itemrp.DescripcionOpcionRespuesta</label>
+
+                                                                                                </div>
+
+
+                                                                                            </div>
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                }
+
+                                                                if (itemp.TiposOpciones == "Solo respuestas")
+                                                                {
+                                                                    <div class="form-group row">
+
+
+
+                                                                        @foreach (var itemrp in ViewBag.OpcionesRespuestas)
+                                                                        {
+                                                                            if (itemp.IDpregunta == itemrp.Idpreg)
+                                                                            {
+
+                                                                                <div class="form-group col-sm-12">
+                                                                                    <div class="custom-control custom-checkbox col-sm-12">
+                                                                                        <input class="custom-control-input validar" type="checkbox" id="@itemrp.IDrespuestaopcion" name="@itemrp.IDrespuestaopcion" value="option+@itemrp.IDrespuestaopcion" onclick="GuardarRespuestaPregOpcionesR(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta,@itemrp.IDrespuestaopcion,@itemc.IDcuestionario,'@itemp.TiposOpciones')">
+                                                                                        <label for="@itemrp.IDrespuestaopcion" class="custom-control-label">@itemrp.DescripcionOpcionRespuesta</label>
+
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                            }
+                                                                        }
+
+
+
+
+
+                                                                    </div>
+                                                                }
+
+
+
+                                                            }
+
+                                                        }
+                                                    }
+
+
+
+                                                    <!-- /.row -->
+                                                    <!-- /.card-body -->
+
+
+
+
+
+
+                                                </div>
+                                                <!-- /.col -->
+                                            </div>
+                                            <!-- /.row -->
+                                            @foreach (var itemas in ViewBag.DetalleAsignacion)
+                                            {
+                                                <div class="row" style="margin-top:5%">
+                                                    <!-- accepted payments column -->
+                                                    <!-- /.col -->
+                                                    <div class="col-8">
+
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="row text-center" style="margin-bottom:2%">
+
+
+                                                            <small class="float-right font-14 text-info"> <b>Fecha asignado: </b>@itemas.FechaAsignacion</small>
+                                                            @if (itemas.Finalizado == false)
+                                                            {
+                                                                if (itemas.Fechafinalizado == null)
+                                                                {
+
+
+                                                                    <small class="float-right font-14 text-info text-center"><b>Última fecha editado:</b> No hay respuestas registradas previamente</small>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <small class="float-right font-14 text-info text-center"><b>Última fecha editado:</b> @itemas.Fechafinalizado</small>
+                                                                }
+                                                            }
+
+
+                                                            else
+                                                            {
+
+
+                                                                <small class="float-right font-14 text-info text-center"> <b>Fecha finalizado:</b> @itemas.Fechafinalizado</small>
+                                                            }
+
+
+                                                            <a href="@Url.Action("EvaluacionParAcademico", new RouteValueDictionary(new { controller = "Cuestionario", action = "EvaluacionParAcademico", Idcuestionario = itemc.IDcuestionario,Idlibro=@ViewBag.Idlibro,Ida=itemas.IDAsignacionCuestionario }))" class="btn btn-info float-right" style="margin-top:2%" target="_blank" title="Ver pdf">
+                                                                <i class="fas fa-download"></i> Ver respuestas registradas
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- /.col -->
+                                                </div>
+                                            }
+                                            <!-- /.row -->
+                                        </section>
+                                        <!-- /.content -->
+                                    }
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                }
+
+
+            </div>
+
+
+
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <br />
+            <footer class="footer text-center">
+                @{
+                    string date = DateTime.Now.ToString("MM-dd-yyyy");
+                    string year = date.Substring(6, 4);
+
+                }
+                <img src="https://localhost:44329/ImagesWeb/logo.png" alt="user" width="100"> Coordinación General de Investigación - Editorial Humus. © @year.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+
+
+
+
+    <script src="~/Recursos/Plantilla/assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="~/Recursos/Plantilla/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Recursos/Plantilla/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+
+    <!-- Toastr -->
+    <script src="~/Recursos/Plantilla/pluginsn/toastr/toastr.min.js"></script>
+
+    <!--Wave Effects -->
+    <script src="~/Recursos/Plantilla/dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="~/Recursos/Plantilla/dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="~/Recursos/Plantilla/dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!-- Bootstrap 4 -->
+    <script src="~/Recursos/Plantilla/pluginsn/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Recursos/Plantilla/distn/js/adminlte.min.js"></script>
+
+    <!--sweetalert2-->
+    <script src="~/Recursos/Plantilla/dist/js/sweetalert2.all.min.js"></script>
+    <script src="~/Recursos/Plantilla/plugins/sweetalert2/sweetalert2.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+<script>
+    function GuardarRespuestaPregAbierta(IDpregunta, IdentificadorTipoPregunta,IDcuestionario) {
+
+        var Idresp = document.getElementById("Idresp");
+        var Ida =@ViewBag.Idasignacion;
+        var Idresp1 = 0;
+        var Tituloresp = null;
+
+
+        //var idpreg = IDpregunta;
+     /*   var Iden = IdentificadorTipoPregunta;*/
+
+
+
+        /*        Idresp.focus();*/
+
+
+            var data = {
+                'idc': IDcuestionario,
+                'ida': Ida,
+                'idresp': Idresp1,
+                'idob':0,
+                'idpregunta': IDpregunta,
+                'identificadorTipoPregunta': IdentificadorTipoPregunta,
+                'respabierta': Idresp.value,
+                'titulorespabierta':Tituloresp,
+                'idopcionpreg': 0,
+                'idresplogica': 0,
+                'tipoOpciones': null,
+                'estado': false,
+                'respuestas': 0,
+
+            }
+            $.ajax({
+
+                url: "@Url.Action("RegistrarRespuestasCuestionarioEA", "Cuestionario")",
+                type: 'POST',
+                dataType: 'json',
+                data: data,
+                success: function (obj) {
+                    if (obj == 1) {
+                        $('#TempData[OK1]').ready(function () {
+                            toastr.success('@TempData["OK1"]', 'Respuesta registrada');
+                        });
+                    }
+                     if (obj == 2) {
+                        $('#TempData[OK1E]').ready(function () {
+                            toastr.info('@TempData["OK1E"]', 'Respuesta editada');
+                        });
+                    }
+                    if (obj == 3) {
+                        $('#TempData[ERROR1]').ready(function () {
+                            toastr.error('@TempData["ERROR1"]', 'Oh NO! Algo salió mal'
+                            )
+                        });
+                    }
+                    @*window.location.href = "@Url.Action("VerCuestionario", new RouteValueDictionary(new { controller = "Cuestionario", action = "VerCuestionario", Idcuestionario = @ViewBag.Idcuestionario }))";
+                }*@
+                }
+
+            })
+
+
+
+
+    }
+
+
+
+
+
+
+    function GuardarRespuestaPregOpciones(IDpregunta, IdentificadorTipoPregunta, IDopcionPreguntaSeleccion, IDrespuestaopcion, IDcuestionario, TiposOpciones) {
+
+        var estado1 = false;
+        var Idresp = 0;
+        var Tituloresp = null;
+        if (IdentificadorTipoPregunta == 3) {
+
+            if (document.getElementById(IDrespuestaopcion).checked) {
+                estado1 = true;
+            }
+
+        }
+
+            var Ida=@ViewBag.Idasignacion;
+
+
+            var data = {
+                'idc': IDcuestionario,
+                'ida': Ida,
+                'idresp': Idresp,
+                'idob': 0,
+                'idpregunta': IDpregunta,
+                'identificadorTipoPregunta': IdentificadorTipoPregunta,
+                'respabierta': null,
+                'titulorespabierta': Tituloresp,
+                'idopcionpreg': IDopcionPreguntaSeleccion,
+                'idresplogica': IDrespuestaopcion,
+                'tipoOpciones': TiposOpciones,
+                'estado': estado1,
+                'respuestas': 0,
+            }
+            $.ajax({
+
+                url: "@Url.Action("RegistrarRespuestasCuestionarioEA", "Cuestionario")",
+                type: 'POST',
+                dataType: 'json',
+                data: data,
+                success: function (obj) {
+                    if (obj == 1) {
+                        $('#TempData[OK2]').ready(function () {
+                            toastr.success('@TempData["OK2"]', 'Respuesta registrada');
+                        });
+                    }
+                     if (obj == 2) {
+                        $('#TempData[OK2E]').ready(function () {
+                            toastr.info('@TempData["OK2E"]', 'Respuesta editada');
+                        });
+                    }
+                    if (obj == 3) {
+                        $('#TempData[ERROR2]').ready(function () {
+                            toastr.error('@TempData["ERROR2"]', 'Oh NO! Algo salió mal'
+                            )
+                        });
+                    }
+                    @*window.location.href = "@Url.Action("VerCuestionario", new RouteValueDictionary(new { controller = "Cuestionario", action = "VerCuestionario", Idcuestionario = @ViewBag.Idcuestionario }))";
+                }*@
+                }
+
+
+            })
+
+
+
+    }
+
+
+
+
+
+
+
+    function GuardarRespuestaPregOpcionesR(IDpregunta, IdentificadorTipoPregunta, IDrespuestaopcion, IDcuestionario, TiposOpciones) {
+
+        var estado1 = false;
+        var Idresp = 0;
+        var Tituloresp = null;
+
+        if (IdentificadorTipoPregunta == 3) {
+
+            if (document.getElementById(IDrespuestaopcion).checked) {
+                estado1 = true;
+            }
+
+        }
+            var Ida=@ViewBag.Idasignacion;
+
+            var data = {
+                'idc': IDcuestionario,
+                'ida': Ida,
+                'idresp': Idresp,
+                'idob': 0,
+                'idpregunta': IDpregunta,
+                'identificadorTipoPregunta': IdentificadorTipoPregunta,
+                'respabierta': null,
+                'titulorespabierta': Tituloresp,
+                'idopcionpreg': 0,
+                'idresplogica': IDrespuestaopcion,
+                'tipoOpciones': TiposOpciones,
+                'estado': estado1,
+                'respuestas': 0,
+
+
+            }
+            $.ajax({
+
+                url: "@Url.Action("RegistrarRespuestasCuestionarioEA", "Cuestionario")",
+                type: 'POST',
+                dataType: 'json',
+                data: data,
+                success: function (obj) {
+                    if (obj == 1) {
+                        $('#TempData[OK3]').ready(function () {
+                            toastr.success('@TempData["OK3"]', 'Respuesta registrada');
+                        });
+                    }
+                     if (obj == 2) {
+                        $('#TempData[OK3E]').ready(function () {
+                            toastr.info('@TempData["OK3E"]', 'Respuesta editada');
+                        });
+                    }
+                    if (obj == 3) {
+                        $('#TempData[ERROR3]').ready(function () {
+                            toastr.error('@TempData["ERROR3"]', 'Oh NO! Algo salió mal'
+                            )
+                        });
+                    }
+                    @*window.location.href = "@Url.Action("VerCuestionario", new RouteValueDictionary(new { controller = "Cuestionario", action = "VerCuestionario", Idcuestionario = @ViewBag.Idcuestionario }))";
+                }*@
+                }
+
+            })
+
+
+
+    }
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+@{
+    if (TempData["OK"] != null)
+    {
+        <script>
+
+        $('#TempData[OK]').ready(function () {
+            toastr.success('@TempData["OK"]', 'TODO SALIÓ BIEN');
+            });
+
+
+        </script>
+
+    }
+
+
+
+
+    if (TempData["ERROR"] != null)
+    {
+        <script>
+
+            $('#TempData[ERROR]').ready(function() {
+                toastr.error('@TempData["ERROR"]', 'ERROR!!'
+              )
+          });
+        </script>
+
+    }
+}

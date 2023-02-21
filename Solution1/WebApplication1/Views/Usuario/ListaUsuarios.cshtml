@@ -1,0 +1,1269 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema Web | Humus Editorial</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Recursos/Plantilla/assets/images/logo1.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/distn/css/adminlte.min.css">
+
+    <!-- Toastr -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/toastr/toastr.min.css">
+
+
+    <!-- Custom CSS -->
+    <link href="~/Recursos/Plantilla/dist/css/style.min.css" rel="stylesheet">
+
+
+
+    <!--Sweetalert2-->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Recursos/Plantilla/dist/css/sweetalert2.min.css">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/datatables-buttons/css/buttons.bootstrap4.min.css">
+
+    <!--sumernote-->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/summernote/summernote-bs4.min.css">
+
+
+
+
+</head>
+
+
+@{
+    var foto = "imgvacia.png";
+    string Nombres = "";
+
+    foreach (var item9 in ViewBag.Usuario)
+    {
+        Nombres = item9.PrimerNombre + " " + item9.ApellidoPrimero;
+        if (item9.Foto != null)
+        {
+
+            //foto = Session["Foto"].ToString();
+            foto = item9.Foto;
+        }
+
+    }
+
+
+}
+
+
+
+<!-- Modales -->
+<!-- Modal editar usuarios-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Datos de usuario</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!--formulario-->
+                <div class="card">
+                    @using (Html.BeginForm("Edit", "Usuario", FormMethod.Post, new { @class = "form-horizontal" }))
+                    {
+
+
+                    <div class="card-body">
+
+                        <input type="hidden" class="form-control" id="Iduser" name="Iduser">
+                        <input type="hidden" class="form-control" id="Foto" name="Foto">
+                        <input type="hidden" class="form-control" id="Filial" name="Filial">
+                        <div class="form-group row">
+                            <label for="fname"
+                                   class="col-sm-4 text-end control-label col-form-label text-info">Usuario</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="Username" name="Username">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="lname" class="col-sm-4 text-end control-label col-form-label text-info">
+                                Contraseña
+                            </label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="password" name="password" placeholder="Contraseña...">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="lname"
+                                   class="col-sm-4 text-end control-label col-form-label text-info">Primer nombre</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="Nombre1" name="Nombre1" placeholder="Primer nombre...">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="lname"
+                                   class="col-sm-4 text-end control-label col-form-label text-info">Segundo nombre</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="Nombre2" name="Nombre2" placeholder="Segundo nombre...">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="lname"
+                                   class="col-sm-4 text-end control-label col-form-label text-info">Primer apellido</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="ApellidoP" name="ApellidoP">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="lname"
+                                   class="col-sm-4 text-end control-label col-form-label text-info">Segundo apellido</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="ApellidoS" name="ApellidoS" placeholder="Segundo apellido...">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email1"
+                                   class="col-sm-4 text-end control-label col-form-label text-info">Email</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="Email" name="Email">
+                            </div>
+                        </div>
+
+
+                    </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-info">Guardar cambios</button>
+                        </div>
+                    }
+                </div>
+                <!--end formulario-->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Modal registrar mensaje para usuario -->
+<div class="modal fade" id="exampleModalmensaje" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Datos de mensaje</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!--formulario-->
+                <div class="card">
+                    <form>
+                        <div class="card-body">
+                            <input type="hidden" class="form-control" id="Id" name="Id">
+                            <div class="form-group row">
+                                <label for="fname"
+                                       class="col-lg-2 text-start control-label col-form-label text-info">Asunto:</label>
+                                <div class="col-lg-10">
+                                    <input type="text" class="form-control" id="asunto" name="asunto" placeholder="Asunto..." required="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="lname" class="col-lg-2 text-start control-label col-form-label text-info">
+
+                                    Mensaje:
+                                </label>
+                                <div class="col-lg-10">
+                                    <textarea type="text" class="form-control" id="mensaje" name="mensaje" rows="10" cols="50" placeholder="Descripción..." required=""></textarea>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-info" onclick="EnviarMensaje()">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+                <!--end formulario-->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+
+
+
+        <header class="topbar" data-navbarbg="skin5">
+
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="skin5">
+
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <a class="navbar-brand" href="@Url.Action("IndexAdmin", "Usuario")">
+                        <!-- Logo icon -->
+                        <b class="logo-icon ps-3">
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            @*<img src="~/Recursos/Plantilla/assets/images/iconw.png" alt="homepage" class="light-logo" />*@
+                            <i class="mdi mdi-f5da mdi-book-open-page-variant text-secondary"></i>
+
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <span class="logo-text">
+                            <!-- dark Logo text -->
+                            @*<img src="~/Recursos/Plantilla/assets/images/title2.png" alt="homepage" class="light-logo" />*@
+
+                            <span class="hide-menu text-secondary" style="padding-left: 5%; padding-right: 10%"> Sistema Web Humus</span>
+
+
+
+                        </span>
+                        <!-- Logo icon -->
+                        <!-- <b class="logo-icon"> -->
+                        <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                        <!-- Dark Logo icon -->
+                        <!-- <img src="~/Recursos/Plantilla/assets/images/logo-text.png" alt="homepage" class="light-logo" /> -->
+                        <!-- </b> -->
+                        <!--End Logo icon -->
+                    </a>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Toggle which is visible on mobile only -->
+                    <!-- ============================================================== -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
+                        <i class="ti-menu ti-close"></i>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-start me-auto">
+                        <li class="nav-item d-none d-lg-block">
+                            <a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)"
+                               data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a>
+                        </li>
+
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-end">
+
+                        <!--inicio-->
+                        <li class="nav-item dropdown">
+
+                            @if (@ViewBag.NuevasNotificaciones == 1)
+                            {
+                                <a class="nav-link dropdown-toggle waves-effect waves-dark" id="idlista" role="button" data-bs-toggle="dropdown" title="@ViewBag.NuevasNotificaciones Notificación nueva">
+                                    <i class="mdi mdi-bell font-24"></i>
+
+                                    <span class="badge badge-info navbar-badge">@ViewBag.NuevasNotificaciones</span>
+
+
+                                </a>
+                            }
+                            else
+                            {
+                                <a class="nav-link dropdown-toggle waves-effect waves-dark" id="idlista" role="button" data-bs-toggle="dropdown" title="@ViewBag.NuevasNotificaciones Notificaciones nuevas">
+                                    <i class="mdi mdi-bell font-24"></i>
+                                    @if (@ViewBag.NuevasNotificaciones != 0)
+                                    {
+                                        <span class="badge badge-info navbar-badge">@ViewBag.NuevasNotificaciones</span>
+                                    }
+                                </a>
+                            }
+
+
+
+                            <!--cambiar de aqui en adelante data-bs-auto-close="outside"   -->
+                            <ul class="dropdown-menu dropdown-menu-end mailbox animated bounceInDown" aria-labelledby="idlista">
+
+                                <li>
+                                    <div class="">
+                                        @if (@ViewBag.TotalNotificaciones == 1)
+                                        {
+                                            <span class="dropdown-item-title dropdown-header text-orange"><b>@ViewBag.TotalNotificaciones Notificación recibida</b></span>
+                                        }
+                                        else
+                                        {
+                                            <span class="dropdown-item-title dropdown-header  text-orange font-14 "><b>@ViewBag.TotalNotificaciones Notificaciones recibidas</b></span>
+                                        }
+                                        @foreach (var itemn in ViewBag.Notificaciones)
+                                        {
+                                            <a href="@Url.Action("Notificaciones", "Usuario")" class="dropdown-item text-secondary font-14" id="Id+@itemn.IDnotificacion">
+
+                                                <i class="fas fa-@itemn.Icono mr-2"></i> @itemn.DetalleNotificacion
+                                                @*<span class="float-right text-muted text-sm" id="p" onclick="EliminarNoti(@itemn.IDtipoNotificacion)"> <i class="mdi mdi- f156 mdi-close"></i></span>*@
+
+
+                                            </a>
+                                        }
+
+
+
+                                        <a href="@Url.Action("Notificaciones", "Usuario")" class="link align-right" style="margin-top:3%">
+                                            <span class="dropdown-item dropdown-header align-right text-black text-12"><b>Ver todas las notificaciones </b></span>
+                                        </a>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                            <!--fin de cambio aqui-->
+
+                        </li>
+
+
+
+
+
+                        <!--fin-->
+                        <!-- ============================================================== -->
+                        <!-- End Messages -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+
+
+                        <li class="nav-item dropdown">
+                            @*@{*@
+
+
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                <img src="~/Recursos/Plantilla/assets/images/users/@foto" alt="user" class="rounded-circle" width="31">
+                            </a>
+                            @*}*@
+
+                            <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
+
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" onclick="Salir()">
+                                    <i class="fa fa-power-off me-1 ms-1"></i> Cerrar sesión
+                                </a>
+
+                            </ul>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+
+
+
+
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+
+
+
+        <aside class="left-sidebar" data-sidebarbg="skin5">
+
+
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav" class="pt-4">
+                        <!--<ul id="sidebarnav" class="pt-0">-->
+
+
+
+
+                        <li class="hide-menu">
+                            <div style="margin-left:25%;margin-right:25%">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link"><img src="~/Recursos/Plantilla/assets/images/users/@foto" alt="user" class="rounded-circle" width="100"></a>
+
+                            </div>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" style="padding-left: 25%; padding-right: 25%"
+                               href="#">
+                                <span class="hide-menu">@Nombres</span>
+
+
+                            </a>
+                            <hr />
+                        </li>
+
+
+
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow waves-effect waves-dark"
+                               href="javascript:void(0)">
+                                <i class=" mdi mdi-f00e mdi-account-multiple"></i><span class="hide-menu">Usuarios</span>
+                            </a>
+                            <ul class="collapse  first-level">
+                                <li class="sidebar-item">
+                                    <a href="@Url.Action("Registro", "Usuario")" class="sidebar-link">
+                                        <i class="mdi mdi-f010 mdi-account-multiple-plus"></i><span class="hide-menu">
+                                            Crear usuarios
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="@Url.Action("ListaUsuarios", "Usuario")" class="sidebar-link">
+                                        <i class="mdi mdi-f016 mdi-account-search"></i><span class="hide-menu">
+                                            Consultar usuarios
+                                        </span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li> @*class="mdi mdi-f104 mdi-camera-iris"*@
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                               href="@Url.Action("GestionarProcesos", "Proceso")" aria-expanded="false">
+                                <i class="mdi mdi-f0bc mdi-book-multiple-variant"></i><span class="hide-menu">Procesos</span>
+                            </a>
+                        </li>
+
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                               href="@Url.Action("GestionarCuestionario", "Cuestionario")" aria-expanded="false">
+                                <i class="mdi mdi-f14e mdi-clipboard-text"></i><span class="hide-menu">Cuestionario</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow waves-effect waves-dark"
+                               href="javascript:void(0)" aria-expanded="false">
+                                <i class="mdi mdi-f0ba mdi-book"></i><span class="hide-menu">Libros</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item">
+                                    <a href="@Url.Action("ListaLibros", "Libro")" " class="sidebar-link">
+                                        <i class="mdi mdi-f332 mdi-library-books"></i><span class="hide-menu">
+                                            Libros en proceso
+                                        </span>
+                                    </a>
+                                </li>
+
+                                @*"@Url.Action("AddLibro", "Libro")"*@
+                                @*href="@Url.Action("AgregarLibro", "Libro", new RouteValueDictionary(new { controller = "Libro", action = "AgregarLibro", Idlibro = ViewBag.Idlibro }))"*@
+                                @*href="@Url.Action("IniciarProceso", new RouteValueDictionary(new { controller = "Proceso", action = "IniciarProceso", IDlibro = @item.IDlibro }))"*@
+                                <li class="sidebar-item">
+                                    <a href="@Url.Action("AgregarLibro", new RouteValueDictionary(new { controller = "Libro", action = "AgregarLibro", IDlibro = 0 }))" class="sidebar-link">
+                                        <i class="mdi mdi-f5db mdi-book-plus"></i><span class="hide-menu">
+                                            Agregar libro externo
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="sidebar-item">
+                                    <a href="@Url.Action("SolicitudesLibros", "Libro")" class="sidebar-link">
+                                        <i class="mdi mdi-f218 mdi-file-delimited"></i><span class="hide-menu">
+                                            Solicitudes de nuevos libros
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li class="sidebar-item">
+                                    <a href="@Url.Action("LibrosArchivados", "Libro")" class="sidebar-link">
+                                        <i class="mdi mdi-f0bb mdi-book-multiple"></i><span class="hide-menu">
+                                            Libros archivados
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                               href="@Url.Action("EditarInfoWeb", "Web")" aria-expanded="false">
+                                <i class="mdi mdi-blur-linear"></i><span class="hide-menu">Sitio web</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link has-arrow waves-effect waves-dark"
+                               href="javascript:void(0)" aria-expanded="false">
+                                <i class=" mdi mdi-f128 mdi-chart-bar"></i><span class="hide-menu">Consultas</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item">
+                                    <a href="@Url.Action("Informes", "Reporte")" class="sidebar-link">
+                                        <i class="mdi mdi-f219 mdi-file-document"></i><span class="hide-menu">
+                                            Consultar Informes
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="@Url.Action("Estadisticas", "Consulta")" class="sidebar-link">
+                                        <i class="mdi mdi-f12a mdi-chart-line"></i><span class="hide-menu">
+                                            Consultar estadísticas
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="@Url.Action("DatosConsultas", "Consulta")" class="sidebar-link">
+                                        <i class="mdi mdi-f16b mdi-code-equal"></i><span class="hide-menu">
+                                            Datos de consultas
+                                        </span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                        <li class="sidebar-item" style="margin-top:2%;">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                               href="@Url.Action("Notificaciones", "Usuario")" aria-expanded="false">
+                                <i class="mdi mdi-f09a mdi-bell"></i><span class="hide-menu">Notificaciones</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item" style="margin-top:2%;">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                               href="@Url.Action("EditperfilAdmin", "Usuario")" aria-expanded="false">
+                                <i class="mdi mdi-f631 mdi-account-settings-variant"></i><span class="hide-menu">Perfil</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item" style="margin-top:2%;">
+
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                               onclick="Salir()">
+                                <i class="mdi mdi-f012 mdi-account-off"></i><span class="hide-menu">Salir</span>
+                            </a>
+                        </li>
+
+                        @*<li class="sidebar-item">
+                        <a class="sidebar-link has-arrow waves-effect waves-dark"
+                           href="javascript:void(0)" aria-expanded="false">
+                            <i class="mdi mdi-f493 mdi-settings"></i><span class="hide-menu">Configuraciones</span>
+                        </a>
+                        <ul aria-expanded="false" class="collapse  first-level">
+                            <li class="sidebar-item">
+                                <a href="@Url.Action("EditperfilAdmin", "Usuario")" class="sidebar-link">
+                                    <i class="mdi mdi-f631 mdi-account-settings-variant"></i><span class="hide-menu">
+                                        Editar Perfil
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="@Url.Action("Logout", "Usuario")" class="sidebar-link">
+                                    <i class="mdi mdi-f012 mdi-account-off"></i><span class="hide-menu">
+                                        Cerrar Sesión
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>*@
+
+                        <!--</ul>-->
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+
+            <!-- End Sidebar scroll-->
+        </aside>
+
+
+
+
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-12 d-flex no-block align-items-center">
+                        <h4 class="page-title">Usuarios registrados</h4>
+                        <div class="ms-auto text-end">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    @*<li class="breadcrumb-item"><a href="#"></a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"></li>*@
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+
+                <div class="row">
+
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <div class="card-body">
+
+                                <table id="example1" class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+
+
+                                            <th class="text-center text-black" style="width:40%"><b>Usuarios</b></th>
+
+                                            <th class="text-center text-black" style="width:15%"><b>Estado</b></th>
+                                            <th class="text-center text-black" style="width:15%"><b>Libros</b></th>
+                                            <th class="text-center text-black" style="width:25%"></th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+
+                                                <td>
+
+
+                                                    <div class="card-body pt-0">
+                                                        <div class="row">
+                                                            <div class="col-7">
+
+                                                                <h6 class="text-secondary"><b>@item.PrimerNombre  @item.ApellidoPrimero @item.ApellidoSegundo</b></h6>
+                                                                <div>
+                                                                    <small class="text-info">@item.Tipo_usuario</small>
+                                                                </div>
+                                                                <div>
+                                                                    <small class="text-secondary">@item.Username</small>
+                                                                </div>
+                                                                <div>
+                                                                    <small class="text-dark">@item.Email</small>
+                                                                </div>
+
+
+                                                            </div>
+                                                            @{ var foto1 = "imgvacia.png";
+                                                                if (item.Foto != null)
+                                                                {
+                                                                    foto1 = item.Foto;
+                                                                }
+                                                                <div class="col-3 text-center">
+                                                                    <img src="~/Recursos/Plantilla/assets/images/users/@foto1" alt="user-avatar" class="img-circle img-fluid">
+                                                                </div>
+                                                            }
+                                                        </div>
+
+                                                    </div>
+
+
+
+
+
+
+
+                                                </td>
+
+                                                <td>
+
+                                                    @if (@item.Estado == true)
+                                                    {
+
+                                                        <a class="text-green">Habilitado</a>
+
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                        <a class="text-danger">Deshabilitado</a>
+
+
+                                                    }
+                                                </td>
+                                                <td>
+
+                                                    @if (@item.Tipo_usuario == "Administrador")
+                                                    {
+                                                        <a class="text-secondary">No hay información para mostrar</a>
+                                                    }
+                                                    @if (@item.Tipo_usuario == "Autor")
+                                                    {
+                                                        <div>
+                                                            <span class="text-black">Libros publicados </span>  @if (item.Librosfinalizados == null || item.Librosfinalizados == 0)
+                                                            {<a class="float-right text-green"> 0</a>}
+                                                            else
+                                                            { <a class="float-right text-green">@item.Librosfinalizados</a>}
+                                                        </div>
+                                                        <div>
+                                                            <span class="text-black"> Libros en proceso </span> <a class="float-right text-green"> @item.Librosproceso</a>
+                                                        </div>
+
+                                                    }
+                                                    @if (@item.Tipo_usuario == "Evaluador")
+                                                    {
+                                                        <div>
+                                                            <span class="text-black">Libros evaluados </span>  @if (item.Librosfinalizados == null || item.Librosfinalizados == 0)
+                                                            {<a class="float-right text-green"> 0</a>}
+                                                            else
+                                                            { <a class="float-right text-green">@item.Librosfinalizados</a>}
+                                                        </div>
+                                                        <div>
+                                                            <span class="text-black"> Libros evaluando </span> <a class="float-right text-green"> @item.Librosproceso</a>
+                                                        </div>
+                                                    }
+
+
+
+                                                </td>
+
+
+
+                                                <td class="project-actions text-right">
+
+                                                    <a href="#" class="btn btn-sm btn-outline-success" title="Enviar mensaje a usuario" data-bs-toggle="modal" data-bs-target="#exampleModalmensaje" data-toggle="tab" onclick="ValidarID(@item.IDusuario)">
+                                                        <i class="fas fa-comments"></i>
+                                                    </a>
+
+                                                    <button type="button" onclick="ValidarDatos(@item.IDusuario,'@item.PrimerNombre','@item.SegundoNombre','@item.ApellidoPrimero','@item.ApellidoSegundo','@item.Email','@item.Username','@item.Foto','@item.Filial')" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" title="Editar usuario">
+                                                        <i class="fas fa-pencil-alt">
+                                                        </i>
+                                                    </button>
+
+                                                    <button type="button" class="btn btn-outline-danger btn-sm" onclick="elimin(@item.IDusuario)" title="Eliminar usuario">
+                                                        <i class="fas fa-trash-alt">
+                                                        </i>
+                                                    </button>
+
+
+                                                    @if (@item.Estado == true)
+                                                    {
+
+                                                        <button class="btn btn-outline-dark btn-sm" title="Deshabilitar usuario" onclick="EstadoUsuario(@item.IDusuario)">
+                                                            <i class="fas fa- fas fa-ban"></i>
+                                                        </button>
+                                                    }
+                                                    else
+                                                    {
+                                                        <button class="btn btn-outline-primary btn-sm" title="Habilitar usuario" onclick="EstadoUsuario(@item.IDusuario)">
+
+                                                            <i class="fas fa-far fa-check-square">
+                                                            </i>
+                                                        </button>
+                                                    }
+
+                                                </td>
+
+
+
+
+                                            </tr>
+
+                                        }
+
+
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+
+
+                                            <th class="text-center text-black" style="width:40%"><b>Usuarios</b></th>
+
+                                            <th class="text-center text-black" style="width:10%"><b>Estado</b></th>
+                                            <th class="text-center text-black" style="width:25%"><b>Libros</b></th>
+                                            <th class="text-center text-black" style="width:25%"></th>
+
+
+                                        </tr>
+                                    </tfoot>
+
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <br />
+            <footer class="footer text-center">
+                @{
+                    string date = DateTime.Now.ToString("MM-dd-yyyy");
+                    string year = date.Substring(6, 4);
+
+                }
+                <img src="https://localhost:44329/ImagesWeb/logo.png" alt="user" width="100"> Coordinación General de Investigación - Editorial Humus. © @year.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+
+
+
+
+    <script src="~/Recursos/Plantilla/assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="~/Recursos/Plantilla/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Recursos/Plantilla/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+
+    <!-- Toastr -->
+    <script src="~/Recursos/Plantilla/pluginsn/toastr/toastr.min.js"></script>
+
+    <!--Wave Effects -->
+    <script src="~/Recursos/Plantilla/dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="~/Recursos/Plantilla/dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="~/Recursos/Plantilla/dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!-- Bootstrap 4 -->
+    <script src="~/Recursos/Plantilla/pluginsn/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Recursos/Plantilla/distn/js/adminlte.min.js"></script>
+
+    <!--sweetalert2-->
+    <script src="~/Recursos/Plantilla/dist/js/sweetalert2.all.min.js"></script>
+    <script src="~/Recursos/Plantilla/plugins/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- DataTables  & Plugins -->
+    <script src="~/Recursos/Plantilla/pluginsn/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Recursos/Plantilla/pluginsn/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Recursos/Plantilla/pluginsn/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/Recursos/Plantilla/pluginsn/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="~/Recursos/Plantilla/pluginsn/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/Recursos/Plantilla/pluginsn/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="~/Recursos/Plantilla/pluginsn/jszip/jszip.min.js"></script>
+    <script src="~/Recursos/Plantilla/pluginsn/pdfmake/pdfmake.min.js"></script>
+    <script src="~/Recursos/Plantilla/pluginsn/pdfmake/vfs_fonts.js"></script>
+    <script src="~/Recursos/Plantilla/pluginsn/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/Recursos/Plantilla/pluginsn/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="~/Recursos/Plantilla/pluginsn/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+
+
+    <!-- Summernote -->
+    <script src="~/Recursos/Plantilla/pluginsn/summernote/summernote-bs4.min.js"></script>
+
+
+    <script>
+
+        $(function () {
+            //Add text editor
+            $('#mensaje').summernote('code', 'Mensaje...')
+        })
+
+
+
+  
+
+            $('#example1').DataTable({
+
+                responsive: true, "lengthChange": false, "autoWidth": false,
+                buttons: ["copy", "csv", "excel", "pdf", "print", "colvis"],
+                language: {
+                    search: "Buscar:",
+                    emptyTable: "No hay datos para mostrar",
+                    info: "Mostrando _START_ a _END_ de un total de _TOTAL_ registros",
+                    infoEmpty: "Mostrando 0 a 0 de 0 registros",
+                    lengthMenu: "Mostrar _MENU_ registros",
+                    infoFiltered: "(filtrado de _MAX_ registros en total)",
+                    zeroRecords: "No se han encontrado registros coincidentes",
+                    buttons: {
+                        copy: "Copiar",
+                        csv: "CSV",
+                        excel: "Excel",
+                        pdf: "PDF",
+                        print: "Imprimir",
+                        colvis: "Ocultar columna",
+
+                    },
+
+                    paginate: {
+
+                        previous: "Anterior",
+                        last: "Último",
+                        first: "Primero",
+                        next: "Siguiente",
+
+                    },
+                }
+            }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+
+
+    </script>
+
+    <script>
+
+         function Salir() {
+
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: "¿Quieres cerrar sesión?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, salir!',
+            cancelButtonText:'Cancelar'
+        }).then((result) => {
+         if (result.isConfirmed) {
+
+         var data = {
+
+        }
+        $.ajax({
+
+            url: "@Url.Action("Logout", "Usuario")",
+            type: 'POST',
+            dataType: 'json',
+            data: data,
+            success: function (obj) {
+
+                window.location.href = "@Url.Action("Login","Usuario")";
+            }
+
+
+        })
+
+
+         }
+        })
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+<script>
+
+
+    function ValidarDatos(IDusuario, PrimerNombre,SegundoNombre, ApellidoPrimero,ApellidoSegundo, Email, Username, Foto, Filial) {
+
+        document.getElementById('Iduser').value = IDusuario;
+        document.getElementById('Username').value = Username;
+        /*document.getElementById('password').value = ;*/
+        document.getElementById('Nombre1').value = PrimerNombre;
+        document.getElementById('Nombre2').value = SegundoNombre;
+        document.getElementById('ApellidoP').value = ApellidoPrimero;
+        document.getElementById('ApellidoS').value = ApellidoSegundo;
+        document.getElementById('Email').value = Email;
+        document.getElementById('Foto').value = Foto;
+        document.getElementById('Filial').value = Filial;
+
+    }
+
+
+
+    function ValidarID(IDusuario) {
+
+        document.getElementById('Id').value = IDusuario;
+
+    }
+
+
+
+
+     function EnviarMensaje() {
+
+
+
+
+          var Mensaje = document.getElementById('mensaje').value;
+          var Asunto = document.getElementById('asunto').value;
+          var iduser = document.getElementById('Id').value;
+
+
+
+            var data = {
+                'Iduser': iduser,
+                'asunto': Asunto,
+                'mensaje': Mensaje
+
+
+            }
+            $.ajax({
+
+                url: "@Url.Action("EnviarMensaje", "Proceso")",
+                type: 'POST',
+                dataType: 'json',
+                data: data,
+                success: function (obj) {
+
+
+                     window.location.href = "@Url.Action("ListaUsuarios")";
+
+
+
+                }
+
+            })
+
+
+
+        }
+
+
+
+
+     function elimin(IDusuario) {
+
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: "¿Quieres eliminar este usuario?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, Eliminar!',
+            cancelButtonText:'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                 var data = {
+
+            'Iduser': IDusuario
+        }
+        $.ajax({
+
+            url: "@Url.Action("Delete","Usuario")",
+            type: 'POST',
+            dataType: 'json',
+            data: data,
+            success: function (obj) {
+
+                window.location.href = "@Url.Action("ListaUsuarios")";
+            }
+
+
+        })
+
+
+            }
+        })
+
+
+
+        }
+
+
+
+
+
+
+     function EstadoUsuario(IDusuario) {
+
+
+
+
+            var data = {
+                'Iduser': IDusuario
+
+
+
+            }
+            $.ajax({
+
+                url: "@Url.Action("CambiarEstadoUsuario", "Usuario")",
+                type: 'POST',
+                dataType: 'json',
+                data: data,
+                success: function (obj) {
+
+                     window.location.href = "@Url.Action("ListaUsuarios")";
+
+
+                }
+
+            })
+
+
+
+        }
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@{
+
+
+    if (TempData["OKM"] != null)
+    {
+        <script>
+
+            $('#TempData[OKM]').ready(function () {
+                Swal.fire(
+                    'Enviado!',
+                    'Mensaje ha sido enviado correctamente.',
+                    'success'
+                )
+            });
+
+
+        </script>
+
+    }
+
+
+
+
+    if (TempData["OK"] != null)
+    {
+        <script>
+
+        $('#TempData[OK]').ready(function () {
+            toastr.success('@TempData["OK"]', 'TODO SALIÓ BIEN');
+            });
+
+
+        </script>
+
+    }
+
+    if (TempData["OKE"] != null)
+    {
+        <script>
+
+            $('#TempData[OKE]').ready(function () {
+                Swal.fire(
+                    'Eliminado!',
+                    'El usuario ha sido eliminado.',
+                    'success'
+                )
+            });
+
+
+        </script>
+
+    }
+
+    if (TempData["ERROR"] != null)
+    {
+        <script>
+
+            $('#TempData[ERROR]').ready(function() {
+                toastr.error('@TempData["ERROR"]', 'ERROR!!'
+              )
+          });
+        </script>
+
+    }
+}

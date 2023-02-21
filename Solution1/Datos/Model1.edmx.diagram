@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="58ea12090f334d518ec1e265c6318485" Name="Diagram1" ZoomLevel="34">
+        <EntityTypeShape EntityType="Model1.AsignacionCuestionario" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Autores" Width="1.5" PointX="8.75" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Carreras" Width="1.5" PointX="1.5" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Categorias" Width="1.5" PointX="1.5" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Comentarios" Width="1.5" PointX="11.25" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Consultas" Width="1.5" PointX="3.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Cuestionarios" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.DatosContactoEditorial" Width="1.5" PointX="13.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Documentos" Width="1.5" PointX="5.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.EstadosTiposproceso" Width="1.5" PointX="3" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Formatos" Width="1.5" PointX="13" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Imagenes" Width="1.5" PointX="15" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.InformacionEditorial" Width="1.5" PointX="13.75" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Libros" Width="1.5" PointX="0.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.MensajesTiposproceso" Width="1.5" PointX="5.25" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Noticias" Width="1.5" PointX="12.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Notificacion" Width="1.5" PointX="10" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.ObservacionesProceso" Width="1.5" PointX="5.25" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.OpcionPreguntaSeleccion" Width="1.5" PointX="8.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.OpcionRespuesta" Width="1.5" PointX="8.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Periodos" Width="1.5" PointX="15.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.PreguntaAbierta" Width="1.5" PointX="8.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.PreguntaObservaciones" Width="1.5" PointX="8.25" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Preguntas" Width="1.5" PointX="6" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Procesos" Width="1.5" PointX="3" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.RequerimientosProcesos" Width="1.5" PointX="8.25" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.RespuestaRequerimiento" Width="1.5" PointX="10.5" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Respuestas" Width="1.5" PointX="11.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.SlidersEditorial" Width="1.5" PointX="15.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.sysdiagrams" Width="1.5" PointX="15.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Tablainter1" Width="1.5" PointX="11" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Tablainter2" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.TipodeDato" Width="1.5" PointX="6" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Tipoformatos" Width="1.5" PointX="10.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.TipoNotificacion" Width="1.5" PointX="7.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.TipoPregunta" Width="1.5" PointX="3.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Tiposproceso" Width="1.5" PointX="0.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Tiposusuarios" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Usuarios" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.VistasLibros" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model1.Years" Width="1.5" PointX="15.75" PointY="14.625" IsExpanded="true" />
+        <AssociationConnector Association="Model1.FK_AsignacionCuestionario_Cuestionarios" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_AsignacionCuestionario_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Respuestas_AsignacionCuestionario" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Tablainter2_AsignacionCuestionario" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Tablainter_Autores" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Libros_Carreras" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Libros_Categorias" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Comentarios_Procesos" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Comentarios_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Preguntas_Cuestionarios" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Documentos_Procesos" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_EstadosTiposproceso_Tiposproceso" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_MensajesTiposproceso_EstadosTiposproceso" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Formatos_Tipoformatos" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Imagenes_Noticias" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Libros_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Procesos_Libros" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Tablainter_Libros" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_VistasLibros_Libros" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Notificacion_TipoNotificacion" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_ObservacionesProceso_Procesos" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_OpcionPreguntaSeleccion_Preguntas" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_OpcionRespuesta_Preguntas" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_PreguntaAbierta_Preguntas" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_PreguntaAbierta_TipodeDato" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_PreguntaObservaciones_Preguntas" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Preguntas_TipoPregunta" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Respuestas_Preguntas" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Procesos_Tiposproceso" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Tablainter2_Procesos" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_DocumentosProcesos_Tiposproceso" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_RequerimientosProcesos_TipodeDato" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_RespuestaRequerimiento_RequerimientosProcesos" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Respuestas_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Tablainter2_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="Model1.FK_Usuarios_Tiposusuarios" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

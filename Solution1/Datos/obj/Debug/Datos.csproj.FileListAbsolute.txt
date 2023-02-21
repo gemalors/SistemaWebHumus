@@ -1,0 +1,9 @@
+D:\Copia-Sistema\SistemaHumus\Solution1\Datos\bin\Debug\Datos.dll.config
+D:\Copia-Sistema\SistemaHumus\Solution1\Datos\bin\Debug\Datos.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Datos\bin\Debug\Datos.pdb
+D:\Copia-Sistema\SistemaHumus\Solution1\Datos\bin\Debug\EntityFramework.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Datos\bin\Debug\EntityFramework.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+D:\Copia-Sistema\SistemaHumus\Solution1\Datos\obj\Debug\Datos.csproj.CopyComplete
+D:\Copia-Sistema\SistemaHumus\Solution1\Datos\obj\Debug\Datos.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Datos\obj\Debug\Datos.pdb

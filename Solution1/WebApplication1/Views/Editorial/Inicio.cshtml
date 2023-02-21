@@ -1,0 +1,408 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Caompatible" content="ie=edge">
+
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Raleway:500,600&display=swap" rel="stylesheet">
+    <title>Editorial Humus</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Recursos/Plantilla/assets/images/logo1.png">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/materialize.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Recursos/PlantillaWeb/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/templatemo-finance-business.css">
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/owl.css">
+
+
+    <style>
+        .carrousel1 {
+     
+            margin-left: 5%;
+            margin-right: 5%;
+            width: 1000px;
+        }
+        .carrousel1-items {
+            display: flex;
+            overflow-x: hidden;
+            overflow-y:hidden;
+            padding:50px 0px;
+        }
+
+
+        .carrousel1-item {
+            min-width: 200px;
+            max-width: 200px;
+            /*width:300px; 350*/
+ 
+            height: 300px;
+        }
+
+
+            .carrousel1-item img {
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+                object-fit: cover;
+             
+                top: 0;
+                left: 0;
+                z-index: -1;
+              
+                animation: cambio 7s infinite;
+         
+           
+            }
+
+        .carrousel1-item:hover {
+          
+            transform:scale(1.2);
+        }
+
+
+      
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    @foreach (var item in ViewBag.DatosEditorial)
+    {
+
+        <div class="sub-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-xs-12">
+                        <ul class="left-info">
+                            <li><a href="http://www.espam.edu.ec/"><i class="fa fa-home text-light"></i>ESPAM MFL</a></li>
+                            <li><a href=""><i class="fa fa-envelope-o"></i>@item.Email</a></li>
+                            <li><a href="#"><i class="fa fa-clock-o style=" color="black"></i>@item.Horario</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+    <header class="">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="@Url.Action("Inicio", "Editorial")"><h2 style="color: #EDF9FC;">EDITORIAL HUMUS</h2></a>
+                @*<a class="navbar-brand" href="index.html"><img width="35%" height="35%" data-sticky-width="82" data-sticky-height="40" data-sticky-top="25" src="~/ImagesWeb/l1.png"></a>*@
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="@Url.Action("Inicio", "Editorial")" title="Inicio">
+                                <i class="fa fa-home"> Inicio</i>
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Busqueda", "Editorial")" title="Búsqueda filtrada"><i class="fa fa-sliders">  Búsqueda filtrada</a></i>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Titulos", "Editorial")" title="Libros"><i class="fa fa-book"> Libros</i> </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Noticias", "Editorial")" title="Noticias"><i class="fa fa-newspaper-o"> Noticias</a></i>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="@Url.Action("Contacto", "Editorial")" title="Contáctenos"><i class="fa fa-envelope"> Contáctenos</a></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="main-banner header-text" id="top">
+        <div class="Modern-Slider">
+            <!-- Item -->
+            @foreach (var item1 in ViewBag.Sliders)
+            {
+                <div class="item ">
+                    <div class="img-fill" style="background-image: url(../../Files/ImagenSliders/@item1.ImagenSlider)">
+                        <div class="text-content">
+
+                            <h6 style="color: #4dbb6d;">@item1.Titulo<br></h6>
+                            <p>@item1.Enunciado</p>
+                        </div>
+                        @*<div class="text-content">
+                                <p>“La lectura no da al hombre sabiduría; le da conocimientos"</p>
+                            </div>*@
+                    </div>
+                </div>
+            }
+            <!-- // Item -->
+
+
+        </div>
+    </div>
+
+    <!-- Banner Ends Here -->
+
+    <div class="request-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h4>Quiere publicar un libro?</h4>
+                </div>
+                <div class="col-md-4">
+                    <a href="@Url.Action("Procesos", "Editorial")" class="border-button">Proceso</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container" style="margin-top:-5%">
+        <div class="more-info">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="more-info-content">
+
+                        @foreach (var item2 in ViewBag.InfoEditorial)
+                        {
+                            if (item2.Pagina == 1)
+                            {
+                                <center><h3 class="center-align titulo" style="color: #4DBB6D;">@item2.TituloInformacion</h3></center>
+
+                                @*<hr style="background-color: #4DBB6D;" />*@
+                                <hr />
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="left-image">
+                                            <img src="~/Files/ImagenInfoEditorial/@item2.ImagenInfo" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 align-self-center">
+                                        <div class="right-content">
+                                            <span></span>
+                                            @*<h3 style="color: #4DBB6D;"></h3>*@
+                                            <div class="text-justify">
+                                                @Html.Raw(@item2.EnunciadoInformacion)
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            }
+
+                        }
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+
+                <center><h3 class="center-align titulo" style="color: #4DBB6D;"> Libros publicados recientemente </h3></center>
+                <hr />
+                <div class="carrousel1 ">
+                    <div class="carrousel1-items">
+                        @foreach (var iteml in ViewBag.Librosrecientes)
+                        {
+                        <div class="carrousel1-item" style="margin-left:1%">
+
+                            <a href="@iteml.UrlAcceso" target="_blank" title="@iteml.Titulo"><img src="@iteml.Portada" alt=""></a>
+                        </div>
+                        }
+                            
+                        </div>
+                </div>
+
+
+                
+
+                @*<div class="carousel center-align">
+               
+                        @foreach (var iteml in ViewBag.Librosrecientes)
+                        {
+                            <div class="carousel-item">
+
+                                <a href="@iteml.UrlAcceso"><img src="@iteml.Portada" alt=""></a>
+
+                            </div>
+                        }
+                     
+
+
+                    </div>*@
+                </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- Footer Starts Here -->
+
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <small class="col-md-12 text-light">
+
+
+                    @{
+                        string date = DateTime.Now.ToString("MM-dd-yyyy");
+                        string year = date.Substring(6, 4);
+
+                    }
+
+                    <img src="~/ImagesWeb/logo.png" alt="user" width="100"> Coordinación General de Investigación - Editorial Humus. © @year.
+
+
+                </small>
+            </div>
+        </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Recursos/PlantillaWeb/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Recursos/PlantillaWeb/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+    <script src="~/Recursos/PlantillaWeb/assets/js/custom.js"></script>
+    <script src="~/Recursos/PlantillaWeb/assets/js/owl.js"></script>
+    <script src="~/Recursos/PlantillaWeb/assets/js/slick.js"></script>
+    <script src="~/Recursos/PlantillaWeb/assets/js/accordions.js"></script>
+    <script src="~/Recursos/PlantillaWeb/assets/js/main.js"></script>
+
+    @*<script src="~/Recursos/PlantillaWeb/assets/js/script.js"></script>*@
+
+
+    <script language="text/Javascript">
+        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+        function clearField(t) {                   //declaring the array outside of the
+            if (!cleared[t.id]) {                      // function makes it static and global
+                cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                t.value = '';         // with more chance of typos
+                t.style.color = '#fff';
+            }
+        }
+    </script>
+
+    <script>
+
+        const carrusel = document.querySelector(".carrousel1-items");
+     
+        
+        let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
+        let intervalo = null;
+        let step = 1;
+        const start = () => {
+            intervalo = setInterval(function () {
+                carrusel.scrollLeft = carrusel.scrollLeft + step;
+                if (carrusel.scrollLeft === maxScrollLeft) {
+                    step = step * -1;
+                } else if (carrusel.scrollLeft === 0) {
+                    step =step * -1;
+                }
+            },10);
+        };
+
+
+        const stop = () => {
+            clearInterval(intervalo);
+        };
+
+        carrusel.addEventListener('mouseover', () => {
+            stop();
+        });
+
+        carrusel.addEventListener('mouseout', () => {
+            start();
+        });
+
+
+
+        start();
+
+        //document.addEventListener('DOMContentLoaded', () => {
+
+        //    const elementosCarousel = document.querySelectorAll('.carousel');
+        //    M.Carousel.init(elementosCarousel, {
+
+
+        //        duration: 150,
+        //        dist: -80,
+        //        shift: 5,
+        //        padding: 5,
+        //        numVisible: 5,
+        //        indicators: true
+
+        //    });
+        //});
+     
+
+    </script>
+
+</body>
+</html>

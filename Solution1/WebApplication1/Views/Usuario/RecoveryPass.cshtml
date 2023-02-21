@@ -1,0 +1,145 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema Web | Humus Editorial</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Recursos/Plantilla/assets/images/logo1.png">
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/fontawesome-free/css/all.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/distn/css/adminlte.min.css">
+
+
+    <!-- Toastr -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/toastr/toastr.min.css">
+
+
+    <!--Sweetalert2-->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Recursos/Plantilla/dist/css/sweetalert2.min.css">
+
+
+
+
+
+</head>
+
+
+
+
+<body class="hold-transition login-page">
+
+    <div class="col-md-6" style="margin-top:15%">
+        <div class="card card-outline card-cyan">
+            <div class="card-body row">
+                <div class="col-5 text-center d-flex align-items-center justify-content-center">
+                    <div class="">
+
+                        <a href="@Url.Action("Inicio", "Editorial")" class="h1 text-secondary">
+                            <img src="~/Recursos/Plantilla/assets/images/logohumus2.png" alt="homepage" class="light-logo" style="margin-top:1%" />
+                        </a>
+                        <div class="lockscreen-footer text-center">
+                            <b><a href="http://www.espam.edu.ec/" class="text-black">&copy;ESPAM MFL</a></b><br> 2022-2023
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7">
+
+
+                    @using (Html.BeginForm("RecuperarP", "Usuario", FormMethod.Post, new { @class = "form-horizontal" }))
+                    {
+                        <input type="hidden" id="token" name="token" value="@ViewBag.token" class="form-control" />
+
+                        <div class="form-group">
+                            <label for="inputName" class="text-muted">Contraseña</label>
+
+                            <input type="password" id="Pass" name="Pass" class="form-control" required="" />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="text-muted">Confirmar contraseña</label>
+                            <input type="password" id="Passc" name="Passc" class="form-control" required="" />
+                        </div>
+
+
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Guardar">
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="~/Recursos/Plantilla/assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="~/Recursos/Plantilla/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Recursos/Plantilla/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="~/Recursos/Plantilla/pluginsn/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/Recursos/Plantilla/pluginsn/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Recursos/Plantilla/distn/js/adminlte.min.js"></script>
+    <!-- Toastr -->
+    <script src="~/Recursos/Plantilla/pluginsn/toastr/toastr.min.js"></script>
+    <!--sweetalert2-->
+    <script src="~/Recursos/Plantilla/dist/js/sweetalert2.all.min.js"></script>
+    <script src="~/Recursos/Plantilla/plugins/sweetalert2/sweetalert2.min.js"></script>
+
+
+
+</body>
+</html>
+
+
+@{
+
+    if (TempData["ERROR3"] != null)
+    {
+        <script>
+
+            $('#TempData[ERROR3]').ready(function() {
+                toastr.warning('@TempData["ERROR3"]', 'ALGO SALIÓ MAL!!'
+              )
+          });
+        </script>
+
+    }
+
+    if (TempData["ERROR"] != null)
+    {
+        <script>
+
+            $('#TempData[ERROR]').ready(function() {
+                toastr.error('@TempData["ERROR"]', 'ALGO SALIÓ MAL!!'
+              )
+          });
+        </script>
+
+
+    }
+
+
+}

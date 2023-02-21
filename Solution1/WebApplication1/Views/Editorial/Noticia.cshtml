@@ -1,0 +1,274 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Caompatible" content="ie=edge">
+
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+
+    <title>Editorial Humus</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Recursos/Plantilla/assets/images/logo1.png">
+
+    @*<link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/fontawesome-free/css/all.min.css">*@
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/distn/css/adminlte.min.css">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Recursos/PlantillaWeb/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/templatemo-finance-business.css">
+
+
+
+
+
+
+    <!--
+
+    Finance Business TemplateMo
+
+
+    -->
+</head>
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- Header -->
+
+
+
+    <header class="">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="@Url.Action("Inicio", "Editorial")"><h2 style="color: #4DBB6D;">EDITORIAL HUMUS</h2></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Inicio", "Editorial")" style="color: black;">
+                                <i class="fa fa-home"> Inicio</i>
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Busqueda", "Editorial")" style="color: black;"><i class="fa fa-sliders">   Búsqueda Filtrada</a></i>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="@Url.Action("Titulos", "Editorial")" title="Libros" style="color:black"><i class="fa fa-book"> Libros</i> </a>
+
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="@Url.Action("Noticias", "Editorial")" style="color: black;"><i class="fa fa-newspaper-o"> Noticias</a></i>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="@Url.Action("Contacto", "Editorial")" style="color: black;"><i class="fa fa-envelope"> Contáctenos</a></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+    <!-- Page Content -->
+
+    <div class="page-heading header-text">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="single-services">
+        <div class="container">
+
+            <br>
+            <div class="container-fluid">
+                <main>
+                    <center>
+
+                        <article id="articulo" style=" margin-top:-5% ;border-left-style: solid; border-width: 3px; border-color: #4DBB6D ; border-radius: 10px; border-right-style: solid; border-width: 3px; border-color: #4DBB6D ;border-radius: 10px;">
+
+
+                            @foreach (var item in ViewBag.NoticiaDetalle)
+                            {
+
+                                <h2 style="border-bottom: 8px solid  #4DBB6D;"></h2>
+                                <!--inicio-->
+                                <div class="card card-solid">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6">
+                                                @*<h3 class="d-inline-block d-sm-none">@item.Titulonoticia</h3>*@
+                                                <div class="col-12">
+                                                    <img src="@item.ImagenNoticia" class="product-image" alt="Product Image">
+                                                </div>
+                                                <div class="col-12 product-image-thumbs">
+                                                    <div class="product-image-thumb active"><img src="@item.ImagenNoticia" alt="Product Image"></div>
+                                                    @foreach (var item1 in ViewBag.ImagenesNoticia)
+                                                    {
+                                                        <div class="product-image-thumb"><img src="~/Files/ImagenNoticias/@item1.Imagendetalle" alt="Product Image"></div>
+                                                    }
+
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6">
+                                                <h3 class="my-3">@item.Titulonoticia</h3>
+                                                <p>@item.DetalleNoticia</p>
+                                                <br />
+                                                <small class="text-secondary">Publicado el:</small><small class="text-green"> @item.Fechapublica</small> 
+                                                <hr>
+
+                                                <div class="text-justify"> @Html.Raw( @item.DescripcionNoticia)</div>
+                                                @*<div class="mt-4 product-share">
+                                <a href="#" class="text-gray">
+                                    <i class="fab fa-facebook-square fa-2x"></i>
+                                </a>
+                                <a href="#" class="text-gray">
+                                    <i class="fab fa-twitter-square fa-2x"></i>
+                                </a>
+                                <a href="#" class="text-gray">
+                                    <i class="fas fa-envelope-square fa-2x"></i>
+                                </a>
+                                <a href="#" class="text-gray">
+                                    <i class="fas fa-rss-square fa-2x"></i>
+                                </a>
+                            </div>*@
+
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+
+
+                                            <!--aqui imagenes para editar o eliminar-->
+
+
+
+                                        </div>
+                                    </div>
+                                    <!-- /.card-body -->
+                                </div>
+                                <!-- /.card -->
+                                <!--fin-->
+                            }
+
+                        </article>
+                    </center>
+
+                </main>
+            </div>
+
+
+
+            <!----><!---->
+            <!---->
+
+
+        </div>
+    </div>
+
+
+
+
+    <br>  <br>
+
+
+    <!-- Footer Starts Here -->
+
+
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <small class="col-md-12 text-light">
+
+
+                        @{
+                            string date = DateTime.Now.ToString("MM-dd-yyyy");
+                            string year = date.Substring(6, 4);
+
+                        }
+
+                        <img src="~/ImagesWeb/logo.png" alt="user" width="100"> Coordinación General de Investigación - Editorial Humus. © @year.
+
+
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Recursos/PlantillaWeb/vendor/jquery/jquery.min.js"></script>
+    @*<script src="~/Recursos/PlantillaWeb/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>*@
+
+    <!-- Additional Scripts -->
+    <script src="~/Recursos/PlantillaWeb/assets/js/custom.js"></script>
+
+
+
+
+    <!-- jQuery -->
+    <script src="~/Recursos/Plantilla/pluginsn/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    @*<script src="~/Recursos/Plantilla/pluginsn/bootstrap/js/bootstrap.bundle.min.js"></script>*@
+    <!-- AdminLTE App -->
+    <script src="~/Recursos/Plantilla/distn/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    @*<script src="~/Recursos/Plantilla/distn/js/demo.js"></script>*@
+
+    <script>
+        $(document).ready(function () {
+            $('.product-image-thumb').on('click', function () {
+                var $image_element = $(this).find('img')
+                $('.product-image').prop('src', $image_element.attr('src'))
+                $('.product-image-thumb.active').removeClass('active')
+                $(this).addClass('active')
+            })
+        })
+    </script>
+
+  
+
+</body>
+</html>

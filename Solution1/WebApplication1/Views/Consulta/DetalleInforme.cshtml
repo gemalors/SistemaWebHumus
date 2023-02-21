@@ -1,0 +1,3009 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema Web | Humus Editorial</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Recursos/Plantilla/assets/images/logo1.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/distn/css/adminlte.min.css">
+
+    <!-- Toastr -->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/toastr/toastr.min.css">
+
+
+    <!-- Custom CSS -->
+    <link href="~/Recursos/Plantilla/dist/css/style.min.css" rel="stylesheet">
+
+
+
+    <!--Sweetalert2-->
+    <link rel="stylesheet" href="~/Recursos/Plantilla/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Recursos/Plantilla/dist/css/sweetalert2.min.css">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div >
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+
+
+
+            <div style="margin-left:1%">
+
+
+
+                <div class=" tab-pane" id="evaluacion">
+                    <div class="active tab-pane" id="evaluar">
+                        <div class="card-body">
+
+                            <div class="row">
+
+
+
+                                <section class="invoice" style="padding-top:1%;margin-bottom:5%">
+                                    <div class="content">
+
+
+                                        <div class="container-fluid" style="margin-bottom:3%;margin-top:2%">
+
+                                            <div class="row">
+                                                <div class="col-12">
+
+                                                    <div class="row">
+                                                        <div class="col-12" style="text-align:center">
+
+                                                            <img src="~/ImagesWeb/log1.png" alt="logo" />
+                                                            <img src="~/ImagesWeb/l4.png" alt="logo" style="margin-left:-1%" />
+                                                        </div>
+
+
+                                                    </div>
+
+
+                                                    <div class="row" style="text-align:center; margin-top:5%">
+
+                                                        <h2>INFORME ESTADÍSTICO</h2>
+                                                    </div>
+
+
+                                                </div>
+
+                                                <!-- /.col -->
+                                            </div>
+
+
+                                            @*<div class="col-lg-12">*@
+
+                                            @foreach (var item in ViewBag.DetalleConsulta)
+                                            {
+
+                                                if (item.Identificador == 1)
+                                                {
+
+                                                    <div class="col-lg-12">
+                                                        <!--gráfico de barras libros publicados-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de barras - @item.DetalleConsulta</p>
+                                                                    <i class="fas fa- fas fa-chart-bar"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg">@ViewBag.TotalLibros</span>
+                                                                        <span>Total de libros</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa- fas fa-circle-notch"></i> @ViewBag.LibsProceso
+                                                                        </span>
+                                                                        <span class="text-black">Libros en proceso</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-fas fa-check"></i>@ViewBag.LibsPublicado
+                                                                        </span>
+                                                                        <span class="text-black">Libros publicados</span>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="@item.Grafico" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <!--tabla de datos-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <h3 class="card-title">Tabla - @item.DetalleConsulta</h3>
+                                                                <div class="card-tools">
+                                                                    <a href="#" class="btn btn-tool btn-sm">
+
+                                                                    </a>
+                                                                    <a href="#" class="btn btn-tool btn-sm">
+                                                                        <i class="fas fa-fas fa-table"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body table-responsive p-0">
+                                                                <table class="table table-striped table-valign-middle">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Carreras</b></th>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Libros publicados</b></th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        @foreach (var item1 in ViewBag.Librospublicadosxcarrera)
+                                                                        {
+                                                                            <tr>
+                                                                                <td style="text-align:left">
+
+                                                                                    @item1.Carrera
+                                                                                </td>
+                                                                                <td style="text-align:left">@item1.LibrosxCarrera</td>
+
+                                                                            </tr>
+                                                                        }
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+
+
+                                                        <!--gráfico de pastel libros publicados-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de pastel - (Porcentajes) @item.DetalleConsulta</p>
+                                                                    <i class="fas fa- fas fa-chart-bar"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg">@ViewBag.TotalLibros</span>
+                                                                        <span>Total de libros</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa- fas fa-circle-notch"></i> @ViewBag.LibsProceso
+                                                                        </span>
+                                                                        <span class="text-black">Libros en proceso</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-fas fa-check"></i>@ViewBag.LibsPublicado
+                                                                        </span>
+                                                                        <span class="text-black">Libros publicados</span>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="piechart" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                        <!--número de libros publicados por categorías-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Número de libros publicados por categoría</p>
+                                                                    <i class="fas fa- fas fa-chart-pie"></i>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg">@ViewBag.TotalCate</span>
+                                                                        <span>Total de categorías</span>
+                                                                    </p>
+
+
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-fas fa-check"></i> @ViewBag.LibsPublicado
+                                                                        </span>
+                                                                        <span class="text-black">Libros publicados</span>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="libpublicadosCate-chart" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <!--aqui-->
+                                                        <!--tabla-->
+                                                        <div class="card-body table-responsive p-0">
+                                                            <table class="table table-striped table-valign-middle">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="text-secondary" style="text-align:left"><b>Categorías</b></th>
+                                                                        <th class="text-secondary" style="text-align:left"><b>Libros publicados</b></th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    @foreach (var item1 in ViewBag.Librospublicadosxcategoria)
+                                                                    {
+                                                                        <tr>
+                                                                            <td style="text-align:left">
+                                                                                @*<img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">*@
+                                                                                @item1.Detallecategoria
+                                                                            </td>
+                                                                            <td style="text-align:left">@item1.LibrosxCategoria</td>
+
+                                                                        </tr>
+                                                                    }
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+
+
+
+
+                                                        <!--Número de libros publicados por años-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de líneas - Número de libros publicados por año</p>
+                                                                    <i class="fas fa- fas fa-chart-line"></i>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg">@ViewBag.TotalLibros</span>
+                                                                        <span>Total de libros</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa- fas fa-circle-notch"></i> @ViewBag.LibsProceso
+                                                                        </span>
+                                                                        <span class="text-black">Libros en proceso</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-fas fa-check"></i> @ViewBag.LibsPublicado
+                                                                        </span>
+                                                                        <span class="text-black">Libros publicados</span>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="line-chart1" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+
+
+
+                                                }
+                                                if (item.Identificador == 2)
+                                                {
+
+                                                    <div class="col-lg-12">
+
+
+
+                                                        <!--gráfico de barras libros publicados por período consultado-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de barras - @item.DetalleConsulta</p>
+                                                                    <i class="fas fa- fas fa-chart-bar"></i>
+                                                                </div>
+                                                                <div style="margin-top:1%">
+                                                                    <span class="mr-2">
+                                                                        <small>@ViewBag.detperiodo</small>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg"> @ViewBag.TotalLibros</span>
+                                                                        <span>Total de libros</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa- fas fa-history"></i> @ViewBag.Totalp
+                                                                        </span>
+                                                                        <span class="text-black">Libros publicados en este período</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-fas fa-check"></i> @ViewBag.LibsPublicado
+                                                                        </span>
+                                                                        <span class="text-black">Total libros publicados</span>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="@item.Grafico" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+                                                        <!--tabla de datos libros publicados por período consultado-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <h3 class="card-title">Tabla - @item.DetalleConsulta</h3>
+                                                                <div class="card-tools">
+
+                                                                    <a href="#" class="btn btn-tool btn-sm">
+                                                                        @*<i class="fas fa-download"></i>*@
+                                                                    </a>
+                                                                    <a href="#" class="btn btn-tool btn-sm">
+                                                                        <i class="fas fa-fas fa-table"></i>
+                                                                    </a>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="card-body table-responsive p-0">
+                                                                <table class="table table-striped table-valign-middle">
+                                                                    <thead>
+                                                                        <tr><small style="margin-left:2%">@ViewBag.detperiodo</small></tr>
+                                                                        <tr>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Carreras</b></th>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Libros publicados</b></th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        @foreach (var item1 in ViewBag.Libperiodos)
+                                                                        {
+                                                                            <tr>
+                                                                                <td style="text-align:left">
+                                                                                    @*<img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">*@
+                                                                                    @item1.Carrera
+                                                                                </td>
+                                                                                <td style="text-align:left">@item1.LibrosxCarrera</td>
+
+                                                                            </tr>
+                                                                        }
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+                                                        <!--gráfico de pastel libros publicados por período consultado-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de pastel - (Porcentajes) @item.DetalleConsulta</p>
+                                                                    <i class="fas fa-fas fa-chart-pie"></i>
+                                                                </div>
+                                                                <div style="margin-top:1%">
+                                                                    <span class="mr-2">
+                                                                        <small>@ViewBag.detperiodo</small>
+                                                                    </span>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg">@ViewBag.TotalLibros</span>
+                                                                        <span>Total de libros</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa- fas fa-history"></i> @ViewBag.Totalp
+                                                                        </span>
+                                                                        <span class="text-black">Libros publicados en este período</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-fas fa-check"></i> @ViewBag.LibsPublicado
+                                                                        </span>
+                                                                        <span class="text-black">Total libros publicados</span>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="piechart2" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                        <!--comparativa libros publicados período ctual vs período anterior-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de barras - (Comparativa período actual y período anterior) @item.DetalleConsulta</p>
+                                                                    <i class="fas fa- fas fa-chart-bar"></i>
+
+                                                                </div>
+                                                                <div style="margin-top:1%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-square text-blue"></i> <small>@ViewBag.nombreant</small>
+                                                                    </span>
+                                                                    <span class="mr-2" style="margin-left:3%">
+                                                                        <i class="fas fa-square text-gray"></i> <small>@ViewBag.nombreact</small>
+                                                                    </span>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg">@ViewBag.TotalLibros</span>
+                                                                        <span>Total de libros</span>
+                                                                    </p>
+
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-fas fa-check"></i>@ViewBag.LibsPublicado
+                                                                        </span>
+                                                                        <span class="text-black">Total libros publicados</span>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="comparativa-chart2" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        Total libros período anterior <b>@ViewBag.pANT</b> <i class="fas fa-fas fa-barcode text-blue"></i>
+                                                                    </span>
+                                                                    <span class="mr-2" style="margin-left:3%">
+                                                                        Total libros período actual <b>@ViewBag.pACT</b> <i class="fas fa-fas fa-barcode text-gray"></i>
+                                                                    </span>
+                                                                    <span class="mr-2" style="margin-left:5%">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras</b> Carreras
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                    </div>
+
+                                                }
+                                                if (item.Identificador == 3)
+                                                {
+
+                                                    <div class="col-lg-12">
+
+                                                        <!--gráfico de barras libros publicados por año consultado-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de barras - @item.DetalleConsulta</p>
+                                                                    <i class="fas fa- fas fa-chart-bar"></i>
+                                                                </div>
+                                                                <div style="margin-top:1%">
+                                                                    <span class="mr-2">
+                                                                        <small>Año @ViewBag.detalleyear</small>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg"> @ViewBag.TotalLibros</span>
+                                                                        <span>Total de libros</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa- fas fa-history"></i> @ViewBag.Totaly
+                                                                        </span>
+                                                                        <span class="text-black">Libros publicados en este año</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-fas fa-check"></i> @ViewBag.LibsPublicado
+                                                                        </span>
+                                                                        <span class="text-black">Total libros publicados</span>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="@item.Grafico" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                        <!--tabla de datos libros publicados por año consultado-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <h3 class="card-title">Tabla - @item.DetalleConsulta</h3>
+                                                                <div class="card-tools">
+
+                                                                    <a href="#" class="btn btn-tool btn-sm">
+
+                                                                    </a>
+                                                                    <a href="#" class="btn btn-tool btn-sm">
+                                                                        <i class="fas fa-fas fa-table"></i>
+                                                                    </a>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="card-body table-responsive p-0">
+                                                                <table class="table table-striped table-valign-middle">
+                                                                    <thead>
+                                                                        <tr><small style="margin-left:2%">Año @ViewBag.detalleyear</small></tr>
+                                                                        <tr>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Carreras</b></th>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Libros publicados</b></th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        @foreach (var item1 in ViewBag.Libyears)
+                                                                        {
+                                                                            <tr>
+                                                                                <td style="text-align:left">
+                                                                                    @*<img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">*@
+                                                                                    @item1.Carrera
+                                                                                </td>
+                                                                                <td style="text-align:left">@item1.LibrosxCarrera</td>
+
+                                                                            </tr>
+                                                                        }
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+
+                                                        <!--gráfico de pastel publicados por año consultado-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de pastel - (Porcentajes) @item.DetalleConsulta</p>
+                                                                    <i class="fas fa- fas fa-chart-bar"></i>
+                                                                </div>
+                                                                <div style="margin-top:1%">
+                                                                    <span class="mr-2">
+                                                                        <small>Año @ViewBag.detalleyear</small>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg">@ViewBag.TotalLibros</span>
+                                                                        <span>Total de libros</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa- fas fa-history"></i> @ViewBag.Totaly
+                                                                        </span>
+                                                                        <span class="text-black">Libros publicados en este año</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-fas fa-check"></i> @ViewBag.LibsPublicado
+                                                                        </span>
+                                                                        <span class="text-black">Total libros publicados</span>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="piechart3" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+
+
+                                                        <!--comparativa libros publicados año ctual vs año anterior-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de barras - (Comparativa año actual y año anterior) @item.DetalleConsulta</p>
+                                                                    <i class="fas fa- fas fa-chart-bar"></i>
+                                                                </div>
+                                                                <div style="margin-top:1%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-square text-blue"></i> <small> Año @ViewBag.yanterior</small>
+                                                                    </span>
+                                                                    <span class="mr-2" style="margin-left:3%">
+                                                                        <i class="fas fa-square text-gray"></i> <small> Año @ViewBag.yactual</small>
+                                                                    </span>
+                                                                </div>
+
+
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg">@ViewBag.TotalLibros</span>
+                                                                        <span>Total de libros</span>
+                                                                    </p>
+
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-fas fa-check"></i>@ViewBag.LibsPublicado
+                                                                        </span>
+                                                                        <span class="text-black">Total libros publicados</span>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="comparativa-chart3" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        Total libros año anterior <b>@ViewBag.LibANT</b> <i class="fas fa-fas fa-barcode text-blue"></i>
+                                                                    </span>
+                                                                    <span class="mr-2" style="margin-left:3%">
+                                                                        Total libros año actual <b>@ViewBag.LibACT</b> <i class="fas fa-fas fa-barcode text-gray"></i>
+                                                                    </span>
+                                                                    <span class="mr-2" style="margin-left:5%">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras</b> Carreras
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+                                                    </div>
+
+
+                                                }
+                                                if (item.Identificador == 4)
+                                                {
+
+                                                    <div class="col-lg-12">
+
+                                                        <!--libros más accedidos desde página web-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de líneas - @item.DetalleConsulta</p>
+                                                                    <i class="fas fa- fas fa-chart-line"></i>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg"> @ViewBag.LibsPublicado</span>
+                                                                        <span>Total de libros publicados</span>
+                                                                    </p>
+
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-book-reader"></i> @ViewBag.Vistas
+                                                                        </span>
+                                                                        <span class="text-muted">Total de vistas de libros</span>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="@item.Grafico" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                        <!--tabla de datos-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <h3 class="card-title">Tabla - @item.DetalleConsulta</h3>
+                                                                <div class="card-tools">
+                                                                    <a href="#" class="btn btn-tool btn-sm">
+
+                                                                    </a>
+                                                                    <a href="#" class="btn btn-tool btn-sm">
+                                                                        <i class="fas fa-fas fa-table"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body table-responsive p-0">
+                                                                <table class="table table-striped table-valign-middle">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Carreras</b></th>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Número de vistas</b></th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        @foreach (var item1 in ViewBag.VistasLibros)
+                                                                        {
+                                                                            <tr>
+                                                                                <td style="text-align:left">
+                                                                                    @*<img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">*@
+                                                                                    @item1.Carrera
+                                                                                </td>
+                                                                                <td style="text-align:left">@item1.Totalvistasxcarrera</td>
+
+                                                                            </tr>
+                                                                        }
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+                                                        <!--gráfico de pastel libros más accedidos desde página web-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de pastel - (Porcentajes) @item.DetalleConsulta</p>
+                                                                    <i class="fas fa-fas fa-chart-pie"></i>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    @*<p class="d-flex flex-column">
+                                                                    <span class="text-bold text-lg"> @ViewBag.TotalLibros</span>
+                                                                    <span>Total de libros</span>
+                                                                </p>*@
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg"> @ViewBag.LibsPublicado</span>
+                                                                        <span>Total de libros publicados</span>
+                                                                    </p>
+
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-book-reader"></i> @ViewBag.Vistas
+                                                                        </span>
+                                                                        <span class="text-muted">Total de vistas de libros</span>
+                                                                    </p>
+
+
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="piechart4" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+
+                                                        <!--libros más accedidos desde página web por años-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de líneas - Número de vistas a libros por años</p>
+                                                                    <i class="fas fa- fas fa-chart-line"></i>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg"> @ViewBag.LibsPublicado</span>
+                                                                        <span>Total de libros publicados</span>
+                                                                    </p>
+
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-book-reader"></i> @ViewBag.Vistas
+                                                                        </span>
+                                                                        <span class="text-muted">Total de vistas de libros</span>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="line-chart4" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+
+                                                        <!--tabla de datos2-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <h3 class="card-title">Tabla - Detalle de los 10 libros más accedidos desde página web</h3>
+                                                                <div class="card-tools">
+                                                                    <a href="#" class="btn btn-tool btn-sm">
+                                                                        @*<i class="fas fa-download"></i>*@
+                                                                    </a>
+                                                                    <a href="#" class="btn btn-tool btn-sm">
+                                                                        <i class="fas fa-fas fa-table"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body table-responsive p-0">
+                                                                <table class="table table-striped table-valign-middle">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Título</b></th>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Publicado</b></th>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Carrera</b></th>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Autores</b></th>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Vistas</b></th>
+
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        @foreach (var item1 in ViewBag.DetalleVistasLibros)
+                                                                        {
+                                                                            <tr>
+                                                                                <td style="text-align:left">
+                                                                                    @*<img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">*@
+                                                                                    @item1.Titulo
+                                                                                </td>
+                                                                                <td style="text-align:left">@item1.Fechapublica</td>
+                                                                                <td style="text-align:left">@item1.Carrera</td>
+                                                                                <td style="text-align:left">@item1.Autores</td>
+                                                                                <td style="text-align:left">@item1.nvistas</td>
+
+                                                                            </tr>
+                                                                        }
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+
+
+                                                    </div>
+
+
+
+                                                }
+                                                if (item.Identificador == 5)
+                                                {
+
+                                                    <div class="col-lg-12">
+
+
+                                                        <!--libros más accedidos desde página web consulta por año-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de líneas - @item.DetalleConsulta</p>
+                                                                    <i class="fas fa- fas fa-chart-line"></i>
+                                                                </div>
+                                                                <div style="margin-top:1%">
+                                                                    <span class="mr-2">
+                                                                        <small>Año @ViewBag.Vyear </small>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg"> @ViewBag.LibsPublicado</span>
+                                                                        <span>Total de libros publicados</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-fas fa-globe"></i> @ViewBag.Totalvyear
+                                                                        </span>
+                                                                        <span class="text-muted">Total de vistas este año</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-book-reader"></i> @ViewBag.Vistast
+                                                                        </span>
+                                                                        <span class="text-muted">Total de vistas de libros</span>
+                                                                    </p>
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="@item.Grafico" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <!--tabla de datos-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <h3 class="card-title">Tabla - @item.DetalleConsulta</h3>
+                                                                <div class="card-tools">
+                                                                    <a href="#" class="btn btn-tool btn-sm">
+                                                                        @*<i class="fas fa-download"></i>*@
+                                                                    </a>
+                                                                    <a href="#" class="btn btn-tool btn-sm">
+                                                                        <i class="fas fa-fas fa-table"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body table-responsive p-0">
+                                                                <table class="table table-striped table-valign-middle">
+                                                                    <thead>
+                                                                        <tr><small style="margin-left:2%">Año @ViewBag.Vyear</small></tr>
+                                                                        <tr>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Carreras</b></th>
+                                                                            <th class="text-secondary" style="text-align:left"><b>Número de vistas</b></th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        @foreach (var item1 in ViewBag.VistasxYears)
+                                                                        {
+                                                                            <tr>
+                                                                                <td style="text-align:left">
+                                                                                    @*<img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">*@
+                                                                                    @item1.Carrera
+                                                                                </td>
+                                                                                <td style="text-align:left">@item1.Totalvistasxcarrera</td>
+
+                                                                            </tr>
+                                                                        }
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+
+                                                        <!--gráfico de pastel libros publicados por año consultado-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de pastel - (Porcentajes) @item.DetalleConsulta</p>
+                                                                    <i class="fas fa-fas fa-chart-pie"></i>
+                                                                </div>
+                                                                <div style="margin-top:1%">
+                                                                    <span class="mr-2">
+                                                                        <small>Año  @ViewBag.Vyear</small>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg"> @ViewBag.LibsPublicado</span>
+                                                                        <span>Total de libros publicados</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-fas fa-globe"></i> @ViewBag.Totalvyear
+                                                                        </span>
+                                                                        <span class="text-muted">Total de vistas este año</span>
+                                                                    </p>
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-book-reader"></i> @ViewBag.Vistast
+                                                                        </span>
+                                                                        <span class="text-muted">Total de vistas de libros</span>
+                                                                    </p>
+
+
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="piechart5" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                                    </span>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+
+                                                        <!--comparativa num de vistas de libros año ctual vs año anterior-->
+                                                        <div class="card" style="margin-top:7%">
+                                                            <div class="card-header border-0">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <p class="card-title">Gráfico de barras - (Comparativa año actual y año anterior) Número de vistas de libros</p>
+                                                                    <i class="fas fa- fas fa-chart-bar"></i>
+                                                                </div>
+                                                                <div style="margin-top:1%">
+                                                                    <span class="mr-2">
+                                                                        <i class="fas fa-square text-blue"></i> <small> Año @ViewBag.YANT</small>
+                                                                    </span>
+                                                                    <span class="mr-2" style="margin-left:3%">
+                                                                        <i class="fas fa-square text-gray"></i> <small> Año @ViewBag.YACT</small>
+                                                                    </span>
+                                                                </div>
+
+
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="d-flex">
+                                                                    <p class="d-flex flex-column">
+                                                                        <span class="text-bold text-lg"> @ViewBag.LibsPublicado</span>
+                                                                        <span>Total de libros publicados</span>
+                                                                    </p>
+
+                                                                    <p class="ml-auto d-flex flex-column text-right">
+                                                                        <span class="text-success">
+                                                                            <i class="fas fa-book-reader"></i> @ViewBag.Vistast
+                                                                        </span>
+                                                                        <span class="text-muted">Total de vistas de libros</span>
+                                                                    </p>
+
+                                                                </div>
+                                                                <!-- /.d-flex -->
+
+                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                                    <canvas id="comparativa-chart5" height="150"></canvas>
+                                                                </div>
+
+                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                                    <span class="mr-2">
+                                                                        Total vistas año anterior <b>@ViewBag.TvistasANT</b> <i class="fas fa-fas fa-bullseye text-blue"></i>
+                                                                    </span>
+                                                                    <span class="mr-2" style="margin-left:3%">
+                                                                        Total vistas año actual <b>@ViewBag.TvistasACT</b> <i class="fas fa-fas fa-bullseye text-gray"></i>
+                                                                    </span>
+                                                                    <span class="mr-2" style="margin-left:5%">
+                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras</b> Carreras
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+                                                    </div>
+
+
+
+                                                }
+
+                                            }
+
+                                            @*</div>*@
+
+
+
+
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                </section>
+
+
+
+
+                            </div>
+
+
+
+
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer text-center">
+                @{
+                    string date = DateTime.Now.ToString("MM-dd-yyyy");
+                    string year = date.Substring(6, 4);
+
+                }
+                <img src="https://localhost:44329/ImagesWeb/logo.png" alt="user" width="100"> Coordinación General de Investigación - Editorial Humus. © @year.
+            </footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <!-- Jquery -->
+    <script src="~/Recursos/Plantilla/assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="~/Recursos/Plantilla/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Recursos/Plantilla/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+
+    <!-- Toastr -->
+    <script src="~/Recursos/Plantilla/pluginsn/toastr/toastr.min.js"></script>
+
+    <!--Wave Effects -->
+    <script src="~/Recursos/Plantilla/dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="~/Recursos/Plantilla/dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="~/Recursos/Plantilla/dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!-- Bootstrap 4 -->
+    <script src="~/Recursos/Plantilla/pluginsn/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Recursos/Plantilla/distn/js/adminlte.min.js"></script>
+
+    <!--sweetalert2-->
+    <script src="~/Recursos/Plantilla/dist/js/sweetalert2.all.min.js"></script>
+    <script src="~/Recursos/Plantilla/plugins/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- ChartJS -->
+    <script src="~/Recursos/Plantilla/pluginsn/chart.js/Chart.min.js"></script>
+
+
+
+
+
+
+
+    <script>
+
+
+    $(function () {
+
+        if (@ViewBag.Identificador == 1) {
+              /*gráfico1 de barras n libros publicados por carrera*/
+
+        jQuery.ajax({
+
+            url: '@Url.Action("ConsultarNumLibrosPublicadosxCarrera", "Consulta")',
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset-utf-8',
+            success: function (data) {
+
+                console.log(data)
+                var arrayCarreras = [];
+                var arrayNumLibros = [];
+
+                for (var i = 0; i < data.length; i++) {
+                    arrayCarreras.push(data[i].Carrera)
+                    arrayNumLibros.push(data[i].LibrosxCarrera)
+                }
+
+
+                var $libpublicados = $('#libpublicados-chart')
+
+
+                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                var libpublicados = new Chart($libpublicados, {
+
+
+
+                    type: 'bar',
+                    data: {
+                        labels: arrayCarreras,
+                        datasets: [{
+
+                            label: 'N° Libros',
+                            data: arrayNumLibros,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(255, 159, 64, 0.5)',
+                                'rgba(255, 205, 86, 0.5)',
+                                'rgba(75, 192, 192, 0.5)',
+                                'rgba(149, 47, 50, 0.5)',
+                                'rgba(153, 102, 255, 0.5)',
+                                'rgba(104, 106, 108, 0.5)',
+                                'rgba(236, 55, 14, 0.5)',
+                                'rgba( 0, 123, 255, 0.5)',
+                                'rgba(35, 255, 0, 0.5)',
+                                'rgba(212, 22, 227, 0.5)',
+
+
+
+
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132)',
+                                'rgba(255, 159, 64)',
+                                'rgba(255, 205, 86)',
+                                'rgba(75, 192, 192)',
+                                'rgba(149, 47, 50)',
+                                'rgba(153, 102, 255)',
+                                'rgba(104, 106, 108)',
+                                'rgba(236, 55, 14)',
+                                'rgba( 0, 123, 255)',
+                                'rgba(35, 255, 0)',
+                                'rgba(212, 22, 227)',
+
+                            ],
+                            borderWidth: 1
+
+
+
+                        }]
+
+
+
+                    }
+
+                })
+
+
+
+
+
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+
+
+        });
+
+
+
+
+        /* gráfico 1 pie chart*/
+
+        jQuery.ajax({
+
+            url: '@Url.Action("ConsultarNumLibrosPublicadosxCarrera", "Consulta")',
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset-utf-8',
+            success: function (data) {
+
+                console.log(data)
+                var arrayCarreras = [];
+                var arrayNumLibros = [];
+                var total = 0;
+                var suma = 0;
+                for (var i = 0; i < data.length; i++) {
+
+                    if (data[i].TotalLibrosPublicados == 0) {
+                        arrayCarreras.push(data[i].Carrera + ' (0)%')
+                        arrayNumLibros.push(data[i].LibrosxCarrera)
+                    } else {
+                        suma = data[i].TotalLibrosPublicados;
+                        total = (data[i].LibrosxCarrera * 100 / suma).toFixed(2);
+                        arrayCarreras.push(data[i].Carrera + ' (' + total + ')%')
+                        arrayNumLibros.push(data[i].LibrosxCarrera)
+                    }
+
+
+
+                   
+                }
+
+
+                var $libpublicados1 = $('#piechart')
+
+
+                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                var libpublicados1 = new Chart($libpublicados1, {
+
+
+
+                    type: 'pie',
+                    data: {
+                        labels: arrayCarreras,
+                        datasets: [{
+
+
+                            data: arrayNumLibros,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(255, 159, 64, 0.5)',
+                                'rgba(255, 205, 86, 0.5)',
+                                'rgba(75, 192, 192, 0.5)',
+                                'rgba(149, 47, 50, 0.5)',
+                                'rgba(153, 102, 255, 0.5)',
+                                'rgba(104, 106, 108, 0.5)',
+                                'rgba(236, 55, 14, 0.5)',
+                                'rgba( 0, 123, 255, 0.5)',
+                                'rgba(35, 255, 0, 0.5)',
+                                'rgba(212, 22, 227, 0.5)',
+
+
+
+
+
+
+                            ],
+                            borderColor: [
+
+                                'rgba(255, 99, 132)',
+                                'rgba(255, 159, 64)',
+                                'rgba(255, 205, 86)',
+                                'rgba(75, 192, 192)',
+                                'rgba(149, 47, 50)',
+                                'rgba(153, 102, 255)',
+                                'rgba(104, 106, 108)',
+                                'rgba(236, 55, 14)',
+                                'rgba( 0, 123, 255)',
+                                'rgba(35, 255, 0)',
+                                'rgba(212, 22, 227)',
+
+
+
+                            ],
+                            borderWidth: 1
+
+
+
+                        }]
+
+
+
+                    }
+
+                })
+
+
+
+
+
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+
+
+        });
+
+
+
+
+
+
+         /*gráfico 1 número de libros publicados listado por año*/
+
+         $.ajax({
+
+                url: "@Url.Action("VerLibrospublicadosxYears", "Consulta")",
+                type: 'GET',
+                dataType: 'json',
+                contentType: 'application/json; charset-utf-8',
+
+                success: function (obj) {
+
+
+                    console.log(obj)
+                    var arrayYears = [];
+                    var arrayNumVistas = [];
+
+                    for (var i = 0; i < obj.length; i++) {
+                        arrayYears.push(obj[i].year)
+                        arrayNumVistas.push(obj[i].TotalLibrosxyears)
+                    }
+
+
+                    var $linechart1 = $('#line-chart1')
+
+
+                    //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                    //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                    var linechart1 = new Chart($linechart1, {
+
+
+
+                        type: 'line',
+                        data: {
+                            labels: arrayYears,
+                            datasets: [{
+
+
+                                label: 'N° Libros',
+                                data: arrayNumVistas,
+                                fill: false,
+                                borderColor: 'rgb(27, 206, 246 )',
+                                tension: 0.1,
+
+                                borderWidth: 3
+
+
+
+                            }]
+
+
+
+                        }
+
+                    })
+
+
+
+
+
+
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+
+
+
+
+
+            });
+
+
+
+
+         /*gráfico1 de barras n libros publicados por categoría*/
+
+        jQuery.ajax({
+
+            url: '@Url.Action("ConsultarNumLibrosPublicadosxCategoria", "Consulta")',
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset-utf-8',
+            success: function (data) {
+
+                console.log(data)
+                var arrayCategorias = [];
+                var arrayNumLibros = [];
+                var total = 0;
+                var suma = 0;
+
+                for (var i = 0; i < data.length; i++) {
+                    suma = data[i].TotalLibrosPublicados;
+                    total = (data[i].LibrosxCategoria * 100 / suma).toFixed(1);
+
+                    arrayCategorias.push(data[i].Detallecategoria + ' (' + total + ')%')
+                    arrayNumLibros.push(data[i].LibrosxCategoria)
+                }
+
+
+                var $libpublicadosCate = $('#libpublicadosCate-chart')
+
+
+                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                var libpublicadosCate = new Chart($libpublicadosCate, {
+
+
+
+                    type: 'doughnut',
+                    data: {
+                        labels: arrayCategorias,
+                        datasets: [{
+
+
+                            data: arrayNumLibros,
+                            backgroundColor: [
+                                'rgba(75, 236, 56 , 0.5)',
+                                'rgba(56, 67, 236 , 0.5)',
+                                'rgba(255, 205, 86, 0.5)',
+                                'rgba(75, 192, 192, 0.5)',
+                                'rgba(149, 47, 50, 0.5)',
+                                'rgba(45, 47, 81 , 0.5)',
+                                'rgba(154, 49, 178 , 0.5)',
+                                'rgba(50, 240, 243 , 0.5)',
+
+
+                            ],
+                            borderColor: [
+
+                                'rgba(75, 236, 56 )',
+                                'rgba(56, 67, 236 )',
+                                'rgba(255, 205, 86)',
+                                'rgba(75, 192, 192)',
+                                'rgba(149, 47, 50)',
+                                'rgba(45, 47, 81 )',
+                                'rgba(154, 49, 178 )',
+                                'rgba(50, 240, 243 )',
+
+
+
+
+                            ],
+                            borderWidth: 1
+
+
+
+                        }]
+
+
+
+                    }
+
+                })
+
+
+
+
+
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+
+
+        });
+
+
+
+        }
+
+
+        if (@ViewBag.Identificador == 2) {
+
+              /*gráfico 2 num de libros publicados por periodo academico - consulta*/
+
+        $.ajax({
+
+            url: "@Url.Action("ConsultarNumLibrosPublicadosxPeriodo", "Consulta")",
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset-utf-8',
+
+
+            success: function (data) {
+
+
+                console.log(data)
+                var arrayCarreras = [];
+                var arrayNumLibros = [];
+
+                for (var i = 0; i < data.length; i++) {
+                    arrayCarreras.push(data[i].Carrera)
+                    arrayNumLibros.push(data[i].LibrosxCarrera)
+                }
+
+
+                var $libperiodoschart = $('#libperiodos-chart')
+
+
+                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                var libperiodoschart = new Chart($libperiodoschart, {
+
+
+
+                    type: 'bar',
+                    data: {
+                        labels: arrayCarreras,
+                        datasets: [{
+
+                            label: 'N° Libros',
+                            data: arrayNumLibros,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(255, 159, 64, 0.5)',
+                                'rgba(255, 205, 86, 0.5)',
+                                'rgba(75, 192, 192, 0.5)',
+                                'rgba(149, 47, 50, 0.5)',
+                                'rgba(153, 102, 255, 0.5)',
+                                'rgba(104, 106, 108, 0.5)',
+                                'rgba(236, 55, 14, 0.5)',
+                                'rgba( 0, 123, 255, 0.5)',
+                                'rgba(35, 255, 0, 0.5)',
+                                'rgba(212, 22, 227, 0.5)',
+
+
+
+
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132)',
+                                'rgba(255, 159, 64)',
+                                'rgba(255, 205, 86)',
+                                'rgba(75, 192, 192)',
+                                'rgba(149, 47, 50)',
+                                'rgba(153, 102, 255)',
+                                'rgba(104, 106, 108)',
+                                'rgba(236, 55, 14)',
+                                'rgba( 0, 123, 255)',
+                                'rgba(35, 255, 0)',
+                                'rgba(212, 22, 227)',
+
+                            ],
+                            borderWidth: 1
+
+
+
+                        }]
+
+
+
+                    }
+
+                })
+
+
+
+
+
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+
+
+
+
+
+        });
+
+
+
+
+        /* gráfico 2 pie chart*/
+
+        jQuery.ajax({
+
+            url: '@Url.Action("ConsultarNumLibrosPublicadosxPeriodo", "Consulta")',
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset-utf-8',
+            success: function (data) {
+
+                console.log(data)
+                var arrayCarreras = [];
+                var arrayNumLibros = [];
+                var total = 0;
+                var suma = 0;
+                for (var i = 0; i < data.length; i++) {
+                   
+                    if (data[i].TotalLibrosPublicadosxp == 0) {
+                        arrayCarreras.push(data[i].Carrera + ' (0)%')
+                        arrayNumLibros.push(data[i].LibrosxCarrera)
+                    } else {
+                        suma = data[i].TotalLibrosPublicadosxp;
+                        total = (data[i].LibrosxCarrera * 100 / suma).toFixed(2);
+                        arrayCarreras.push(data[i].Carrera + ' (' + total + ')%')
+                        arrayNumLibros.push(data[i].LibrosxCarrera)
+                    }
+                 
+                   
+                }
+
+
+                var $piechart2 = $('#piechart2')
+
+
+                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                var piechart2 = new Chart($piechart2, {
+
+
+
+                    type: 'pie',
+                    data: {
+                        labels: arrayCarreras,
+                        datasets: [{
+
+
+                            data: arrayNumLibros,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(255, 159, 64, 0.5)',
+                                'rgba(255, 205, 86, 0.5)',
+                                'rgba(75, 192, 192, 0.5)',
+                                'rgba(149, 47, 50, 0.5)',
+                                'rgba(153, 102, 255, 0.5)',
+                                'rgba(104, 106, 108, 0.5)',
+                                'rgba(236, 55, 14, 0.5)',
+                                'rgba( 0, 123, 255, 0.5)',
+                                'rgba(35, 255, 0, 0.5)',
+                                'rgba(212, 22, 227, 0.5)',
+
+
+
+
+
+
+                            ],
+                            borderColor: [
+
+                                'rgba(255, 99, 132)',
+                                'rgba(255, 159, 64)',
+                                'rgba(255, 205, 86)',
+                                'rgba(75, 192, 192)',
+                                'rgba(149, 47, 50)',
+                                'rgba(153, 102, 255)',
+                                'rgba(104, 106, 108)',
+                                'rgba(236, 55, 14)',
+                                'rgba( 0, 123, 255)',
+                                'rgba(35, 255, 0)',
+                                'rgba(212, 22, 227)',
+
+
+
+                            ],
+                            borderWidth: 1
+
+
+
+                        }]
+
+
+
+                    }
+
+                })
+
+
+
+
+
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+
+
+        });
+
+
+
+
+
+
+          /*gráfico 2 comparativa libros publicados entre periodo anterior y periodo actual*/
+        jQuery.ajax({
+
+            url: '@Url.Action("ConsultarComparativaPeriodanterior", "Consulta")',
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset-utf-8',
+            success: function (data1){
+
+                console.log(data1)
+                var arrayCarreras = [];
+                var arrayNumLibrosANT = [];
+                var arrayNumLibrosACT = [];
+
+                for (var i = 0; i < data1.length; i++) {
+                    arrayCarreras.push(data1[i].Carrera)
+                    arrayNumLibrosANT.push(data1[i].LibrosxCarreraANT)
+                    arrayNumLibrosACT.push(data1[i].LibrosxCarreraACT)
+                }
+
+
+                var $comparativaChart2 = $('#comparativa-chart2')
+
+
+                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                var comparativaChart2 = new Chart($comparativaChart2, {
+
+
+
+                    type: 'bar',
+                    data: {
+                        labels: arrayCarreras,
+                        datasets: [
+                            {
+                                label: 'N° Libros período anterior',
+                                data: arrayNumLibrosANT,
+
+                                backgroundColor: '#007bff',
+                                borderColor: '#007bff',
+                                borderWidth: 1
+                            },
+
+                            {
+                                label: 'N° Libros período actual',
+                                backgroundColor: '#8A817F',
+                                borderColor: '#8A817F',
+                                borderWidth: 1,
+                                data: arrayNumLibrosACT,
+                            }
+
+
+                        ]
+
+
+
+                    }
+
+
+
+                })
+
+
+
+
+
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+
+
+        });
+
+
+
+
+        }
+
+
+        if (@ViewBag.Identificador == 3) {
+
+           /*gráfico 3 num de libros publicados por año - consulta*/
+
+
+            $.ajax({
+
+                url: "@Url.Action("ConsultarNumLibrosPublicadosxYear", "Consulta")",
+                type: 'GET',
+                dataType: 'json',
+                contentType: 'application/json; charset-utf-8',
+
+                success: function (obj) {
+
+
+                    console.log(obj)
+                    var arrayCarreras = [];
+                    var arrayNumLibros = [];
+
+                    for (var i = 0; i < obj.length; i++) {
+                        arrayCarreras.push(obj[i].Carrera)
+                        arrayNumLibros.push(obj[i].LibrosxCarrera)
+                    }
+
+
+                    var $libyearchart = $('#libyear-chart')
+
+
+                    //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                    //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                    var libyearchart = new Chart($libyearchart, {
+
+
+
+                        type: 'bar',
+                        data: {
+                            labels: arrayCarreras,
+                            datasets: [{
+
+                                label: 'N° Libros',
+                                data: arrayNumLibros,
+                                backgroundColor: [
+                                    'rgba(255, 99, 132, 0.5)',
+                                    'rgba(255, 159, 64, 0.5)',
+                                    'rgba(255, 205, 86, 0.5)',
+                                    'rgba(75, 192, 192, 0.5)',
+                                    'rgba(149, 47, 50, 0.5)',
+                                    'rgba(153, 102, 255, 0.5)',
+                                    'rgba(104, 106, 108, 0.5)',
+                                    'rgba(236, 55, 14, 0.5)',
+                                    'rgba( 0, 123, 255, 0.5)',
+                                    'rgba(35, 255, 0, 0.5)',
+                                    'rgba(212, 22, 227, 0.5)',
+
+
+
+
+                                ],
+                                borderColor: [
+                                    'rgba(255, 99, 132)',
+                                    'rgba(255, 159, 64)',
+                                    'rgba(255, 205, 86)',
+                                    'rgba(75, 192, 192)',
+                                    'rgba(149, 47, 50)',
+                                    'rgba(153, 102, 255)',
+                                    'rgba(104, 106, 108)',
+                                    'rgba(236, 55, 14)',
+                                    'rgba( 0, 123, 255)',
+                                    'rgba(35, 255, 0)',
+                                    'rgba(212, 22, 227)',
+
+                                ],
+                                borderWidth: 1
+
+
+
+                            }]
+
+
+
+                        }
+
+                    })
+
+
+
+
+
+
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+
+
+
+
+
+            });
+
+
+
+
+         /* gráfico 3 pie chart*/
+
+        jQuery.ajax({
+
+            url: '@Url.Action("ConsultarNumLibrosPublicadosxYear", "Consulta")',
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset-utf-8',
+            success: function (data) {
+
+                console.log(data)
+                var arrayCarreras = [];
+                var arrayNumLibros = [];
+                var total = 0;
+                var suma = 0;
+                for (var i = 0; i < data.length; i++) {
+
+
+                    if (data[i].TotalLibrosPublicadosxa == 0) {
+                        arrayCarreras.push(data[i].Carrera + ' (0)%')
+                        arrayNumLibros.push(data[i].LibrosxCarrera)
+                    } else {
+                        suma = data[i].TotalLibrosPublicadosxa;
+                        total = (data[i].LibrosxCarrera * 100 / suma).toFixed(2);
+                        arrayCarreras.push(data[i].Carrera + ' (' + total + ')%')
+                        arrayNumLibros.push(data[i].LibrosxCarrera)
+                    }
+
+
+
+                   
+                }
+
+
+                var $piechart3 = $('#piechart3')
+
+
+                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                var piechart3 = new Chart($piechart3, {
+
+
+
+                    type: 'pie',
+                    data: {
+                        labels: arrayCarreras,
+                        datasets: [{
+
+
+                            data: arrayNumLibros,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(255, 159, 64, 0.5)',
+                                'rgba(255, 205, 86, 0.5)',
+                                'rgba(75, 192, 192, 0.5)',
+                                'rgba(149, 47, 50, 0.5)',
+                                'rgba(153, 102, 255, 0.5)',
+                                'rgba(104, 106, 108, 0.5)',
+                                'rgba(236, 55, 14, 0.5)',
+                                'rgba( 0, 123, 255, 0.5)',
+                                'rgba(35, 255, 0, 0.5)',
+                                'rgba(212, 22, 227, 0.5)',
+
+
+
+
+
+
+                            ],
+                            borderColor: [
+
+                                'rgba(255, 99, 132)',
+                                'rgba(255, 159, 64)',
+                                'rgba(255, 205, 86)',
+                                'rgba(75, 192, 192)',
+                                'rgba(149, 47, 50)',
+                                'rgba(153, 102, 255)',
+                                'rgba(104, 106, 108)',
+                                'rgba(236, 55, 14)',
+                                'rgba( 0, 123, 255)',
+                                'rgba(35, 255, 0)',
+                                'rgba(212, 22, 227)',
+
+
+
+                            ],
+                            borderWidth: 1
+
+
+
+                        }]
+
+
+
+                    }
+
+                })
+
+
+
+
+
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+
+
+        });
+
+
+
+
+
+
+         /*gráfico 3 comparativa libros publicados entre año anterior y año actual*/
+        jQuery.ajax({
+
+            url: '@Url.Action("ConsultarComparativaYearanterior", "Consulta")',
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset-utf-8',
+            success: function (data1){
+
+                console.log(data1)
+                var arrayCarreras = [];
+                var arrayNumLibrosANT = [];
+                var arrayNumLibrosACT = [];
+
+                for (var i = 0; i < data1.length; i++) {
+                    arrayCarreras.push(data1[i].Carrera)
+                    arrayNumLibrosANT.push(data1[i].yLibrosxCarreraANT)
+                    arrayNumLibrosACT.push(data1[i].yLibrosxCarreraACT)
+                }
+
+
+                var $comparativaChart3 = $('#comparativa-chart3')
+
+
+                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                var comparativaChart3 = new Chart($comparativaChart3, {
+
+
+
+                    type: 'bar',
+                    data: {
+                        labels: arrayCarreras,
+                        datasets: [
+                            {
+                                label: 'N° Libros año anterior',
+                                data: arrayNumLibrosANT,
+
+                                backgroundColor: '#007bff',
+                                borderColor: '#007bff',
+                                borderWidth: 1
+                            },
+
+                            {
+                                label: 'N° Libros año actual',
+                                backgroundColor: '#8A817F',
+                                borderColor: '#8A817F',
+                                borderWidth: 1,
+                                data: arrayNumLibrosACT,
+                            }
+
+
+                        ]
+
+
+
+                    }
+
+
+
+                })
+
+
+
+
+
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+
+
+        });
+
+
+
+
+        }
+
+
+        if (@ViewBag.Identificador == 4) {
+
+          /*gráfico 4 número de vistas de libros página web*/
+
+         $.ajax({
+
+                url: "@Url.Action("ConsultarNumVistasLibrosxCarrera", "Consulta")",
+                type: 'GET',
+                dataType: 'json',
+                contentType: 'application/json; charset-utf-8',
+
+                success: function (obj) {
+
+
+                    console.log(obj)
+                    var arrayCarreras = [];
+                    var arrayNumVistas = [];
+
+                    for (var i = 0; i < obj.length; i++) {
+                        arrayCarreras.push(obj[i].Carrera)
+                        arrayNumVistas.push(obj[i].Totalvistasxcarrera)
+                    }
+
+
+                    var $libvistaschart = $('#libvistas-chart')
+
+
+                    //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                    //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                    var libvistaschart = new Chart($libvistaschart, {
+
+
+
+                        type: 'line',
+                        data: {
+                            labels: arrayCarreras,
+                            datasets: [{
+
+
+                                label: 'N° Vistas',
+                                data: arrayNumVistas,
+                                fill: false,
+                                borderColor: 'rgb(75, 192, 192)',
+                                tension: 0.1,
+
+                                borderWidth: 3
+
+
+
+                            }]
+
+
+
+                        }
+
+                    })
+
+
+
+
+
+
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+
+
+
+
+
+            });
+
+
+
+
+
+         /* gráfico 4 pie chart*/
+
+        jQuery.ajax({
+
+            url: '@Url.Action("ConsultarNumVistasLibrosxCarrera", "Consulta")',
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset-utf-8',
+            success: function (data) {
+
+                console.log(data)
+                var arrayCarreras = [];
+                var arrayNumVistas = [];
+                var total = 0;
+                var suma = 0;
+                for (var i = 0; i < data.length; i++) {
+
+                    if (data[i].Totalvistaslibros == 0) {
+                        arrayCarreras.push(data[i].Carrera + ' (0)%')
+                        arrayNumVistas.push(data[i].Totalvistasxcarrera)
+                    } else {
+                        suma = data[i].Totalvistaslibros;
+                        total = (data[i].Totalvistasxcarrera * 100 / suma).toFixed(2);
+                        arrayCarreras.push(data[i].Carrera + ' (' + total + ')%')
+                        arrayNumVistas.push(data[i].Totalvistasxcarrera)
+                    }
+
+
+                  
+                }
+
+
+                var $piechart4 = $('#piechart4')
+
+
+                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                var piechart4 = new Chart($piechart4, {
+
+
+
+                    type: 'pie',
+                    data: {
+                        labels: arrayCarreras,
+                        datasets: [{
+
+
+                            data: arrayNumVistas,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(255, 159, 64, 0.5)',
+                                'rgba(255, 205, 86, 0.5)',
+                                'rgba(75, 192, 192, 0.5)',
+                                'rgba(149, 47, 50, 0.5)',
+                                'rgba(153, 102, 255, 0.5)',
+                                'rgba(104, 106, 108, 0.5)',
+                                'rgba(236, 55, 14, 0.5)',
+                                'rgba( 0, 123, 255, 0.5)',
+                                'rgba(35, 255, 0, 0.5)',
+                                'rgba(212, 22, 227, 0.5)',
+
+
+
+
+
+
+                            ],
+                            borderColor: [
+
+                                'rgba(255, 99, 132)',
+                                'rgba(255, 159, 64)',
+                                'rgba(255, 205, 86)',
+                                'rgba(75, 192, 192)',
+                                'rgba(149, 47, 50)',
+                                'rgba(153, 102, 255)',
+                                'rgba(104, 106, 108)',
+                                'rgba(236, 55, 14)',
+                                'rgba( 0, 123, 255)',
+                                'rgba(35, 255, 0)',
+                                'rgba(212, 22, 227)',
+
+
+
+                            ],
+                            borderWidth: 1
+
+
+
+                        }]
+
+
+
+                    }
+
+                })
+
+
+
+
+
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+
+
+        });
+
+
+
+
+         /*gráfico 4 número de vistas de libros página web listado por año*/
+
+         $.ajax({
+
+                url: "@Url.Action("VistasLibrosxYears", "Consulta")",
+                type: 'GET',
+                dataType: 'json',
+                contentType: 'application/json; charset-utf-8',
+
+                success: function (obj) {
+
+
+                    console.log(obj)
+                    var arrayYears = [];
+                    var arrayNumVistas = [];
+
+                    for (var i = 0; i < obj.length; i++) {
+                        arrayYears.push(obj[i].year)
+                        arrayNumVistas.push(obj[i].vistasxyear)
+                    }
+
+
+                    var $linechart4 = $('#line-chart4')
+
+
+                    //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                    //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                    var linechart4 = new Chart($linechart4, {
+
+
+
+                        type: 'line',
+                        data: {
+                            labels: arrayYears,
+                            datasets: [{
+
+
+                                label: 'N° Vistas',
+                                data: arrayNumVistas,
+                                fill: false,
+                                borderColor: 'rgb(27, 206, 246 )',
+                                tension: 0.1,
+
+                                borderWidth: 3
+
+
+
+                            }]
+
+
+
+                        }
+
+                    })
+
+
+
+
+
+
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+
+
+
+
+
+            });
+
+
+
+
+
+
+         
+
+
+        }
+
+
+
+        if (@ViewBag.Identificador == 5) {
+
+
+        /*gráfico 5 número de vistas de libros página web consulta por año*/
+
+         $.ajax({
+
+                url: "@Url.Action("ConsultarNumVistasLibrosxYear", "Consulta")",
+                type: 'GET',
+                dataType: 'json',
+                contentType: 'application/json; charset-utf-8',
+
+                success: function (obj) {
+
+
+                    console.log(obj)
+                    var arrayCarreras = [];
+                    var arrayNumVistas = [];
+
+                    for (var i = 0; i < obj.length; i++) {
+                        arrayCarreras.push(obj[i].Carrera)
+                        arrayNumVistas.push(obj[i].Totalvistasxcarrera)
+                    }
+
+
+                    var $libvistas2chart = $('#libvistas2-chart')
+
+
+                    //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                    //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                    var libvistas2chart = new Chart($libvistas2chart, {
+
+
+
+                        type: 'line',
+                        data: {
+                            labels: arrayCarreras,
+                            datasets: [{
+
+
+                                label: 'N° Vistas',
+                                data: arrayNumVistas,
+                                fill: false,
+                                borderColor: 'rgb( 251, 128, 58  )',
+                                tension: 0.1,
+
+                                borderWidth: 3
+
+
+
+                            }]
+
+
+
+                        }
+
+                    })
+
+
+
+
+
+
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+
+
+
+
+
+            });
+
+
+
+
+
+        /* gráfico 5 pie chart*/
+
+        jQuery.ajax({
+
+            url: '@Url.Action("ConsultarNumVistasLibrosxYear", "Consulta")',
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset-utf-8',
+            success: function (data) {
+
+                console.log(data)
+                var arrayCarreras = [];
+                var arrayNumVistas = [];
+                var total = 0;
+                var suma = 0;
+
+                for (var i = 0; i < data.length; i++) {
+
+                    if (data[i].Totalvistaslibrosxa == 0) {
+                        arrayCarreras.push(data[i].Carrera + ' (0)%')
+                        arrayNumVistas.push(data[i].Totalvistasxcarrera)
+                    } else {
+                        suma = data[i].Totalvistaslibrosxa;
+                        total = (data[i].Totalvistasxcarrera * 100 / suma).toFixed(2);
+                        arrayCarreras.push(data[i].Carrera + ' (' + total + ')%')
+                        arrayNumVistas.push(data[i].Totalvistasxcarrera)
+                    }
+
+
+
+                   
+
+                }
+
+
+                var $piechart5 = $('#piechart5')
+
+
+                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                var piechart5 = new Chart($piechart5, {
+
+
+
+                    type: 'pie',
+                    data: {
+                        labels: arrayCarreras,
+                        datasets: [{
+
+
+                            data: arrayNumVistas,
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.5)',
+                                'rgba(255, 159, 64, 0.5)',
+                                'rgba(255, 205, 86, 0.5)',
+                                'rgba(75, 192, 192, 0.5)',
+                                'rgba(149, 47, 50, 0.5)',
+                                'rgba(153, 102, 255, 0.5)',
+                                'rgba(104, 106, 108, 0.5)',
+                                'rgba(236, 55, 14, 0.5)',
+                                'rgba( 0, 123, 255, 0.5)',
+                                'rgba(35, 255, 0, 0.5)',
+                                'rgba(212, 22, 227, 0.5)',
+
+
+
+
+
+
+                            ],
+                            borderColor: [
+
+                                'rgba(255, 99, 132)',
+                                'rgba(255, 159, 64)',
+                                'rgba(255, 205, 86)',
+                                'rgba(75, 192, 192)',
+                                'rgba(149, 47, 50)',
+                                'rgba(153, 102, 255)',
+                                'rgba(104, 106, 108)',
+                                'rgba(236, 55, 14)',
+                                'rgba( 0, 123, 255)',
+                                'rgba(35, 255, 0)',
+                                'rgba(212, 22, 227)',
+
+
+
+                            ],
+                            borderWidth: 1
+
+
+
+                        }]
+
+
+
+                    }
+
+                })
+
+
+
+
+
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+
+
+        });
+
+
+
+
+
+         /*gráfico 5 comparativa vista libros entre año anterior y año actual*/
+        jQuery.ajax({
+
+            url: '@Url.Action("ConsultarComparativaNumVistasLibrosxYearAnterior", "Consulta")',
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset-utf-8',
+            success: function (data1){
+
+                console.log(data1)
+                var arrayCarreras = [];
+                var arrayNumVistasANT = [];
+                var arrayNumVistasACT = [];
+
+                for (var i = 0; i < data1.length; i++) {
+                    arrayCarreras.push(data1[i].Carrera)
+                    arrayNumVistasANT.push(data1[i].vistasxyearANT)
+                    arrayNumVistasACT.push(data1[i].vistasxyearACT)
+                }
+
+
+                var $comparativaChart5 = $('#comparativa-chart5')
+
+
+                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                //const Tnlibros = ['1', '2', '3', '4', '5']
+
+
+
+                var comparativaChart5 = new Chart($comparativaChart5, {
+
+
+
+                    type: 'bar',
+                    data: {
+                        labels: arrayCarreras,
+                        datasets: [
+                            {
+                                label: 'N° Vistas año anterior',
+                                data: arrayNumVistasANT,
+
+                                backgroundColor: '#007bff',
+                                borderColor: '#007bff',
+                                borderWidth: 1
+                            },
+
+                            {
+                                label: 'N° Vistas año actual',
+                                backgroundColor: '#8A817F',
+                                borderColor: '#8A817F',
+                                borderWidth: 1,
+                                data: arrayNumVistasACT,
+                            }
+
+
+                        ]
+
+
+
+                    }
+
+
+
+                })
+
+
+
+
+
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+
+
+        });
+
+
+
+
+
+        }
+
+
+
+
+
+    })
+
+
+    </script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

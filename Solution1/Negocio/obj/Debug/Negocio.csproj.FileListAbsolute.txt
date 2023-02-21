@@ -1,0 +1,288 @@
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\bin\Debug\Negocio.dll.config
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\bin\Debug\Negocio.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\bin\Debug\Negocio.pdb
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\bin\Debug\Datos.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\bin\Debug\EntityFramework.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\bin\Debug\SimpleCrypto.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\bin\Debug\Datos.pdb
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\bin\Debug\Datos.dll.config
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\bin\Debug\EntityFramework.xml
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\obj\Debug\Negocio.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\Negocio\obj\Debug\Negocio.pdb
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\bin\Debug\Negocio.dll.config
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\bin\Debug\Negocio.dll
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\bin\Debug\Negocio.pdb
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\bin\Debug\Datos.dll
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\bin\Debug\EntityFramework.dll
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\bin\Debug\SimpleCrypto.dll
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\bin\Debug\Datos.pdb
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\bin\Debug\Datos.dll.config
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\bin\Debug\EntityFramework.xml
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\obj\Debug\Negocio.dll
+G:\Unidades compartidas\humus-proyect\Solution1\Negocio\obj\Debug\Negocio.pdb
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\bin\Debug\Negocio.dll.config
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\bin\Debug\Negocio.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\bin\Debug\Negocio.pdb
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\bin\Debug\Datos.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\bin\Debug\EntityFramework.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\bin\Debug\SimpleCrypto.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\bin\Debug\Datos.pdb
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\bin\Debug\Datos.dll.config
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\bin\Debug\EntityFramework.xml
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\obj\Debug\Negocio.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\Negocio\obj\Debug\Negocio.pdb
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\bin\Debug\Negocio.dll.config
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\bin\Debug\Negocio.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\bin\Debug\Negocio.pdb
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\bin\Debug\Datos.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\bin\Debug\EntityFramework.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\bin\Debug\SimpleCrypto.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\bin\Debug\Datos.pdb
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\bin\Debug\Datos.dll.config
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\bin\Debug\EntityFramework.xml
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\obj\Debug\Negocio.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\Negocio\obj\Debug\Negocio.pdb
+D:\ARCHIVOS\Solution1\Negocio\bin\Debug\Negocio.dll.config
+D:\ARCHIVOS\Solution1\Negocio\bin\Debug\Negocio.dll
+D:\ARCHIVOS\Solution1\Negocio\bin\Debug\Negocio.pdb
+D:\ARCHIVOS\Solution1\Negocio\bin\Debug\Datos.dll
+D:\ARCHIVOS\Solution1\Negocio\bin\Debug\EntityFramework.dll
+D:\ARCHIVOS\Solution1\Negocio\bin\Debug\SimpleCrypto.dll
+D:\ARCHIVOS\Solution1\Negocio\bin\Debug\Datos.pdb
+D:\ARCHIVOS\Solution1\Negocio\bin\Debug\Datos.dll.config
+D:\ARCHIVOS\Solution1\Negocio\bin\Debug\EntityFramework.xml
+D:\ARCHIVOS\Solution1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\ARCHIVOS\Solution1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\ARCHIVOS\Solution1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\ARCHIVOS\Solution1\Negocio\obj\Debug\Negocio.dll
+D:\ARCHIVOS\Solution1\Negocio\obj\Debug\Negocio.pdb
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\Negocio.dll.config
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\Negocio.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\Negocio.pdb
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\Datos.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\EntityFramework.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\SimpleCrypto.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\Datos.pdb
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\Datos.dll.config
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\EntityFramework.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\obj\Debug\Negocio.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\obj\Debug\Negocio.pdb
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\bin\Debug\Negocio.dll.config
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\bin\Debug\Negocio.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\bin\Debug\Negocio.pdb
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\bin\Debug\Datos.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\bin\Debug\EntityFramework.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\bin\Debug\SimpleCrypto.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\bin\Debug\Datos.pdb
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\bin\Debug\Datos.dll.config
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\bin\Debug\EntityFramework.xml
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\obj\Debug\Negocio.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\Negocio\obj\Debug\Negocio.pdb
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\Microsoft.OData.Edm.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Buffers.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Memory.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Numerics.Vectors.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Text.Encodings.Web.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Text.Json.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.ValueTuple.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\Microsoft.OData.Edm.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Buffers.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Memory.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Numerics.Vectors.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Text.Encodings.Web.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Text.Json.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\Negocio\bin\Debug\System.ValueTuple.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\Negocio.dll.config
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\Negocio.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\Negocio.pdb
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\Datos.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\EntityFramework.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\Microsoft.OData.Edm.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\SimpleCrypto.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Buffers.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Memory.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Numerics.Vectors.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Text.Encodings.Web.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Text.Json.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.ValueTuple.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\Datos.pdb
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\Datos.dll.config
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\EntityFramework.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\Microsoft.OData.Edm.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Buffers.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Memory.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Numerics.Vectors.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Text.Encodings.Web.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Text.Json.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\bin\Debug\System.ValueTuple.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\obj\Debug\Negocio.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\Negocio\obj\Debug\Negocio.pdb
+D:\Solution1\Negocio\bin\Debug\Negocio.dll.config
+D:\Solution1\Negocio\bin\Debug\Negocio.dll
+D:\Solution1\Negocio\bin\Debug\Negocio.pdb
+D:\Solution1\Negocio\bin\Debug\Datos.dll
+D:\Solution1\Negocio\bin\Debug\EntityFramework.dll
+D:\Solution1\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Solution1\Negocio\bin\Debug\Microsoft.OData.Edm.dll
+D:\Solution1\Negocio\bin\Debug\SimpleCrypto.dll
+D:\Solution1\Negocio\bin\Debug\System.Buffers.dll
+D:\Solution1\Negocio\bin\Debug\System.Memory.dll
+D:\Solution1\Negocio\bin\Debug\System.Numerics.Vectors.dll
+D:\Solution1\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Solution1\Negocio\bin\Debug\System.Text.Encodings.Web.dll
+D:\Solution1\Negocio\bin\Debug\System.Text.Json.dll
+D:\Solution1\Negocio\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Solution1\Negocio\bin\Debug\System.ValueTuple.dll
+D:\Solution1\Negocio\bin\Debug\Datos.pdb
+D:\Solution1\Negocio\bin\Debug\Datos.dll.config
+D:\Solution1\Negocio\bin\Debug\EntityFramework.xml
+D:\Solution1\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Solution1\Negocio\bin\Debug\Microsoft.OData.Edm.xml
+D:\Solution1\Negocio\bin\Debug\System.Buffers.xml
+D:\Solution1\Negocio\bin\Debug\System.Memory.xml
+D:\Solution1\Negocio\bin\Debug\System.Numerics.Vectors.xml
+D:\Solution1\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Solution1\Negocio\bin\Debug\System.Text.Encodings.Web.xml
+D:\Solution1\Negocio\bin\Debug\System.Text.Json.xml
+D:\Solution1\Negocio\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Solution1\Negocio\bin\Debug\System.ValueTuple.xml
+D:\Solution1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\Solution1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\Solution1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\Solution1\Negocio\obj\Debug\Negocio.dll
+D:\Solution1\Negocio\obj\Debug\Negocio.pdb
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\Negocio.dll.config
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\Negocio.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\Negocio.pdb
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\Datos.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\EntityFramework.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\Microsoft.OData.Edm.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\SimpleCrypto.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Buffers.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Memory.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Numerics.Vectors.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Text.Encodings.Web.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Text.Json.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.ValueTuple.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\Datos.pdb
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\Datos.dll.config
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\EntityFramework.xml
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\Microsoft.OData.Edm.xml
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Buffers.xml
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Memory.xml
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Numerics.Vectors.xml
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Text.Encodings.Web.xml
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Text.Json.xml
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Sistema-Web-Humus\Solution1\Negocio\bin\Debug\System.ValueTuple.xml
+D:\Sistema-Web-Humus\Solution1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\Sistema-Web-Humus\Solution1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\Sistema-Web-Humus\Solution1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\Sistema-Web-Humus\Solution1\Negocio\obj\Debug\Negocio.dll
+D:\Sistema-Web-Humus\Solution1\Negocio\obj\Debug\Negocio.pdb
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\Negocio.dll.config
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\Negocio.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\Negocio.pdb
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\Datos.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\EntityFramework.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\Microsoft.OData.Edm.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\SimpleCrypto.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Buffers.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Memory.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Numerics.Vectors.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Text.Encodings.Web.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Text.Json.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.ValueTuple.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\Datos.pdb
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\Datos.dll.config
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\EntityFramework.xml
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\Microsoft.OData.Edm.xml
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Buffers.xml
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Memory.xml
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Numerics.Vectors.xml
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Text.Encodings.Web.xml
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Text.Json.xml
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\SistemaHumus-cambios\Solution1\Negocio\bin\Debug\System.ValueTuple.xml
+D:\SistemaHumus-cambios\Solution1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\SistemaHumus-cambios\Solution1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\SistemaHumus-cambios\Solution1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\SistemaHumus-cambios\Solution1\Negocio\obj\Debug\Negocio.dll
+D:\SistemaHumus-cambios\Solution1\Negocio\obj\Debug\Negocio.pdb
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\Negocio.dll.config
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\Negocio.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\Negocio.pdb
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\Datos.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\EntityFramework.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\Microsoft.OData.Edm.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\SimpleCrypto.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Buffers.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Memory.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Numerics.Vectors.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Text.Encodings.Web.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Text.Json.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.ValueTuple.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\Datos.pdb
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\Datos.dll.config
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\EntityFramework.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\Microsoft.OData.Edm.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Buffers.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Memory.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Numerics.Vectors.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Text.Encodings.Web.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Text.Json.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\bin\Debug\System.ValueTuple.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\obj\Debug\Negocio.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\Negocio\obj\Debug\Negocio.pdb

@@ -1,0 +1,452 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Editorial Humus</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="~/Recursos/Plantilla/assets/images/logo1.png">
+
+
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Recursos/PlantillaWeb/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/templatemo-finance-business.css">
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/owl.css">
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/estilos.css">
+
+    <!--
+
+    Finance Business TemplateMo
+
+    https://templatemo.com/tm-545-finance-business
+
+    -->
+</head>
+
+<body>
+
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- Header -->
+
+    <header class="">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="@Url.Action("Inicio", "Editorial")"><h2 style="color: #4DBB6D;">EDITORIAL HUMUS</h2></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Inicio", "Editorial")" style="color: black;">
+                                <i class="fa fa-home"> Inicio</i>
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Busqueda", "Editorial")" style="color: black;"><i class="fa fa-sliders">   Búsqueda Filtrada</a></i>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="@Url.Action("Titulos", "Editorial")" title="Libros" style="color:black"><i class="fa fa-book"> Libros</i> </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Noticias", "Editorial")" style="color: black;"><i class="fa fa-newspaper-o"> Noticias</a></i>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Contacto", "Editorial")" style="color: black;"><i class="fa fa-envelope"> Contáctenos</a></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Content -->
+    <div class="page-heading header-text">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="single-services">
+        <div class="container">
+
+            
+            @foreach(var item in ViewBag.LibroDetalle) { 
+            <div class="row" id="tabs">
+                <div class="col-md-4">
+                    <ul>
+                        <div _ngcontent-c2="" class="col-md-4" role="none">
+                            <div _ngcontent-c2="" class="row text-center" role="none">
+                                <div _ngcontent-c2="" class="col-md-12" role="img">
+                                    <img _ngcontent-c2="" class="b-b b-t b-r b-l b-solid b-grey cover" width="220" src="@item.Portada" alt="portada">
+                                </div>
+                            </div>
+                            
+                            <br>
+                            <div _ngcontent-c2="" class="row m-t-10" role="none">
+                                <div _ngcontent-c2="" class="col-md-12" role="button">
+                                    <!---->
+                                    <!----><a  _ngcontent-c2=""  class="btn bg-default bg-success btn-block text-white" style=" width: 220px" onclick="Addvistas(@item.IDlibro)" target="_blank" href="@item.Libro">
+                                        <span _ngcontent-c2="" class="pull-left m-r-15" style="margin-top: 2px">
+                                            <i _ngcontent-c2="" class="fa fa-tablet" aria-hidden="true" style="font-size: 18px"></i>
+                                        </span>
+                                        Leer en línea
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div _ngcontent-c2="" class="row m-t-5 m-b-5" role="none" style="margin-top:3%">
+                                <div _ngcontent-c2="" class="col-md-12" role="button">
+
+                                    <button _ngcontent-c2="" class="btn bg-default bg-success btn-block text-white" style="width: 220px" data-toggle="modal" data-target="#modal-default">
+                                        <span _ngcontent-c2="" class="pull-left m-r-15 m-t-5" style="margin-top: 2px">
+                                            <i _ngcontent-c2="" class="fa fa fa-quote-right" aria-hidden="true" style="font-size: 18px"></i>
+                                        </span>
+                                        Obtener cita
+                                    </button>
+
+                                </div>
+                            </div>
+
+                            <div _ngcontent-c2="" class="row m-t-5 m-b-5" role="none" style="margin-top:3%">
+                                <div _ngcontent-c2="" class="col-md-12" role="button">
+                                    <!----><a href="@item.Libro" download="@item.Titulo .pdf">
+                                        <button _ngcontent-c2="" class="btn bg-default bg-success btn-block text-white" style="width: 220px">
+                                            <span _ngcontent-c2="" class="pull-left m-r-15 m-t-5" style="margin-top: 2px">
+                                                <i _ngcontent-c2="" class="fa fa-download" aria-hidden="true" style="font-size: 18px"></i>
+                                            </span>
+                                            Descargar
+                                        </button>
+                                    </a>
+                                    <!---->
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="col-md-8">
+
+
+                    <div _ngcontent-c2="" class="col-md-12 bg-white flex-last flex-md-first" role="main" style="margin-left:-2%;margin-top:2%">
+                        <!---->
+                        <div _ngcontent-c2="" class="row b-b b-solid b-grey p-b-15" role="heading">
+                            <div _ngcontent-c2="" class="col-md-12" role="none">
+                                <h2 _ngcontent-c2="" class="no-margin p-t-15">
+                                   @item.Titulo
+                                </h2>
+                            </div>
+                          
+                        </div>
+                    </div>
+
+
+                    <div _ngcontent-c2="" class="row" role="none">
+                        <div _ngcontent-c2="" class="col-md-12 b-b b-solid b-grey p-t-10" role="none">
+                            <br><br> <h5 _ngcontent-c2="" class="ng-tns-c2-0" style="  color:  #2dbb99 ;">Información Bibliográfica</h5><br>
+                            <div _ngcontent-c2="" class="row m-t-20 m-b-10" role="none" style="margin-top:3%">
+                                <div _ngcontent-c2="" class="col-md-12" role="none">
+                                    <div _ngcontent-c2="" class="row form-group" role="textbox">
+                                        <label _ngcontent-c2="" class="col-md-4 control-label bold">Autores:</label>
+                                        <div _ngcontent-c2="" class="col-md-8 hint-text">
+                                            <span _ngcontent-c2="" class="ng-tns-c2-0" style=" color: #7d7574">
+
+
+                                                @{
+                                                    int cont1 = 0;
+
+                                                    foreach (var itema in ViewBag.Autores)
+                                                    {
+                                                        if (ViewBag.Autores.Count > 1)
+                                                        {
+                                                            if (cont1 == ViewBag.Autores.Count - 1)
+                                                            {
+                                                                <span>&</span>
+                                                            }
+
+                                                        }
+
+
+                                            <span> @itema.ApellidoPrimero @itema.PrimerNombre.,  </span>
+
+                                                        cont1++;
+
+
+                                                    }
+                                                }
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div _ngcontent-c2="" class="row form-group" role="textbox">
+                                        <!---->
+                                    </div>
+
+                                    <div _ngcontent-c2="" class="row form-group" role="textbox">
+                                        <label _ngcontent-c2="" class="col-md-4 control-label bold">ISBN:</label>
+                                        <div _ngcontent-c2="" class="col-md-8 hint-text" role="text" style=" color: #7d7574">
+                                            @item.CodigoISBN
+                                        </div>
+                                    </div>
+                                    <div _ngcontent-c2="" class="row form-group" role="textbox">
+                                        <label _ngcontent-c2="" class="col-md-4 control-label bold">Publicación:</label>
+                                        <div _ngcontent-c2="" class="col-md-8 hint-text" role="text" style=" color: #7d7574">
+                                            @item.Fechapublica
+                                        </div>
+                                    </div>
+                                    <div _ngcontent-c2="" class="row form-group" role="textbox">
+                                        <label _ngcontent-c2="" class="col-md-4 control-label bold">Editorial:</label>
+                                        <div _ngcontent-c2="" class="col-md-8 hint-text" role="text" style=" color: #7d7574">
+                                            @item.Editorial
+                                        </div>
+                                    </div>
+                                    <div _ngcontent-c2="" class="row form-group" role="textbox">
+                                        <label _ngcontent-c2="" class="col-md-4 control-label bold">Vistas:</label>
+                                        <div _ngcontent-c2="" class="col-md-8 hint-text" role="text" style=" color: #7d7574">
+
+                                            @{
+                                                var letra = "";
+                                                float r = 0;
+
+                                                if (item.Vistas >= 1 && item.Vistas <= 999)
+                                                {
+                                                    r = item.Vistas;
+                                                    letra = "";
+                                                }
+                                                if (@item.Vistas >= 1000 && @item.Vistas <= 9999)
+                                                {
+                                                    r = (@item.Vistas / 1000);
+                                                    letra = "K";
+                                                }
+                                                if (@item.Vistas >= 1000000)
+                                                {
+                                                    r = (@item.Vistas / 1000000);
+                                                    letra = "M";
+                                                }
+
+
+                                               <span> @r </span><span> @letra</span> 
+                                            }
+
+
+                                        </div>
+                                    </div>
+                                    <div _ngcontent-c2="" class="row form-group" role="textbox">
+                                        <label _ngcontent-c2="" class="col-md-4 control-label bold">Carrera:</label>
+                                        <div _ngcontent-c2="" class="col-md-8 hint-text" role="text" style=" color: #7d7574">
+
+                                            @item.Carrera
+                                        </div>
+                                    </div>
+                                    <!---->
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----><!---->
+                    <!---->
+
+
+                </div>
+            </div>
+        
+        
+        }
+        </div>
+
+
+        <!-- .modal-ver cita de libro -->
+        <div class="modal fade " id="modal-default">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p class="modal-title font-16 text-blue"><b>Referencia bibliográfica</b></p>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group row text-muted">
+
+                            <p class="text-primary" style="margin-left:2%">APA 7ma edición</p>
+                            <div class="col-sm-12">
+
+                                @{
+                                    int cont = 0;
+
+                                    foreach (var itema in ViewBag.Autores)
+                                    {
+                                        if (ViewBag.Autores.Count > 1)
+                                        {
+                                            if (cont == ViewBag.Autores.Count - 1)
+                                            {
+                                                <span>&</span>
+                                            }
+
+                                        }
+
+
+                                        <span> @itema.ApellidoPrimero, @itema.inicialnombre.,</span>
+
+                                        cont++;
+
+
+                                    }
+                                    foreach (var item in ViewBag.CitaLibro)
+                                    {
+                                        <span> (@item.Fechapublica). @item.Titulo. @item.Editorial. @item.UrlAcceso </span>
+
+                                    }}
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Cerrar</button>
+
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+   
+    
+    
+    </div>
+  
+        <br>  <br>
+
+
+
+
+        <!-- Footer Starts Here -->
+
+
+        <div class="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <small class="col-md-12 text-light">
+
+
+                            @{
+                                string date = DateTime.Now.ToString("MM-dd-yyyy");
+                                string year = date.Substring(6, 4);
+
+                            }
+
+                            <img src="~/ImagesWeb/logo.png" alt="user" width="100"> Coordinación General de Investigación - Editorial Humus. © @year.
+
+
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="~/Recursos/PlantillaWeb/vendor/jquery/jquery.min.js"></script>
+        <script src="~/Recursos/PlantillaWeb/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+        <!-- Additional Scripts -->
+        <script src="~/Recursos/PlantillaWeb/assets/js/custom.js"></script>
+        <script src="~/Recursos/PlantillaWeb/assets/js/owl.js"></script>
+        <script src="~/Recursos/PlantillaWeb/assets/js/slick.js"></script>
+        <script src="~/Recursos/PlantillaWeb/assets/js/accordions.js"></script>
+
+        <script language="text/Javascript">
+
+            cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+            function clearField(t) {                   //declaring the array outside of the
+                if (!cleared[t.id]) {                      // function makes it static and global
+                    cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                    t.value = '';         // with more chance of typos
+                    t.style.color = '#fff';
+                }
+            }
+        </script>
+
+        <script>
+
+
+            function Addvistas(IDlibro) {
+
+
+            var data = {
+                'lib': IDlibro
+
+
+            }
+            $.ajax({
+
+                url: "@Url.Action("AgregarVista", "Editorial")",
+                type: 'POST',
+                dataType: 'json',
+                data: data,
+                success: function (obj) {
+                    //window.location.href = ""+libro+"";
+
+
+
+                }
+
+            })
+
+
+
+        }
+
+
+
+        </script>
+
+</body>
+</html>

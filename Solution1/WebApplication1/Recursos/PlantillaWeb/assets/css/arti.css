@@ -1,0 +1,33 @@
+/*articulo*/
+@media (min-width: 320px) and (max-width: 768px) and (orientation: landscape) { 
+      main{
+	width: 1000px;
+	height: auto;
+}
+
+/*Poner articulo*/
+#articulo{
+	width: 1000px;
+	height: auto;
+
+	
+
+	
+}
+
+#articulo h2{
+	
+	font-size: 30px;
+	font-family: Arial Rounded MT Bold;
+}
+#articulo img{
+	width: 450px;
+	height: 300px;
+	margin: 10px;
+	border-radius: 10px;
+}
+#articulo p{
+	text-align: justify;
+	padding: 5px;
+}
+}

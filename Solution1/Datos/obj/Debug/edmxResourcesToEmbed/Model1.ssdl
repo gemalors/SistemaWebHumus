@@ -1,0 +1,2165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AsignacionCuestionario">
+    <Key>
+      <PropertyRef Name="IDAsignacionCuestionario" />
+    </Key>
+    <Property Name="IDAsignacionCuestionario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fechafinalizado" Type="nvarchar" MaxLength="50" />
+    <Property Name="Idcuestionario" Type="int" />
+    <Property Name="Eliminado" Type="bit" />
+    <Property Name="Idpersona" Type="int" />
+    <Property Name="Finalizado" Type="bit" />
+    <Property Name="FechaAsignacion" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Autores">
+    <Key>
+      <PropertyRef Name="IDautor" />
+    </Key>
+    <Property Name="IDautor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PrimerNombre" Type="nvarchar" MaxLength="250" />
+    <Property Name="ApellidoPrimero" Type="nvarchar" MaxLength="250" />
+    <Property Name="Cedula" Type="nvarchar" MaxLength="250" />
+    <Property Name="Email" Type="nvarchar" MaxLength="250" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="250" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="250" />
+    <Property Name="Eliminautor" Type="bit" />
+    <Property Name="Filial" Type="nvarchar" MaxLength="250" />
+    <Property Name="ApellidoSegundo" Type="nvarchar" MaxLength="250" />
+    <Property Name="SegundoNombre" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Carreras">
+    <Key>
+      <PropertyRef Name="IDcarrera" />
+    </Key>
+    <Property Name="IDcarrera" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Carrera" Type="nvarchar(max)" />
+    <Property Name="Eliminado" Type="bit" />
+  </EntityType>
+  <EntityType Name="Categorias">
+    <Key>
+      <PropertyRef Name="IDcategoria" />
+    </Key>
+    <Property Name="IDcategoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Detallecategoria" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Eliminacategoria" Type="bit" />
+  </EntityType>
+  <EntityType Name="Comentarios">
+    <Key>
+      <PropertyRef Name="IDcomentario" />
+    </Key>
+    <Property Name="IDcomentario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Comentario" Type="text" />
+    <Property Name="Eliminacoment" Type="bit" />
+    <Property Name="Idproceso" Type="int" />
+    <Property Name="Idusuario" Type="int" />
+    <Property Name="Fecha" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Consultas">
+    <Key>
+      <PropertyRef Name="IDConsulta" />
+    </Key>
+    <Property Name="IDConsulta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DetalleConsulta" Type="nvarchar(max)" />
+    <Property Name="Identificador" Type="int" />
+    <Property Name="Grafico" Type="nvarchar" MaxLength="250" />
+    <Property Name="Parametros" Type="bit" />
+    <Property Name="Idparametro" Type="int" />
+  </EntityType>
+  <EntityType Name="Cuestionarios">
+    <Key>
+      <PropertyRef Name="IDcuestionario" />
+    </Key>
+    <Property Name="IDcuestionario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
+    <Property Name="Estado" Type="bit" />
+    <Property Name="FechaAsignado" Type="nvarchar" MaxLength="50" />
+    <Property Name="Eliminado" Type="bit" />
+    <Property Name="Idpreg" Type="int" />
+    <Property Name="Fechacreado" Type="nvarchar" MaxLength="50" />
+    <Property Name="TipoCuestionario" Type="nvarchar" MaxLength="50" />
+    <Property Name="UsuarioAsignado" Type="nvarchar" MaxLength="50" />
+    <Property Name="Finalizado" Type="bit" />
+    <Property Name="NumeroCuestionario" Type="int" />
+  </EntityType>
+  <EntityType Name="DatosContactoEditorial">
+    <Key>
+      <PropertyRef Name="IDContactoEditorial" />
+    </Key>
+    <Property Name="IDContactoEditorial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="250" />
+    <Property Name="Horario" Type="nvarchar" MaxLength="250" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="250" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Documentos">
+    <Key>
+      <PropertyRef Name="IDdocumento" />
+    </Key>
+    <Property Name="IDdocumento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Documento" Type="nvarchar(max)" />
+    <Property Name="Detalledocu" Type="nvarchar(max)" />
+    <Property Name="Idproceso" Type="int" />
+    <Property Name="Visibleautor" Type="bit" />
+    <Property Name="Emisor" Type="nvarchar" MaxLength="250" />
+    <Property Name="Fecha" Type="nvarchar" MaxLength="50" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="50" />
+    <Property Name="Visibleadmin" Type="bit" />
+    <Property Name="Idemisor" Type="int" />
+    <Property Name="Visiblevaluador" Type="bit" />
+    <Property Name="Idrequerimiento" Type="int" />
+    <Property Name="DocObligatorio" Type="bit" />
+  </EntityType>
+  <EntityType Name="EstadosTiposproceso">
+    <Key>
+      <PropertyRef Name="IDEstadosTiposproceso" />
+    </Key>
+    <Property Name="IDEstadosTiposproceso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdentificadorEstados" Type="int" Nullable="false" />
+    <Property Name="DetalleEstados" Type="nvarchar" MaxLength="250" />
+    <Property Name="EliminadoEstados" Type="bit" />
+    <Property Name="Idtipoproceso" Type="int" />
+    <Property Name="VRequerimientosAutor" Type="bit" />
+    <Property Name="VEnviarProcesoRevision" Type="bit" />
+    <Property Name="VEnviarRevisionReversado" Type="bit" />
+    <Property Name="VRequerimientosAdmin" Type="bit" />
+    <Property Name="VEnviarResultados" Type="bit" />
+    <Property Name="VIniciarSiguienteProceso" Type="bit" />
+    <Property Name="VAsignarEvaluadores" Type="bit" />
+    <Property Name="VEnviarEvaluacionPares" Type="bit" />
+    <Property Name="VPublicacionLibro" Type="bit" />
+  </EntityType>
+  <EntityType Name="Formatos">
+    <Key>
+      <PropertyRef Name="IDformato" />
+    </Key>
+    <Property Name="IDformato" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Archivo" Type="nvarchar(max)" />
+    <Property Name="Detallearchivo" Type="nvarchar(max)" />
+    <Property Name="Idtipoformato" Type="int" />
+    <Property Name="Eliminaform" Type="bit" />
+    <Property Name="DescripcionFormato" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Imagenes">
+    <Key>
+      <PropertyRef Name="IDimagen" />
+    </Key>
+    <Property Name="IDimagen" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imagendetalle" Type="nvarchar" MaxLength="50" />
+    <Property Name="Eliminado" Type="bit" />
+    <Property Name="Idnoticia" Type="int" />
+  </EntityType>
+  <EntityType Name="InformacionEditorial">
+    <Key>
+      <PropertyRef Name="IDinformacion" />
+    </Key>
+    <Property Name="IDinformacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TituloInformacion" Type="nvarchar(max)" />
+    <Property Name="EnunciadoInformacion" Type="nvarchar(max)" />
+    <Property Name="ImagenInfo" Type="nvarchar(max)" />
+    <Property Name="UrlInfo" Type="nvarchar(max)" />
+    <Property Name="EliminadoInfo" Type="bit" />
+    <Property Name="Pagina" Type="int" />
+  </EntityType>
+  <EntityType Name="Libros">
+    <Key>
+      <PropertyRef Name="IDlibro" />
+    </Key>
+    <Property Name="IDlibro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titulo" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="CodigoISBN" Type="nvarchar" MaxLength="250" />
+    <Property Name="Fechapublica" Type="nvarchar" MaxLength="50" />
+    <Property Name="Editorial" Type="nvarchar" MaxLength="250" />
+    <Property Name="Libro" Type="nvarchar(max)" />
+    <Property Name="Portada" Type="nvarchar(max)" />
+    <Property Name="Eliminalibros" Type="bit" />
+    <Property Name="Idcategoria" Type="int" />
+    <Property Name="Idusuario" Type="int" />
+    <Property Name="Estado" Type="bit" />
+    <Property Name="ProcesoL" Type="nvarchar" MaxLength="250" />
+    <Property Name="ProgresoL" Type="int" />
+    <Property Name="EstadoL" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdprocesoL" Type="int" />
+    <Property Name="UrlAcceso" Type="nvarchar(max)" />
+    <Property Name="Archivado" Type="bit" />
+    <Property Name="Creado" Type="nvarchar" MaxLength="50" />
+    <Property Name="Actualizado" Type="nvarchar" MaxLength="50" />
+    <Property Name="Aceptado" Type="bit" />
+    <Property Name="Idcarrera" Type="int" />
+    <Property Name="FechaPublicacion" Type="datetime" />
+    <Property Name="Externo" Type="bit" />
+  </EntityType>
+  <EntityType Name="MensajesTiposproceso">
+    <Key>
+      <PropertyRef Name="IDMensajeTiposproceso" />
+    </Key>
+    <Property Name="IDMensajeTiposproceso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescripcionMensaje" Type="nvarchar(max)" />
+    <Property Name="VisibleMensaje" Type="nvarchar" MaxLength="50" />
+    <Property Name="EliminadoMensaje" Type="bit" />
+    <Property Name="Idestados" Type="int" />
+  </EntityType>
+  <EntityType Name="Noticias">
+    <Key>
+      <PropertyRef Name="IDNoticia" />
+    </Key>
+    <Property Name="IDNoticia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DetalleNoticia" Type="nvarchar(max)" />
+    <Property Name="DescripcionNoticia" Type="nvarchar(max)" />
+    <Property Name="EliminaNoticia" Type="bit" />
+    <Property Name="ImagenNoticia" Type="nvarchar(max)" />
+    <Property Name="Titulonoticia" Type="nvarchar(max)" />
+    <Property Name="Fechapublica" Type="nvarchar" MaxLength="50" />
+    <Property Name="Estado" Type="bit" />
+    <Property Name="Fechapublicacion" Type="datetime" />
+    <Property Name="Urlacceso" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Notificacion">
+    <Key>
+      <PropertyRef Name="IDnotificacion" />
+    </Key>
+    <Property Name="IDnotificacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Notificacion" Type="nvarchar(max)" />
+    <Property Name="Estado" Type="bit" />
+    <Property Name="UrlNotificacion" Type="nvarchar(max)" />
+    <Property Name="Visible" Type="nvarchar" MaxLength="50" />
+    <Property Name="Idusuario" Type="int" />
+    <Property Name="Idtiponotificacion" Type="int" />
+    <Property Name="Eliminado" Type="bit" />
+    <Property Name="Fechanotifi" Type="nvarchar" MaxLength="50" />
+    <Property Name="DetalleNotificacion" Type="nvarchar" MaxLength="250" />
+    <Property Name="General" Type="bit" />
+    <Property Name="Publicado" Type="bit" />
+  </EntityType>
+  <EntityType Name="ObservacionesProceso">
+    <Key>
+      <PropertyRef Name="IDObservacion" />
+    </Key>
+    <Property Name="IDObservacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Detalleobservacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="Descripcionobservacion" Type="nvarchar(max)" />
+    <Property Name="Eliminaobservacion" Type="bit" />
+    <Property Name="Idproceso" Type="int" />
+    <Property Name="Emisor" Type="nvarchar" MaxLength="250" />
+    <Property Name="Titulo" Type="nvarchar" MaxLength="250" />
+    <Property Name="Fechaobservacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="VisibleAutor" Type="bit" />
+    <Property Name="EstadoObservacion" Type="nvarchar" MaxLength="50" />
+    <Property Name="Idemisor" Type="int" />
+    <Property Name="RespuestaProceso" Type="bit" />
+    <Property Name="Idrequerimiento" Type="int" />
+    <Property Name="Obligatoria" Type="bit" />
+  </EntityType>
+  <EntityType Name="OpcionPreguntaSeleccion">
+    <Key>
+      <PropertyRef Name="IDopcionPreguntaSeleccion" />
+    </Key>
+    <Property Name="IDopcionPreguntaSeleccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Idpregunta" Type="int" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
+    <Property Name="Eliminado" Type="bit" />
+    <Property Name="Identificador" Type="int" />
+  </EntityType>
+  <EntityType Name="OpcionRespuesta">
+    <Key>
+      <PropertyRef Name="IDrespuestaopcion" />
+    </Key>
+    <Property Name="IDrespuestaopcion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
+    <Property Name="Eliminado" Type="bit" />
+    <Property Name="Idpreg" Type="int" />
+  </EntityType>
+  <EntityType Name="Periodos">
+    <Key>
+      <PropertyRef Name="IDperiodo" />
+    </Key>
+    <Property Name="IDperiodo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Detalleperiodo" Type="nvarchar(max)" />
+    <Property Name="Ordenperiodo" Type="int" />
+    <Property Name="Fechainicio" Type="datetime" />
+    <Property Name="Fechafin" Type="datetime" />
+    <Property Name="Identificador" Type="int" />
+  </EntityType>
+  <EntityType Name="PreguntaAbierta">
+    <Key>
+      <PropertyRef Name="IDpreguntaAbierta" />
+    </Key>
+    <Property Name="IDpreguntaAbierta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Idpregunta" Type="int" />
+    <Property Name="Eliminado" Type="bit" />
+    <Property Name="Idtipodato" Type="int" />
+    <Property Name="EspecificarRango" Type="bit" />
+    <Property Name="ValorMax" Type="nvarchar" MaxLength="500" />
+    <Property Name="ValorMin" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="PreguntaObservaciones">
+    <Key>
+      <PropertyRef Name="IDpreguntaObservaciones" />
+    </Key>
+    <Property Name="IDpreguntaObservaciones" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Idpregunta" Type="int" />
+    <Property Name="Detallepregobservacion" Type="nvarchar(max)" />
+    <Property Name="Ordenobservacion" Type="int" />
+    <Property Name="Eliminado" Type="bit" />
+    <Property Name="Leyendainferior" Type="nvarchar(max)" />
+    <Property Name="Respuestas" Type="int" />
+  </EntityType>
+  <EntityType Name="Preguntas">
+    <Key>
+      <PropertyRef Name="IDpregunta" />
+    </Key>
+    <Property Name="IDpregunta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Idtipopregunta" Type="int" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
+    <Property Name="Obligatorio" Type="bit" />
+    <Property Name="Orden" Type="int" />
+    <Property Name="Eliminado" Type="bit" />
+    <Property Name="LeyendaSuperior" Type="nvarchar(max)" />
+    <Property Name="LeyendaLateral" Type="nvarchar(max)" />
+    <Property Name="Idcuestionario" Type="int" />
+    <Property Name="TiposOpciones" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdpregAnterior" Type="int" />
+  </EntityType>
+  <EntityType Name="Procesos">
+    <Key>
+      <PropertyRef Name="IDproceso" />
+    </Key>
+    <Property Name="IDproceso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="250" />
+    <Property Name="Eliminaproceso" Type="bit" />
+    <Property Name="Idlibro" Type="int" />
+    <Property Name="Idtipoproceso" Type="int" />
+    <Property Name="InicioFecha" Type="nvarchar" MaxLength="50" />
+    <Property Name="ActualizadoFecha" Type="nvarchar" MaxLength="50" />
+    <Property Name="Idprocanterior" Type="int" />
+    <Property Name="Opresultado" Type="int" />
+    <Property Name="IdentificaEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="RequerimientosProcesos">
+    <Key>
+      <PropertyRef Name="IDrequerimiento" />
+    </Key>
+    <Property Name="IDrequerimiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Detallerequerimiento" Type="nvarchar" MaxLength="250" />
+    <Property Name="Idtipoproceso" Type="int" />
+    <Property Name="Eliminarequerimiento" Type="bit" />
+    <Property Name="Descripcionrequerimiento" Type="nvarchar" MaxLength="250" />
+    <Property Name="Emisor" Type="nvarchar" MaxLength="50" />
+    <Property Name="respuesta" Type="nvarchar" MaxLength="50" />
+    <Property Name="Idtipodato" Type="int" />
+    <Property Name="Visibleautor" Type="bit" />
+    <Property Name="Visibleevaluador" Type="bit" />
+    <Property Name="Visibleadmin" Type="bit" />
+    <Property Name="Obligatorio" Type="bit" />
+    <Property Name="ResultadoProceso" Type="bit" />
+  </EntityType>
+  <EntityType Name="RespuestaRequerimiento">
+    <Key>
+      <PropertyRef Name="IDrespuestaRequerimiento" />
+    </Key>
+    <Property Name="IDrespuestaRequerimiento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DetalleResp" Type="nvarchar" MaxLength="250" />
+    <Property Name="ProgresoResp" Type="int" />
+    <Property Name="Idrequerimiento" Type="int" />
+    <Property Name="Eliminado" Type="bit" />
+  </EntityType>
+  <EntityType Name="Respuestas">
+    <Key>
+      <PropertyRef Name="IDrespuesta" />
+    </Key>
+    <Property Name="IDrespuesta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Idpregunta" Type="int" />
+    <Property Name="IdrespuestaLogica" Type="int" />
+    <Property Name="DescripcionRespuestaAbierta" Type="nvarchar(max)" />
+    <Property Name="Idusuario" Type="int" />
+    <Property Name="Idopcionpreg" Type="int" />
+    <Property Name="Idcuestionario" Type="int" />
+    <Property Name="Idasignacion" Type="int" />
+    <Property Name="Titulorespabierta" Type="nvarchar" MaxLength="250" />
+    <Property Name="Idobservacionpreg" Type="int" />
+  </EntityType>
+  <EntityType Name="SlidersEditorial">
+    <Key>
+      <PropertyRef Name="IDSlider" />
+    </Key>
+    <Property Name="IDSlider" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titulo" Type="nvarchar(max)" />
+    <Property Name="Enunciado" Type="nvarchar(max)" />
+    <Property Name="ImagenSlider" Type="nvarchar(max)" />
+    <Property Name="Urlslider" Type="nvarchar(max)" />
+    <Property Name="EliminadoSlider" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Tablainter1">
+    <Key>
+      <PropertyRef Name="IDtablainter" />
+    </Key>
+    <Property Name="IDtablainter" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Idautor" Type="int" />
+    <Property Name="Idlibro" Type="int" />
+    <Property Name="EliminadoT1" Type="bit" />
+  </EntityType>
+  <EntityType Name="Tablainter2">
+    <Key>
+      <PropertyRef Name="IDtablainter2" />
+    </Key>
+    <Property Name="IDtablainter2" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Idevaluador" Type="int" />
+    <Property Name="EliminadoT2" Type="bit" />
+    <Property Name="Idproceso" Type="int" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdasignacionEvaluacion" Type="int" />
+    <Property Name="NumEvaluador" Type="int" />
+  </EntityType>
+  <EntityType Name="TipodeDato">
+    <Key>
+      <PropertyRef Name="IDtipodato" />
+    </Key>
+    <Property Name="IDtipodato" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Identificador" Type="int" />
+    <Property Name="TipoHtml" Type="nvarchar" MaxLength="500" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="500" />
+    <Property Name="Eliminado" Type="bit" />
+  </EntityType>
+  <EntityType Name="Tipoformatos">
+    <Key>
+      <PropertyRef Name="IDtipoformato" />
+    </Key>
+    <Property Name="IDtipoformato" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Detalletipoform" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Eliminatipoform" Type="bit" />
+  </EntityType>
+  <EntityType Name="TipoNotificacion">
+    <Key>
+      <PropertyRef Name="IDtipoNotificacion" />
+    </Key>
+    <Property Name="IDtipoNotificacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DetalleTipoNotificacion" Type="nvarchar" MaxLength="250" />
+    <Property Name="Icono" Type="nvarchar" MaxLength="250" />
+    <Property Name="Eliminado" Type="bit" />
+  </EntityType>
+  <EntityType Name="TipoPregunta">
+    <Key>
+      <PropertyRef Name="IDtipopregunta" />
+    </Key>
+    <Property Name="IDtipopregunta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Identificador" Type="int" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="500" />
+    <Property Name="Eliminado" Type="bit" />
+  </EntityType>
+  <EntityType Name="Tiposproceso">
+    <Key>
+      <PropertyRef Name="IDtiposprocesos" />
+    </Key>
+    <Property Name="IDtiposprocesos" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Numeroprocesos" Type="int" />
+    <Property Name="Detalletipospro" Type="nvarchar" MaxLength="250" />
+    <Property Name="Progreso" Type="int" />
+    <Property Name="Eliminatipospro" Type="bit" />
+    <Property Name="Duracionproceso" Type="nvarchar" MaxLength="50" />
+    <Property Name="Identificador" Type="int" />
+    <Property Name="Descripciontipoproceso" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Tiposusuarios">
+    <Key>
+      <PropertyRef Name="IDtipousuario" />
+    </Key>
+    <Property Name="IDtipousuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Detalleusuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Eliminatipouser" Type="bit" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="IDusuario" />
+    </Key>
+    <Property Name="IDusuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PrimerNombre" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ApellidoPrimero" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Salt" Type="nvarchar(max)" />
+    <Property Name="Foto" Type="nvarchar(max)" />
+    <Property Name="Idtipousuario" Type="int" />
+    <Property Name="Eliminauser" Type="bit" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="50" />
+    <Property Name="Direccion" Type="nvarchar(max)" />
+    <Property Name="Filial" Type="nvarchar" MaxLength="250" />
+    <Property Name="Token_recovery" Type="nvarchar(max)" />
+    <Property Name="Cedula" Type="nchar" MaxLength="50" />
+    <Property Name="Estado" Type="bit" />
+    <Property Name="Librosproceso" Type="int" />
+    <Property Name="Librosfinalizados" Type="int" />
+    <Property Name="ApellidoSegundo" Type="nvarchar" MaxLength="250" />
+    <Property Name="SegundoNombre" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="VistasLibros">
+    <Key>
+      <PropertyRef Name="IDvistas" />
+    </Key>
+    <Property Name="IDvistas" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IPvistas" Type="nvarchar(max)" />
+    <Property Name="Fechavistas" Type="datetime" />
+    <Property Name="Idlibro" Type="int" />
+  </EntityType>
+  <EntityType Name="Years">
+    <Key>
+      <PropertyRef Name="IDyear" />
+    </Key>
+    <Property Name="IDyear" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fechayear" Type="datetime" />
+    <Property Name="year" Type="int" />
+  </EntityType>
+  <Association Name="FK_AsignacionCuestionario_Cuestionarios">
+    <End Role="Cuestionarios" Type="Self.Cuestionarios" Multiplicity="0..1" />
+    <End Role="AsignacionCuestionario" Type="Self.AsignacionCuestionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cuestionarios">
+        <PropertyRef Name="IDcuestionario" />
+      </Principal>
+      <Dependent Role="AsignacionCuestionario">
+        <PropertyRef Name="Idcuestionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AsignacionCuestionario_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="AsignacionCuestionario" Type="Self.AsignacionCuestionario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IDusuario" />
+      </Principal>
+      <Dependent Role="AsignacionCuestionario">
+        <PropertyRef Name="Idpersona" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comentarios_Procesos">
+    <End Role="Procesos" Type="Self.Procesos" Multiplicity="0..1" />
+    <End Role="Comentarios" Type="Self.Comentarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Procesos">
+        <PropertyRef Name="IDproceso" />
+      </Principal>
+      <Dependent Role="Comentarios">
+        <PropertyRef Name="Idproceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comentarios_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Comentarios" Type="Self.Comentarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IDusuario" />
+      </Principal>
+      <Dependent Role="Comentarios">
+        <PropertyRef Name="Idusuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documentos_Procesos">
+    <End Role="Procesos" Type="Self.Procesos" Multiplicity="0..1" />
+    <End Role="Documentos" Type="Self.Documentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Procesos">
+        <PropertyRef Name="IDproceso" />
+      </Principal>
+      <Dependent Role="Documentos">
+        <PropertyRef Name="Idproceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentosProcesos_Tiposproceso">
+    <End Role="Tiposproceso" Type="Self.Tiposproceso" Multiplicity="0..1" />
+    <End Role="RequerimientosProcesos" Type="Self.RequerimientosProcesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tiposproceso">
+        <PropertyRef Name="IDtiposprocesos" />
+      </Principal>
+      <Dependent Role="RequerimientosProcesos">
+        <PropertyRef Name="Idtipoproceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EstadosTiposproceso_Tiposproceso">
+    <End Role="Tiposproceso" Type="Self.Tiposproceso" Multiplicity="0..1" />
+    <End Role="EstadosTiposproceso" Type="Self.EstadosTiposproceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tiposproceso">
+        <PropertyRef Name="IDtiposprocesos" />
+      </Principal>
+      <Dependent Role="EstadosTiposproceso">
+        <PropertyRef Name="Idtipoproceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Formatos_Tipoformatos">
+    <End Role="Tipoformatos" Type="Self.Tipoformatos" Multiplicity="0..1" />
+    <End Role="Formatos" Type="Self.Formatos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipoformatos">
+        <PropertyRef Name="IDtipoformato" />
+      </Principal>
+      <Dependent Role="Formatos">
+        <PropertyRef Name="Idtipoformato" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Imagenes_Noticias">
+    <End Role="Noticias" Type="Self.Noticias" Multiplicity="0..1" />
+    <End Role="Imagenes" Type="Self.Imagenes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Noticias">
+        <PropertyRef Name="IDNoticia" />
+      </Principal>
+      <Dependent Role="Imagenes">
+        <PropertyRef Name="Idnoticia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Libros_Carreras">
+    <End Role="Carreras" Type="Self.Carreras" Multiplicity="0..1" />
+    <End Role="Libros" Type="Self.Libros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Carreras">
+        <PropertyRef Name="IDcarrera" />
+      </Principal>
+      <Dependent Role="Libros">
+        <PropertyRef Name="Idcarrera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Libros_Categorias">
+    <End Role="Categorias" Type="Self.Categorias" Multiplicity="0..1" />
+    <End Role="Libros" Type="Self.Libros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorias">
+        <PropertyRef Name="IDcategoria" />
+      </Principal>
+      <Dependent Role="Libros">
+        <PropertyRef Name="Idcategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Libros_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Libros" Type="Self.Libros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IDusuario" />
+      </Principal>
+      <Dependent Role="Libros">
+        <PropertyRef Name="Idusuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MensajesTiposproceso_EstadosTiposproceso">
+    <End Role="EstadosTiposproceso" Type="Self.EstadosTiposproceso" Multiplicity="0..1" />
+    <End Role="MensajesTiposproceso" Type="Self.MensajesTiposproceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadosTiposproceso">
+        <PropertyRef Name="IDEstadosTiposproceso" />
+      </Principal>
+      <Dependent Role="MensajesTiposproceso">
+        <PropertyRef Name="Idestados" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notificacion_TipoNotificacion">
+    <End Role="TipoNotificacion" Type="Self.TipoNotificacion" Multiplicity="0..1" />
+    <End Role="Notificacion" Type="Self.Notificacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoNotificacion">
+        <PropertyRef Name="IDtipoNotificacion" />
+      </Principal>
+      <Dependent Role="Notificacion">
+        <PropertyRef Name="Idtiponotificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObservacionesProceso_Procesos">
+    <End Role="Procesos" Type="Self.Procesos" Multiplicity="0..1" />
+    <End Role="ObservacionesProceso" Type="Self.ObservacionesProceso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Procesos">
+        <PropertyRef Name="IDproceso" />
+      </Principal>
+      <Dependent Role="ObservacionesProceso">
+        <PropertyRef Name="Idproceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OpcionPreguntaSeleccion_Preguntas">
+    <End Role="Preguntas" Type="Self.Preguntas" Multiplicity="0..1" />
+    <End Role="OpcionPreguntaSeleccion" Type="Self.OpcionPreguntaSeleccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Preguntas">
+        <PropertyRef Name="IDpregunta" />
+      </Principal>
+      <Dependent Role="OpcionPreguntaSeleccion">
+        <PropertyRef Name="Idpregunta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OpcionRespuesta_Preguntas">
+    <End Role="Preguntas" Type="Self.Preguntas" Multiplicity="0..1" />
+    <End Role="OpcionRespuesta" Type="Self.OpcionRespuesta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Preguntas">
+        <PropertyRef Name="IDpregunta" />
+      </Principal>
+      <Dependent Role="OpcionRespuesta">
+        <PropertyRef Name="Idpreg" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PreguntaAbierta_Preguntas">
+    <End Role="Preguntas" Type="Self.Preguntas" Multiplicity="0..1" />
+    <End Role="PreguntaAbierta" Type="Self.PreguntaAbierta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Preguntas">
+        <PropertyRef Name="IDpregunta" />
+      </Principal>
+      <Dependent Role="PreguntaAbierta">
+        <PropertyRef Name="Idpregunta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PreguntaAbierta_TipodeDato">
+    <End Role="TipodeDato" Type="Self.TipodeDato" Multiplicity="0..1" />
+    <End Role="PreguntaAbierta" Type="Self.PreguntaAbierta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipodeDato">
+        <PropertyRef Name="IDtipodato" />
+      </Principal>
+      <Dependent Role="PreguntaAbierta">
+        <PropertyRef Name="Idtipodato" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PreguntaObservaciones_Preguntas">
+    <End Role="Preguntas" Type="Self.Preguntas" Multiplicity="0..1" />
+    <End Role="PreguntaObservaciones" Type="Self.PreguntaObservaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Preguntas">
+        <PropertyRef Name="IDpregunta" />
+      </Principal>
+      <Dependent Role="PreguntaObservaciones">
+        <PropertyRef Name="Idpregunta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Preguntas_Cuestionarios">
+    <End Role="Cuestionarios" Type="Self.Cuestionarios" Multiplicity="0..1" />
+    <End Role="Preguntas" Type="Self.Preguntas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cuestionarios">
+        <PropertyRef Name="IDcuestionario" />
+      </Principal>
+      <Dependent Role="Preguntas">
+        <PropertyRef Name="Idcuestionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Preguntas_TipoPregunta">
+    <End Role="TipoPregunta" Type="Self.TipoPregunta" Multiplicity="0..1" />
+    <End Role="Preguntas" Type="Self.Preguntas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPregunta">
+        <PropertyRef Name="IDtipopregunta" />
+      </Principal>
+      <Dependent Role="Preguntas">
+        <PropertyRef Name="Idtipopregunta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Procesos_Libros">
+    <End Role="Libros" Type="Self.Libros" Multiplicity="0..1" />
+    <End Role="Procesos" Type="Self.Procesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Libros">
+        <PropertyRef Name="IDlibro" />
+      </Principal>
+      <Dependent Role="Procesos">
+        <PropertyRef Name="Idlibro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Procesos_Tiposproceso">
+    <End Role="Tiposproceso" Type="Self.Tiposproceso" Multiplicity="0..1" />
+    <End Role="Procesos" Type="Self.Procesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tiposproceso">
+        <PropertyRef Name="IDtiposprocesos" />
+      </Principal>
+      <Dependent Role="Procesos">
+        <PropertyRef Name="Idtipoproceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequerimientosProcesos_TipodeDato">
+    <End Role="TipodeDato" Type="Self.TipodeDato" Multiplicity="0..1" />
+    <End Role="RequerimientosProcesos" Type="Self.RequerimientosProcesos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipodeDato">
+        <PropertyRef Name="IDtipodato" />
+      </Principal>
+      <Dependent Role="RequerimientosProcesos">
+        <PropertyRef Name="Idtipodato" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RespuestaRequerimiento_RequerimientosProcesos">
+    <End Role="RequerimientosProcesos" Type="Self.RequerimientosProcesos" Multiplicity="0..1" />
+    <End Role="RespuestaRequerimiento" Type="Self.RespuestaRequerimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RequerimientosProcesos">
+        <PropertyRef Name="IDrequerimiento" />
+      </Principal>
+      <Dependent Role="RespuestaRequerimiento">
+        <PropertyRef Name="Idrequerimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Respuestas_AsignacionCuestionario">
+    <End Role="AsignacionCuestionario" Type="Self.AsignacionCuestionario" Multiplicity="0..1" />
+    <End Role="Respuestas" Type="Self.Respuestas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AsignacionCuestionario">
+        <PropertyRef Name="IDAsignacionCuestionario" />
+      </Principal>
+      <Dependent Role="Respuestas">
+        <PropertyRef Name="Idasignacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Respuestas_Preguntas">
+    <End Role="Preguntas" Type="Self.Preguntas" Multiplicity="0..1" />
+    <End Role="Respuestas" Type="Self.Respuestas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Preguntas">
+        <PropertyRef Name="IDpregunta" />
+      </Principal>
+      <Dependent Role="Respuestas">
+        <PropertyRef Name="Idpregunta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Respuestas_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Respuestas" Type="Self.Respuestas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IDusuario" />
+      </Principal>
+      <Dependent Role="Respuestas">
+        <PropertyRef Name="Idusuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tablainter_Autores">
+    <End Role="Autores" Type="Self.Autores" Multiplicity="0..1" />
+    <End Role="Tablainter1" Type="Self.Tablainter1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Autores">
+        <PropertyRef Name="IDautor" />
+      </Principal>
+      <Dependent Role="Tablainter1">
+        <PropertyRef Name="Idautor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tablainter_Libros">
+    <End Role="Libros" Type="Self.Libros" Multiplicity="0..1" />
+    <End Role="Tablainter1" Type="Self.Tablainter1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Libros">
+        <PropertyRef Name="IDlibro" />
+      </Principal>
+      <Dependent Role="Tablainter1">
+        <PropertyRef Name="Idlibro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tablainter2_AsignacionCuestionario">
+    <End Role="AsignacionCuestionario" Type="Self.AsignacionCuestionario" Multiplicity="0..1" />
+    <End Role="Tablainter2" Type="Self.Tablainter2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AsignacionCuestionario">
+        <PropertyRef Name="IDAsignacionCuestionario" />
+      </Principal>
+      <Dependent Role="Tablainter2">
+        <PropertyRef Name="IdasignacionEvaluacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tablainter2_Procesos">
+    <End Role="Procesos" Type="Self.Procesos" Multiplicity="0..1" />
+    <End Role="Tablainter2" Type="Self.Tablainter2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Procesos">
+        <PropertyRef Name="IDproceso" />
+      </Principal>
+      <Dependent Role="Tablainter2">
+        <PropertyRef Name="Idproceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tablainter2_Usuarios">
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="0..1" />
+    <End Role="Tablainter2" Type="Self.Tablainter2" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuarios">
+        <PropertyRef Name="IDusuario" />
+      </Principal>
+      <Dependent Role="Tablainter2">
+        <PropertyRef Name="Idevaluador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuarios_Tiposusuarios">
+    <End Role="Tiposusuarios" Type="Self.Tiposusuarios" Multiplicity="0..1" />
+    <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tiposusuarios">
+        <PropertyRef Name="IDtipousuario" />
+      </Principal>
+      <Dependent Role="Usuarios">
+        <PropertyRef Name="Idtipousuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VistasLibros_Libros">
+    <End Role="Libros" Type="Self.Libros" Multiplicity="0..1" />
+    <End Role="VistasLibros" Type="Self.VistasLibros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Libros">
+        <PropertyRef Name="IDlibro" />
+      </Principal>
+      <Dependent Role="VistasLibros">
+        <PropertyRef Name="Idlibro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="EditarAutor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Autor">
+    <Parameter Name="Idautor" Type="int" Mode="In" />
+    <Parameter Name="Nombre1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nombre2" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApellidoP" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApellidoS" Type="nvarchar" Mode="In" />
+    <Parameter Name="Cedula" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filial" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EliminarAutor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Autor">
+    <Parameter Name="Idautor" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertarAutor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Autor">
+    <Parameter Name="IDlibro" Type="int" Mode="In" />
+    <Parameter Name="Nombre1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nombre2" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApellidoP" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApellidoS" Type="nvarchar" Mode="In" />
+    <Parameter Name="Cedula" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filial" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="VerAutores" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Autor">
+    <Parameter Name="IDlibro" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConsultarCarreras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Carrera" />
+  <Function Name="EditarCarreras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Carrera">
+    <Parameter Name="Idcarrera" Type="int" Mode="In" />
+    <Parameter Name="carrera" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EliminarCarreras" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Carrera">
+    <Parameter Name="Idcarrera" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RegistroCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Carrera">
+    <Parameter Name="Detallecarrera" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ConsultarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Categoria" />
+  <Function Name="EditarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Categoria">
+    <Parameter Name="Idcate" Type="int" Mode="In" />
+    <Parameter Name="Detallecate" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="EliminarCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Categoria">
+    <Parameter Name="Idcate" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RegistroCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Categoria">
+    <Parameter Name="Detallecate" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EliminarComentario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Comentario">
+    <Parameter Name="Idcomentario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertarComentario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Comentario">
+    <Parameter Name="Idproceso" Type="int" Mode="In" />
+    <Parameter Name="Comentario" Type="text" Mode="In" />
+    <Parameter Name="Fechacoment" Type="nvarchar" Mode="In" />
+    <Parameter Name="Idusuario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerComentarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Comentario">
+    <Parameter Name="Idprocess" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConsultarComparativaNumVistasLibrosxYearAnterior" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas" />
+  <Function Name="ConsultarComparativaPeriodanterior" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas" />
+  <Function Name="ConsultarComparativaYearanterior" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas" />
+  <Function Name="ConsultarNumLibrosPublicadosxCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas" />
+  <Function Name="ConsultarNumLibrosPublicadosxCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas" />
+  <Function Name="ConsultarNumLibrosPublicadosxPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas">
+    <Parameter Name="idpe" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConsultarNumLibrosPublicadosxYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas">
+    <Parameter Name="idy" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConsultarNumVistasLibrosxCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas" />
+  <Function Name="ConsultarNumVistasLibrosxYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas">
+    <Parameter Name="idy" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DetalleConsultaxId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas">
+    <Parameter Name="ide" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EditarConsulta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas">
+    <Parameter Name="idconsulta" Type="int" Mode="In" />
+    <Parameter Name="idparametro" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarConsultas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas" />
+  <Function Name="VerLibrospublicadosxYears" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas" />
+  <Function Name="VerLibrosVistas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas" />
+  <Function Name="VerNumLibrosPublicadosxPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas">
+    <Parameter Name="idc" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerNumLibrosPublicadosxYears" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas">
+    <Parameter Name="idc" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerNumVistasLibrosxYears" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas">
+    <Parameter Name="idc" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VistasLibrosxYears" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Consultas" />
+  <Function Name="EditarCuestionario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="Idcuestionario" Type="int" Mode="In" />
+    <Parameter Name="nombre" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fechacreado" Type="nvarchar" Mode="In" />
+    <Parameter Name="asignado" Type="nvarchar" Mode="In" />
+    <Parameter Name="tipocuestionario" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EditarFechaEdicionAsignacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+    <Parameter Name="Idc" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="nvarchar" Mode="In" />
+    <Parameter Name="Ida" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EditarIdpregCuestionario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="IdP" Type="int" Mode="In" />
+    <Parameter Name="Idc" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarAsignacionCuestionarioUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="Ida" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarCuestionarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarRespuesta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="FinalizarCuestionario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+    <Parameter Name="Idc" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="nvarchar" Mode="In" />
+    <Parameter Name="Ida" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertarAsignacionCuestionario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="numc" Type="int" Mode="In" />
+    <Parameter Name="Idp" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ListarCuestionarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario" />
+  <Function Name="RegitrarCuestionario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="nombre" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fechacreado" Type="nvarchar" Mode="In" />
+    <Parameter Name="asignado" Type="nvarchar" Mode="In" />
+    <Parameter Name="tipocuestionario" Type="nvarchar" Mode="In" />
+    <Parameter Name="numc" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RespuestasPreguntasCuestionario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="idc" Type="int" Mode="In" />
+    <Parameter Name="ida" Type="int" Mode="In" />
+    <Parameter Name="Idresp" Type="int" Mode="In" />
+    <Parameter Name="idob" Type="int" Mode="In" />
+    <Parameter Name="idpregunta" Type="int" Mode="In" />
+    <Parameter Name="user" Type="int" Mode="In" />
+    <Parameter Name="idresplogica" Type="int" Mode="In" />
+    <Parameter Name="respabierta" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="titulorespabierta" Type="nvarchar" Mode="In" />
+    <Parameter Name="idopcionpreg" Type="int" Mode="In" />
+    <Parameter Name="identificadorTipoPregunta" Type="int" Mode="In" />
+    <Parameter Name="tipoOpciones" Type="nvarchar" Mode="In" />
+    <Parameter Name="estado" Type="bit" Mode="In" />
+    <Parameter Name="respuestas" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerCuestionarioRegistrado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="Idcuestionario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerDetalleAsignacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="Idasignacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerDetalleCuestionario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="Idcuestionario" Type="int" Mode="In" />
+    <Parameter Name="tipouser" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="VerRespuestaPregAbierta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+    <Parameter Name="Idc" Type="int" Mode="In" />
+    <Parameter Name="Ida" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerRespuestaPregOpcionesTipo1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+    <Parameter Name="Idc" Type="int" Mode="In" />
+    <Parameter Name="Ida" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerRespuestaPregOpcionesTipo2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+    <Parameter Name="Idc" Type="int" Mode="In" />
+    <Parameter Name="Ida" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerRespuestaPregTipo4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Cuestionario">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+    <Parameter Name="Idc" Type="int" Mode="In" />
+    <Parameter Name="Ida" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EditarDatosContacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="DatosContactoEditorial">
+    <Parameter Name="Iddatos" Type="int" Mode="In" />
+    <Parameter Name="email" Type="nvarchar" Mode="In" />
+    <Parameter Name="horario" Type="nvarchar" Mode="In" />
+    <Parameter Name="direccion" Type="nvarchar" Mode="In" />
+    <Parameter Name="telefono" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="VerDatosContacto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="DatosContactoEditorial" />
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="EditarEstadoDocumentosEnviados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Documento">
+    <Parameter Name="idemisor" Type="int" Mode="In" />
+    <Parameter Name="Idproce" Type="int" Mode="In" />
+    <Parameter Name="estadoconsulta" Type="nvarchar" Mode="In" />
+    <Parameter Name="estadoedit" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EditarEstadoDocumentosEnviadosxEvaluadores" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Documento">
+    <Parameter Name="idadmin" Type="int" Mode="In" />
+    <Parameter Name="idautor" Type="int" Mode="In" />
+    <Parameter Name="Idproce" Type="int" Mode="In" />
+    <Parameter Name="estadoconsulta" Type="nvarchar" Mode="In" />
+    <Parameter Name="estadoedit" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EliminarDocumento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Documento">
+    <Parameter Name="IDdocu" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertarDocumento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Documento">
+    <Parameter Name="Idproceso" Type="int" Mode="In" />
+    <Parameter Name="Documento" Type="nvarchar" Mode="In" />
+    <Parameter Name="Detalledocu" Type="nvarchar" Mode="In" />
+    <Parameter Name="visiblea" Type="int" Mode="In" />
+    <Parameter Name="emisor" Type="nvarchar" Mode="In" />
+    <Parameter Name="fecha" Type="nvarchar" Mode="In" />
+    <Parameter Name="estado" Type="nvarchar" Mode="In" />
+    <Parameter Name="visibleadmin" Type="int" Mode="In" />
+    <Parameter Name="visiblevaluador" Type="int" Mode="In" />
+    <Parameter Name="idemisor" Type="int" Mode="In" />
+    <Parameter Name="idreq" Type="int" Mode="In" />
+    <Parameter Name="obligatorio" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="VerDocumentosAutor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Documento">
+    <Parameter Name="Idproces" Type="int" Mode="In" />
+    <Parameter Name="idemisor" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerDocumentosEnviados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Documento">
+    <Parameter Name="Idproces" Type="int" Mode="In" />
+    <Parameter Name="idemisor" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerDocumentosRecibidos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Documento">
+    <Parameter Name="Idproces" Type="int" Mode="In" />
+    <Parameter Name="idemisor" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AgregarEstadoTiposProcesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Estados">
+    <Parameter Name="identificador" Type="int" Mode="In" />
+    <Parameter Name="detalle" Type="nvarchar" Mode="In" />
+    <Parameter Name="idtipoproceso" Type="int" Mode="In" />
+    <Parameter Name="requerimientosAutor" Type="bit" Mode="In" />
+    <Parameter Name="revision" Type="bit" Mode="In" />
+    <Parameter Name="reversado" Type="bit" Mode="In" />
+    <Parameter Name="requerimientosAdmin" Type="bit" Mode="In" />
+    <Parameter Name="resultados" Type="bit" Mode="In" />
+    <Parameter Name="iniciarProceso" Type="bit" Mode="In" />
+    <Parameter Name="asignarEvaluadores" Type="bit" Mode="In" />
+    <Parameter Name="evaluacionPares" Type="bit" Mode="In" />
+    <Parameter Name="publicacionLibro" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="EditarEstadoTiposProcesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Estados">
+    <Parameter Name="idestado" Type="int" Mode="In" />
+    <Parameter Name="detalle" Type="nvarchar" Mode="In" />
+    <Parameter Name="requerimientosAutor" Type="bit" Mode="In" />
+    <Parameter Name="revision" Type="bit" Mode="In" />
+    <Parameter Name="reversado" Type="bit" Mode="In" />
+    <Parameter Name="requerimientosAdmin" Type="bit" Mode="In" />
+    <Parameter Name="resultados" Type="bit" Mode="In" />
+    <Parameter Name="iniciarProceso" Type="bit" Mode="In" />
+    <Parameter Name="asignarEvaluadores" Type="bit" Mode="In" />
+    <Parameter Name="evaluacionPares" Type="bit" Mode="In" />
+    <Parameter Name="publicacionLibro" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="EliminarEstadoTiposProcesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Estados">
+    <Parameter Name="idestado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarEstadoTiposProcesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Estados">
+    <Parameter Name="idtipoproceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarEstadoxDetalleRespuesta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Estados">
+    <Parameter Name="idtipoproceso" Type="int" Mode="In" />
+    <Parameter Name="respconsulta" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ListarEstadoxIdentificador" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Estados">
+    <Parameter Name="idtipoproceso" Type="int" Mode="In" />
+    <Parameter Name="identificador" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AsignarEvaluador" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Evaluador">
+    <Parameter Name="IDlibro" Type="int" Mode="In" />
+    <Parameter Name="IDproceso" Type="int" Mode="In" />
+    <Parameter Name="IDevaluador" Type="int" Mode="In" />
+    <Parameter Name="estadoasignacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="num" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EditarEstadoAsignacionEvaluador" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Evaluador">
+    <Parameter Name="IDproceso" Type="int" Mode="In" />
+    <Parameter Name="IDevaluador" Type="int" Mode="In" />
+    <Parameter Name="estadoasignacion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EditarEstadoAsignacionEvaluador2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Evaluador">
+    <Parameter Name="IDproceso" Type="int" Mode="In" />
+    <Parameter Name="estadoasignacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="Ida" Type="int" Mode="In" />
+    <Parameter Name="Ide" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarEvaluadores" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Evaluador" />
+  <Function Name="VerDetalleAsignacionEvaluador" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Evaluador">
+    <Parameter Name="idproceso" Type="int" Mode="In" />
+    <Parameter Name="idevaluador" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerEvaluadores" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Evaluador">
+    <Parameter Name="IDlibro" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConsultarFormato" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Formato" />
+  <Function Name="ConsultarTipoformatos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Formato" />
+  <Function Name="EditarFormato" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Formato">
+    <Parameter Name="Idformato" Type="int" Mode="In" />
+    <Parameter Name="Archivo" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Detalleform" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Idtipoform" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EditarTipoformatos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Formato">
+    <Parameter Name="Idtipoform" Type="int" Mode="In" />
+    <Parameter Name="Detalletipoform" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EliminarFormato" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Formato">
+    <Parameter Name="Idformato" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarTipoformatos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Formato">
+    <Parameter Name="Idtipoform" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RegistroFormato" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Formato">
+    <Parameter Name="Archivo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Detallearchivo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Idtipoformato" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="RegistroTipoformatos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Formato">
+    <Parameter Name="Detalletipoform" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="AgregarImagen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Imagenes">
+    <Parameter Name="detalleimg" Type="nvarchar" Mode="In" />
+    <Parameter Name="idnoticia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EditarImagen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Imagenes">
+    <Parameter Name="Idimg" Type="int" Mode="In" />
+    <Parameter Name="detalleimg" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EliminarImagen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Imagenes">
+    <Parameter Name="Idimg" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarImagenesxIdnoticia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Imagenes">
+    <Parameter Name="Idnoticia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AgregarInformacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="InformacionEditorial">
+    <Parameter Name="tituloinfo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="enunciadoinfo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="imageninfo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="urlinfo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="pagina" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EditarInformacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="InformacionEditorial">
+    <Parameter Name="Idinfo" Type="int" Mode="In" />
+    <Parameter Name="tituloinfo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="enunciadoinfo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="imageninfo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="urlinfo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="pagina" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarInformacionEditorial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="InformacionEditorial">
+    <Parameter Name="Idinfo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerDetalleInformacionEditorial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="InformacionEditorial">
+    <Parameter Name="Idinfo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerInformacionEditorial" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="InformacionEditorial" />
+  <Function Name="AceptaroDenegarLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="IDlibro" Type="int" Mode="In" />
+    <Parameter Name="aceptado" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="nvarchar" Mode="In" />
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AgregarLibroExterno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="Titulo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="CodigoISBN" Type="nvarchar" Mode="In" />
+    <Parameter Name="Editorial" Type="nvarchar" Mode="In" />
+    <Parameter Name="Idcategoria" Type="int" Mode="In" />
+    <Parameter Name="Fechapublica" Type="nvarchar" Mode="In" />
+    <Parameter Name="idcarrera" Type="int" Mode="In" />
+    <Parameter Name="Portada" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Libro" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="urlacceso" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fechap" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="ArchivarLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="IDlibro" Type="int" Mode="In" />
+  </Function>
+  <Function Name="BusquedaLibrosAutores" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="buscador" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="BusquedaLibrosCodigoISBN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="buscador" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="BusquedaLibrosTitulo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="buscador" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="BusquedaLibrosTodoParametros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="buscador" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="idcarrera" Type="int" Mode="In" />
+    <Parameter Name="yearp" Type="int" Mode="In" />
+    <Parameter Name="idcate" Type="int" Mode="In" />
+  </Function>
+  <Function Name="BusquedaLibrosxCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="buscador" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="idcarrera" Type="int" Mode="In" />
+  </Function>
+  <Function Name="BusquedaLibrosxCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="buscador" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="idcate" Type="int" Mode="In" />
+  </Function>
+  <Function Name="BusquedaLibrosYearPublicacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="buscador" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="yearp" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CrearCitaLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="idlibro" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CrearLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+    <Parameter Name="TituloLib" Type="nvarchar" Mode="In" />
+    <Parameter Name="procesoL" Type="nvarchar" Mode="In" />
+    <Parameter Name="progresoL" Type="int" Mode="In" />
+    <Parameter Name="actualizadoL" Type="nvarchar" Mode="In" />
+    <Parameter Name="fechacreado" Type="nvarchar" Mode="In" />
+    <Parameter Name="estadoL" Type="nvarchar" Mode="In" />
+    <Parameter Name="aceptado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EditarLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="IDlibro" Type="int" Mode="In" />
+    <Parameter Name="procesoL" Type="nvarchar" Mode="In" />
+    <Parameter Name="progresoL" Type="int" Mode="In" />
+    <Parameter Name="actualizadoL" Type="nvarchar" Mode="In" />
+    <Parameter Name="estadoL" Type="nvarchar" Mode="In" />
+    <Parameter Name="IdprocesoL" Type="int" Mode="In" />
+    <Parameter Name="estado" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="EditarLibroExterno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="Idlibro" Type="int" Mode="In" />
+    <Parameter Name="Titulo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="CodigoISBN" Type="nvarchar" Mode="In" />
+    <Parameter Name="Editorial" Type="nvarchar" Mode="In" />
+    <Parameter Name="Idcategoria" Type="int" Mode="In" />
+    <Parameter Name="Fechapublica" Type="nvarchar" Mode="In" />
+    <Parameter Name="idcarrera" Type="int" Mode="In" />
+    <Parameter Name="Portada" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Libro" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="urlacceso" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fechap" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="EditarTituloLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="IDlibro" Type="int" Mode="In" />
+    <Parameter Name="Titulo" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EliminarLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="IDlibro" Type="int" Mode="In" />
+    <Parameter Name="iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarLibrosxIdUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MostrarLibrosxCarrera" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="idcarrera" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MostrarLibrosxCarreraPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="idpe" Type="int" Mode="In" />
+    <Parameter Name="idc" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MostrarLibrosxCarreraYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="idc" Type="int" Mode="In" />
+    <Parameter Name="yearp" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MostrarLibrosxCategoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="idcate" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MostrarLibrosxPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="idpe" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MostrarLibrosxYear" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="yearp" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RegistroVistasLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="ip" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fechavistas" Type="datetime" Mode="In" />
+    <Parameter Name="idlibro" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerDetalleLibro" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="IDlibro" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerDetalleLibroExterno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="IDlibro" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerLibrosArchivados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro" />
+  <Function Name="VerLibrosArchivadosAutor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerLibrosEnProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro" />
+  <Function Name="VerLibrosEvaluar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerLibrosPopulares" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro" />
+  <Function Name="VerLibrosRecientes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro" />
+  <Function Name="VerLibrosTopRecientes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro" />
+  <Function Name="VerSolicitudesLibros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro" />
+  <Function Name="VerTodosLosLibros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Libro" />
+  <Function Name="AgregarMensajeEstadoTiposProcesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Mensajes">
+    <Parameter Name="idestado" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="visible" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EditarMensajeEstadoTiposProcesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Mensajes">
+    <Parameter Name="idmensaje" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="visible" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EliminarMensajeEstadoTiposProcesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Mensajes">
+    <Parameter Name="idmensaje" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarMensajeEstadoTiposProcesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Mensajes">
+    <Parameter Name="idestado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerMensajeEstadoProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Mensajes">
+    <Parameter Name="idestado" Type="int" Mode="In" />
+    <Parameter Name="idtipoproceso" Type="int" Mode="In" />
+    <Parameter Name="visible" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AgregarNoticia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Noticias">
+    <Parameter Name="detalleNoticia" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="descripcionNoticia" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="imagennoticia" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="titulonoticia" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EditarNoticia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Noticias">
+    <Parameter Name="Idnoticia" Type="int" Mode="In" />
+    <Parameter Name="detalleNoticia" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="descripcionNoticia" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="imagennoticia" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="titulonoticia" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EliminarNoticia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Noticias">
+    <Parameter Name="Idnoticia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PublicarNoticia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Noticias">
+    <Parameter Name="Idnoticia" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="nvarchar" Mode="In" />
+    <Parameter Name="fechap" Type="datetime" Mode="In" />
+    <Parameter Name="urlacceso" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="VerDetalleNoticia" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Noticias">
+    <Parameter Name="Idnoticia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerNoticias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Noticias" />
+  <Function Name="CambiarEstadoNotificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Notificaciones">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CrearNotificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Notificaciones">
+    <Parameter Name="notificacion" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="urlnotificacion" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="visible" Type="nvarchar" Mode="In" />
+    <Parameter Name="iduser" Type="int" Mode="In" />
+    <Parameter Name="idtipo" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="nvarchar" Mode="In" />
+    <Parameter Name="detallenotificacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="general" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="EditarNotificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Notificaciones">
+    <Parameter Name="Idnoti" Type="int" Mode="In" />
+    <Parameter Name="notificacion" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="urlnotificacion" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="visible" Type="nvarchar" Mode="In" />
+    <Parameter Name="iduser" Type="int" Mode="In" />
+    <Parameter Name="idtipo" Type="int" Mode="In" />
+    <Parameter Name="fecha" Type="nvarchar" Mode="In" />
+    <Parameter Name="detallenotificacion" Type="nvarchar" Mode="In" />
+    <Parameter Name="general" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="EliminarNotificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Notificaciones">
+    <Parameter Name="Idnotifi" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarTodoNotificaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Notificaciones">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PublicarNotificacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Notificaciones">
+    <Parameter Name="idnoti" Type="int" Mode="In" />
+    <Parameter Name="visible" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="VerNotificacionesRegistradas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Notificaciones" />
+  <Function Name="VerNotificacionesxIduser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Notificaciones">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerTiposNotificaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Notificaciones" />
+  <Function Name="VerTodoNotificacionesxIduser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Notificaciones">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AgregarObservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ObservacionesProceso">
+    <Parameter Name="Idproceso" Type="int" Mode="In" />
+    <Parameter Name="observacion" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Detalle" Type="nvarchar" Mode="In" />
+    <Parameter Name="emisor" Type="nvarchar" Mode="In" />
+    <Parameter Name="titulo" Type="nvarchar" Mode="In" />
+    <Parameter Name="fecha" Type="nvarchar" Mode="In" />
+    <Parameter Name="visible" Type="bit" Mode="In" />
+    <Parameter Name="estado" Type="nvarchar" Mode="In" />
+    <Parameter Name="idemisor" Type="int" Mode="In" />
+    <Parameter Name="respuesta" Type="bit" Mode="In" />
+    <Parameter Name="idreq" Type="int" Mode="In" />
+    <Parameter Name="obligatoria" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="EditarEstadoObservacionesEnviadas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ObservacionesProceso">
+    <Parameter Name="idemisor" Type="int" Mode="In" />
+    <Parameter Name="Idproce" Type="int" Mode="In" />
+    <Parameter Name="estadoconsulta" Type="nvarchar" Mode="In" />
+    <Parameter Name="estadoedit" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EliminarObservacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ObservacionesProceso">
+    <Parameter Name="Idobservacion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerObservaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ObservacionesProceso">
+    <Parameter Name="Idproceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerObservacionesEnviadas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="ObservacionesProceso">
+    <Parameter Name="Idproceso" Type="int" Mode="In" />
+    <Parameter Name="idemisor" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EditarPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Periodos">
+    <Parameter Name="Id" Type="int" Mode="In" />
+    <Parameter Name="detalleperiodo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="fechainicio" Type="datetime" Mode="In" />
+    <Parameter Name="fechafin" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="EliminarPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Periodos">
+    <Parameter Name="idperiodo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarPeriodos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Periodos" />
+  <Function Name="ListarYearPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Periodos" />
+  <Function Name="RegistroPeriodo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Periodos">
+    <Parameter Name="detalleperiodo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ordenperiodo" Type="int" Mode="In" />
+    <Parameter Name="fechainicio" Type="datetime" Mode="In" />
+    <Parameter Name="fechafin" Type="datetime" Mode="In" />
+    <Parameter Name="ident" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConsultarOpcionesRespuestaPreguntaSeleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idcuestionario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConsultarPreguntaAbierta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idcuestionario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConsultarPreguntaObservaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idcuestionario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConsultarPreguntas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idcuestionario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConsultarPreguntaSeleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idcuestionario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EditarOpcionPreguntaSeleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idopcion" Type="int" Mode="In" />
+    <Parameter Name="descripcionop" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EditarOpcionRespuestaPreguntaSeleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idopresp" Type="int" Mode="In" />
+    <Parameter Name="descripcionopresp" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EditarPregunta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idpreg" Type="int" Mode="In" />
+    <Parameter Name="Idc" Type="int" Mode="In" />
+    <Parameter Name="Idtipopreg" Type="int" Mode="In" />
+    <Parameter Name="descripcionpreg" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="obligatorio" Type="bit" Mode="In" />
+    <Parameter Name="leyendasup" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="tiposopciones" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EditarPreguntaAbierta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="idtipodato" Type="int" Mode="In" />
+    <Parameter Name="IdpregA" Type="int" Mode="In" />
+    <Parameter Name="especificarRango" Type="bit" Mode="In" />
+    <Parameter Name="valormax" Type="nvarchar" Mode="In" />
+    <Parameter Name="valormin" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EditarPreguntaObservaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="idpregobser" Type="int" Mode="In" />
+    <Parameter Name="detalleobser" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="leyenda" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="respuestas" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="EliminarOpcionPreguntaSeleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idopcion" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarOpcionRespuestaPreguntaSeleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idopresp" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarPregunta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idpreg" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarPreguntaAbierta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="IdpregA" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarPreguntaObservaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="idpregobser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertarOpcionesRespuestaPreguntaSeleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="descripcionopresp" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ordenopresp" Type="int" Mode="In" />
+    <Parameter Name="idpreg" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertarPregunta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idc" Type="int" Mode="In" />
+    <Parameter Name="Idtipopreg" Type="int" Mode="In" />
+    <Parameter Name="descripcionpreg" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="obligatorio" Type="bit" Mode="In" />
+    <Parameter Name="ordenpreg" Type="int" Mode="In" />
+    <Parameter Name="leyendasup" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="tiposopciones" Type="nvarchar" Mode="In" />
+    <Parameter Name="idpregA" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertarPreguntaAbierta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="idtipodato" Type="int" Mode="In" />
+    <Parameter Name="Idpreg" Type="int" Mode="In" />
+    <Parameter Name="especificarRango" Type="bit" Mode="In" />
+    <Parameter Name="valormax" Type="nvarchar" Mode="In" />
+    <Parameter Name="valormin" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertarPreguntaObservaciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idpreg" Type="int" Mode="In" />
+    <Parameter Name="detalleobser" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ordenobser" Type="int" Mode="In" />
+    <Parameter Name="leyenda" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="respuestas" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="InsertarPreguntaSeleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idpreg" Type="int" Mode="In" />
+    <Parameter Name="descripcionpregS" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="identificadorpregS" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarTipodeDatoPreguntaAbierta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas" />
+  <Function Name="ListarTipodePregunta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas" />
+  <Function Name="VerOpcionesdePreguntaSeleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idpreg" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerOpcionesRespuestaSeleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="idpreg" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerPreguntaAbierta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idpreg" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerPreguntaInsertada" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idpreg" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerPreguntaObservacionesxIdpreg" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idpreg" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerPreguntaSeleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
+    <Parameter Name="Idpreg" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EditarProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Proceso">
+    <Parameter Name="Idproceso" Type="int" Mode="In" />
+    <Parameter Name="Fechactualizada" Type="nvarchar" Mode="In" />
+    <Parameter Name="Estado_Proceso" Type="nvarchar" Mode="In" />
+    <Parameter Name="Idpanterior" Type="int" Mode="In" />
+    <Parameter Name="opresult" Type="int" Mode="In" />
+    <Parameter Name="identificador" Type="int" Mode="In" />
+  </Function>
+  <Function Name="IniciarProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Proceso">
+    <Parameter Name="Idlibro" Type="int" Mode="In" />
+    <Parameter Name="Fechainicio" Type="nvarchar" Mode="In" />
+    <Parameter Name="Estado_Proceso" Type="nvarchar" Mode="In" />
+    <Parameter Name="Idtipoproceso" Type="int" Mode="In" />
+    <Parameter Name="identificador" Type="int" Mode="In" />
+  </Function>
+  <Function Name="IniciarProceso2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Proceso">
+    <Parameter Name="IDlibro" Type="int" Mode="In" />
+    <Parameter Name="Fechainicio" Type="nvarchar" Mode="In" />
+    <Parameter Name="Fechactualizada" Type="nvarchar" Mode="In" />
+    <Parameter Name="Estado_Proceso" Type="nvarchar" Mode="In" />
+    <Parameter Name="Idtipoproceso" Type="int" Mode="In" />
+    <Parameter Name="Idpanterior" Type="int" Mode="In" />
+    <Parameter Name="identificador" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarRequerimientosxProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Proceso">
+    <Parameter Name="numproceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Proceso">
+    <Parameter Name="Idlibro" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerProcesoxId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Proceso">
+    <Parameter Name="Idlibro" Type="int" Mode="In" />
+    <Parameter Name="Idproceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AgregarRequerimientoProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Requerimiento">
+    <Parameter Name="detallerequerimiento" Type="nvarchar" Mode="In" />
+    <Parameter Name="Idtipopro" Type="int" Mode="In" />
+    <Parameter Name="idtipodato" Type="int" Mode="In" />
+    <Parameter Name="descripcionrequerimiento" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="emisor" Type="nvarchar" Mode="In" />
+    <Parameter Name="resp" Type="nvarchar" Mode="In" />
+    <Parameter Name="visibleadmin" Type="bit" Mode="In" />
+    <Parameter Name="visibleE" Type="bit" Mode="In" />
+    <Parameter Name="visibleautor" Type="bit" Mode="In" />
+    <Parameter Name="obligatorio" Type="bit" Mode="In" />
+    <Parameter Name="resultproceso" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="AgregarRespuestaRequerimiento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Requerimiento">
+    <Parameter Name="idrequerimiento" Type="int" Mode="In" />
+    <Parameter Name="detalle" Type="nvarchar" Mode="In" />
+    <Parameter Name="progreso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EditarRequerimientoProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Requerimiento">
+    <Parameter Name="Idrequerimiento" Type="int" Mode="In" />
+    <Parameter Name="detallerequerimiento" Type="nvarchar" Mode="In" />
+    <Parameter Name="Idtipopro" Type="int" Mode="In" />
+    <Parameter Name="idtipodato" Type="int" Mode="In" />
+    <Parameter Name="descripcionrequerimiento" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="emisor" Type="nvarchar" Mode="In" />
+    <Parameter Name="resp" Type="nvarchar" Mode="In" />
+    <Parameter Name="visibleadmin" Type="bit" Mode="In" />
+    <Parameter Name="visibleE" Type="bit" Mode="In" />
+    <Parameter Name="visibleautor" Type="bit" Mode="In" />
+    <Parameter Name="obligatorio" Type="bit" Mode="In" />
+    <Parameter Name="resultproceso" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="EditarRespuestaRequerimiento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Requerimiento">
+    <Parameter Name="idrespuesta" Type="int" Mode="In" />
+    <Parameter Name="detalle" Type="nvarchar" Mode="In" />
+    <Parameter Name="progreso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarRequerimientoProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Requerimiento">
+    <Parameter Name="Idrequerimiento" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarRespuestaRequerimiento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Requerimiento">
+    <Parameter Name="idrespuesta" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarRequerimientoProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Requerimiento">
+    <Parameter Name="Idproceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarRequerimientoProcesoxId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Requerimiento">
+    <Parameter Name="Idtipoproceso" Type="int" Mode="In" />
+    <Parameter Name="visible" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ListarRespuestaRequerimiento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Requerimiento">
+    <Parameter Name="idrequerimiento" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarRespuestasRequerimientoxIdRequerimiento" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Requerimiento">
+    <Parameter Name="idresp" Type="int" Mode="In" />
+    <Parameter Name="idrequerimiento" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarRespuestasRequerimientoxTipoProceso" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Requerimiento">
+    <Parameter Name="idtipoproceso" Type="int" Mode="In" />
+    <Parameter Name="visible" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AgregarSlider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SlidersEditorial">
+    <Parameter Name="titulo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="enunciado" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="imagenslider" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="url" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EditarSlider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SlidersEditorial">
+    <Parameter Name="Idslider" Type="int" Mode="In" />
+    <Parameter Name="titulo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="enunciado" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="imagenslider" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="url" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EliminarSlider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SlidersEditorial">
+    <Parameter Name="Idslider" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerSliders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SlidersEditorial" />
+  <Function Name="AgregarTiposProcesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TiposProcesos">
+    <Parameter Name="detalletipospro" Type="nvarchar" Mode="In" />
+    <Parameter Name="progreso" Type="int" Mode="In" />
+    <Parameter Name="duracionproceso" Type="nvarchar" Mode="In" />
+    <Parameter Name="Numero" Type="int" Mode="In" />
+    <Parameter Name="identificador" Type="int" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="EditarTiposProcesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TiposProcesos">
+    <Parameter Name="Idtipoproceso" Type="int" Mode="In" />
+    <Parameter Name="detalletipospro" Type="nvarchar" Mode="In" />
+    <Parameter Name="progreso" Type="int" Mode="In" />
+    <Parameter Name="duracionproceso" Type="nvarchar" Mode="In" />
+    <Parameter Name="descripcion" Type="nvarchar" Mode="In" />
+    <Parameter Name="numero" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarTiposProcesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TiposProcesos">
+    <Parameter Name="Idtipoproceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarTiposProcesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TiposProcesos" />
+  <Function Name="ListarTiposProcesosxnum" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TiposProcesos">
+    <Parameter Name="num" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ConsultarTipoUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario" />
+  <Function Name="DeshabilitarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DetalleUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EditarNumLibrosFinalizados" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EditarPerfil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+    <Parameter Name="Nombre1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nombre2" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApellidoP" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApellidoS" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filial" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Pass" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Salt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Foto" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EditarPerfil2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+    <Parameter Name="Nombre1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nombre2" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApellidoP" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApellidoS" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Filial" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Foto" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EditarToken" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="email" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="token_recovery" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EditarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+    <Parameter Name="Nombre1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nombre2" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApellidoP" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApellidoS" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Salt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EliminarFoto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EliminarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="Iduser" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ListarUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario" />
+  <Function Name="LoginUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ObtenerUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="ObtenerUsuarioxTipoUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="tipouser" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="RecuperarPass" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="token" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="password" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Salt" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="RegistroUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="Nombre1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Nombre2" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApellidoP" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApellidoS" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Salt" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Foto" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="IdTipousuario" Type="int" Mode="In" />
+    <Parameter Name="Telefono" Type="nvarchar" Mode="In" />
+    <Parameter Name="Direccion" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Filial" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Libproceso" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VerificarToken" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Usuario">
+    <Parameter Name="token" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="AsignacionCuestionario" EntityType="Self.AsignacionCuestionario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Autores" EntityType="Self.Autores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Carreras" EntityType="Self.Carreras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categorias" EntityType="Self.Categorias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comentarios" EntityType="Self.Comentarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Consultas" EntityType="Self.Consultas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cuestionarios" EntityType="Self.Cuestionarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DatosContactoEditorial" EntityType="Self.DatosContactoEditorial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Documentos" EntityType="Self.Documentos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstadosTiposproceso" EntityType="Self.EstadosTiposproceso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Formatos" EntityType="Self.Formatos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Imagenes" EntityType="Self.Imagenes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InformacionEditorial" EntityType="Self.InformacionEditorial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Libros" EntityType="Self.Libros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MensajesTiposproceso" EntityType="Self.MensajesTiposproceso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Noticias" EntityType="Self.Noticias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notificacion" EntityType="Self.Notificacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObservacionesProceso" EntityType="Self.ObservacionesProceso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OpcionPreguntaSeleccion" EntityType="Self.OpcionPreguntaSeleccion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OpcionRespuesta" EntityType="Self.OpcionRespuesta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Periodos" EntityType="Self.Periodos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PreguntaAbierta" EntityType="Self.PreguntaAbierta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PreguntaObservaciones" EntityType="Self.PreguntaObservaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Preguntas" EntityType="Self.Preguntas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Procesos" EntityType="Self.Procesos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RequerimientosProcesos" EntityType="Self.RequerimientosProcesos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RespuestaRequerimiento" EntityType="Self.RespuestaRequerimiento" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Respuestas" EntityType="Self.Respuestas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SlidersEditorial" EntityType="Self.SlidersEditorial" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tablainter1" EntityType="Self.Tablainter1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tablainter2" EntityType="Self.Tablainter2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipodeDato" EntityType="Self.TipodeDato" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tipoformatos" EntityType="Self.Tipoformatos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoNotificacion" EntityType="Self.TipoNotificacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoPregunta" EntityType="Self.TipoPregunta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tiposproceso" EntityType="Self.Tiposproceso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tiposusuarios" EntityType="Self.Tiposusuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VistasLibros" EntityType="Self.VistasLibros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Years" EntityType="Self.Years" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AsignacionCuestionario_Cuestionarios" Association="Self.FK_AsignacionCuestionario_Cuestionarios">
+      <End Role="Cuestionarios" EntitySet="Cuestionarios" />
+      <End Role="AsignacionCuestionario" EntitySet="AsignacionCuestionario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AsignacionCuestionario_Usuarios" Association="Self.FK_AsignacionCuestionario_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="AsignacionCuestionario" EntitySet="AsignacionCuestionario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comentarios_Procesos" Association="Self.FK_Comentarios_Procesos">
+      <End Role="Procesos" EntitySet="Procesos" />
+      <End Role="Comentarios" EntitySet="Comentarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comentarios_Usuarios" Association="Self.FK_Comentarios_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Comentarios" EntitySet="Comentarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documentos_Procesos" Association="Self.FK_Documentos_Procesos">
+      <End Role="Procesos" EntitySet="Procesos" />
+      <End Role="Documentos" EntitySet="Documentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentosProcesos_Tiposproceso" Association="Self.FK_DocumentosProcesos_Tiposproceso">
+      <End Role="Tiposproceso" EntitySet="Tiposproceso" />
+      <End Role="RequerimientosProcesos" EntitySet="RequerimientosProcesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EstadosTiposproceso_Tiposproceso" Association="Self.FK_EstadosTiposproceso_Tiposproceso">
+      <End Role="Tiposproceso" EntitySet="Tiposproceso" />
+      <End Role="EstadosTiposproceso" EntitySet="EstadosTiposproceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Formatos_Tipoformatos" Association="Self.FK_Formatos_Tipoformatos">
+      <End Role="Tipoformatos" EntitySet="Tipoformatos" />
+      <End Role="Formatos" EntitySet="Formatos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Imagenes_Noticias" Association="Self.FK_Imagenes_Noticias">
+      <End Role="Noticias" EntitySet="Noticias" />
+      <End Role="Imagenes" EntitySet="Imagenes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Libros_Carreras" Association="Self.FK_Libros_Carreras">
+      <End Role="Carreras" EntitySet="Carreras" />
+      <End Role="Libros" EntitySet="Libros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Libros_Categorias" Association="Self.FK_Libros_Categorias">
+      <End Role="Categorias" EntitySet="Categorias" />
+      <End Role="Libros" EntitySet="Libros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Libros_Usuarios" Association="Self.FK_Libros_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Libros" EntitySet="Libros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MensajesTiposproceso_EstadosTiposproceso" Association="Self.FK_MensajesTiposproceso_EstadosTiposproceso">
+      <End Role="EstadosTiposproceso" EntitySet="EstadosTiposproceso" />
+      <End Role="MensajesTiposproceso" EntitySet="MensajesTiposproceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notificacion_TipoNotificacion" Association="Self.FK_Notificacion_TipoNotificacion">
+      <End Role="TipoNotificacion" EntitySet="TipoNotificacion" />
+      <End Role="Notificacion" EntitySet="Notificacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObservacionesProceso_Procesos" Association="Self.FK_ObservacionesProceso_Procesos">
+      <End Role="Procesos" EntitySet="Procesos" />
+      <End Role="ObservacionesProceso" EntitySet="ObservacionesProceso" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OpcionPreguntaSeleccion_Preguntas" Association="Self.FK_OpcionPreguntaSeleccion_Preguntas">
+      <End Role="Preguntas" EntitySet="Preguntas" />
+      <End Role="OpcionPreguntaSeleccion" EntitySet="OpcionPreguntaSeleccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OpcionRespuesta_Preguntas" Association="Self.FK_OpcionRespuesta_Preguntas">
+      <End Role="Preguntas" EntitySet="Preguntas" />
+      <End Role="OpcionRespuesta" EntitySet="OpcionRespuesta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PreguntaAbierta_Preguntas" Association="Self.FK_PreguntaAbierta_Preguntas">
+      <End Role="Preguntas" EntitySet="Preguntas" />
+      <End Role="PreguntaAbierta" EntitySet="PreguntaAbierta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PreguntaAbierta_TipodeDato" Association="Self.FK_PreguntaAbierta_TipodeDato">
+      <End Role="TipodeDato" EntitySet="TipodeDato" />
+      <End Role="PreguntaAbierta" EntitySet="PreguntaAbierta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PreguntaObservaciones_Preguntas" Association="Self.FK_PreguntaObservaciones_Preguntas">
+      <End Role="Preguntas" EntitySet="Preguntas" />
+      <End Role="PreguntaObservaciones" EntitySet="PreguntaObservaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Preguntas_Cuestionarios" Association="Self.FK_Preguntas_Cuestionarios">
+      <End Role="Cuestionarios" EntitySet="Cuestionarios" />
+      <End Role="Preguntas" EntitySet="Preguntas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Preguntas_TipoPregunta" Association="Self.FK_Preguntas_TipoPregunta">
+      <End Role="TipoPregunta" EntitySet="TipoPregunta" />
+      <End Role="Preguntas" EntitySet="Preguntas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Procesos_Libros" Association="Self.FK_Procesos_Libros">
+      <End Role="Libros" EntitySet="Libros" />
+      <End Role="Procesos" EntitySet="Procesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Procesos_Tiposproceso" Association="Self.FK_Procesos_Tiposproceso">
+      <End Role="Tiposproceso" EntitySet="Tiposproceso" />
+      <End Role="Procesos" EntitySet="Procesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequerimientosProcesos_TipodeDato" Association="Self.FK_RequerimientosProcesos_TipodeDato">
+      <End Role="TipodeDato" EntitySet="TipodeDato" />
+      <End Role="RequerimientosProcesos" EntitySet="RequerimientosProcesos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RespuestaRequerimiento_RequerimientosProcesos" Association="Self.FK_RespuestaRequerimiento_RequerimientosProcesos">
+      <End Role="RequerimientosProcesos" EntitySet="RequerimientosProcesos" />
+      <End Role="RespuestaRequerimiento" EntitySet="RespuestaRequerimiento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Respuestas_AsignacionCuestionario" Association="Self.FK_Respuestas_AsignacionCuestionario">
+      <End Role="AsignacionCuestionario" EntitySet="AsignacionCuestionario" />
+      <End Role="Respuestas" EntitySet="Respuestas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Respuestas_Preguntas" Association="Self.FK_Respuestas_Preguntas">
+      <End Role="Preguntas" EntitySet="Preguntas" />
+      <End Role="Respuestas" EntitySet="Respuestas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Respuestas_Usuarios" Association="Self.FK_Respuestas_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Respuestas" EntitySet="Respuestas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tablainter_Autores" Association="Self.FK_Tablainter_Autores">
+      <End Role="Autores" EntitySet="Autores" />
+      <End Role="Tablainter1" EntitySet="Tablainter1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tablainter_Libros" Association="Self.FK_Tablainter_Libros">
+      <End Role="Libros" EntitySet="Libros" />
+      <End Role="Tablainter1" EntitySet="Tablainter1" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tablainter2_AsignacionCuestionario" Association="Self.FK_Tablainter2_AsignacionCuestionario">
+      <End Role="AsignacionCuestionario" EntitySet="AsignacionCuestionario" />
+      <End Role="Tablainter2" EntitySet="Tablainter2" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tablainter2_Procesos" Association="Self.FK_Tablainter2_Procesos">
+      <End Role="Procesos" EntitySet="Procesos" />
+      <End Role="Tablainter2" EntitySet="Tablainter2" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tablainter2_Usuarios" Association="Self.FK_Tablainter2_Usuarios">
+      <End Role="Usuarios" EntitySet="Usuarios" />
+      <End Role="Tablainter2" EntitySet="Tablainter2" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuarios_Tiposusuarios" Association="Self.FK_Usuarios_Tiposusuarios">
+      <End Role="Tiposusuarios" EntitySet="Tiposusuarios" />
+      <End Role="Usuarios" EntitySet="Usuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VistasLibros_Libros" Association="Self.FK_VistasLibros_Libros">
+      <End Role="Libros" EntitySet="Libros" />
+      <End Role="VistasLibros" EntitySet="VistasLibros" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,1402 @@
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\WebApplication1.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\WebApplication1.pdb
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\csc.exe
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\csc.exe.config
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\csc.rsp
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\csi.exe
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\csi.exe.config
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\csi.rsp
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\desktop.ini
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.AppContext.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Console.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Net.Http.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\vbc.exe
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\vbc.exe.config
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\vbc.rsp
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\Antlr3.Runtime.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\Newtonsoft.Json.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.Helpers.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.Mvc.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.Optimization.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.Razor.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.WebPages.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\WebGrease.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.Helpers.xml
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.Mvc.xml
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.Optimization.xml
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.Razor.xml
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.WebPages.xml
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\Newtonsoft.Json.xml
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\Antlr3.Runtime.pdb
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\es\System.Web.Helpers.resources.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\es\System.Web.Mvc.resources.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\es\System.Web.Optimization.resources.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\es\System.Web.Razor.resources.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\es\System.Web.WebPages.resources.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\Negocio.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\SimpleCrypto.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\Datos.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\EntityFramework.dll
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\Negocio.pdb
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\Negocio.dll.config
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\Datos.pdb
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\Datos.dll.config
+C:\Users\GEMA LOOR\source\repos\Solution1\WebApplication1\bin\EntityFramework.xml
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\WebApplication1.dll.config
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\WebApplication1.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\WebApplication1.pdb
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\csc.exe
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\csc.exe.config
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\csc.rsp
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\csi.exe
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\csi.exe.config
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\csi.rsp
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.AppContext.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Console.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Net.Http.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\vbc.exe
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\vbc.exe.config
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\vbc.rsp
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\Antlr3.Runtime.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\Negocio.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\Newtonsoft.Json.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\SimpleCrypto.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.Helpers.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.Mvc.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.Optimization.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.Razor.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.WebPages.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\WebGrease.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\Datos.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\EntityFramework.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\Negocio.pdb
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\Negocio.dll.config
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.Helpers.xml
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.Mvc.xml
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.Optimization.xml
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.Razor.xml
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.WebPages.xml
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\Newtonsoft.Json.xml
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\Antlr3.Runtime.pdb
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\Datos.pdb
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\Datos.dll.config
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\EntityFramework.xml
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\es\System.Web.Helpers.resources.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\es\System.Web.Mvc.resources.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\es\System.Web.Optimization.resources.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\es\System.Web.Razor.resources.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\es\System.Web.WebPages.resources.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\es\System.Web.WebPages.Deployment.resources.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\bin\es\System.Web.WebPages.Razor.resources.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\obj\Debug\WebApplication1.dll
+G:\Unidades compartidas\humus-proyect\Solution1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\WebApplication1.dll.config
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\WebApplication1.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\WebApplication1.pdb
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\csc.exe
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\csc.exe.config
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\csc.rsp
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\csi.exe
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\csi.exe.config
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\csi.rsp
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.AppContext.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Console.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Net.Http.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\vbc.exe
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\vbc.exe.config
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\vbc.rsp
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\Negocio.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\SimpleCrypto.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.Helpers.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.Mvc.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.Optimization.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.Razor.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.WebPages.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\WebGrease.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\Datos.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\EntityFramework.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\Negocio.pdb
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\Negocio.dll.config
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.Helpers.xml
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.Mvc.xml
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.Optimization.xml
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.Razor.xml
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.WebPages.xml
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\Datos.pdb
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\Datos.dll.config
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\EntityFramework.xml
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\es\System.Web.Helpers.resources.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\es\System.Web.Mvc.resources.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\es\System.Web.Optimization.resources.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\es\System.Web.Razor.resources.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\es\System.Web.WebPages.resources.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\LIBROS LEER HASTA MARZO\USAR EN CASO DE EMERGENCIA\Solution1\WebApplication1\obj\Debug\WebApplication1.pdb
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\WebApplication1.dll.config
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\WebApplication1.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\WebApplication1.pdb
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\csc.exe
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\csc.exe.config
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\csc.rsp
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\csi.exe
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\csi.exe.config
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\csi.rsp
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.AppContext.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Console.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Net.Http.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\vbc.exe
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\vbc.exe.config
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\vbc.rsp
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\Antlr3.Runtime.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\Negocio.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\Newtonsoft.Json.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\SimpleCrypto.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Helpers.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Mvc.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Optimization.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Razor.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\WebGrease.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\Datos.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\EntityFramework.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\Negocio.pdb
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\Negocio.dll.config
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Helpers.xml
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Mvc.xml
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Optimization.xml
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Razor.xml
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.xml
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\Newtonsoft.Json.xml
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\Antlr3.Runtime.pdb
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\Datos.pdb
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\Datos.dll.config
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\EntityFramework.xml
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.Helpers.resources.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.Mvc.resources.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.Optimization.resources.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.Razor.resources.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.WebPages.resources.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.WebPages.Deployment.resources.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.WebPages.Razor.resources.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.dll
+G:\Unidades compartidas\humus-proyect\Sistema-web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\WebApplication1.dll.config
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\WebApplication1.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\WebApplication1.pdb
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\csc.exe
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\csc.exe.config
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\csc.rsp
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\csi.exe
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\csi.exe.config
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\csi.rsp
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.AppContext.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Console.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Net.Http.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\vbc.exe
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\vbc.exe.config
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\vbc.rsp
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Negocio.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\SimpleCrypto.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Helpers.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Mvc.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Optimization.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Razor.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\WebGrease.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Datos.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\EntityFramework.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Negocio.pdb
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Negocio.dll.config
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Helpers.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Mvc.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Optimization.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.Razor.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Datos.pdb
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Datos.dll.config
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\EntityFramework.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.Helpers.resources.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.Mvc.resources.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.Optimization.resources.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.Razor.resources.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.WebPages.resources.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\ARCHIVOS\Solution1\WebApplication1\bin\WebApplication1.dll.config
+D:\ARCHIVOS\Solution1\WebApplication1\bin\WebApplication1.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\WebApplication1.pdb
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\csc.exe
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\csc.exe.config
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\csc.rsp
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\csi.exe
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\csi.exe.config
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\csi.rsp
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.AppContext.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Console.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Net.Http.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\vbc.exe
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\vbc.exe.config
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\vbc.rsp
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\ARCHIVOS\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\ARCHIVOS\Solution1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\Negocio.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\SimpleCrypto.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.Helpers.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.Mvc.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.Optimization.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.Razor.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.WebPages.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\WebGrease.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\Datos.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\EntityFramework.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\Negocio.pdb
+D:\ARCHIVOS\Solution1\WebApplication1\bin\Negocio.dll.config
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.Helpers.xml
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.Mvc.xml
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.Optimization.xml
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.Razor.xml
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.WebPages.xml
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\ARCHIVOS\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\ARCHIVOS\Solution1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\ARCHIVOS\Solution1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\ARCHIVOS\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ARCHIVOS\Solution1\WebApplication1\bin\Datos.pdb
+D:\ARCHIVOS\Solution1\WebApplication1\bin\Datos.dll.config
+D:\ARCHIVOS\Solution1\WebApplication1\bin\EntityFramework.xml
+D:\ARCHIVOS\Solution1\WebApplication1\bin\es\System.Web.Helpers.resources.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\es\System.Web.Mvc.resources.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\es\System.Web.Optimization.resources.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\es\System.Web.Razor.resources.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\es\System.Web.WebPages.resources.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\ARCHIVOS\Solution1\WebApplication1\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\ARCHIVOS\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+D:\ARCHIVOS\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\ARCHIVOS\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\ARCHIVOS\Solution1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\ARCHIVOS\Solution1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\WebApplication1.dll.config
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\WebApplication1.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\WebApplication1.pdb
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\csc.exe
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\csc.exe.config
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\csc.rsp
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\csi.exe
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\csi.exe.config
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\csi.rsp
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.AppContext.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Console.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Net.Http.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\vbc.exe
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\vbc.exe.config
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\vbc.rsp
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Negocio.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\SimpleCrypto.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.Helpers.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.Mvc.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.Optimization.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.Razor.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.WebPages.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\WebGrease.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Datos.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\EntityFramework.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Negocio.pdb
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Negocio.dll.config
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.Helpers.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.Mvc.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.Optimization.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.Razor.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.WebPages.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Datos.pdb
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Datos.dll.config
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\EntityFramework.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\es\System.Web.Helpers.resources.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\es\System.Web.Mvc.resources.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\es\System.Web.Optimization.resources.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\es\System.Web.Razor.resources.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\es\System.Web.WebPages.resources.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\WebApplication1.dll.config
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\WebApplication1.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\WebApplication1.pdb
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\csc.exe
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\csc.exe.config
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\csc.rsp
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\csi.exe
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\csi.exe.config
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\csi.rsp
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.AppContext.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Console.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Net.Http.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\vbc.exe
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\vbc.exe.config
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\vbc.rsp
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\Negocio.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\SimpleCrypto.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.Helpers.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.Mvc.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.Optimization.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.Razor.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.WebPages.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\WebGrease.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\Datos.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\EntityFramework.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\Negocio.pdb
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\Negocio.dll.config
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.Helpers.xml
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.Mvc.xml
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.Optimization.xml
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.Razor.xml
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.WebPages.xml
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\Datos.pdb
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\Datos.dll.config
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\EntityFramework.xml
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\es\System.Web.Helpers.resources.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\es\System.Web.Mvc.resources.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\es\System.Web.Optimization.resources.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\es\System.Web.Razor.resources.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\es\System.Web.WebPages.resources.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\ARCHIVOS\EMERGENCY\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Microsoft.OData.Edm.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Buffers.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Memory.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Text.Json.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.ValueTuple.dll
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\Microsoft.OData.Edm.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Buffers.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Memory.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Text.Json.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\ARCHIVOS\NEWPRUEBA\Solution1\WebApplication1\bin\System.ValueTuple.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Microsoft.OData.Edm.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Buffers.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Memory.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Text.Json.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.ValueTuple.dll
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\Microsoft.OData.Edm.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Buffers.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Memory.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Text.Json.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\ARCHIVOS\Sistema-web-Humus\Solution1\WebApplication1\bin\System.ValueTuple.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\WebApplication1.dll.config
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\WebApplication1.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\WebApplication1.pdb
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\csc.exe
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\csc.exe.config
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\csc.rsp
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\csi.exe
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\csi.exe.config
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\csi.rsp
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.AppContext.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Console.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Net.Http.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\vbc.exe
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\vbc.exe.config
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\vbc.rsp
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Microsoft.OData.Edm.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Negocio.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\SimpleCrypto.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Buffers.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Memory.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Text.Json.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.ValueTuple.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.Helpers.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.Mvc.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.Optimization.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.Razor.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.WebPages.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\WebGrease.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Datos.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\EntityFramework.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Negocio.pdb
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Negocio.dll.config
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Microsoft.OData.Edm.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Buffers.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Memory.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Text.Json.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.ValueTuple.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.Helpers.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.Mvc.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.Optimization.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.Razor.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.WebPages.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Datos.pdb
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\Datos.dll.config
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\EntityFramework.xml
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\es\System.Web.Helpers.resources.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\es\System.Web.Mvc.resources.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\es\System.Web.Optimization.resources.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\es\System.Web.Razor.resources.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\es\System.Web.WebPages.resources.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\ARCHIVOS\COPIA-SISTEMA-HUMUS\Solution1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\Solution1\WebApplication1\bin\WebApplication1.dll.config
+D:\Solution1\WebApplication1\bin\WebApplication1.dll
+D:\Solution1\WebApplication1\bin\WebApplication1.pdb
+D:\Solution1\WebApplication1\bin\roslyn\csc.exe
+D:\Solution1\WebApplication1\bin\roslyn\csc.exe.config
+D:\Solution1\WebApplication1\bin\roslyn\csc.rsp
+D:\Solution1\WebApplication1\bin\roslyn\csi.exe
+D:\Solution1\WebApplication1\bin\roslyn\csi.exe.config
+D:\Solution1\WebApplication1\bin\roslyn\csi.rsp
+D:\Solution1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Solution1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Solution1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Solution1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Solution1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.AppContext.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Console.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Net.Http.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+D:\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Solution1\WebApplication1\bin\roslyn\vbc.exe
+D:\Solution1\WebApplication1\bin\roslyn\vbc.exe.config
+D:\Solution1\WebApplication1\bin\roslyn\vbc.rsp
+D:\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\Solution1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Solution1\WebApplication1\bin\Microsoft.OData.Edm.dll
+D:\Solution1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\Solution1\WebApplication1\bin\Negocio.dll
+D:\Solution1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\Solution1\WebApplication1\bin\SimpleCrypto.dll
+D:\Solution1\WebApplication1\bin\System.Buffers.dll
+D:\Solution1\WebApplication1\bin\System.Memory.dll
+D:\Solution1\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Solution1\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\Solution1\WebApplication1\bin\System.Text.Json.dll
+D:\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\Solution1\WebApplication1\bin\System.ValueTuple.dll
+D:\Solution1\WebApplication1\bin\System.Web.Helpers.dll
+D:\Solution1\WebApplication1\bin\System.Web.Mvc.dll
+D:\Solution1\WebApplication1\bin\System.Web.Optimization.dll
+D:\Solution1\WebApplication1\bin\System.Web.Razor.dll
+D:\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\Solution1\WebApplication1\bin\System.Web.WebPages.dll
+D:\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\Solution1\WebApplication1\bin\WebGrease.dll
+D:\Solution1\WebApplication1\bin\Datos.dll
+D:\Solution1\WebApplication1\bin\EntityFramework.dll
+D:\Solution1\WebApplication1\bin\Negocio.pdb
+D:\Solution1\WebApplication1\bin\Negocio.dll.config
+D:\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Solution1\WebApplication1\bin\Microsoft.OData.Edm.xml
+D:\Solution1\WebApplication1\bin\System.Buffers.xml
+D:\Solution1\WebApplication1\bin\System.Memory.xml
+D:\Solution1\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Solution1\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\Solution1\WebApplication1\bin\System.Text.Json.xml
+D:\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\Solution1\WebApplication1\bin\System.ValueTuple.xml
+D:\Solution1\WebApplication1\bin\System.Web.Helpers.xml
+D:\Solution1\WebApplication1\bin\System.Web.Mvc.xml
+D:\Solution1\WebApplication1\bin\System.Web.Optimization.xml
+D:\Solution1\WebApplication1\bin\System.Web.Razor.xml
+D:\Solution1\WebApplication1\bin\System.Web.WebPages.xml
+D:\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\Solution1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\Solution1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Solution1\WebApplication1\bin\Datos.pdb
+D:\Solution1\WebApplication1\bin\Datos.dll.config
+D:\Solution1\WebApplication1\bin\EntityFramework.xml
+D:\Solution1\WebApplication1\bin\es\System.Web.Helpers.resources.dll
+D:\Solution1\WebApplication1\bin\es\System.Web.Mvc.resources.dll
+D:\Solution1\WebApplication1\bin\es\System.Web.Optimization.resources.dll
+D:\Solution1\WebApplication1\bin\es\System.Web.Razor.resources.dll
+D:\Solution1\WebApplication1\bin\es\System.Web.WebPages.resources.dll
+D:\Solution1\WebApplication1\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\Solution1\WebApplication1\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+D:\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\Solution1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\Solution1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\WebApplication1.dll.config
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\WebApplication1.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\WebApplication1.pdb
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\csc.exe
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\csc.exe.config
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\csc.rsp
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\csi.exe
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\csi.exe.config
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\csi.rsp
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.AppContext.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Console.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Net.Http.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\vbc.exe
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\vbc.exe.config
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\vbc.rsp
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Microsoft.OData.Edm.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Negocio.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\SimpleCrypto.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Buffers.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Memory.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Text.Json.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.ValueTuple.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.Helpers.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.Mvc.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.Optimization.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.Razor.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\WebGrease.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Datos.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\EntityFramework.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Negocio.pdb
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Negocio.dll.config
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Microsoft.OData.Edm.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Buffers.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Memory.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Text.Json.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.ValueTuple.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.Helpers.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.Mvc.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.Optimization.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.Razor.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Datos.pdb
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Datos.dll.config
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\EntityFramework.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\es\System.Web.Helpers.resources.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\es\System.Web.Mvc.resources.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\es\System.Web.Optimization.resources.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\es\System.Web.Razor.resources.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\es\System.Web.WebPages.resources.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+D:\Sistema-Web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\Sistema-Web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\Sistema-Web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\Rotativa.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\BouncyCastle.Crypto.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\itextsharp.dll
+D:\Sistema-Web-Humus\Solution1\WebApplication1\bin\itextsharp.xml
+D:\Sistema-Web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.Properties.Resources.resources
+D:\Sistema-Web-Humus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.GenerateResource.cache
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\WebApplication1.dll.config
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\WebApplication1.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\WebApplication1.pdb
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\csc.exe
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\csc.exe.config
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\csc.rsp
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\csi.exe
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\csi.exe.config
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\csi.rsp
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.AppContext.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Console.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Net.Http.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\vbc.exe
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\vbc.exe.config
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\vbc.rsp
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\BouncyCastle.Crypto.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\itextsharp.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Microsoft.OData.Edm.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Negocio.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Rotativa.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\SimpleCrypto.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Buffers.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Memory.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Text.Json.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.ValueTuple.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.Helpers.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.Mvc.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.Optimization.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.Razor.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.WebPages.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\WebGrease.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Datos.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\EntityFramework.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Negocio.pdb
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Negocio.dll.config
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\itextsharp.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Microsoft.OData.Edm.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Buffers.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Memory.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Text.Json.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.ValueTuple.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.Helpers.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.Mvc.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.Optimization.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.Razor.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.WebPages.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Datos.pdb
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\Datos.dll.config
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\EntityFramework.xml
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\es\System.Web.Helpers.resources.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\es\System.Web.Mvc.resources.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\es\System.Web.Optimization.resources.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\es\System.Web.Razor.resources.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\es\System.Web.WebPages.resources.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+D:\SistemaHumus-cambios\Solution1\WebApplication1\obj\Debug\WebApplication1.Properties.Resources.resources
+D:\SistemaHumus-cambios\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.GenerateResource.cache
+D:\SistemaHumus-cambios\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\SistemaHumus-cambios\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\SistemaHumus-cambios\Solution1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\SistemaHumus-cambios\Solution1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\WebApplication1.dll.config
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\WebApplication1.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\WebApplication1.pdb
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\csc.exe
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\csc.exe.config
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\csc.rsp
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\csi.exe
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\csi.exe.config
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\csi.rsp
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.AppContext.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Collections.Immutable.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Console.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Globalization.Calendars.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Net.Http.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Net.Sockets.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Reflection.Metadata.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.ValueTuple.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\vbc.exe
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\vbc.exe.config
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\vbc.rsp
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Antlr3.Runtime.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\BouncyCastle.Crypto.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\itextsharp.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Microsoft.OData.Edm.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Negocio.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Newtonsoft.Json.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Rotativa.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\SimpleCrypto.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Buffers.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Memory.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Numerics.Vectors.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Text.Encodings.Web.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Text.Json.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.ValueTuple.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.Helpers.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.Mvc.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.Optimization.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.Razor.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.WebPages.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\WebGrease.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Datos.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\EntityFramework.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Negocio.pdb
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Negocio.dll.config
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\itextsharp.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Microsoft.OData.Edm.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Buffers.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Memory.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Numerics.Vectors.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Text.Encodings.Web.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Text.Json.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Threading.Tasks.Extensions.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.ValueTuple.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.Helpers.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.Mvc.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.Optimization.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.Razor.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.WebPages.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Web.WebPages.Razor.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Newtonsoft.Json.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Antlr3.Runtime.pdb
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Datos.pdb
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\Datos.dll.config
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\EntityFramework.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\es\System.Web.Helpers.resources.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\es\System.Web.Mvc.resources.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\es\System.Web.Optimization.resources.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\es\System.Web.Razor.resources.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\es\System.Web.WebPages.resources.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\es\System.Web.WebPages.Deployment.resources.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\es\System.Web.WebPages.Razor.resources.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.AssemblyReference.cache
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\obj\Debug\WebApplication1.Properties.Resources.resources
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.GenerateResource.cache
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CoreCompileInputs.cache
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\obj\Debug\WebApplication1.csproj.CopyComplete
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\PagedList.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\PagedList.Mvc.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\PagedList.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\PagedList.Mvc.xml
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Text.Encoding.CodePages.dll
+D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\bin\System.Text.Encoding.CodePages.xml

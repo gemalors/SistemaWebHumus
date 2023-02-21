@@ -1,0 +1,194 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script src="~/Recursos/Plantilla/plugins/js/jquery-3.4.1.min.js"></script>
+
+
+
+
+
+@{
+
+
+    if (TempData["EXISTEE"] != null)
+    {
+        <script>
+
+
+            $('#TempData[EXISTEE]').ready(function () {
+
+
+                Swal.fire(
+                    'Notificación',
+                    ' Se ha enviado un mensaje a su cuenta de correo electrónico, verifique en su bandeja de entrada o en correos no deseados y siga los pasos señalados para generar su nueva contraseña.',
+                    'warning'
+
+
+                )
+
+
+
+
+
+            });
+
+
+
+        </script>
+    }
+
+
+
+    if (TempData["EXISTE2"] != null)
+    {
+        <script>
+
+            $('#TempData[EXISTE2]').ready(function () {
+                Swal.fire(
+                    'Notificación',
+                    'Su contraseña ha sido restablecida exitósamente.',
+                    'success'
+
+
+                )
+
+
+
+            });
+        </script>
+
+    }
+
+
+
+
+    if (TempData["ERRORD"] != null)
+    {
+        <script>
+
+            $('#TempData[ERRORD]').ready(function() {
+                toastr.warning('@TempData["ERRORD"]', 'ACCESO DENEGADO!!'
+              )
+          });
+        </script>
+
+    }
+
+
+
+    if (TempData["ERROR"] != null)
+    {
+        <script>
+
+            $('#TempData[ERROR]').ready(function() {
+                toastr.warning('@TempData["ERROR"]', 'ALGO SALIÓ MAL!!'
+              )
+          });
+        </script>
+
+    }
+
+
+
+    if (TempData["ERROR1"] != null)
+    {
+        <script>
+
+            $('#TempData[ERROR1]').ready(function() {
+                toastr.error('@TempData["ERROR1"]', 'ALGO SALIÓ MAL!!'
+              )
+          });
+        </script>
+
+
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+<div class="login-box">
+    <!-- /.login-logo -->
+    <div class="card card-outline card-primary">
+        <div class="card-header text-center">
+            <a href="@Url.Action("Inicio", "Editorial")" class="h1 text-secondary">
+                <b class="text-secondary">Sistema Web </b>
+                <img src="~/Recursos/Plantilla/assets/images/logohumus2.png" alt="homepage" class="light-logo" style="margin-top:1%" />
+            </a>
+        </div>
+        <div class="card-body">
+
+
+
+            @using (Html.BeginForm("Logeo", "Usuario", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+
+
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Usuario" id="Username" name="Username" required="">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+
+                            <span class="fas fa-user"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" placeholder="Contraseña" id="password" name="password" required="">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- /.col -->
+                <div class="input-group mb-3">
+                    <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+                </div>
+                <!-- /.col -->
+
+
+
+            }
+
+
+
+            <!-- /.social-auth-links -->
+
+            <p class="text-center" style="margin-top: 5%">
+
+                <a href="@Url.Action("ForgotPass", "Usuario")">¿ Olvidaste tu contraseña ?</a>
+            </p>
+
+
+            <p class="text-center text-muted" style="margin-top: 10%">
+
+
+                Escuela Superior Politécnica Agropecuaria de Manabí Manuel Félix López
+
+            </p>
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+</div>
+<!-- /.login-box -->

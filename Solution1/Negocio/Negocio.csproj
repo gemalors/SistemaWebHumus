@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFC652F9-1414-4150-B98D-296833EE7255}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Negocio</RootNamespace>
+    <AssemblyName>Negocio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm, Version=7.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.OData.Edm.7.9.0\lib\net45\Microsoft.OData.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleCrypto, Version=26.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleCrypto.0.3.30.26\lib\SimpleCrypto.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.6.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entidades\E_Carreras.cs" />
+    <Compile Include="Entidades\E_Consultas.cs" />
+    <Compile Include="Entidades\E_DescripcionTiposProcesos.cs" />
+    <Compile Include="Entidades\E_EstadosTiposproceso.cs" />
+    <Compile Include="Entidades\E_MensajesTiposproceso.cs" />
+    <Compile Include="Entidades\E_Notificaciones.cs" />
+    <Compile Include="Entidades\E_AsignacionCuestionario.cs" />
+    <Compile Include="Entidades\E_Autores.cs" />
+    <Compile Include="Entidades\E_Categorias.cs" />
+    <Compile Include="Entidades\E_Comentarios.cs" />
+    <Compile Include="Entidades\E_Cuestionarios.cs" />
+    <Compile Include="Entidades\E_DatosContactoEditorial.cs" />
+    <Compile Include="Entidades\E_Documentos.cs" />
+    <Compile Include="Entidades\E_Imagenes.cs" />
+    <Compile Include="Entidades\E_InformacionEditorial.cs" />
+    <Compile Include="Entidades\E_Noticias.cs" />
+    <Compile Include="Entidades\E_ObservacionesProceso.cs" />
+    <Compile Include="Entidades\E_OpcionesRespuesta.cs" />
+    <Compile Include="Entidades\E_OpcionPreguntaSeleccion.cs" />
+    <Compile Include="Entidades\E_Periodos.cs" />
+    <Compile Include="Entidades\E_PreguntaAbierta.cs" />
+    <Compile Include="Entidades\E_PreguntaObservaciones.cs" />
+    <Compile Include="Entidades\E_Preguntas.cs" />
+    <Compile Include="Entidades\E_RequerimientosProcesos.cs" />
+    <Compile Include="Entidades\E_Formatos.cs" />
+    <Compile Include="Entidades\E_Libros.cs" />
+    <Compile Include="Entidades\E_Procesos.cs" />
+    <Compile Include="Entidades\E_RespuestaRequerimiento.cs" />
+    <Compile Include="Entidades\E_Respuestas.cs" />
+    <Compile Include="Entidades\E_SlidersEditorial.cs" />
+    <Compile Include="Entidades\E_Tablainter1.cs" />
+    <Compile Include="Entidades\E_Tablainter2.cs" />
+    <Compile Include="Entidades\E_TipodeDato.cs" />
+    <Compile Include="Entidades\E_Tipoformatos.cs" />
+    <Compile Include="Entidades\E_TipoNotificacion.cs" />
+    <Compile Include="Entidades\E_TipoPregunta.cs" />
+    <Compile Include="Entidades\E_Tiposproceso.cs" />
+    <Compile Include="Entidades\E_Tipousuarios.cs" />
+    <Compile Include="Entidades\E_Usuarios.cs" />
+    <Compile Include="Entidades\E_VistasLibros.cs" />
+    <Compile Include="Entidades\E_Years.cs" />
+    <Compile Include="Metodos\M_Carreras.cs" />
+    <Compile Include="Metodos\M_Consultas.cs" />
+    <Compile Include="Metodos\M_EstadosTiposproceso.cs" />
+    <Compile Include="Metodos\M_MensajesTiposproceso.cs" />
+    <Compile Include="Metodos\M_Notificaciones.cs" />
+    <Compile Include="Metodos\M_Cuestionarios.cs" />
+    <Compile Include="Metodos\M_DatosContactoEditorial.cs" />
+    <Compile Include="Metodos\M_InformacionEditorial.cs" />
+    <Compile Include="Metodos\M_Noticias.cs" />
+    <Compile Include="Metodos\M_ObservacionesProceso.cs" />
+    <Compile Include="Metodos\M_Periodos.cs" />
+    <Compile Include="Metodos\M_Preguntas.cs" />
+    <Compile Include="Metodos\M_RequerimientosProcesos.cs" />
+    <Compile Include="Metodos\M_RespuestaRequerimiento.cs" />
+    <Compile Include="Metodos\M_SlidersEditorial.cs" />
+    <Compile Include="Metodos\M_Tiposproceso.cs" />
+    <Compile Include="Metodos\M_Autores.cs" />
+    <Compile Include="Metodos\M_Categorias.cs" />
+    <Compile Include="Metodos\M_Comentarios.cs" />
+    <Compile Include="Metodos\M_Documentos.cs" />
+    <Compile Include="Metodos\M_Evaluadores.cs" />
+    <Compile Include="Metodos\M_Formatos.cs" />
+    <Compile Include="Metodos\M_Libros.cs" />
+    <Compile Include="Metodos\M_Procesos.cs" />
+    <Compile Include="Metodos\M_Usuarios.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{6ba9b102-19c1-45db-82e7-f989efb23639}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
