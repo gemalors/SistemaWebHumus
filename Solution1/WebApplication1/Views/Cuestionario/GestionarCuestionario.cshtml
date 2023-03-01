@@ -49,10 +49,13 @@
 @{
     var foto = "imgvacia.png";
     string Nombres = "";
+    var tipouser = "";
 
     foreach (var item9 in ViewBag.Usuario)
     {
         Nombres = item9.PrimerNombre + " " + item9.ApellidoPrimero;
+
+        tipouser = item9.Tipo_usuario;
         if (item9.Foto != null)
         {
 
@@ -707,6 +710,8 @@
                                                                 <button class="btn btn-danger btn-sm text-light" title="Eliminar cuestionario" type="button" onclick="eliminar1(@item.IDcuestionario)"><i class="fas fa-trash-alt"></i></button>
 
                                                             </p>
+
+                                                        
                                                         </div>
                                                     }
                                                 </div>

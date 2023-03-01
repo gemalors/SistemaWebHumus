@@ -109,52 +109,55 @@
 
 
 
-    @foreach (var item in ViewBag.DatosEditorial)
-    {
+    @*@foreach (var item in ViewBag.DatosEditorial)
+        {
 
-        <div class="sub-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-xs-12">
-                        <ul class="left-info">
-                            <li><a href="http://www.espam.edu.ec/"><i class="fa fa-home text-light"></i>ESPAM MFL</a></li>
-                            <li><a href=""><i class="fa fa-envelope-o"></i>@item.Email</a></li>
-                            <li><a href="#"><i class="fa fa-clock-o style=" color="black"></i>@item.Horario</a></li>
-                        </ul>
+            <div class="sub-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <ul class="left-info">
+                                <li><a href="http://www.espam.edu.ec/" target="_blank"><i class="fa fa-home text-light"></i>ESPAM MFL</a></li>
+                                <li><a href=""><i class="fa fa-envelope-o"></i>@item.Email</a></li>
+                                <li><a href="#"><i class="fa fa-clock-o "></i>@item.Horario</a></li>
+                                <li><a href="#"><i class="fa fa-phone"></i>@item.Telefono</a></li>
+                                <li><a href="#"><i class="fa fa-map-marker"></i>@item.Direccion</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    }
+        }*@
 
 
-    <header class="">
-        <nav class="navbar navbar-expand-lg">
+
+    <header class="" >
+        <nav class="navbar navbar-expand-lg" >
             <div class="container">
-                <a class="navbar-brand" href="@Url.Action("Inicio", "Editorial")"><h2 style="color: #EDF9FC;">EDITORIAL HUMUS</h2></a>
-                @*<a class="navbar-brand" href="index.html"><img width="35%" height="35%" data-sticky-width="82" data-sticky-height="40" data-sticky-top="25" src="~/ImagesWeb/l1.png"></a>*@
+                <a class="navbar-brand" href="@Url.Action("Inicio", "Editorial")" ><h2 style="color: #4DBB6D;">EDITORIAL HUMUS</h2></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="@Url.Action("Inicio", "Editorial")" title="Inicio">
-                                <i class="fa fa-home"> Inicio</i>
+                            <a class="nav-link" href="@Url.Action("Inicio", "Editorial")" style="color: #4DBB6D;">
+                                <i class="fa fa-home" style="color: ##4DBB6D"> Inicio</i>
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="@Url.Action("Busqueda", "Editorial")" title="Búsqueda filtrada"><i class="fa fa-sliders">  Búsqueda filtrada</a></i>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="@Url.Action("Titulos", "Editorial")" title="Libros"><i class="fa fa-book"> Libros</i> </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="@Url.Action("Noticias", "Editorial")" title="Noticias"><i class="fa fa-newspaper-o"> Noticias</a></i>
+                            <a class="nav-link" href="@Url.Action("Busqueda", "Editorial")" style="color: black;"><i class="fa fa-sliders">   Búsqueda Filtrada</a></i>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="@Url.Action("Contacto", "Editorial")" title="Contáctenos"><i class="fa fa-envelope"> Contáctenos</a></i>
+                            <a class="nav-link" href="@Url.Action("Titulos", "Editorial")" title="Libros" style="color:black"><i class="fa fa-book"> Libros</i> </a>
+
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="@Url.Action("Noticias", "Editorial")" style="color: black;"><i class="fa fa-newspaper-o"> Noticias</a></i>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="@Url.Action("Contacto", "Editorial")" style="color: black;"><i class="fa fa-envelope"> Contáctenos</a></i>
                         </li>
                     </ul>
                 </div>
@@ -164,22 +167,43 @@
 
 
 
-    <div class="main-banner header-text" id="top">
-        <div class="Modern-Slider">
+    <!-- Page Content -->
+    <div class="page-heading header-text" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="single-services" >
+        <div class="Modern-Slider" style="margin-top:-60px">
             <!-- Item -->
             @foreach (var item1 in ViewBag.Sliders)
             {
                 <div class="item ">
+
+
                     <div class="img-fill" style="background-image: url(../../Files/ImagenSliders/@item1.ImagenSlider)">
+
                         <div class="text-content">
 
                             <h6 style="color: #4dbb6d;">@item1.Titulo<br></h6>
-                            <p>@item1.Enunciado</p>
+                            <p style="color: #ffffff " class="font-24">@item1.Enunciado</p>
+                            @if (item1.Urlslider != "#")
+                            {
+                                <a href="@item1.Urlslider" class="filled-button text-success" target="_blank" style="background-color: #ffffff">Más información</a>
+                            }
+
                         </div>
-                        @*<div class="text-content">
-                                <p>“La lectura no da al hombre sabiduría; le da conocimientos"</p>
-                            </div>*@
+
                     </div>
+
                 </div>
             }
             <!-- // Item -->
@@ -254,7 +278,7 @@
 
 
     <div class="container">
-        <div class="row">
+        <div class="row" style="margin-top:5%">
             <div class="col s12">
 
                 <center><h3 class="center-align titulo" style="color: #4DBB6D;"> Libros publicados recientemente </h3></center>
@@ -263,20 +287,20 @@
                     <div class="carrousel1-items">
                         @foreach (var iteml in ViewBag.Librosrecientes)
                         {
-                        <div class="carrousel1-item" style="margin-left:1%">
+                            <div class="carrousel1-item" style="margin-left:1%">
 
-                            <a href="@iteml.UrlAcceso" target="_blank" title="@iteml.Titulo"><img src="@iteml.Portada" alt=""></a>
-                        </div>
+                                <a href="@iteml.UrlAcceso" target="_blank" title="@iteml.Titulo"><img src="@iteml.Portada" alt=""></a>
+                            </div>
                         }
-                            
-                        </div>
+
+                    </div>
                 </div>
 
 
-                
+
 
                 @*<div class="carousel center-align">
-               
+
                         @foreach (var iteml in ViewBag.Librosrecientes)
                         {
                             <div class="carousel-item">
@@ -285,11 +309,11 @@
 
                             </div>
                         }
-                     
+
 
 
                     </div>*@
-                </div>
+            </div>
         </div>
 
     </div>
@@ -300,25 +324,86 @@
 
     <!-- Footer Starts Here -->
 
-    <div class="sub-footer">
-        <div class="container">
-            <div class="row">
-                <small class="col-md-12 text-light">
 
 
-                    @{
-                        string date = DateTime.Now.ToString("MM-dd-yyyy");
-                        string year = date.Substring(6, 4);
 
-                    }
+    <footer>
+        @foreach (var item in ViewBag.DatosEditorial)
+        {
+            <div class="container" style="margin-top:-5%;margin-bottom:-5%">
+                <div class="row">
+                    <div class="col-md-3 footer-item">
+                        <p style="color: #4DBB6D"><i class="fa fa-map-marker"></i> Dirección</p>
+                        <p>@item.Direccion </p>
+                        @*<ul class="menu-list">
+                                <li><a href="#"></a></li>
 
-                    <img src="~/ImagesWeb/logo.png" alt="user" width="100"> Coordinación General de Investigación - Editorial Humus. © @year.
+                            </ul>*@
+                    </div>
+                    <div class="col-md-3 footer-item">
+                        <p style="color: #4DBB6D"><i class="fa fa-clock-o "></i> Horario de atención</p>
+                        <p>@item.Horario </p>
+
+                    </div>
+                    <div class="col-md-3 footer-item">
+                        <p style="color: #4DBB6D"><i class="fa fa-phone"></i> Teléfono</p>
+                        <p>@item.Telefono </p>
+
+                    </div>
+                    <div class="col-md-3 footer-item last-item">
+                        <p style="color: #4DBB6D"><i class="fa fa-envelope-o"></i> Contactenos</p>
+                        <p>@item.Email </p>
+
+                       
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <ul class="social-icons ">
+                            @*<li><a rel="nofollow" href="#" target="_blank" style="background-color: #202aa1" title="Facebook"><i class="fa fa-facebook text-light"></i></a></li>
+        <li><a href="#" target="_blank" style="background-color: #0767eb" title="Twitter"><i class="fa fa-twitter text-light"></i></a></li>
+        <li><a href="#" target="_blank" style="background-color: #c914e5" title="Instagram"><i class="fa fa-instagram text-light"></i></a></li>
+        <li><a href="#" target="_blank" style="background-color: #bf1818" title="Youtube"><i class="fa fa-youtube text-light"></i></a></li>*@
+
+                            <li><a rel="nofollow" href="#" target="_blank" style="background-color: #4DBB6D" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" target="_blank" style="background-color: #4DBB6D" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank" style="background-color: #4DBB6D" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#" target="_blank" style="background-color: #4DBB6D" title="Youtube"><i class="fa fa-youtube"></i></a></li>
 
 
-                </small>
+                        </ul>
+                    </div>
+                    @*#A4C639  #4DBB6D*@
+                </div>
+                <hr />
+                <div class="row">
+                    <small class="col-md-12 text-light text-center">
+
+
+                        @{
+                            string date = DateTime.Now.ToString("MM-dd-yyyy");
+                            string year = date.Substring(6, 4);
+
+                        }
+
+                        <a href="http://www.espam.edu.ec/" target="_blank"> <img src="~/ImagesWeb/logo.png" alt="user" width="100"></a> Coordinación General de Investigación - Editorial Humus. © @year.
+
+
+                    </small>
+                </div>
             </div>
-        </div>
-    </div>
+        }
+    </footer>
+
+
+
+
+
+
+
+
+
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- Bootstrap core JavaScript -->
@@ -352,8 +437,8 @@
     <script>
 
         const carrusel = document.querySelector(".carrousel1-items");
-     
-        
+
+
         let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
         let intervalo = null;
         let step = 1;
@@ -363,9 +448,9 @@
                 if (carrusel.scrollLeft === maxScrollLeft) {
                     step = step * -1;
                 } else if (carrusel.scrollLeft === 0) {
-                    step =step * -1;
+                    step = step * -1;
                 }
-            },10);
+            }, 10);
         };
 
 
@@ -385,22 +470,22 @@
 
         start();
 
-        //document.addEventListener('DOMContentLoaded', () => {
+                                        //document.addEventListener('DOMContentLoaded', () => {
 
-        //    const elementosCarousel = document.querySelectorAll('.carousel');
-        //    M.Carousel.init(elementosCarousel, {
+                                        //    const elementosCarousel = document.querySelectorAll('.carousel');
+                                        //    M.Carousel.init(elementosCarousel, {
 
 
-        //        duration: 150,
-        //        dist: -80,
-        //        shift: 5,
-        //        padding: 5,
-        //        numVisible: 5,
-        //        indicators: true
+                                        //        duration: 150,
+                                        //        dist: -80,
+                                        //        shift: 5,
+                                        //        padding: 5,
+                                        //        numVisible: 5,
+                                        //        indicators: true
 
-        //    });
-        //});
-     
+                                        //    });
+                                        //});
+
 
     </script>
 

@@ -1047,7 +1047,7 @@
                                     <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab"><i class="mdi mdi-f61d mdi-dictionary"></i> Requerimientos de proceso </a></li>
                                     <li class="nav-item"><a class="nav-link " href="#activity1" data-toggle="tab"><i class="mdi mdi-f61d mdi-dictionary"></i> Estados de proceso </a></li>
                                    
-                                    <li class="nav-item "><a class="nav-link " href="@Url.Action("GestionarProcesos", "Proceso")"><i class="mdi mdi-f60c mdi-subdirectory-arrow-left"></i> Regresar a lista de procesos</a></li>
+                                    <li class="nav-item "><a class="nav-link " href="@Url.Action("GestionarProcesos", "Proceso")"><i class="mdi mdi-f60c mdi-subdirectory-arrow-left"></i> Regresar a lista de tipos de procesos</a></li>
 
 
                                     @*<li class="nav-item "><a class="nav-link " data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="mdi mdi-f3ec mdi-pencil-box"></i> Agregar nuevo cuestionario</a></li>*@
@@ -1113,7 +1113,7 @@
 
 
                                                             <div class="form-group">
-                                                                <label class="text-info">Requiere respuesta</label>
+                                                                <label class="text-info">Requiere respuesta de selección</label>
                                                                 <div class="form-check">
                                                                     <input type="radio" class="form-check-input"
                                                                            id="resp" name="resp" value="Si" required="">
@@ -1285,11 +1285,11 @@
                                                             </div>
 
                                                             @*<small class="text-danger">: </small>*@
-                                                            <label class="text-danger">Restricciones </label>
+                                                            <label class="text-danger">Tener en cuenta: </label>
                                                             <br />
                                                             <small class="text-secondary font-12">- Requerimientos de tipo archivo no deben ser visibles por el tipo de usuario asignado como emisor.</small>
                                                             <br />
-                                                            <small class="text-secondary font-12">- Solo se puede establecer a un requerimientos como resultado de proceso. Esto es opcional para cada proceso.</small>
+                                                            <small class="text-secondary font-12">- Solo se puede establecer a un requerimiento como resultado de proceso. Esto es opcional para cada proceso.</small>
                                                         </div>
                                                         <!-- /.col -->
 
@@ -1437,7 +1437,7 @@
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <div class="form-group">
-                                                                <label class="text-danger">Restricciones</label>
+                                                                <label class="text-danger">Tener en cuenta:</label>
 
                                                                 <br />
                                                                 <small class="text-secondary font-12">- Identificador deberá ser #1 cuando se inicia el proceso.</small>
@@ -1744,7 +1744,7 @@
                                                                                 <div class="btn-group btn-group-sm">
 
                                                                                    
-                                                                                    <a class="btn btn-outline-info btn-sm" style="margin-right:5%" title="Gestionar mensajes de estados para proceso" href="@Url.Action("OpcionesProceso", new RouteValueDictionary(new { controller = "Proceso", action = "OpcionesProceso", Idproceso = @item1.Idtipoproceso, Id=@item1.IDEstadosTiposproceso,t=2}))" target="_blank"><i class=" fas fa- fas fa-plus"></i></a>
+                                                                                    <a class="btn btn-outline-info btn-sm" style="margin-right:5%" title="Gestionar mensajes de estados" href="@Url.Action("OpcionesProceso", new RouteValueDictionary(new { controller = "Proceso", action = "OpcionesProceso", Idproceso = @item1.Idtipoproceso, Id=@item1.IDEstadosTiposproceso,t=2}))" target="_blank"><i class=" fas fa- fas fa-plus"></i></a>
 
                                                                                     <button type="button" class="btn btn-outline-success btn-sm" style="margin-right:5%" title="Editar estado" onclick="EditarEstado(@item1.IDEstadosTiposproceso,'@item1.DetalleEstados',Boolean(@item1.VRequerimientosAutor),Boolean(@item1.VEnviarProcesoRevision),Boolean(@item1.VEnviarRevisionReversado),Boolean(@item1.VRequerimientosAdmin),Boolean(@item1.VEnviarResultados),Boolean(@item1.VIniciarSiguienteProceso),Boolean(@item1.VAsignarEvaluadores),Boolean(@item1.VEnviarEvaluacionPares),Boolean(@item1.VPublicacionLibro))" data-bs-toggle="modal" data-bs-target="#exampleModal5"><i class="fas fa-pencil-alt"></i></button>
 

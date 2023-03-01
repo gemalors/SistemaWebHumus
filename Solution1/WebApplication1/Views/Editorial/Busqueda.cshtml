@@ -93,7 +93,7 @@
                             </a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="@Url.Action("Busqueda", "Editorial")" style="color: black;"><i class="fa fa-sliders">   Búsqueda Filtrada</a></i>
+                            <a class="nav-link" href="@Url.Action("Busqueda", "Editorial")" style="color: #4DBB6D;"><i class="fa fa-sliders">   Búsqueda Filtrada</a></i>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="@Url.Action("Titulos", "Editorial")" title="Libros" style="color:black"><i class="fa fa-book"> Libros</i> </a>
@@ -289,7 +289,7 @@
                                         @if (ViewBag.Alerta != null)
                                         {
 
-                                            <small class="text-danger"><i class="fa fa-warning" ></i> @ViewBag.Alerta</small>
+                                            <small class="text-danger"><i class="fa fa-warning"></i> @ViewBag.Alerta</small>
                                             <small class="text-danger">Por defecto se muestran libros consultados por título.</small>
 
 
@@ -378,26 +378,70 @@
     <!-- Footer Starts Here -->
 
 
-    <div class="sub-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <small class="col-md-12 text-light">
-                 
-                            @{
-                                string date = DateTime.Now.ToString("MM-dd-yyyy");
-                                string year = date.Substring(6, 4);
 
-                            }
-                         
-                        <img src="~/ImagesWeb/logo.png" alt="user" width="100"> Coordinación General de Investigación - Editorial Humus. © @year.
+    <footer>
+        @foreach (var item in ViewBag.DatosEditorial)
+        {
+            <div class="container" style="margin-top:-5%;margin-bottom:-5%">
+                <div class="row">
+                    <div class="col-md-3 footer-item">
+                        <p style="color: #4DBB6D"><i class="fa fa-map-marker"></i> Dirección</p>
+                        <p>@item.Direccion </p>
+                        @*<ul class="menu-list">
+                                <li><a href="#"></a></li>
+
+                            </ul>*@
+                    </div>
+                    <div class="col-md-3 footer-item">
+                        <p style="color: #4DBB6D"><i class="fa fa-clock-o "></i> Horario de atención</p>
+                        <p>@item.Horario </p>
+
+                    </div>
+                    <div class="col-md-3 footer-item">
+                        <p style="color: #4DBB6D"><i class="fa fa-phone"></i> Teléfono</p>
+                        <p>@item.Telefono </p>
+
+                    </div>
+                    <div class="col-md-3 footer-item last-item">
+                        <p style="color: #4DBB6D"><i class="fa fa-envelope-o"></i> Contactenos</p>
+                        <p>@item.Email </p>
+
+
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <ul class="social-icons ">
+                            <li><a rel="nofollow" href="#" target="_blank" style="background-color: #4DBB6D" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" target="_blank" style="background-color: #4DBB6D" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank" style="background-color: #4DBB6D" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#" target="_blank" style="background-color: #4DBB6D" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    @*#A4C639*@
+                </div>
+                <hr />
+                <div class="row">
+                    <small class="col-md-12 text-light text-center">
+
+
+                        @{
+                            string date = DateTime.Now.ToString("MM-dd-yyyy");
+                            string year = date.Substring(6, 4);
+
+                        }
+
+                        <a href="http://www.espam.edu.ec/" target="_blank"> <img src="~/ImagesWeb/logo.png" alt="user" width="100"></a> Coordinación General de Investigación - Editorial Humus. © @year.
 
 
                     </small>
                 </div>
             </div>
-        </div>
-    </div>
+        }
+    </footer>
+
+
 
 
 

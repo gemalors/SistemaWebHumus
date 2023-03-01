@@ -854,31 +854,33 @@
 
 
                                                                 <td class="project-actions text-right">
-                                                                    <button type="button" onclick="ValidarDatos(@item1.IDnotificacion,'@item1.DetalleNotificacion','@item1.Notificacion','@item1.Visible')" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1" title="Editar notificación">
-                                                                        <i class="fas fa-pencil-alt">
-                                                                        </i>
-                                                                    </button>
-
-                                                                    <button type="button" class="btn btn-outline-danger btn-sm" onclick="eliminar(@item1.IDnotificacion)" title="Eliminar notificación">
-                                                                        <i class="fas fa-trash-alt">
-                                                                        </i>
-                                                                    </button>
-                                                                    @if (item1.Publicado == true)
+                                                                    @if (item1.Publicado != true)
                                                                     {
-                                                                        <button type="button" class="btn btn-outline-info btn-sm" title="Notificación publicada">
-                                                                            <i class="fas fa- fas fa-check-square">
+                                                                        <button type="button" onclick="ValidarDatos(@item1.IDnotificacion,'@item1.DetalleNotificacion','@item1.Notificacion','@item1.Visible')" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1" title="Editar notificación">
+                                                                            <i class="fas fa-pencil-alt">
                                                                             </i>
                                                                         </button>
                                                                     }
-                                                                    else
-                                                                    {
-                                                                        <button type="button" class="btn btn-outline-primary btn-sm" onclick="Publicar(@item1.IDnotificacion,'@item1.Visible','@item1.DetalleNotificacion','@item1.Notificacion')" title="Publicar notificación">
-                                                                            <i class="fas fa- fas fa-check-square">
+                                                                        <button type="button" class="btn btn-outline-danger btn-sm" onclick="eliminar(@item1.IDnotificacion)" title="Eliminar notificación">
+                                                                            <i class="fas fa-trash-alt">
                                                                             </i>
                                                                         </button>
-                                                                    }
+                                                                        @if (item1.Publicado == true)
+                                                                        {
+                                                                            <button type="button" class="btn btn-outline-info btn-sm" title="Notificación publicada">
+                                                                                <i class="fas fa- fas fa-check-square">
+                                                                                </i>
+                                                                            </button>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <button type="button" class="btn btn-outline-primary btn-sm" onclick="Publicar(@item1.IDnotificacion,'@item1.Visible','@item1.DetalleNotificacion','@item1.Notificacion')" title="Publicar notificación">
+                                                                                <i class="fas fa- fas fa-check-square">
+                                                                                </i>
+                                                                            </button>
+                                                                        }
 
-                                                                </td>
+                                                                    </td>
 
 
 

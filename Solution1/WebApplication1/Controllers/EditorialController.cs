@@ -84,6 +84,7 @@ namespace WebApplication1.Controllers
             {
                 ViewBag.NoticiaDetalle = conexNoticias.VerDetalleNoticiasEditorial(n);
                 ViewBag.ImagenesNoticia = conexNoticias.VerImagenesdeNoticia(n);
+                ViewBag.DatosEditorial = conexDatosEditorial.VerDatosContactoEditorial();
             }
             catch (Exception)
             {
@@ -112,6 +113,7 @@ namespace WebApplication1.Controllers
                 ViewBag.Autores = conexAutor.VerAutores(lib);
                 ViewBag.CitaLibro = conexLibro.VerCitaLibro(lib);
                 ViewBag.LibroDetalle = conexLibro.VerDetalleLibro(lib);
+                ViewBag.DatosEditorial = conexDatosEditorial.VerDatosContactoEditorial();
             }
             catch (Exception)
             {
@@ -178,7 +180,7 @@ namespace WebApplication1.Controllers
             {
                 ViewBag.Carreras = conexcarrera.VerCarreras();
                 ViewBag.Categorias = conexCate.Vercategorias();
-
+                ViewBag.DatosEditorial = conexDatosEditorial.VerDatosContactoEditorial();
                 var lista = conexLibro.BusquedaLibrosTitulo(buscador);
 
                 PageSize = (PageSize ?? 10);
@@ -334,7 +336,7 @@ namespace WebApplication1.Controllers
             {
                 ViewBag.Carreras = conexcarrera.VerCarreras();
                 ViewBag.Categorias = conexCate.Vercategorias();
-
+                ViewBag.DatosEditorial = conexDatosEditorial.VerDatosContactoEditorial();
                 var lista = conexNoticias.VerNoticiasEditorial();
 
                 PageSize = (PageSize ?? 12);
@@ -374,7 +376,7 @@ namespace WebApplication1.Controllers
             try
             {
 
-
+                ViewBag.DatosEditorial = conexDatosEditorial.VerDatosContactoEditorial();
                 PageSize = (PageSize ?? 20);
                 page = (page ?? 1);
                 tipobusca = (tipobusca ?? 1);
@@ -438,6 +440,7 @@ namespace WebApplication1.Controllers
             {
                 ViewBag.Formatos = conexFormatos.ConsultarFormatos();
                 ViewBag.InfoEditorial = conexInfoWeb.VerInformacionEDitorial();
+                ViewBag.DatosEditorial = conexDatosEditorial.VerDatosContactoEditorial();
             }
             catch (Exception)
             {
@@ -462,6 +465,7 @@ namespace WebApplication1.Controllers
             try
             {
                 ViewBag.DatosEditorial = conexDatosEditorial.VerDatosContactoEditorial();
+
             }
             catch (Exception)
             {

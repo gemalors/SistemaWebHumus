@@ -770,7 +770,7 @@
                                         <li class="nav-item"><a class="nav-link" type="submit" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal4" data-toggle="tab"><i class="mdi mdi-f6ca mdi-contacts"></i> Registrar datos de los autores</a></li>
                                     }
                                     <li class="nav-item "><a class="nav-link" type="submit" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-toggle="tab"><i class="mdi mdi-f21a mdi-file-document-box"></i> Agregar nueva categoría</a></li>
-                                    @if (@ViewBag.Idlibro1 != 0 && ViewBag.Estado != "Libro Publicado")
+                                    @if (@ViewBag.Idlibro1 != 0 && ViewBag.Estado != "Libro publicado")
                                     {
                                         <li class="nav-item "><a class="nav-link" type="submit" href="@Url.Action("PublicarLibroExterno", "Libro", new RouteValueDictionary(new { controller = "Libro", action = "PublicarLibroExterno", IDlibro = @ViewBag.Idlibro1}))"><i class="mdi mdi-f216 mdi-file-check"></i> Publicar este Libro</a></li>
 

@@ -50,8 +50,13 @@
                         <a href="@Url.Action("Inicio", "Editorial")" class="h1 text-secondary">
                             <img src="~/Recursos/Plantilla/assets/images/logohumus2.png" alt="homepage" class="light-logo" style="margin-top:1%" />
                         </a>
+                        @{
+                            string date = DateTime.Now.ToString("MM-dd-yyyy");
+                            string year = date.Substring(6, 4);
+
+                        }
                         <div class="lockscreen-footer text-center">
-                            <b><a href="http://www.espam.edu.ec/" class="text-black">&copy;ESPAM MFL</a></b><br> 2022-2023
+                            <b><a href="http://www.espam.edu.ec/" class="text-black">&copy;ESPAM MFL - @year</a></b><br> 
 
                         </div>
                     </div>

@@ -652,7 +652,7 @@
 
 
                                         <li class="nav-item "><a class="nav-link " type="submit" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" data-toggle="tab"><i class="mdi mdi-f21a mdi-file-document-box"></i> Agregar nueva categoría</a></li>
-                                        @if (itemp.IdentificaEstado != 8)
+                                        @if (itemp.IdentificaEstado != 8 && itemp.Estado!="Libro publicado")
                                         {
                                             <li class="nav-item "><a class="nav-link" type="submit" href="@Url.Action("Publicar", "Libro", new RouteValueDictionary(new { controller = "Libro", action = "Publicar", Idlibro = @ViewBag.Idlibro, Idproceso=itemp.IDproceso}))"><i class="mdi mdi-f216 mdi-file-check"></i> Publicar este libro</a></li>
                                         }

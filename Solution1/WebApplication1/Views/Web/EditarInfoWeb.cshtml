@@ -86,43 +86,53 @@
                     @using (Html.BeginForm("EditarSlider", "Web", FormMethod.Post, new { @class = "form - horizontal", enctype = "multipart/form-data" }))
                     {
 
-                        <div class="card-body">
-                            <input type="hidden" class="form-control" id="Id1" name="Id1">
-                            <div class="form-group row">
-                                <label for="fname"
-                                       class="col-lg-2 text-start control-label col-form-label text-info">Título:</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="titulo1" name="titulo1">
-                                </div>
+                    <div class="card-body">
+                        <input type="hidden" class="form-control" id="Id1" name="Id1">
+                        <div class="form-group row">
+            <label for="fname"
+                   class="col-lg-2 text-start control-label col-form-label text-info">Título:</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="titulo1" name="titulo1">
+            </div>
+        </div>
+                        <div class="form-group row">
+                            <label for="lname" class="col-lg-2 text-start control-label col-form-label text-info">
+
+                                Descripción:
+                            </label>
+                            <div class="col-lg-10">
+                                <textarea type="text" class="form-control" id="enunciado1" name="enunciado1" rows="5" cols="5"></textarea>
+
                             </div>
-                            <div class="form-group row">
-                                <label for="lname" class="col-lg-2 text-start control-label col-form-label text-info">
-
-                                    Descripción:
-                                </label>
-                                <div class="col-lg-10">
-                                    <textarea type="text" class="form-control" id="enunciado1" name="enunciado1" rows="10" cols="50"></textarea>
-
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="lname"
-                                       class="col-lg-2 text-start control-label col-form-label text-info">Imagen:</label>
-                                <div class="col-lg-10">
-                                    <input type="file" class="form-control" id="imagen" name="imagen">
-                                </div>
-                            </div>
-                            <input type="hidden" class="form-control" id="imagen1" name="imagen1">
-                            @*<div class="form-group row">
-                                    <label for="lname"
-                                           class="col-sm-3 text-end control-label col-form-label">:</label>
-                                    <div class="col-sm-9">
-                                        <input type="file" class="form-control" id="imagenslider" name="imagenslider" required="">
-                                    </div>
-                                </div>*@
-
                         </div>
+                        <div class="form-group row">
+                            <label for="lname" class="col-lg-2 text-start control-label col-form-label text-info">
+
+                                Url:
+                            </label>
+                            <div class="col-lg-10">
+                                <textarea type="text" class="form-control" id="url1" name="url1" rows="3" cols="3"></textarea>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="lname"
+                                   class="col-lg-2 text-start control-label col-form-label text-info">Imagen:</label>
+                            <div class="col-lg-10">
+                                <input type="file" class="form-control" id="imagen" name="imagen">
+                            </div>
+                        </div>
+                        <input type="hidden" class="form-control" id="imagen1" name="imagen1">
+                        @*<div class="form-group row">
+            <label for="lname"
+                   class="col-sm-3 text-end control-label col-form-label">:</label>
+            <div class="col-sm-9">
+                <input type="file" class="form-control" id="imagenslider" name="imagenslider" required="">
+            </div>
+        </div>*@
+
+                    </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             <button type="submit" class="btn btn-info">Guardar</button>
@@ -427,43 +437,52 @@
                 <div class="card">
                     @using (Html.BeginForm("RegistroSlider", "Web", FormMethod.Post, new { @class = "form - horizontal", enctype = "multipart/form-data" }))
                     {
-                        <div class="card-body">
+                    <div class="card-body">
 
-                            <div class="form-group row">
-                                <label for="fname"
-                                       class="col-lg-2 text-start control-label col-form-label text-info">Título:</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título...">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="lname" class="col-lg-2 text-start control-label col-form-label text-info">
+                        <div class="form-group row">
+            <label for="fname"
+                   class="col-lg-2 text-start control-label col-form-label text-info">Título:</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título...">
+            </div>
+        </div>
+                        <div class="form-group row">
+            <label for="lname" class="col-lg-2 text-start control-label col-form-label text-info">
 
-                                    Descripción:
-                                </label>
-                                <div class="col-lg-10">
-                                    <textarea type="text" class="form-control" id="enunciado" name="enunciado" rows="10" cols="50" placeholder="Descripción..."></textarea>
+                Descripción:
+            </label>
+            <div class="col-lg-10">
+                <textarea type="text" class="form-control" id="enunciado" name="enunciado" rows="5" cols="5" placeholder="Descripción..."></textarea>
 
-                                </div>
-                            </div>
+            </div>
+        </div>
+                    <div class="form-group row">
+                        <label for="lname" class="col-lg-2 text-start control-label col-form-label text-info">
 
-                            <div class="form-group row">
-                                <label for="lname"
-                                       class="col-lg-2 text-start control-label col-form-label text-info">Imagen:</label>
-                                <div class="col-lg-10">
-                                    <input type="file" class="form-control" id="imagen" name="imagen" required="">
-                                </div>
-                            </div>
-
-                            @*<div class="form-group row">
-                                    <label for="lname"
-                                           class="col-sm-3 text-end control-label col-form-label">:</label>
-                                    <div class="col-sm-9">
-                                        <input type="file" class="form-control" id="imagenslider" name="imagenslider" required="">
-                                    </div>
-                                </div>*@
+                            Url:
+                        </label>
+                        <div class="col-lg-10">
+                            <textarea type="text" class="form-control" id="url" name="url" rows="3" cols="3" placeholder="Url..."></textarea>
 
                         </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lname"
+                               class="col-lg-2 text-start control-label col-form-label text-info">Imagen:</label>
+                        <div class="col-lg-10">
+                            <input type="file" class="form-control" id="imagen" name="imagen" required="">
+                        </div>
+                    </div>
+
+                    @*<div class="form-group row">
+        <label for="lname"
+               class="col-sm-3 text-end control-label col-form-label">:</label>
+        <div class="col-sm-9">
+            <input type="file" class="form-control" id="imagenslider" name="imagenslider" required="">
+        </div>
+    </div>*@
+
+                    </div>
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -1634,7 +1653,7 @@
                                                                     <hr />
 
                                                                     <div class="tools">
-                                                                        <i class="fas fa-edit text-success" title="Editar slider" onclick="EditSlider(@item1.IDSlider,'@item1.Titulo','@item1.Enunciado','@item1.ImagenSlider')" data-bs-toggle="modal" data-bs-target="#exampleModal1"></i>
+                                                                        <i class="fas fa-edit text-success" title="Editar slider" onclick="EditSlider(@item1.IDSlider,'@item1.Titulo','@item1.Enunciado','@item1.ImagenSlider','@item1.Urlslider')" data-bs-toggle="modal" data-bs-target="#exampleModal1"></i>
                                                                         <i class="fas fa-trash text-danger" title="Eliminar slider" onclick="EliminarSlider(@item1.IDSlider)"></i>
                                                                     </div>
 
@@ -2205,13 +2224,13 @@
 
 
 
-                function EditSlider(IDSlider, Titulo, Enunciado, ImagenSlider) {
+    function EditSlider(IDSlider, Titulo, Enunciado, ImagenSlider, Urlslider) {
 
                 document.getElementById('Id1').value = IDSlider;
                 document.getElementById('titulo1').value = Titulo;
                 document.getElementById('enunciado1').value = Enunciado;
                 document.getElementById('imagen1').value = ImagenSlider;
-
+                document.getElementById('url1').value = Urlslider;
 
                 }
 
