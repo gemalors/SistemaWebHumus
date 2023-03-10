@@ -285,7 +285,6 @@
           <Property Name="Ordenperiodo" Type="int" />
           <Property Name="Fechainicio" Type="datetime" />
           <Property Name="Fechafin" Type="datetime" />
-          <Property Name="Identificador" Type="int" />
         </EntityType>
         <EntityType Name="PreguntaAbierta">
           <Key>
@@ -390,8 +389,6 @@
             <PropertyRef Name="IDSlider" />
           </Key>
           <Property Name="IDSlider" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Titulo" Type="nvarchar(max)" />
-          <Property Name="Enunciado" Type="nvarchar(max)" />
           <Property Name="ImagenSlider" Type="nvarchar(max)" />
           <Property Name="Urlslider" Type="nvarchar(max)" />
           <Property Name="EliminadoSlider" Type="bit" />
@@ -1635,7 +1632,6 @@
           <Parameter Name="ordenperiodo" Type="int" Mode="In" />
           <Parameter Name="fechainicio" Type="datetime" Mode="In" />
           <Parameter Name="fechafin" Type="datetime" Mode="In" />
-          <Parameter Name="ident" Type="int" Mode="In" />
         </Function>
         <Function Name="ConsultarOpcionesRespuestaPreguntaSeleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
           <Parameter Name="Idcuestionario" Type="int" Mode="In" />
@@ -1847,15 +1843,11 @@
           <Parameter Name="visible" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="AgregarSlider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SlidersEditorial">
-          <Parameter Name="titulo" Type="nvarchar(max)" Mode="In" />
-          <Parameter Name="enunciado" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="imagenslider" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="url" Type="nvarchar(max)" Mode="In" />
         </Function>
         <Function Name="EditarSlider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SlidersEditorial">
           <Parameter Name="Idslider" Type="int" Mode="In" />
-          <Parameter Name="titulo" Type="nvarchar(max)" Mode="In" />
-          <Parameter Name="enunciado" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="imagenslider" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="url" Type="nvarchar(max)" Mode="In" />
         </Function>
@@ -2480,7 +2472,6 @@
           <Property Name="Ordenperiodo" Type="Int32" />
           <Property Name="Fechainicio" Type="DateTime" Precision="3" />
           <Property Name="Fechafin" Type="DateTime" Precision="3" />
-          <Property Name="Identificador" Type="Int32" />
         </EntityType>
         <EntityType Name="PreguntaAbierta">
           <Key>
@@ -2608,8 +2599,6 @@
             <PropertyRef Name="IDSlider" />
           </Key>
           <Property Name="IDSlider" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Titulo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Enunciado" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ImagenSlider" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Urlslider" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="EliminadoSlider" Type="Boolean" />
@@ -4059,7 +4048,6 @@
             <Parameter Name="ordenperiodo" Mode="In" Type="Int32" />
             <Parameter Name="fechainicio" Mode="In" Type="DateTime" />
             <Parameter Name="fechafin" Mode="In" Type="DateTime" />
-            <Parameter Name="ident" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="ConsultarOpcionesRespuestaPreguntaSeleccion" ReturnType="Collection(Model1.ConsultarOpcionesRespuestaPreguntaSeleccion_Result)">
             <Parameter Name="Idcuestionario" Mode="In" Type="Int32" />
@@ -4271,15 +4259,11 @@
             <Parameter Name="visible" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="AgregarSlider" ReturnType="Collection(Int32)">
-            <Parameter Name="titulo" Mode="In" Type="String" />
-            <Parameter Name="enunciado" Mode="In" Type="String" />
             <Parameter Name="imagenslider" Mode="In" Type="String" />
             <Parameter Name="url" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="EditarSlider" ReturnType="Collection(Int32)">
             <Parameter Name="Idslider" Mode="In" Type="Int32" />
-            <Parameter Name="titulo" Mode="In" Type="String" />
-            <Parameter Name="enunciado" Mode="In" Type="String" />
             <Parameter Name="imagenslider" Mode="In" Type="String" />
             <Parameter Name="url" Mode="In" Type="String" />
           </FunctionImport>
@@ -4582,6 +4566,7 @@
           <Property Type="Int32" Name="TotalLibrosPublicados" Nullable="true" />
           <Property Type="Int32" Name="TotalLibrosProceso" Nullable="true" />
           <Property Type="String" Name="detalleperiodo" Nullable="true" />
+          <Property Type="Int32" Name="idperiodo" Nullable="true" />
           <Property Type="Int32" Name="LibrosxCarrera" Nullable="true" />
           <Property Type="Int32" Name="TotalCarreras" Nullable="true" />
         </ComplexType>
@@ -4593,6 +4578,7 @@
           <Property Type="Int32" Name="TotalLibrosPublicados" Nullable="true" />
           <Property Type="Int32" Name="TotalLibrosProceso" Nullable="true" />
           <Property Type="Int32" Name="detalleyear" Nullable="true" />
+          <Property Type="Int32" Name="idyear" Nullable="true" />
           <Property Type="Int32" Name="LibrosxCarrera" Nullable="true" />
           <Property Type="Int32" Name="TotalCarreras" Nullable="true" />
         </ComplexType>
@@ -4603,6 +4589,7 @@
           <Property Type="Int32" Name="Totalvistaslibrosxa" Nullable="true" />
           <Property Type="Int32" Name="Totalvistasxcarrera" Nullable="true" />
           <Property Type="Int32" Name="detalleyear" Nullable="true" />
+          <Property Type="Int32" Name="idyear" Nullable="true" />
         </ComplexType>
         <ComplexType Name="VistasLibrosxYears_Result">
           <Property Type="Int32" Name="IDyear" Nullable="false" />
@@ -5430,7 +5417,6 @@
           <Property Type="Int32" Name="Ordenperiodo" Nullable="true" />
           <Property Type="DateTime" Name="Fechainicio" Nullable="true" Precision="23" />
           <Property Type="DateTime" Name="Fechafin" Nullable="true" Precision="23" />
-          <Property Type="Int32" Name="Identificador" Nullable="true" />
         </ComplexType>
         <ComplexType Name="ListarYearPeriodo_Result">
           <Property Type="Int32" Name="IDyear" Nullable="false" />
@@ -5708,8 +5694,6 @@
         </ComplexType>
         <ComplexType Name="VerSliders_Result">
           <Property Type="Int32" Name="IDSlider" Nullable="false" />
-          <Property Type="String" Name="Titulo" Nullable="true" />
-          <Property Type="String" Name="Enunciado" Nullable="true" />
           <Property Type="String" Name="ImagenSlider" Nullable="true" />
           <Property Type="String" Name="Urlslider" Nullable="true" />
         </ComplexType>
@@ -6138,7 +6122,6 @@
                 <ScalarProperty Name="Ordenperiodo" ColumnName="Ordenperiodo" />
                 <ScalarProperty Name="Fechainicio" ColumnName="Fechainicio" />
                 <ScalarProperty Name="Fechafin" ColumnName="Fechafin" />
-                <ScalarProperty Name="Identificador" ColumnName="Identificador" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -6251,8 +6234,6 @@
             <EntityTypeMapping TypeName="Model1.SlidersEditorial">
               <MappingFragment StoreEntitySet="SlidersEditorial">
                 <ScalarProperty Name="IDSlider" ColumnName="IDSlider" />
-                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
-                <ScalarProperty Name="Enunciado" ColumnName="Enunciado" />
                 <ScalarProperty Name="ImagenSlider" ColumnName="ImagenSlider" />
                 <ScalarProperty Name="Urlslider" ColumnName="Urlslider" />
                 <ScalarProperty Name="EliminadoSlider" ColumnName="EliminadoSlider" />
@@ -6660,6 +6641,7 @@
                 <ScalarProperty Name="TotalLibrosPublicados" ColumnName="TotalLibrosPublicados" />
                 <ScalarProperty Name="TotalLibrosProceso" ColumnName="TotalLibrosProceso" />
                 <ScalarProperty Name="detalleperiodo" ColumnName="detalleperiodo" />
+                <ScalarProperty Name="idperiodo" ColumnName="idperiodo" />
                 <ScalarProperty Name="LibrosxCarrera" ColumnName="LibrosxCarrera" />
                 <ScalarProperty Name="TotalCarreras" ColumnName="TotalCarreras" />
               </ComplexTypeMapping>
@@ -6675,6 +6657,7 @@
                 <ScalarProperty Name="TotalLibrosPublicados" ColumnName="TotalLibrosPublicados" />
                 <ScalarProperty Name="TotalLibrosProceso" ColumnName="TotalLibrosProceso" />
                 <ScalarProperty Name="detalleyear" ColumnName="detalleyear" />
+                <ScalarProperty Name="idyear" ColumnName="idyear" />
                 <ScalarProperty Name="LibrosxCarrera" ColumnName="LibrosxCarrera" />
                 <ScalarProperty Name="TotalCarreras" ColumnName="TotalCarreras" />
               </ComplexTypeMapping>
@@ -6689,6 +6672,7 @@
                 <ScalarProperty Name="Totalvistaslibrosxa" ColumnName="Totalvistaslibrosxa" />
                 <ScalarProperty Name="Totalvistasxcarrera" ColumnName="Totalvistasxcarrera" />
                 <ScalarProperty Name="detalleyear" ColumnName="detalleyear" />
+                <ScalarProperty Name="idyear" ColumnName="idyear" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -7833,7 +7817,6 @@
                 <ScalarProperty Name="Ordenperiodo" ColumnName="Ordenperiodo" />
                 <ScalarProperty Name="Fechainicio" ColumnName="Fechainicio" />
                 <ScalarProperty Name="Fechafin" ColumnName="Fechafin" />
-                <ScalarProperty Name="Identificador" ColumnName="Identificador" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -8231,8 +8214,6 @@
             <ResultMapping>
               <ComplexTypeMapping TypeName="Model1.VerSliders_Result">
                 <ScalarProperty Name="IDSlider" ColumnName="IDSlider" />
-                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
-                <ScalarProperty Name="Enunciado" ColumnName="Enunciado" />
                 <ScalarProperty Name="ImagenSlider" ColumnName="ImagenSlider" />
                 <ScalarProperty Name="Urlslider" ColumnName="Urlslider" />
               </ComplexTypeMapping>

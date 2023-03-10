@@ -59,12 +59,17 @@ namespace WebApplication1.Controllers
 
             ViewBag.TotalNotificaciones = ntotal;
             ViewBag.NuevasNotificaciones = nnuevas;
-
+            ViewBag.Idpa = 0;
+            ViewBag.Periodos = conexPeriodo.ListarPeriodos();
+            foreach (var item in ViewBag.Periodos)
+            {
+                ViewBag.Idpa = item.IDperiodo;
+            }
             
 
             ViewBag.Categorias = conexcate.Vercategorias();
             ViewBag.Carreras = conexcarrera.VerCarreras();
-            ViewBag.Periodos = conexPeriodo.ListarPeriodos();
+           
 
             ViewBag.Usuario = conexUser.BuscarUsuario(Session["Username"].ToString());
             return View();
@@ -105,7 +110,7 @@ namespace WebApplication1.Controllers
                 ViewBag.TotalCarreras = item.TotalCarreras;
                 ViewBag.LibsProceso = item.TotalLibrosProceso;
                 ViewBag.LibsPublicado = item.TotalLibrosPublicados;
-
+                break;
 
             }
 
@@ -115,6 +120,7 @@ namespace WebApplication1.Controllers
                 foreach (var item in ViewBag.Librospublicadosxcategoria)
                 {
                     ViewBag.TotalCate = item.TotalCategorias;
+                    break;
                 }
             }
             
@@ -124,9 +130,11 @@ namespace WebApplication1.Controllers
                 ViewBag.Libperiodos = conexconsulta.VerNumLibrosPublicadosxPeriodo(idc);
                 foreach (var item in ViewBag.Libperiodos)
                 {
+                    ViewBag.Idp1 = item.idperiodo;
                     ViewBag.detperiodo = item.detalleperiodo;
                     ViewBag.Periodo = item.detalleperiodo;
                     ViewBag.Totalp = item.TotalLibrosPublicadosxp;
+                    break;
                 }
 
                 foreach (var item in conexconsulta.ConsultarComparativaPeriodanterior())
@@ -135,6 +143,7 @@ namespace WebApplication1.Controllers
                     ViewBag.pACT = Convert.ToInt32(item.periodoactual);
                     ViewBag.nombreant = item.periodoANT;
                     ViewBag.nombreact = item.periodoACT;
+                    break;
                 }
 
 
@@ -147,8 +156,10 @@ namespace WebApplication1.Controllers
                 ViewBag.Libyears = conexconsulta.VerNumLibrosPublicadosxYears(idc);
                 foreach (var item in ViewBag.Libyears)
                 {
+                    ViewBag.Idp2 = item.idyear;
                     ViewBag.detalleyear = item.detalleyear;
                     ViewBag.Totaly = item.TotalLibrosPublicadosxa;
+                    break;
                 }
 
                 foreach (var item in conexconsulta.ConsultarComparativaYearanterior())
@@ -158,7 +169,7 @@ namespace WebApplication1.Controllers
                     ViewBag.yanterior = item.yANT;
                     ViewBag.yactual = item.yACT;
 
-
+                    break;
                 }
 
             }
@@ -169,6 +180,7 @@ namespace WebApplication1.Controllers
                 foreach (var item in ViewBag.VistasLibros)
                 {
                     ViewBag.Vistas = item.Totalvistaslibros;
+                    break;
                 }
 
                 ViewBag.DetalleVistasLibros = conexconsulta.VerLibrosVistas();
@@ -180,9 +192,11 @@ namespace WebApplication1.Controllers
                 ViewBag.VistasxYears = conexconsulta.VerNumVistasLibrosxYears(idc);
                 foreach (var item in ViewBag.VistasxYears)
                 {
+                    ViewBag.Idp3 = item.idyear;
                     ViewBag.Vyear = item.detalleyear;
                     ViewBag.Totalvyear = item.Totalvistaslibrosxa;
                     ViewBag.Vistast = item.Totalvistaslibros;
+                    break;
 
                 }
 
@@ -192,6 +206,7 @@ namespace WebApplication1.Controllers
                     ViewBag.TvistasACT = item.TotalvistaslibrosACT;
                     ViewBag.YACT = item.yearACT;
                     ViewBag.YANT = item.yearANT;
+                    break;
                 }
 
             }
@@ -226,7 +241,6 @@ namespace WebApplication1.Controllers
 
             }
 
-            int idp = 0, idy = 0, idy1 = 0;
             int ntotal = 0;
             int nnuevas = 0;
             int Id = Convert.ToInt32(Session["Id"]);
@@ -267,52 +281,25 @@ namespace WebApplication1.Controllers
             
 
             ViewBag.Consultas = conexconsulta.ListarConsultas();
-
-
-            foreach(var item3 in ViewBag.Consultas)
-            {
-                if (item3.Identificador == 2 && item3.Parametros==true)
-                {
-                    idp = item3.Idparametro;
-                }
-                if(item3.Identificador == 3 && item3.Parametros == true)
-                {
-                    idy = item3.Idparametro;
-                }
-                if (item3.Identificador == 5 && item3.Parametros == true)
-                {
-                    idy1 = item3.Idparametro;
-                }
-            }
-
-
-            foreach(var item in conexconsulta.ConsultarNumLibrosPublicadosxPeriodo(idp))
-            {
-                ViewBag.Totalp = item.TotalLibrosPublicadosxp;
-                ViewBag.Periodo = item.detalleperiodo;
-                break;
-            }
-
-
-            foreach (var item in conexconsulta.ConsultarNumLibrosPublicadosxYear(idy))
-            {
-                ViewBag.Totaly = item.TotalLibrosPublicadosxa;
-                ViewBag.year = item.detalleyear;
-                break;
-            }
-
-
-            foreach (var item in conexconsulta.ConsultarNumVistasLibrosxYear(idy1))
-            {
-                ViewBag.year1 = item.detalleyear;
-                ViewBag.Vistasxa = item.Totalvistaslibrosxa;
-                break;
-            }
-            
-
-
             ViewBag.Periodos = conexPeriodo.ListarPeriodos();
             ViewBag.years = conexPeriodo.ListarYears();
+
+
+            foreach(var item in ViewBag.Consultas)
+            {
+                if(item.Identificador==5 && item.Parametros == true)
+                {
+                    ViewBag.year1 = item.Idparametro;
+                }
+                if (item.Identificador == 3 && item.Parametros == true)
+                {
+                    ViewBag.year = item.Idparametro;
+                }
+                if (item.Identificador == 2 && item.Parametros == true)
+                {
+                    ViewBag.Periodo = item.Idparametro;
+                }
+            }
         
 
 
@@ -320,42 +307,6 @@ namespace WebApplication1.Controllers
             ViewBag.Usuario = conexUser.BuscarUsuario(Session["Username"].ToString());
 
             return View();
-        }
-
-
-
-
-
-
-
-
-        //Función para editar consulta
-        [HttpPost]
-        public ActionResult Editarconsulta(int idconsulta,int idparametro)
-        {
-            int r = 0;
-         
-
-
-            try
-            {
-
-                r = conexconsulta.EditarConsulta(idconsulta,idparametro);
-
-                if (r != 3)
-                {
-                    TempData["OK"] = "consulta realizada";
-                }
-
-            }
-            catch (Exception)
-            {
-                TempData["ERROR"] = "Algo salió mal";
-                //return View();
-            }
-
-
-            return RedirectToAction("Estadisticas");
         }
 
 
@@ -441,7 +392,7 @@ namespace WebApplication1.Controllers
 
         //Función para agregar período académico
         [HttpPost]
-        public ActionResult AgregarPeriodo(string detallep, int ordenp,DateTime fechainiciop, DateTime fechafinp, int ident)
+        public ActionResult AgregarPeriodo(string detallep, int ordenp,DateTime fechainiciop, DateTime fechafinp)
         {
             int r = 0;
 
@@ -449,23 +400,26 @@ namespace WebApplication1.Controllers
 
             try
             {
-                if(ordenp<=0 || ident <= 0)
+                if(ordenp<=0)
                 {
                     TempData["ERROR2"] = "No se aceptan valores negativos, vuelva a intentarlo e ingrese los valores correctos.";
                     return RedirectToAction("DatosConsultas");
                 }
-                r = conexPeriodo.RegistrarPeriodo(detallep,ordenp,fechainiciop,fechafinp,ident);
-                if (r == 1)
+                if(ordenp == 1 || ordenp == 2)
                 {
-                    TempData["OK"] = "Período académico registrado correctamente";
-                }else if (r == 2)
-                {
-                    TempData["ERROR2"] = "Número de identificador ya existe, intente con un número diferente.";
+                    r = conexPeriodo.RegistrarPeriodo(detallep, ordenp, fechainiciop, fechafinp);
                 }
                 else
                 {
-                    TempData["ERROR"] = "Algo salió mal";
+                    TempData["ERROR2"] = "Solo se aceptan los valores de 1 o 2 para especificar el orden del período a registrar, vuelva a intentarlo e ingrese los valores correctos.";
+                    return RedirectToAction("DatosConsultas");
                 }
+               
+                if (r == 1)
+                {
+                    TempData["OK"] = "Período académico registrado correctamente";
+                }
+               
                 
 
             }
@@ -717,53 +671,73 @@ namespace WebApplication1.Controllers
 
 
 
+        //Función para editar consulta
+        [HttpGet]
+        public JsonResult EditarConsulta(int idconsulta, int idparametro)
+        {
+            
+            int r = conexconsulta.EditarConsulta(idconsulta, idparametro);
+
+            return Json(r, JsonRequestBehavior.AllowGet);
+        }
+
+
+
 
 
 
         //Listo - gráfico 2
         //Función para obtener libros publicados por períodos académicos
         [HttpGet]
-        public JsonResult ConsultarNumLibrosPublicadosxPeriodo()
+        public JsonResult ConsultarNumLibrosPublicadosxPeriodo(int idparametro)
         {
-            int idpe = 0;
-            foreach (var item in conexconsulta.ListarConsultas())
-            {
-                if (item.Identificador == 2 && item.Parametros == true)
-                {
-                    idpe = Convert.ToInt32(item.Idparametro);
-                }
-            }
-
-            var lista = conexconsulta.ConsultarNumLibrosPublicadosxPeriodo(idpe);
 
 
+            //int idpe = 0;
+            //foreach (var item in conexconsulta.ListarConsultas())
+            //{
+            //    if (item.Identificador == 2 && item.Parametros == true)
+            //    {
+            //        idpe = Convert.ToInt32(item.Idparametro);
+            //    }
+            //}
+           //int r = conexconsulta.EditarConsulta(idconsulta, idparametro);
+            
+           var lista = conexconsulta.ConsultarNumLibrosPublicadosxPeriodo(idparametro);
+            
+         
             return Json(lista, JsonRequestBehavior.AllowGet);
         }
 
 
 
 
+     
 
 
         //Listo -  gráfico 3
         //Función para obtener libros publicados por año
         [HttpGet]
-        public JsonResult ConsultarNumLibrosPublicadosxYear()
+        public JsonResult ConsultarNumLibrosPublicadosxYear(int idparametro)
         {
-            int idy = 0;
-            foreach (var item in conexconsulta.ListarConsultas())
-            {
-                if (item.Identificador == 3 && item.Parametros == true)
-                {
-                    idy = Convert.ToInt32(item.Idparametro);
-                }
-            }
+            //int idy = 0;
+            //foreach (var item in conexconsulta.ListarConsultas())
+            //{
+            //    if (item.Identificador == 3 && item.Parametros == true)
+            //    {
+            //        idy = Convert.ToInt32(item.Idparametro);
+            //    }
+            //}
 
-            var lista = conexconsulta.ConsultarNumLibrosPublicadosxYear(idy);
+            
+            var lista = conexconsulta.ConsultarNumLibrosPublicadosxYear(idparametro);
 
 
             return Json(lista, JsonRequestBehavior.AllowGet);
         }
+
+
+      
 
 
 
@@ -791,18 +765,11 @@ namespace WebApplication1.Controllers
         //Listo - gráfico 5
         //Función para consultar num de vistas de libros en página web por año
         [HttpGet]
-        public JsonResult ConsultarNumVistasLibrosxYear()
+        public JsonResult ConsultarNumVistasLibrosxYear(int idparametro)
         {
-            int idy = 0;
-            foreach (var item in conexconsulta.ListarConsultas())
-            {
-                if (item.Identificador == 5 && item.Parametros == true)
-                {
-                    idy = Convert.ToInt32(item.Idparametro);
-                }
-            }
+           
 
-            var lista = conexconsulta.ConsultarNumVistasLibrosxYear(idy);
+            var lista = conexconsulta.ConsultarNumVistasLibrosxYear(idparametro);
 
 
             return Json(lista, JsonRequestBehavior.AllowGet);

@@ -677,8 +677,10 @@ namespace WebApplication1.Controllers
 
 
         //Vista de registro de usuarios//
-        public ActionResult Registro(string busca)
+        public ActionResult Registro()
         {
+            string busca = "";
+
             if (Session["Type"] == null)
             {
                 TempData["ERRORD"] = "No tiene acceso a esta sección del sistema. Inicia sesión";
@@ -710,26 +712,36 @@ namespace WebApplication1.Controllers
 
 
             //ViewBag.DetalleUsuario = conexUser.VerDetalleUsuario(Id);
-            ViewBag.Id = 0;
-            var lista = conexUser.BuscarUsuario(busca);
-           foreach(var item in lista)
-            {
-                ViewBag.Id = item.IDusuario;
-            }
+         
+            //var lista = conexUser.BuscarUsuario(busca);
+          
 
            
 
 
             ViewBag.Usuario = conexUser.BuscarUsuario(Session["Username"].ToString());
             ViewBag.Tipos = conexUser.VerTiposUsuarios();
-            return View(lista);
+            return View();
         }
 
 
 
 
 
-       
+        [HttpGet]
+        public JsonResult ObtenerDatos(string ced)
+        {
+
+
+            var lista = conexUser.BuscarUsuario(ced);
+
+
+            return Json(lista, JsonRequestBehavior.AllowGet);
+        }
+
+
+
+
         // POST: Usuario/Crear usuario
         [HttpPost]
         public ActionResult Create(string Nombre1,string Nombre2, string ApellidoP,string ApellidoS, string Email, string Username, string Telefono, string Direccion, int IdTipousuario)
@@ -737,6 +749,16 @@ namespace WebApplication1.Controllers
             string password = Username;
             bool general = false;
             int r = 0;
+
+            int c = ValidarCedula(Username);
+
+            if (c == 2)
+            {
+                TempData["EXISTE"] = "Número de cédula no válido, verifique que el número este correctamente digitado y vuelva a intentarlo";
+                return RedirectToAction("Registro", new RouteValueDictionary(new { controller = "Usuario", action = "Registro", Id = r }));
+
+            }
+
             if (Telefono == "")
             {
                 Telefono = "Sin actualizar";
@@ -1379,6 +1401,91 @@ namespace WebApplication1.Controllers
             }
 
             return Json(r, JsonRequestBehavior.AllowGet);
+        }
+
+
+
+
+
+
+
+        //Función para validar némero de cédula
+        public int ValidarCedula(string ced)
+        {
+
+            int r = 0;
+            try
+            {
+
+                int[] valores = new int[9];
+                //string ced = "0500681697";
+                char[] chars = ced.ToCharArray();
+
+                int r1 = 0;
+                int suma = 0;
+                int verif = 0;
+                int res = 0;
+                int sum2 = 0;
+                int n = 0;
+
+
+                for (int ctr = 0; ctr < 9; ctr++)
+                {
+                    r1 = ctr % 2;
+                    if (r1 == 0)
+                    {
+                        valores[ctr] = (int)Char.GetNumericValue(chars[ctr]) * 2;
+                        if (valores[ctr] > 9)
+                        {
+                            valores[ctr] = valores[ctr] - 9;
+                        }
+
+                    }
+                    else
+                    {
+                        valores[ctr] = (int)Char.GetNumericValue(chars[ctr]) * 1;
+
+                    }
+
+                    suma = suma + valores[ctr];
+
+                }
+
+                verif = suma + 10;
+                res = verif % 10;
+                sum2 = verif - res;
+
+                n = sum2 - suma;
+                if (n == 10)
+                {
+                    n = 0;
+                }
+
+               
+
+                if ((int)Char.GetNumericValue(chars[9]) == n)
+                {
+                    r = 1;
+                    //Console.WriteLine("cédula valida {0}:{1}", chars[9], n);
+                }
+                else
+                {
+                    r = 2;
+                    //Console.WriteLine("cédula no valida {0}:{1}", chars[9], n);
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+
+
+            return r;
+
         }
 
 

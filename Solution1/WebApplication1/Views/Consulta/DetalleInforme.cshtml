@@ -400,7 +400,7 @@
 
                                                     <div class="col-lg-12">
 
-
+                                                        <input type="hidden" id="p1" value="@ViewBag.Idp1" />
 
                                                         <!--gráfico de barras libros publicados por período consultado-->
                                                         <div class="card" style="margin-top:7%">
@@ -614,6 +614,7 @@
 
                                                     <div class="col-lg-12">
 
+                                                        <input type="hidden" id="p2" value="@ViewBag.Idp2" />
                                                         <!--gráfico de barras libros publicados por año consultado-->
                                                         <div class="card" style="margin-top:7%">
                                                             <div class="card-header border-0">
@@ -852,7 +853,7 @@
                                                                         <span class="text-success">
                                                                             <i class="fas fa-book-reader"></i> @ViewBag.Vistas
                                                                         </span>
-                                                                        <span class="text-muted">Total de vistas de libros</span>
+                                                                        <span class="text-black">Total de vistas de libros</span>
                                                                     </p>
                                                                 </div>
                                                                 <!-- /.d-flex -->
@@ -941,7 +942,7 @@
                                                                         <span class="text-success">
                                                                             <i class="fas fa-book-reader"></i> @ViewBag.Vistas
                                                                         </span>
-                                                                        <span class="text-muted">Total de vistas de libros</span>
+                                                                        <span class="text-black">Total de vistas de libros</span>
                                                                     </p>
 
 
@@ -986,7 +987,7 @@
                                                                         <span class="text-success">
                                                                             <i class="fas fa-book-reader"></i> @ViewBag.Vistas
                                                                         </span>
-                                                                        <span class="text-muted">Total de vistas de libros</span>
+                                                                        <span class="text-black">Total de vistas de libros</span>
                                                                     </p>
                                                                 </div>
                                                                 <!-- /.d-flex -->
@@ -1070,215 +1071,215 @@
                                                 if (item.Identificador == 5)
                                                 {
 
-                                                    <div class="col-lg-12">
+                                        <div class="col-lg-12">
+
+                                            <input type="hidden" id="p3" value="@ViewBag.Idp3" />
+                                            <!--libros más accedidos desde página web consulta por año-->
+                                            <div class="card" style="margin-top:7%">
+                                                <div class="card-header border-0">
+                                                    <div class="d-flex justify-content-between">
+                                                        <p class="card-title">Gráfico de líneas - @item.DetalleConsulta</p>
+                                                        <i class="fas fa- fas fa-chart-line"></i>
+                                                    </div>
+                                                    <div style="margin-top:1%">
+                                                        <span class="mr-2">
+                                                            <small>Año @ViewBag.Vyear </small>
+                                                        </span>
+
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="d-flex">
+                                                        <p class="d-flex flex-column">
+                                                            <span class="text-bold text-lg"> @ViewBag.LibsPublicado</span>
+                                                            <span>Total de libros publicados</span>
+                                                        </p>
+                                                        <p class="ml-auto d-flex flex-column text-right">
+                                                            <span class="text-success">
+                                                                <i class="fas fa-fas fa-globe"></i> @ViewBag.Totalvyear
+                                                            </span>
+                                                            <span class="text-black">Total de vistas este año</span>
+                                                        </p>
+                                                        <p class="ml-auto d-flex flex-column text-right">
+                                                            <span class="text-success">
+                                                                <i class="fas fa-book-reader"></i> @ViewBag.Vistast
+                                                            </span>
+                                                            <span class="text-black">Total de vistas de libros</span>
+                                                        </p>
+                                                    </div>
+                                                    <!-- /.d-flex -->
+
+                                                    <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                        <canvas id="@item.Grafico" height="150"></canvas>
+                                                    </div>
+
+                                                    <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                        <span class="mr-2">
+                                                            <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                        </span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
 
 
-                                                        <!--libros más accedidos desde página web consulta por año-->
-                                                        <div class="card" style="margin-top:7%">
-                                                            <div class="card-header border-0">
-                                                                <div class="d-flex justify-content-between">
-                                                                    <p class="card-title">Gráfico de líneas - @item.DetalleConsulta</p>
-                                                                    <i class="fas fa- fas fa-chart-line"></i>
-                                                                </div>
-                                                                <div style="margin-top:1%">
-                                                                    <span class="mr-2">
-                                                                        <small>Año @ViewBag.Vyear </small>
-                                                                    </span>
+                                            <!--tabla de datos-->
+                                            <div class="card" style="margin-top:7%">
+                                                <div class="card-header border-0">
+                                                    <h3 class="card-title">Tabla - @item.DetalleConsulta</h3>
+                                                    <div class="card-tools">
+                                                        <a href="#" class="btn btn-tool btn-sm">
+                                                            @*<i class="fas fa-download"></i>*@
+                                                        </a>
+                                                        <a href="#" class="btn btn-tool btn-sm">
+                                                            <i class="fas fa-fas fa-table"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body table-responsive p-0">
+                                                    <table class="table table-striped table-valign-middle">
+                                                        <thead>
+                                                            <tr><small style="margin-left:2%">Año @ViewBag.Vyear</small></tr>
+                                                            <tr>
+                                                                <th class="text-secondary" style="text-align:left"><b>Carreras</b></th>
+                                                                <th class="text-secondary" style="text-align:left"><b>Número de vistas</b></th>
 
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-body">
-                                                                <div class="d-flex">
-                                                                    <p class="d-flex flex-column">
-                                                                        <span class="text-bold text-lg"> @ViewBag.LibsPublicado</span>
-                                                                        <span>Total de libros publicados</span>
-                                                                    </p>
-                                                                    <p class="ml-auto d-flex flex-column text-right">
-                                                                        <span class="text-success">
-                                                                            <i class="fas fa-fas fa-globe"></i> @ViewBag.Totalvyear
-                                                                        </span>
-                                                                        <span class="text-muted">Total de vistas este año</span>
-                                                                    </p>
-                                                                    <p class="ml-auto d-flex flex-column text-right">
-                                                                        <span class="text-success">
-                                                                            <i class="fas fa-book-reader"></i> @ViewBag.Vistast
-                                                                        </span>
-                                                                        <span class="text-muted">Total de vistas de libros</span>
-                                                                    </p>
-                                                                </div>
-                                                                <!-- /.d-flex -->
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @foreach (var item1 in ViewBag.VistasxYears)
+                                                            {
+                                                                <tr>
+                                                                    <td style="text-align:left">
+                                                                        @*<img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">*@
+                                                                        @item1.Carrera
+                                                                    </td>
+                                                                    <td style="text-align:left">@item1.Totalvistasxcarrera</td>
 
-                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
-                                                                    <canvas id="@item.Grafico" height="150"></canvas>
-                                                                </div>
+                                                                </tr>
+                                                            }
 
-                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
-                                                                    <span class="mr-2">
-                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
-                                                                    </span>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-
-                                                        <!--tabla de datos-->
-                                                        <div class="card" style="margin-top:7%">
-                                                            <div class="card-header border-0">
-                                                                <h3 class="card-title">Tabla - @item.DetalleConsulta</h3>
-                                                                <div class="card-tools">
-                                                                    <a href="#" class="btn btn-tool btn-sm">
-                                                                        @*<i class="fas fa-download"></i>*@
-                                                                    </a>
-                                                                    <a href="#" class="btn btn-tool btn-sm">
-                                                                        <i class="fas fa-fas fa-table"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-body table-responsive p-0">
-                                                                <table class="table table-striped table-valign-middle">
-                                                                    <thead>
-                                                                        <tr><small style="margin-left:2%">Año @ViewBag.Vyear</small></tr>
-                                                                        <tr>
-                                                                            <th class="text-secondary" style="text-align:left"><b>Carreras</b></th>
-                                                                            <th class="text-secondary" style="text-align:left"><b>Número de vistas</b></th>
-
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        @foreach (var item1 in ViewBag.VistasxYears)
-                                                                        {
-                                                                            <tr>
-                                                                                <td style="text-align:left">
-                                                                                    @*<img src="dist/img/default-150x150.png" alt="Product 1" class="img-circle img-size-32 mr-2">*@
-                                                                                    @item1.Carrera
-                                                                                </td>
-                                                                                <td style="text-align:left">@item1.Totalvistasxcarrera</td>
-
-                                                                            </tr>
-                                                                        }
-
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
-                                                        </div>
-
-
-
-
-
-
-                                                        <!--gráfico de pastel libros publicados por año consultado-->
-                                                        <div class="card" style="margin-top:7%">
-                                                            <div class="card-header border-0">
-                                                                <div class="d-flex justify-content-between">
-                                                                    <p class="card-title">Gráfico de pastel - (Porcentajes) @item.DetalleConsulta</p>
-                                                                    <i class="fas fa-fas fa-chart-pie"></i>
-                                                                </div>
-                                                                <div style="margin-top:1%">
-                                                                    <span class="mr-2">
-                                                                        <small>Año  @ViewBag.Vyear</small>
-                                                                    </span>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-body">
-                                                                <div class="d-flex">
-                                                                    <p class="d-flex flex-column">
-                                                                        <span class="text-bold text-lg"> @ViewBag.LibsPublicado</span>
-                                                                        <span>Total de libros publicados</span>
-                                                                    </p>
-                                                                    <p class="ml-auto d-flex flex-column text-right">
-                                                                        <span class="text-success">
-                                                                            <i class="fas fa-fas fa-globe"></i> @ViewBag.Totalvyear
-                                                                        </span>
-                                                                        <span class="text-muted">Total de vistas este año</span>
-                                                                    </p>
-                                                                    <p class="ml-auto d-flex flex-column text-right">
-                                                                        <span class="text-success">
-                                                                            <i class="fas fa-book-reader"></i> @ViewBag.Vistast
-                                                                        </span>
-                                                                        <span class="text-muted">Total de vistas de libros</span>
-                                                                    </p>
-
-
-                                                                </div>
-                                                                <!-- /.d-flex -->
-
-                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
-                                                                    <canvas id="piechart5" height="150"></canvas>
-                                                                </div>
-
-                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
-                                                                    <span class="mr-2">
-                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
-                                                                    </span>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
 
 
 
 
 
 
-                                                        <!--comparativa num de vistas de libros año ctual vs año anterior-->
-                                                        <div class="card" style="margin-top:7%">
-                                                            <div class="card-header border-0">
-                                                                <div class="d-flex justify-content-between">
-                                                                    <p class="card-title">Gráfico de barras - (Comparativa año actual y año anterior) Número de vistas de libros</p>
-                                                                    <i class="fas fa- fas fa-chart-bar"></i>
-                                                                </div>
-                                                                <div style="margin-top:1%">
-                                                                    <span class="mr-2">
-                                                                        <i class="fas fa-square text-blue"></i> <small> Año @ViewBag.YANT</small>
-                                                                    </span>
-                                                                    <span class="mr-2" style="margin-left:3%">
-                                                                        <i class="fas fa-square text-gray"></i> <small> Año @ViewBag.YACT</small>
-                                                                    </span>
-                                                                </div>
+                                            <!--gráfico de pastel libros publicados por año consultado-->
+                                            <div class="card" style="margin-top:7%">
+                                                <div class="card-header border-0">
+                                                    <div class="d-flex justify-content-between">
+                                                        <p class="card-title">Gráfico de pastel - (Porcentajes) @item.DetalleConsulta</p>
+                                                        <i class="fas fa-fas fa-chart-pie"></i>
+                                                    </div>
+                                                    <div style="margin-top:1%">
+                                                        <span class="mr-2">
+                                                            <small>Año  @ViewBag.Vyear</small>
+                                                        </span>
 
-
-                                                            </div>
-                                                            <div class="card-body">
-                                                                <div class="d-flex">
-                                                                    <p class="d-flex flex-column">
-                                                                        <span class="text-bold text-lg"> @ViewBag.LibsPublicado</span>
-                                                                        <span>Total de libros publicados</span>
-                                                                    </p>
-
-                                                                    <p class="ml-auto d-flex flex-column text-right">
-                                                                        <span class="text-success">
-                                                                            <i class="fas fa-book-reader"></i> @ViewBag.Vistast
-                                                                        </span>
-                                                                        <span class="text-muted">Total de vistas de libros</span>
-                                                                    </p>
-
-                                                                </div>
-                                                                <!-- /.d-flex -->
-
-                                                                <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
-                                                                    <canvas id="comparativa-chart5" height="150"></canvas>
-                                                                </div>
-
-                                                                <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
-                                                                    <span class="mr-2">
-                                                                        Total vistas año anterior <b>@ViewBag.TvistasANT</b> <i class="fas fa-fas fa-bullseye text-blue"></i>
-                                                                    </span>
-                                                                    <span class="mr-2" style="margin-left:3%">
-                                                                        Total vistas año actual <b>@ViewBag.TvistasACT</b> <i class="fas fa-fas fa-bullseye text-gray"></i>
-                                                                    </span>
-                                                                    <span class="mr-2" style="margin-left:5%">
-                                                                        <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras</b> Carreras
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="d-flex">
+                                                        <p class="d-flex flex-column">
+                                                            <span class="text-bold text-lg"> @ViewBag.LibsPublicado</span>
+                                                            <span>Total de libros publicados</span>
+                                                        </p>
+                                                        <p class="ml-auto d-flex flex-column text-right">
+                                                            <span class="text-success">
+                                                                <i class="fas fa-fas fa-globe"></i> @ViewBag.Totalvyear
+                                                            </span>
+                                                            <span class="text-black">Total de vistas este año</span>
+                                                        </p>
+                                                        <p class="ml-auto d-flex flex-column text-right">
+                                                            <span class="text-success">
+                                                                <i class="fas fa-book-reader"></i> @ViewBag.Vistast
+                                                            </span>
+                                                            <span class="text-black">Total de vistas de libros</span>
+                                                        </p>
 
 
                                                     </div>
+                                                    <!-- /.d-flex -->
+
+                                                    <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                        <canvas id="piechart5" height="150"></canvas>
+                                                    </div>
+
+                                                    <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                        <span class="mr-2">
+                                                            <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras Carreras</b>
+                                                        </span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+                                            <!--comparativa num de vistas de libros año ctual vs año anterior-->
+                                            <div class="card" style="margin-top:7%">
+                                                <div class="card-header border-0">
+                                                    <div class="d-flex justify-content-between">
+                                                        <p class="card-title">Gráfico de barras - (Comparativa año actual y año anterior) Número de vistas de libros</p>
+                                                        <i class="fas fa- fas fa-chart-bar"></i>
+                                                    </div>
+                                                    <div style="margin-top:1%">
+                                                        <span class="mr-2">
+                                                            <i class="fas fa-square text-blue"></i> <small> Año @ViewBag.YANT</small>
+                                                        </span>
+                                                        <span class="mr-2" style="margin-left:3%">
+                                                            <i class="fas fa-square text-gray"></i> <small> Año @ViewBag.YACT</small>
+                                                        </span>
+                                                    </div>
+
+
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="d-flex">
+                                                        <p class="d-flex flex-column">
+                                                            <span class="text-bold text-lg"> @ViewBag.LibsPublicado</span>
+                                                            <span>Total de libros publicados</span>
+                                                        </p>
+
+                                                        <p class="ml-auto d-flex flex-column text-right">
+                                                            <span class="text-success">
+                                                                <i class="fas fa-book-reader"></i> @ViewBag.Vistast
+                                                            </span>
+                                                            <span class="text-black">Total de vistas de libros</span>
+                                                        </p>
+
+                                                    </div>
+                                                    <!-- /.d-flex -->
+
+                                                    <div class="position-relative mb-4" style="margin-top:3%; margin-left:-5%;padding-right:18%">
+                                                        <canvas id="comparativa-chart5" height="150"></canvas>
+                                                    </div>
+
+                                                    <div class="d-flex flex-row justify-content-end" style="margin-top:3%">
+                                                        <span class="mr-2">
+                                                            Total vistas año anterior <b>@ViewBag.TvistasANT</b> <i class="fas fa-fas fa-bullseye text-blue"></i>
+                                                        </span>
+                                                        <span class="mr-2" style="margin-left:3%">
+                                                            Total vistas año actual <b>@ViewBag.TvistasACT</b> <i class="fas fa-fas fa-bullseye text-gray"></i>
+                                                        </span>
+                                                        <span class="mr-2" style="margin-left:5%">
+                                                            <i class="fas fa-fas fa-boxes text-green"></i> <b>@ViewBag.TotalCarreras</b> Carreras
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
 
 
 
@@ -1517,7 +1518,7 @@
 
 
 
-                   
+
                 }
 
 
@@ -1786,13 +1787,26 @@
 
         if (@ViewBag.Identificador == 2) {
 
-              /*gráfico 2 num de libros publicados por periodo academico - consulta*/
+            /*gráfico 2 num de libros publicados por periodo academico - consulta*/
 
+
+            var idp1 = document.getElementById('p1').value;
+
+
+            var data1 = {
+
+                'idparametro': idp1,
+
+            };
+
+
+          
         $.ajax({
 
             url: "@Url.Action("ConsultarNumLibrosPublicadosxPeriodo", "Consulta")",
             type: 'GET',
             dataType: 'json',
+            data:  data1,
             contentType: 'application/json; charset-utf-8',
 
 
@@ -1897,6 +1911,7 @@
             url: '@Url.Action("ConsultarNumLibrosPublicadosxPeriodo", "Consulta")',
             type: 'GET',
             dataType: 'json',
+            data: data1,
             contentType: 'application/json; charset-utf-8',
             success: function (data) {
 
@@ -1906,7 +1921,7 @@
                 var total = 0;
                 var suma = 0;
                 for (var i = 0; i < data.length; i++) {
-                   
+
                     if (data[i].TotalLibrosPublicadosxp == 0) {
                         arrayCarreras.push(data[i].Carrera + ' (0)%')
                         arrayNumLibros.push(data[i].LibrosxCarrera)
@@ -1916,8 +1931,8 @@
                         arrayCarreras.push(data[i].Carrera + ' (' + total + ')%')
                         arrayNumLibros.push(data[i].LibrosxCarrera)
                     }
-                 
-                   
+
+
                 }
 
 
@@ -2094,12 +2109,24 @@
 
            /*gráfico 3 num de libros publicados por año - consulta*/
 
+            var idp2 = document.getElementById('p2').value;
+
+
+            var data2 = {
+
+                'idparametro': idp2,
+
+            };
+
+
+
 
             $.ajax({
 
                 url: "@Url.Action("ConsultarNumLibrosPublicadosxYear", "Consulta")",
                 type: 'GET',
                 dataType: 'json',
+                data:data2,
                 contentType: 'application/json; charset-utf-8',
 
                 success: function (obj) {
@@ -2203,6 +2230,7 @@
             url: '@Url.Action("ConsultarNumLibrosPublicadosxYear", "Consulta")',
             type: 'GET',
             dataType: 'json',
+            data:data2,
             contentType: 'application/json; charset-utf-8',
             success: function (data) {
 
@@ -2226,7 +2254,7 @@
 
 
 
-                   
+
                 }
 
 
@@ -2507,7 +2535,7 @@
                     }
 
 
-                  
+
                 }
 
 
@@ -2673,7 +2701,7 @@
 
 
 
-         
+
 
 
         }
@@ -2685,11 +2713,22 @@
 
         /*gráfico 5 número de vistas de libros página web consulta por año*/
 
+            var idp3 = document.getElementById('p3').value;
+
+
+            var data3 = {
+
+                'idparametro': idp3,
+
+            };
+
+
          $.ajax({
 
                 url: "@Url.Action("ConsultarNumVistasLibrosxYear", "Consulta")",
                 type: 'GET',
-                dataType: 'json',
+             dataType: 'json',
+                data:data3,
                 contentType: 'application/json; charset-utf-8',
 
                 success: function (obj) {
@@ -2768,6 +2807,7 @@
             url: '@Url.Action("ConsultarNumVistasLibrosxYear", "Consulta")',
             type: 'GET',
             dataType: 'json',
+            data:data3,
             contentType: 'application/json; charset-utf-8',
             success: function (data) {
 
@@ -2791,7 +2831,7 @@
 
 
 
-                   
+
 
                 }
 

@@ -19,5 +19,6 @@ namespace Datos
         public Nullable<int> Totalvistaslibrosxa { get; set; }
         public Nullable<int> Totalvistasxcarrera { get; set; }
         public Nullable<int> detalleyear { get; set; }
+        public Nullable<int> idyear { get; set; }
     }
 }

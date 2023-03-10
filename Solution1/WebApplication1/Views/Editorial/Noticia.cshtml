@@ -22,18 +22,25 @@
     <title>Editorial Humus</title>
     <link rel="icon" type="image/png" sizes="16x16" href="~/Recursos/Plantilla/assets/images/logo1.png">
 
-    @*<link rel="stylesheet" href="~/Recursos/Plantilla/pluginsn/fontawesome-free/css/all.min.css">*@
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/materialize.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Recursos/PlantillaWeb/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+
     <!-- Theme style -->
     <link rel="stylesheet" href="~/Recursos/Plantilla/distn/css/adminlte.min.css">
 
 
 
-    <!-- Bootstrap core CSS -->
-    <link href="~/Recursos/PlantillaWeb/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/fontawesome.css">
     <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/templatemo-finance-business.css">
+    <link rel="stylesheet" href="~/Recursos/PlantillaWeb/assets/css/owl.css">
 
 
 
@@ -63,6 +70,7 @@
 
 
 
+
     <header class="">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
@@ -74,7 +82,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="@Url.Action("Inicio", "Editorial")" style="color: black;">
-                                <i class="fa fa-home"> Inicio</i>
+                                <i class="fa fa-home" > Inicio</i>
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
@@ -85,8 +93,8 @@
                             <a class="nav-link" href="@Url.Action("Titulos", "Editorial")" title="Libros" style="color:black"><i class="fa fa-book"> Libros</i> </a>
 
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="@Url.Action("Noticias", "Editorial")" style="color: #4DBB6D;"><i class="fa fa-newspaper-o"> Noticias</a></i>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="@Url.Action("Noticias", "Editorial")"  style="color:black"><i class="fa fa-newspaper-o"> Noticias</a></i>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link" href="@Url.Action("Contacto", "Editorial")" style="color: black;"><i class="fa fa-envelope"> Contáctenos</a></i>
@@ -102,19 +110,22 @@
 
 
 
-    <!-- Page Content -->
 
+    <!-- Page Content -->
     <div class="page-heading header-text">
         <div class="container">
             <div class="row">
-
                 <div class="col-md-12">
 
                 </div>
             </div>
         </div>
-
     </div>
+
+
+
+
+
 
     <div class="single-services">
         <div class="container">
@@ -237,7 +248,7 @@
 
                     </div>
                     <div class="col-md-3 footer-item last-item">
-                        <p style="color: #4DBB6D"><i class="fa fa-envelope-o"></i> Contactenos</p>
+                        <p style="color: #4DBB6D"><i class="fa fa-envelope-o"></i> Contáctenos</p>
                         <p>@item.Email </p>
 
 
@@ -278,25 +289,43 @@
 
 
 
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Recursos/PlantillaWeb/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Recursos/PlantillaWeb/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+    <script src="~/Recursos/PlantillaWeb/assets/js/custom.js"></script>
+    <script src="~/Recursos/PlantillaWeb/assets/js/owl.js"></script>
+    <script src="~/Recursos/PlantillaWeb/assets/js/slick.js"></script>
+    <script src="~/Recursos/PlantillaWeb/assets/js/accordions.js"></script>
+    <script src="~/Recursos/PlantillaWeb/assets/js/main.js"></script>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="~/Recursos/PlantillaWeb/vendor/jquery/jquery.min.js"></script>
-    @*<script src="~/Recursos/PlantillaWeb/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>*@
 
-    <!-- Additional Scripts -->
-    <script src="~/Recursos/PlantillaWeb/assets/js/custom.js"></script>
-
-
-
-
-    <!-- jQuery -->
-    <script src="~/Recursos/Plantilla/pluginsn/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 4 -->
-    @*<script src="~/Recursos/Plantilla/pluginsn/bootstrap/js/bootstrap.bundle.min.js"></script>*@
     <!-- AdminLTE App -->
     <script src="~/Recursos/Plantilla/distn/js/adminlte.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    @*<script src="~/Recursos/Plantilla/distn/js/demo.js"></script>*@
+
+
+
+    <script language="text/Javascript">
+        cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+        function clearField(t) {                   //declaring the array outside of the
+            if (!cleared[t.id]) {                      // function makes it static and global
+                cleared[t.id] = 1;  // you could use true and false, but that's more typing
+                t.value = '';         // with more chance of typos
+                t.style.color = '#fff';
+            }
+        }
+    </script>
+
+
 
     <script>
         $(document).ready(function () {

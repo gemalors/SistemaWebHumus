@@ -586,6 +586,18 @@ namespace WebApplication1.Controllers
             int libproceso = 0;
             int IdE = 0;
 
+            int c = ValidarCedula(Cedula);
+
+
+            if (c == 2)
+            {
+                TempData["EXISTE"] = "Número de cédula no válido, verifique que el número este correctamente digitado y vuelva a intentarlo";
+                return RedirectToAction("Evaluadores", new RouteValueDictionary(new { controller = "Proceso", action = "Evaluadores", IDlibro = IDlibro, Idproceso = Idproceso }));
+
+
+            }
+
+
 
             try
             {
@@ -924,7 +936,8 @@ namespace WebApplication1.Controllers
                 {
                     if (item1.EstadoDocu == "Enviado" && item1.Visibleadmin==true)
                     {
-                        path = @"D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\Files\Documents\" + item1.Documento;
+                        path = Server.MapPath("~/Files/Documents/") + item1.Documento;
+                      
                         mail.Attachments.Add(new Attachment(path));
                     }
                 }
@@ -997,7 +1010,8 @@ namespace WebApplication1.Controllers
                 {
                     if (item1.EstadoDocu == "Enviado" && item1.Visibleautor==true)
                     {
-                        path = @"D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\Files\Documents\" + item1.Documento;
+                       path= Server.MapPath("~/Files/Documents/")+item1.Documento;
+
                         mail.Attachments.Add(new Attachment(path));
                     }
                 }
@@ -1077,7 +1091,8 @@ namespace WebApplication1.Controllers
                 {
                     if (item1.Idemisor != Iduser && item1.EstadoDocu == "Enviado" && item1.Visibleautor == true)
                     {
-                        path = @"D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\Files\Documents\" + item1.Documento;
+                        path = Server.MapPath("~/Files/Documents/") + item1.Documento;
+                 
                         mail.Attachments.Add(new Attachment(path));
                     }
                 }
@@ -1086,7 +1101,8 @@ namespace WebApplication1.Controllers
                 {
                     if (item1.EstadoDocu == "Enviado" && item1.Visibleautor == true)
                     {
-                        path = @"D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\Files\Documents\" + item1.Documento;
+                        path = Server.MapPath("~/Files/Documents/") + item1.Documento;
+                   
                         mail.Attachments.Add(new Attachment(path));
                     }
                 }
@@ -1166,7 +1182,8 @@ namespace WebApplication1.Controllers
                 {
                     if (item1.EstadoDocu == "Pendiente a evaluar" && item1.Visiblevaluador==true)
                     {
-                        path = @"D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\Files\Documents\" + item1.Documento;
+                        path = Server.MapPath("~/Files/Documents/") + item1.Documento;
+
                         mail.Attachments.Add(new Attachment(path));
                     }
                 }
@@ -2082,7 +2099,84 @@ namespace WebApplication1.Controllers
         }
 
 
+        //Función para validar némero de cédula
+        public int ValidarCedula(string ced)
+        {
 
+            int r = 0;
+            try
+            {
+
+                int[] valores = new int[9];
+                //string ced = "0500681697";
+                char[] chars = ced.ToCharArray();
+
+                int r1 = 0;
+                int suma = 0;
+                int verif = 0;
+                int res = 0;
+                int sum2 = 0;
+                int n = 0;
+
+
+                for (int ctr = 0; ctr < 9; ctr++)
+                {
+                    r1 = ctr % 2;
+                    if (r1 == 0)
+                    {
+                        valores[ctr] = (int)Char.GetNumericValue(chars[ctr]) * 2;
+                        if (valores[ctr] > 9)
+                        {
+                            valores[ctr] = valores[ctr] - 9;
+                        }
+
+                    }
+                    else
+                    {
+                        valores[ctr] = (int)Char.GetNumericValue(chars[ctr]) * 1;
+
+                    }
+
+                    suma = suma + valores[ctr];
+
+                }
+
+                verif = suma + 10;
+                res = verif % 10;
+                sum2 = verif - res;
+
+                n = sum2 - suma;
+                if (n == 10)
+                {
+                    n = 0;
+                }
+
+
+
+                if ((int)Char.GetNumericValue(chars[9]) == n)
+                {
+                    r = 1;
+                    //Console.WriteLine("cédula valida {0}:{1}", chars[9], n);
+                }
+                else
+                {
+                    r = 2;
+                    //Console.WriteLine("cédula no valida {0}:{1}", chars[9], n);
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+
+
+            return r;
+
+        }
 
 
 
@@ -3075,7 +3169,7 @@ namespace WebApplication1.Controllers
 
 
 
-                    if (r ==1 && el==1)
+                    if (r == 1 && el == 1)
                     {
                         TempData["OK"] = "El proceso ha sido enviado a revisión";
                       
@@ -3093,7 +3187,7 @@ namespace WebApplication1.Controllers
 
                         //enviar correo a editorial
                         SendEmailDocumentosEditorial(notificacion, asunto, Idproceso, idemisor);
-                       }
+                    }
 
                     else
                     {
@@ -3871,7 +3965,7 @@ namespace WebApplication1.Controllers
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 TempData["ERROR"] = "Algo salió mal";
             }

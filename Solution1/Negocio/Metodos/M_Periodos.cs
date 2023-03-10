@@ -18,7 +18,7 @@ namespace Negocio.Metodos
 
 
         //Función para agregar períodos académicos para generar consulta de estadísticas
-        public int RegistrarPeriodo(string detalleperiodo, int ordenperiodo, DateTime fechainicio, DateTime fechafin, int ident)
+        public int RegistrarPeriodo(string detalleperiodo, int ordenperiodo, DateTime fechainicio, DateTime fechafin)
         {
 
 
@@ -27,7 +27,7 @@ namespace Negocio.Metodos
             try
             {
 
-                r = Convert.ToInt32(DB.RegistroPeriodo(detalleperiodo,ordenperiodo,fechainicio,fechafin,ident).FirstOrDefault());
+                r = Convert.ToInt32(DB.RegistroPeriodo(detalleperiodo,ordenperiodo,fechainicio,fechafin).FirstOrDefault());
             }
             catch (Exception)
             {
@@ -80,7 +80,7 @@ namespace Negocio.Metodos
                     Ordenperiodo=item.Ordenperiodo,
                     Fechainicio=item.Fechainicio,
                     Fechafin=item.Fechafin,
-                    Identificador=item.Identificador
+                   
 
 
                 });

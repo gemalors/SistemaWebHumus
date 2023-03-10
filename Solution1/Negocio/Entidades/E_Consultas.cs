@@ -57,8 +57,9 @@ namespace Negocio.Entidades
         public int? nvistas { get; set; }
         public int? TotalLibrosxyears { get; set; }
 
-        
-
+        public int? idperiodo { get; set; }
+        public int? idyear { get; set; }
+       
 
 
     }

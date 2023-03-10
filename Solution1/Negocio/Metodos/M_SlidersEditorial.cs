@@ -19,7 +19,7 @@ namespace Negocio.Metodos
 
         
         //Función para agregar slider para página web
-        public int AgregarSlider(string titulo, string enunciado, string imagenslider, string url)
+        public int AgregarSlider(string imagenslider, string url)
         {
           
             int r = 1;
@@ -27,7 +27,7 @@ namespace Negocio.Metodos
             try
             {
 
-                r = Convert.ToInt32(DB.AgregarSlider(titulo,enunciado,imagenslider,url).FirstOrDefault());
+                r = Convert.ToInt32(DB.AgregarSlider(imagenslider,url).FirstOrDefault());
             }
             catch (Exception)
             {
@@ -43,14 +43,14 @@ namespace Negocio.Metodos
 
 
         //Función para editar slider para página web
-        public int EditarSlider(int Idslider, string titulo, string enunciado, string imagenslider, string url)
+        public int EditarSlider(int Idslider, string imagenslider, string url)
         {
             int r = 1;
 
             try
             {
 
-                r = Convert.ToInt32(DB.EditarSlider(Idslider,titulo ,enunciado,imagenslider,url).FirstOrDefault());
+                r = Convert.ToInt32(DB.EditarSlider(Idslider,imagenslider,url).FirstOrDefault());
             }
             catch (Exception)
             {
@@ -98,8 +98,8 @@ namespace Negocio.Metodos
                 {
 
                     IDSlider=item.IDSlider, 
-                    Titulo=item.Titulo,
-                    Enunciado=item.Enunciado, 
+                    //Titulo=item.Titulo,
+                    //Enunciado=item.Enunciado, 
                     ImagenSlider=item.ImagenSlider,
                     Urlslider=item.Urlslider
                    

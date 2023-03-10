@@ -131,7 +131,8 @@ namespace Negocio.Metodos
                     TotalLibrosPublicados = item.TotalLibrosPublicados,
                     TotalLibrosProceso = item.TotalLibrosProceso,
                     LibrosxCarrera = item.LibrosxCarrera,
-                    detalleyear = item.detalleyear
+                    detalleyear = item.detalleyear,
+                
 
 
 
@@ -267,7 +268,7 @@ namespace Negocio.Metodos
                     TotalLibrosPublicados = item.TotalLibrosPublicados,
                     TotalLibrosProceso = item.TotalLibrosProceso,
                     LibrosxCarrera = item.LibrosxCarrera,
-
+                    idperiodo = item.idperiodo,
                     TotalLibrosPublicadosxp = item.TotalLibrosPublicadosxp,
 
 
@@ -300,8 +301,8 @@ namespace Negocio.Metodos
                     Totalvistaslibros = item.Totalvistaslibros,
                     Totalvistaslibrosxa=item.Totalvistaslibrosxa,
                     Totalvistasxcarrera = item.Totalvistasxcarrera,
-                    detalleyear = item.detalleyear
-
+                    detalleyear = item.detalleyear,
+                    idyear=item.idyear,
 
 
                 });
@@ -549,7 +550,7 @@ namespace Negocio.Metodos
                     TotalLibrosPublicados = item.TotalLibrosPublicados,
                     TotalLibrosProceso = item.TotalLibrosProceso,
                     LibrosxCarrera = item.LibrosxCarrera,
-
+                    idyear=item.idyear,
 
 
 

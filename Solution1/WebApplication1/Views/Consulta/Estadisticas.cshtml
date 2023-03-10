@@ -541,7 +541,7 @@
                                                             <span class="text-bold text-lg">@ViewBag.TotalLibs</span>
                                                             <span>Total de libros</span>
                                                         </p>
-                                                        <p class="ml-auto d-flex flex-column text-right">
+                                                        <p class="ml-auto d-flex flex-column text-center">
                                                             <span class="text-success">
                                                                 <i class="fas fa- fas fa-circle-notch"></i> @ViewBag.LibsProceso
                                                             </span>
@@ -591,44 +591,41 @@
 
                                                 <div class="card-header border-0">
                                                     <div class="d-flex justify-content-between">
-                                                        @using (Html.BeginForm("Editarconsulta", "Consulta", FormMethod.Post, new { @class = "form-horizontal" }))
-                                                        {
-                                                            @*<form>*@
-                                                            <div class="form-group">
-                                                                <input id="idconsulta" name="idconsulta" value="@item.IDConsulta" type="hidden" />
+                                                       
+                                                        <div class="form-group">
+                                                            <input id="identificador" name="identificador" value="@item.Identificador" type="hidden" />
+                                                            <input id="idconsulta" name="idconsulta" value="@item.IDConsulta" type="hidden" />
 
-                                                                <div class="col-12">
-                                                                    <div class="row">
-                                                                        <div class="col-10">
-                                                                            <select id="idparametro" name="idparametro" class="required form-control text-secondary" for="position-top-right">
-                                                                                <option value="0">Seleccione período a consultar...</option>
-                                                                                @foreach (var item1 in ViewBag.Periodos)
-                                                                                {
-                                                                                    <option @if (ViewBag.Periodo == @item1.Detalleperiodo) { @Html.Raw("selected") } value="@item1.IDperiodo">@item1.Detalleperiodo</option>
-                                                                                }
-
-
-                                                                            </select>
-
-                                                                        </div>
-                                                                        <div class="col-2">
+                                                            <div class="col-12">
+                                                                <div class="row">
+                                                                    <div class="col-10">
+                                                                        <select id="idparametro" name="idparametro" class="required form-control text-secondary" for="position-top-right">
+                                                                            <option value="0">Seleccione período a consultar...</option>
+                                                                            @foreach (var item1 in ViewBag.Periodos)
+                                                                            {
+                                                                                <option @if (ViewBag.Periodo == @item1.IDperiodo) { @Html.Raw("selected") } value="@item1.IDperiodo">@item1.Detalleperiodo</option>
+                                                                            }
 
 
-                                                                            <button class="btn btn-info btn-sm" type="submit">Consultar</button>
-
-                                                                        </div>
+                                                                        </select>
 
                                                                     </div>
-                                                                    <small class="text-left text-green" style="margin-top:5%;margin-left:3%"><b>Seleccione período a consultar</b></small>
+                                                                    <div class="col-2">
 
-                                                                    @*<small class="text-left text-green" style="margin-top:5%;margin-left:3%"><b>@ViewBag.Periodo</b></small>*@
 
+                                                                        <button class="btn btn-info btn-sm" type="button" id="con1">Consultar</button>
+
+                                                                    </div>
 
                                                                 </div>
+                                                                <small class="text-left text-green" style="margin-top:5%;margin-left:3%"><b>Seleccione período a consultar</b></small>
+
+                                                               
 
                                                             </div>
-                                                            @*</form>*@
-                                                        }
+
+                                                        </div>
+                                                        
                                                     </div>
                                                 </div>
 
@@ -637,24 +634,49 @@
                                                     <div class="d-flex">
 
                                                         <p class="d-flex flex-column">
-                                                            <span class="text-bold text-lg">@ViewBag.TotalLibs</span>
+                                                            <span class="text-bold text-lg" id="lt"></span>
                                                             <span>Total de libros</span>
+                                                          
                                                         </p>
                                                         <p class="ml-auto d-flex flex-column text-right">
-                                                            <span class="text-success">
-                                                                <i class="fas fa- fas fa-history"></i> @ViewBag.Totalp
-                                                            </span>
-                                                            <span class="text-black">Libros publicados en este período</span>
+
+                                                          
+                                                            <div>
+                                                                <div class="text-success text-center">
+                                                                    <i class="fas fa- fas fa-history">
+
+                                                                    </i>
+                                                                    <span class="text-success" id="lpp">
+
+                                                                    </span>
+                                                                </div>
+                                                               
+                                                               
+                                                                <span class="text-black"> Libros publicados en este período</span>
+                                                            </div>
+                                                           
+                                                            
+                                                        
                                                         </p>
                                                         <p class="ml-auto d-flex flex-column text-right">
-                                                            <span class="text-success">
-                                                                <i class="fas fa-fas fa-check"></i> @ViewBag.LibsPublicados
-                                                            </span>
-                                                            <span class="text-black">Total libros publicados</span>
+
+                                                            <div>
+                                                                <div class="text-success text-right">
+                                                                    <i class="fas fa-fas fa-check"></i>
+                                                                    <span class="text-success" id="ltp">
+
+                                                                    </span>
+                                                                </div>
+
+
+                                                                <span class="text-black">Total libros publicados</span>
+                                                            </div>
+
+                                                           
                                                         </p>
 
                                                     </div>
-                                                    @*libpublicados-chart*@
+                                                  
 
                                                     <div class="position-relative mb-4" style="margin-top:3%">
                                                         <canvas id="@item.Grafico" height="100">
@@ -662,12 +684,13 @@
                                                     </div>
 
                                                     <div class="d-flex flex-row justify-content-end">
-                                                        <span class="mr-2">
-                                                            <i class="fas fa-calendar text-success"></i> <b>@ViewBag.Periodo</b>
+                                                        <span class="mr-2" >
+                                                            <i class="fas fa-calendar text-success"></i> <b id="detallep"></b>
+                                                           
                                                         </span>
 
                                                         <span>
-                                                            @*<i class="fas fa-square text-gray"></i> Semana pasada*@
+                                                          
                                                         </span>
                                                     </div>
                                                 </div>
@@ -690,64 +713,95 @@
 
                                                 <div class="card-header border-0">
                                                     <div class="d-flex justify-content-between">
-                                                        @using (Html.BeginForm("Editarconsulta", "Consulta", FormMethod.Post, new { @class = "form-horizontal" }))
-                                                        {
+                                                        
 
-                                                            <div class="form-group">
-                                                                <input id="idconsulta" name="idconsulta" value="@item.IDConsulta" type="hidden" />
+                                                        <div class="form-group">
+                                                            <input id="identificador1" name="identificador1" value="@item.Identificador" type="hidden" />
+                                                            <input id="idconsulta1" name="idconsulta1" value="@item.IDConsulta" type="hidden" />
 
-                                                                <div class="col-12">
-                                                                    <div class="row">
-                                                                        <div class="col-10">
-                                                                            <select id="idparametro" name="idparametro" class="required form-control text-secondary" for="position-top-right">
-                                                                                <option value="0">Seleccione año a consultar...</option>
-                                                                                @foreach (var item2 in ViewBag.years)
-                                                                                {
-                                                                                    <option @if (ViewBag.year == @item2.year) { @Html.Raw("selected") } value="@item2.IDyear">@item2.year</option>
-                                                                                }
+                                                            <div class="col-12">
+                                                                <div class="row">
+                                                                    <div class="col-10">
+                                                                        <select id="idparametro1" name="idparametro1" class="required form-control text-secondary" for="position-top-right">
+                                                                            <option value="0">Seleccione año a consultar...</option>
+                                                                            @foreach (var item2 in ViewBag.years)
+                                                                            {
+                                                                                <option @if (ViewBag.year == @item2.IDyear) { @Html.Raw("selected") } value="@item2.IDyear">@item2.year</option>
+                                                                            }
 
 
-                                                                            </select>
+                                                                        </select>
 
-                                                                        </div>
-                                                                        <div class="col-2">
-
-                                                                            @*<h3 class="card-title">@item.DetalleConsulta</h3>*@
-                                                                            <button class="btn btn-info btn-sm" type="submit">Consultar</button>
-                                                                        </div>
                                                                     </div>
-                                                                    <small class="text-left text-green" style="margin-top:5%;margin-left:4%"><b>Seleccione año a consultar</b></small>
-                                                                    @*<small class="text-left text-green" style="margin-top:5%;margin-left:4%"><b>Año @ViewBag.year</b></small>*@
-                                                                </div>
+                                                                    <div class="col-2">
 
+
+                                                                        <button class="btn btn-info btn-sm" type="button" id="con2">Consultar</button>
+                                                                    </div>
+                                                                </div>
+                                                                <small class="text-left text-green" style="margin-top:5%;margin-left:4%"><b>Seleccione año a consultar</b></small>
+                                                               
                                                             </div>
 
-                                                        }
+                                                        </div>
+
+                                                       
                                                     </div>
                                                 </div>
 
                                                 <div class="card-body">
+
+
+
+
+                                                    <!--/-->
                                                     <div class="d-flex">
 
                                                         <p class="d-flex flex-column">
-                                                            <span class="text-bold text-lg">@ViewBag.TotalLibs</span>
+                                                            <span class="text-bold text-lg" id="lt1"></span>
                                                             <span>Total de libros</span>
+
                                                         </p>
                                                         <p class="ml-auto d-flex flex-column text-right">
-                                                            <span class="text-success">
-                                                                <i class="fas fa- fas fa-history"></i> @ViewBag.Totaly
-                                                            </span>
-                                                            <span class="text-black">Libros publicados en este año</span>
+
+
+                                                            <div>
+                                                                <div class="text-success text-center">
+                                                                    <i class="fas fa- fas fa-history">
+
+                                                                    </i>
+                                                                    <span class="text-success" id="lpy">
+
+                                                                    </span>
+                                                                </div>
+
+
+                                                                <span class="text-black"> Libros publicados en este año</span>
+                                                            </div>
+
+
+
                                                         </p>
                                                         <p class="ml-auto d-flex flex-column text-right">
-                                                            <span class="text-success">
-                                                                <i class="fas fa-fas fa-check"></i> @ViewBag.LibsPublicados
-                                                            </span>
-                                                            <span class="text-black">Total libros publicados</span>
+
+                                                            <div>
+                                                                <div class="text-success text-right">
+                                                                    <i class="fas fa-fas fa-check"></i>
+                                                                    <span class="text-success" id="lty">
+
+                                                                    </span>
+                                                                </div>
+
+
+                                                                <span class="text-black">Total libros publicados</span>
+                                                            </div>
+
+
                                                         </p>
 
                                                     </div>
-                                                    @*libpublicados-chart*@
+
+                                                
 
                                                     <div class="position-relative mb-4" style="margin-top:3%">
                                                         <canvas id="@item.Grafico" height="100">
@@ -756,11 +810,11 @@
 
                                                     <div class="d-flex flex-row justify-content-end">
                                                         <span class="mr-2">
-                                                            <i class="fas fa-square text-success"></i> <b>Año @ViewBag.year</b>
+                                                            <i class="fas fa-square text-success"></i><b> Año </b> <b id="detalley"> </b>
                                                         </span>
 
                                                         <span>
-                                                            @*<i class="fas fa-square text-gray"></i> Semana pasada*@
+                                                          
                                                         </span>
                                                     </div>
                                                 </div>
@@ -814,6 +868,10 @@
 
                                         }
 
+
+
+
+
                                         if (item.Identificador == 5 && item.Parametros == true)
                                         {
                                             <div class="card">
@@ -825,74 +883,99 @@
                                                 </div>
                                                 <div class="card-header border-0">
                                                     <div class="d-flex justify-content-between">
-                                                        @using (Html.BeginForm("Editarconsulta", "Consulta", FormMethod.Post, new { @class = "form-horizontal" }))
-                                                        {
+                                                       
+                                                        <div class="form-group">
+                                                            <input id="identificador2" name="identificador2" value="@item.Identificador" type="hidden" />
+                                                            <input id="idconsulta2" name="idconsulta2" value="@item.IDConsulta" type="hidden" />
 
-                                                            <div class="form-group">
-                                                                <input id="idconsulta" name="idconsulta" value="@item.IDConsulta" type="hidden" />
-
-                                                                <div class="col-12">
-                                                                    <div class="row">
-                                                                        <div class="col-10">
-                                                                            <select id="idparametro" name="idparametro" class="required form-control text-secondary" for="position-top-right">
-                                                                                <option value="0">Seleccione año a consultar...</option>
-                                                                                @foreach (var item2 in ViewBag.years)
-                                                                                {
-                                                                                    <option @if (ViewBag.year1 == @item2.year) { @Html.Raw("selected") } value="@item2.IDyear">@item2.year</option>
-                                                                                }
+                                                            <div class="col-12">
+                                                                <div class="row">
+                                                                    <div class="col-10">
+                                                                        <select id="idparametro2" name="idparametro2" class="required form-control text-secondary" for="position-top-right">
+                                                                            <option value="0">Seleccione año a consultar...</option>
+                                                                            @foreach (var item2 in ViewBag.years)
+                                                                            {
+                                                                                <option @if (ViewBag.year1 == @item2.IDyear) { @Html.Raw("selected") } value="@item2.IDyear">@item2.year</option>
+                                                                            }
 
 
-                                                                            </select>
+                                                                        </select>
 
-                                                                        </div>
-                                                                        <div class="col-2">
-
-                                                                            @*<h3 class="card-title">@item.DetalleConsulta</h3>*@
-                                                                            <button class="btn btn-info btn-sm" type="submit">Consultar</button>
-                                                                        </div>
                                                                     </div>
-                                                                    <small class="text-left text-green" style="margin-top:5%;margin-left:4%"><b>Seleccione año a consultar</b></small>
-                                                                    @*<small class="text-left text-green" style="margin-top:5%;margin-left:4%"><b>Año @ViewBag.year1</b></small>*@
-                                                                </div>
+                                                                    <div class="col-2">
 
+                                                                     
+                                                                        <button class="btn btn-info btn-sm" type="button" id="con3">Consultar</button>
+                                                                    </div>
+                                                                </div>
+                                                                <small class="text-left text-green" style="margin-top:5%;margin-left:4%"><b>Seleccione año a consultar</b></small>
+                                                             
                                                             </div>
 
-                                                        }
+                                                        </div>
+
+                                                        
                                                     </div>
                                                 </div>
 
                                                 <div class="card-body">
+
                                                     <div class="d-flex">
+
                                                         <p class="d-flex flex-column">
-                                                            <span class="text-bold text-lg">@ViewBag.LibsPublicados</span>
+                                                            <span class="text-bold text-lg" id="lt2"></span>
                                                             <span>Total de libros publicados</span>
+
                                                         </p>
                                                         <p class="ml-auto d-flex flex-column text-right">
-                                                            <span class="text-success">
-                                                                <i class="fas fa-fas fa-globe"></i> @ViewBag.Vistasxa
-                                                            </span>
-                                                            <span class="text-muted">Total de vistas este año</span>
+
+
+                                                            <div>
+                                                                <div class="text-success text-center">
+                                                                    <i class="fas fa-fas fa-globe"></i>
+                                                                    <span class="text-success" id="lvy">
+
+                                                                    </span>
+                                                                </div>
+
+
+                                                                <span class="text-black"> Total de vistas este año</span>
+                                                            </div>
+
+
+
                                                         </p>
                                                         <p class="ml-auto d-flex flex-column text-right">
-                                                            <span class="text-success">
-                                                                <i class="fas fa-book-reader"></i> @ViewBag.Vistas
-                                                            </span>
-                                                            <span class="text-muted">Total de vistas de libros</span>
+
+                                                            <div>
+                                                                <div class="text-success text-right">
+                                                                    <i class="fas fa-book-reader"></i>
+                                                                    <span class="text-success" id="ltv">
+
+                                                                    </span>
+                                                                </div>
+
+
+                                                                <span class="text-black">Total de vistas de libros</span>
+                                                            </div>
+
+
                                                         </p>
+
                                                     </div>
 
+
+                                                
 
                                                     <div class="position-relative mb-4">
                                                         <canvas id="@item.Grafico" height="100"></canvas>
                                                     </div>
 
                                                     <div class="d-flex flex-row justify-content-end">
-                                                        @*<span class="mr-2">
-                                                            <i class="fas fa-square text-primary"></i> This Week
-                                                        </span>*@
+                       
 
                                                         <span>
-                                                            <i class="fas fa-square text-success"></i> <b>Año @ViewBag.year1</b>
+                                                            <i class="fas fa-square text-success"></i><b> Año </b> <b id="detalley2"> </b>
                                                         </span>
                                                     </div>
                                                 </div>
@@ -1084,246 +1167,172 @@
 
 <script>
 
-
-
-
-
-
     $(function () {
 
+        consulta1();
+        consulta2();
 
-        /* libros publicados por carrera*/
-        jQuery.ajax({
+        consulta3();
+        consulta4();
+        consulta5();
 
-            url: '@Url.Action("ConsultarNumLibrosPublicadosxCarrera", "Consulta")',
-            type: 'GET',
-            dataType: 'json',
-            contentType: 'application/json; charset-utf-8',
-            success: function (data) {
+        $('#con1').click(function () {
 
-                console.log(data)
-                var arrayCarreras = [];
-                var arrayNumLibros = [];
+            editar1();
+        });
+        $('#con2').click(function () {
 
-                for (var i = 0; i < data.length; i++) {
-                    arrayCarreras.push(data[i].Carrera)
-                    arrayNumLibros.push(data[i].LibrosxCarrera)
-                }
+            editar2();
+        });
+        $('#con3').click(function () {
 
-
-                var $libpublicados = $('#libpublicados-chart')
-
-
-                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
-                //const Tnlibros = ['1', '2', '3', '4', '5']
-
-
-
-                var libpublicados = new Chart($libpublicados, {
-
-
-
-                    type: 'bar',
-                    data: {
-                        labels: arrayCarreras,
-                        datasets: [{
-
-                            label: 'N° Libros',
-                            data: arrayNumLibros,
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.5)',
-                                'rgba(255, 159, 64, 0.5)',
-                                'rgba(255, 205, 86, 0.5)',
-                                'rgba(75, 192, 192, 0.5)',
-                                'rgba(149, 47, 50, 0.5)',
-                                'rgba(153, 102, 255, 0.5)',
-                                'rgba(104, 106, 108, 0.5)',
-                                'rgba(236, 55, 14, 0.5)',
-                                'rgba( 0, 123, 255, 0.5)',
-                                'rgba(35, 255, 0, 0.5)',
-                                'rgba(212, 22, 227, 0.5)',
-
-
-
-
-                            ],
-                            borderColor: [
-                                'rgba(255, 99, 132)',
-                                'rgba(255, 159, 64)',
-                                'rgba(255, 205, 86)',
-                                'rgba(75, 192, 192)',
-                                'rgba(149, 47, 50)',
-                                'rgba(153, 102, 255)',
-                                'rgba(104, 106, 108)',
-                                'rgba(236, 55, 14)',
-                                'rgba( 0, 123, 255)',
-                                'rgba(35, 255, 0)',
-                                'rgba(212, 22, 227)',
-
-                            ],
-                            borderWidth: 1
-
-
-
-                        }]
-
-
-
-                    }
-
-                })
-
-
-
-
-
-
-            },
-            error: function (error) {
-                console.log(error)
-            }
-
-
+            editar3();
         });
 
+    });
 
 
 
 
 
-        /* consulta por periodos*/
-
-
-        $.ajax({
-
-            url: "@Url.Action("ConsultarNumLibrosPublicadosxPeriodo", "Consulta")",
-            type: 'GET',
-            dataType: 'json',
-            contentType: 'application/json; charset-utf-8',
-
-
-            success: function (data) {
-
-
-                console.log(data)
-                var arrayCarreras = [];
-                var arrayNumLibros = [];
-
-                for (var i = 0; i < data.length; i++) {
-                    arrayCarreras.push(data[i].Carrera)
-                    arrayNumLibros.push(data[i].LibrosxCarrera)
-
-                }
-
-
-                var $libperiodoschart = $('#libperiodos-chart')
-
-
-                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
-                //const Tnlibros = ['1', '2', '3', '4', '5']
+     function editar1() {
 
 
 
-                var libperiodoschart = new Chart($libperiodoschart, {
+         var idc = document.getElementById('idconsulta').value;
+         var idp = document.getElementById('idparametro').value;
 
 
+            var data = {
+                'idconsulta': idc,
+                'idparametro': idp,
 
-                    type: 'bar',
-                    data: {
-                        labels: arrayCarreras,
-                        datasets: [{
+            };
 
-                            label: 'N° Libros ',
-                            data: arrayNumLibros,
-                            backgroundColor: [
-                                'rgba(255, 99, 132, 0.5)',
-                                'rgba(255, 159, 64, 0.5)',
-                                'rgba(255, 205, 86, 0.5)',
-                                'rgba(75, 192, 192, 0.5)',
-                                'rgba(149, 47, 50, 0.5)',
-                                'rgba(153, 102, 255, 0.5)',
-                                'rgba(104, 106, 108, 0.5)',
-                                'rgba(236, 55, 14, 0.5)',
-                                'rgba( 0, 123, 255, 0.5)',
-                                'rgba(35, 255, 0, 0.5)',
-                                'rgba(212, 22, 227, 0.5)',
+              $.ajax({
 
-
-
-
-                            ],
-                            borderColor: [
-                                'rgba(255, 99, 132)',
-                                'rgba(255, 159, 64)',
-                                'rgba(255, 205, 86)',
-                                'rgba(75, 192, 192)',
-                                'rgba(149, 47, 50)',
-                                'rgba(153, 102, 255)',
-                                'rgba(104, 106, 108)',
-                                'rgba(236, 55, 14)',
-                                'rgba( 0, 123, 255)',
-                                'rgba(35, 255, 0)',
-                                'rgba(212, 22, 227)',
-
-                            ],
-                            borderWidth: 1
-
-
-
-                        }]
-
-
-
-                    }
-
-                })
-
-
-
-
-
-
-            },
-            error: function (error) {
-                console.log(error)
-            }
-
-
-
-
-
-        });
-
-
-
-
-
-
-
-        /* consulta por años*/
-
-
-            $.ajax({
-
-                url: "@Url.Action("ConsultarNumLibrosPublicadosxYear", "Consulta")",
+                url: "@Url.Action("EditarConsulta", "Consulta")",
                 type: 'GET',
                 dataType: 'json',
-                contentType: 'application/json; charset-utf-8',
+                data: data,
+                success: function (obj) {
 
+                     if (obj !=3) {
+
+                         consulta2();
+
+                    }
+
+                  },
+
+
+            })
+        };
+
+
+
+
+
+
+     function editar2() {
+
+
+
+         var idc1 = document.getElementById('idconsulta1').value;
+         var idp1 = document.getElementById('idparametro1').value;
+
+
+            var data = {
+                'idconsulta': idc1,
+                'idparametro': idp1,
+
+            };
+
+              $.ajax({
+
+                url: "@Url.Action("EditarConsulta", "Consulta")",
+                type: 'GET',
+                dataType: 'json',
+                data: data,
                 success: function (obj) {
 
 
-                    console.log(obj)
+                    if (obj != 3) {
+
+                        consulta3();
+
+                    }
+
+                  },
+
+
+            })
+        };
+
+
+
+     function editar3() {
+
+
+
+         var idc2 = document.getElementById('idconsulta2').value;
+         var idp2 = document.getElementById('idparametro2').value;
+
+
+            var data = {
+                'idconsulta': idc2,
+                'idparametro': idp2,
+
+            };
+
+              $.ajax({
+
+                url: "@Url.Action("EditarConsulta", "Consulta")",
+                type: 'GET',
+                dataType: 'json',
+                data: data,
+                success: function (obj) {
+
+
+                    if (obj != 3) {
+
+                        consulta5();
+
+                    }
+
+                  },
+
+
+            })
+        };
+
+
+
+
+
+
+
+      /* libros publicados por carrera*/
+        function consulta1() {
+            jQuery.ajax({
+
+                url: '@Url.Action("ConsultarNumLibrosPublicadosxCarrera", "Consulta")',
+                type: 'GET',
+                dataType: 'json',
+                contentType: 'application/json; charset-utf-8',
+                success: function (data) {
+
+                    console.log(data)
                     var arrayCarreras = [];
                     var arrayNumLibros = [];
 
-                    for (var i = 0; i < obj.length; i++) {
-                        arrayCarreras.push(obj[i].Carrera)
-                        arrayNumLibros.push(obj[i].LibrosxCarrera)
+                    for (var i = 0; i < data.length; i++) {
+                        arrayCarreras.push(data[i].Carrera)
+                        arrayNumLibros.push(data[i].LibrosxCarrera)
                     }
 
 
-                    var $libyearchart = $('#libyear-chart')
+                    var $libpublicados = $('#libpublicados-chart')
 
 
                     //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
@@ -1331,7 +1340,7 @@
 
 
 
-                    var libyearchart = new Chart($libyearchart, {
+                    var libpublicados = new Chart($libpublicados, {
 
 
 
@@ -1396,10 +1405,248 @@
                 }
 
 
-
-
-
             });
+        };
+
+
+
+
+
+        /* consulta por periodos*/
+
+    function consulta2() {
+
+
+         var idp = document.getElementById('idparametro').value;
+
+
+            var data = {
+
+                'idparametro': idp,
+
+            };
+
+              $.ajax({
+
+                url: "@Url.Action("ConsultarNumLibrosPublicadosxPeriodo", "Consulta")",
+                type: 'GET',
+                dataType: 'json',
+                data: data,
+                success: function (obj) {
+
+
+                    var arrayCarreras = [];
+                    var arrayNumLibros = [];
+
+
+                      console.log(obj)
+
+
+                      for (var i = 0; i < obj.length; i++) {
+                          arrayCarreras.push(obj[i].Carrera)
+                          arrayNumLibros.push(obj[i].LibrosxCarrera)
+                          document.getElementById('lt').innerHTML = obj[i].TotalLibros
+                          document.getElementById('lpp').innerHTML = obj[i].TotalLibrosPublicadosxp
+                          document.getElementById('ltp').innerHTML = obj[i].TotalLibrosPublicados
+                          document.getElementById('detallep').innerHTML = obj[i].detalleperiodo
+                      }
+
+
+
+                    var ctx = document.getElementById('libperiodos-chart').getContext('2d');
+                    if (window.grafica) {
+                        window.grafica.clear();
+                        window.grafica.destroy();
+                    }
+                    window.grafica = new Chart(ctx, {
+
+
+
+                          type: 'bar',
+                          data: {
+                              labels: arrayCarreras,
+                              datasets: [{
+
+                                  label: 'N° Libros ',
+                                  data: arrayNumLibros,
+                                  backgroundColor: [
+                                      'rgba(255, 99, 132, 0.5)',
+                                      'rgba(255, 159, 64, 0.5)',
+                                      'rgba(255, 205, 86, 0.5)',
+                                      'rgba(75, 192, 192, 0.5)',
+                                      'rgba(149, 47, 50, 0.5)',
+                                      'rgba(153, 102, 255, 0.5)',
+                                      'rgba(104, 106, 108, 0.5)',
+                                      'rgba(236, 55, 14, 0.5)',
+                                      'rgba( 0, 123, 255, 0.5)',
+                                      'rgba(35, 255, 0, 0.5)',
+                                      'rgba(212, 22, 227, 0.5)',
+
+
+
+
+                                  ],
+                                  borderColor: [
+                                      'rgba(255, 99, 132)',
+                                      'rgba(255, 159, 64)',
+                                      'rgba(255, 205, 86)',
+                                      'rgba(75, 192, 192)',
+                                      'rgba(149, 47, 50)',
+                                      'rgba(153, 102, 255)',
+                                      'rgba(104, 106, 108)',
+                                      'rgba(236, 55, 14)',
+                                      'rgba( 0, 123, 255)',
+                                      'rgba(35, 255, 0)',
+                                      'rgba(212, 22, 227)',
+
+                                  ],
+                                  borderWidth: 1
+
+
+
+                              }]
+
+
+
+                          }
+
+                      })
+
+
+
+
+                  },
+
+
+            })
+        };
+
+
+
+
+
+
+
+
+
+
+
+        /* consulta por años*/
+
+    function consulta3() {
+
+
+
+
+         var idp1 = document.getElementById('idparametro1').value;
+
+
+            var data = {
+
+                'idparametro': idp1,
+
+            };
+
+              $.ajax({
+
+                url: "@Url.Action("ConsultarNumLibrosPublicadosxYear", "Consulta")",
+                type: 'GET',
+                dataType: 'json',
+                data: data,
+                success: function (obj) {
+
+
+                    var arrayCarreras = [];
+                    var arrayNumLibros = [];
+
+
+                      console.log(obj)
+
+
+                    for (var i = 0; i < obj.length; i++) {
+                        arrayCarreras.push(obj[i].Carrera)
+                        arrayNumLibros.push(obj[i].LibrosxCarrera)
+                        document.getElementById('lt1').innerHTML = obj[i].TotalLibros
+                        document.getElementById('lpy').innerHTML = obj[i].TotalLibrosPublicadosxa
+                        document.getElementById('lty').innerHTML = obj[i].TotalLibrosPublicados
+                        document.getElementById('detalley').innerHTML = obj[i].detalleyear
+
+                    }
+
+
+
+
+                    var ctx1 = document.getElementById('libyear-chart').getContext('2d');
+                    if (window.grafica1) {
+                        window.grafica1.clear();
+                        window.grafica1.destroy();
+                    }
+                    window.grafica1 = new Chart(ctx1, {
+
+
+
+                          type: 'bar',
+                          data: {
+                              labels: arrayCarreras,
+                              datasets: [{
+
+                                  label: 'N° Libros ',
+                                  data: arrayNumLibros,
+                                  backgroundColor: [
+                                      'rgba(255, 99, 132, 0.5)',
+                                      'rgba(255, 159, 64, 0.5)',
+                                      'rgba(255, 205, 86, 0.5)',
+                                      'rgba(75, 192, 192, 0.5)',
+                                      'rgba(149, 47, 50, 0.5)',
+                                      'rgba(153, 102, 255, 0.5)',
+                                      'rgba(104, 106, 108, 0.5)',
+                                      'rgba(236, 55, 14, 0.5)',
+                                      'rgba( 0, 123, 255, 0.5)',
+                                      'rgba(35, 255, 0, 0.5)',
+                                      'rgba(212, 22, 227, 0.5)',
+
+
+
+
+                                  ],
+                                  borderColor: [
+                                      'rgba(255, 99, 132)',
+                                      'rgba(255, 159, 64)',
+                                      'rgba(255, 205, 86)',
+                                      'rgba(75, 192, 192)',
+                                      'rgba(149, 47, 50)',
+                                      'rgba(153, 102, 255)',
+                                      'rgba(104, 106, 108)',
+                                      'rgba(236, 55, 14)',
+                                      'rgba( 0, 123, 255)',
+                                      'rgba(35, 255, 0)',
+                                      'rgba(212, 22, 227)',
+
+                                  ],
+                                  borderWidth: 1
+
+
+
+                              }]
+
+
+
+                          }
+
+                      })
+
+
+
+
+                  },
+
+
+            })
+        };
+
+
+
+
 
 
 
@@ -1407,78 +1654,81 @@
 
 
         /*número de vistas de libros página web*/
+    function consulta4() {
+        $.ajax({
 
-         $.ajax({
+            url: "@Url.Action("ConsultarNumVistasLibrosxCarrera", "Consulta")",
+            type: 'GET',
+            dataType: 'json',
+            contentType: 'application/json; charset-utf-8',
 
-                url: "@Url.Action("ConsultarNumVistasLibrosxCarrera", "Consulta")",
-                type: 'GET',
-                dataType: 'json',
-                contentType: 'application/json; charset-utf-8',
-
-                success: function (obj) {
-
-
-                    console.log(obj)
-                    var arrayCarreras = [];
-                    var arrayNumVistas = [];
-
-                    for (var i = 0; i < obj.length; i++) {
-                        arrayCarreras.push(obj[i].Carrera)
-                        arrayNumVistas.push(obj[i].Totalvistasxcarrera)
-                    }
+            success: function (obj) {
 
 
-                    var $libvistaschart = $('#libvistas-chart')
+                console.log(obj)
+                var arrayCarreras = [];
+                var arrayNumVistas = [];
 
-
-                    //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
-                    //const Tnlibros = ['1', '2', '3', '4', '5']
-
-
-
-                    var libvistaschart = new Chart($libvistaschart, {
-
-
-
-                        type: 'line',
-                        data: {
-                            labels: arrayCarreras,
-                            datasets: [{
-
-
-                                label: 'N° Vistas',
-                                data: arrayNumVistas,
-                                fill: false,
-                                borderColor: 'rgb(75, 192, 192)',
-                                tension: 0.1,
-
-                                borderWidth: 3
-
-
-
-                            }]
-
-
-
-                        }
-
-                    })
-
-
-
-
-
-
-                },
-                error: function (error) {
-                    console.log(error)
+                for (var i = 0; i < obj.length; i++) {
+                    arrayCarreras.push(obj[i].Carrera)
+                    arrayNumVistas.push(obj[i].Totalvistasxcarrera)
                 }
 
 
+                var $libvistaschart = $('#libvistas-chart')
+
+
+                //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
+                //const Tnlibros = ['1', '2', '3', '4', '5']
 
 
 
-            });
+                var libvistaschart = new Chart($libvistaschart, {
+
+
+
+                    type: 'line',
+                    data: {
+                        labels: arrayCarreras,
+                        datasets: [{
+
+
+                            label: 'N° Vistas',
+                            data: arrayNumVistas,
+                            fill: false,
+                            borderColor: 'rgb(75, 192, 192)',
+                            tension: 0.1,
+
+                            borderWidth: 3
+
+
+
+                        }]
+
+
+
+                    }
+
+                })
+
+
+
+
+
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+
+
+
+
+
+        });
+
+    };
+
 
 
 
@@ -1487,85 +1737,101 @@
 
 
         /*número de vistas de libros página web consulta por año*/
+    function consulta5() {
 
-         $.ajax({
-
-                url: "@Url.Action("ConsultarNumVistasLibrosxYear", "Consulta")",
-                type: 'GET',
-                dataType: 'json',
-                contentType: 'application/json; charset-utf-8',
-
-                success: function (obj) {
+        var idp2 = document.getElementById('idparametro2').value;
 
 
-                    console.log(obj)
-                    var arrayCarreras = [];
-                    var arrayNumVistas = [];
+        var data = {
 
-                    for (var i = 0; i < obj.length; i++) {
-                        arrayCarreras.push(obj[i].Carrera)
-                        arrayNumVistas.push(obj[i].Totalvistasxcarrera)
-                    }
+            'idparametro': idp2,
 
-
-                    var $libvistas2chart = $('#libvistas2-chart')
-
-
-                    //const Tcarreras = ['Computación', 'Administración', 'Veterinaria', 'Agrícola', 'Ambiente']
-                    //const Tnlibros = ['1', '2', '3', '4', '5']
+        };
 
 
 
-                    var libvistas2chart = new Chart($libvistas2chart, {
+        $.ajax({
+
+            url: "@Url.Action("ConsultarNumVistasLibrosxYear", "Consulta")",
+            type: 'GET',
+            dataType: 'json',
+            data: data,
+            contentType: 'application/json; charset-utf-8',
+
+            success: function (obj) {
 
 
+                console.log(obj)
+                var arrayCarreras = [];
+                var arrayNumVistas = [];
 
-                        type: 'line',
-                        data: {
-                            labels: arrayCarreras,
-                            datasets: [{
-
-
-                                label: 'N° Vistas',
-                                data: arrayNumVistas,
-                                fill: false,
-                                borderColor: 'rgb( 251, 128, 58  )',
-                                tension: 0.1,
-
-                                borderWidth: 3
-
-
-
-                            }]
-
-
-
-                        }
-
-                    })
-
-
-
-
-
-
-                },
-                error: function (error) {
-                    console.log(error)
+                for (var i = 0; i < obj.length; i++) {
+                    arrayCarreras.push(obj[i].Carrera)
+                    arrayNumVistas.push(obj[i].Totalvistasxcarrera)
+                    document.getElementById('lt2').innerHTML = obj[i].TotalLibrosPublicados
+                    document.getElementById('lvy').innerHTML = obj[i].Totalvistaslibrosxa
+                    document.getElementById('ltv').innerHTML = obj[i].Totalvistaslibros
+                    document.getElementById('detalley2').innerHTML = obj[i].detalleyear
                 }
 
 
 
+                var ctx2 = document.getElementById('libvistas2-chart').getContext('2d');
+                if (window.grafica2) {
+                    window.grafica2.clear();
+                    window.grafica2.destroy();
+                }
+                window.grafica2 = new Chart(ctx2, {
 
 
-            });
+
+
+                    type: 'line',
+                    data: {
+                        labels: arrayCarreras,
+                        datasets: [{
+
+
+                            label: 'N° Vistas',
+                            data: arrayNumVistas,
+                            fill: false,
+                            borderColor: 'rgb( 251, 128, 58  )',
+                            tension: 0.1,
+
+                            borderWidth: 3
+
+
+
+                        }]
+
+
+
+                    }
+
+                })
 
 
 
 
 
 
-    }  )
+            },
+            error: function (error) {
+                console.log(error)
+            }
+
+
+
+
+
+        });
+
+    };
+
+
+
+
+
 
 
 

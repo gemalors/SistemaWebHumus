@@ -3551,7 +3551,6 @@
     <Content Include="Views\Editorial\Noticia.cshtml" />
     <Content Include="Views\Editorial\Contacto.cshtml" />
     <Content Include="Views\Editorial\Busqueda.cshtml" />
-    <Content Include="Views\Editorial\Error.cshtml" />
     <Content Include="Views\Usuario\Login.cshtml" />
     <Content Include="Views\Usuario\IndexAdmin.cshtml" />
     <Content Include="Views\Web\EditarInfoWeb.cshtml" />

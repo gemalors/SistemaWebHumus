@@ -308,7 +308,6 @@
     <Property Name="Ordenperiodo" Type="Int32" />
     <Property Name="Fechainicio" Type="DateTime" Precision="3" />
     <Property Name="Fechafin" Type="DateTime" Precision="3" />
-    <Property Name="Identificador" Type="Int32" />
   </EntityType>
   <EntityType Name="PreguntaAbierta">
     <Key>
@@ -436,8 +435,6 @@
       <PropertyRef Name="IDSlider" />
     </Key>
     <Property Name="IDSlider" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Titulo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Enunciado" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="ImagenSlider" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Urlslider" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="EliminadoSlider" Type="Boolean" />
@@ -1887,7 +1884,6 @@
       <Parameter Name="ordenperiodo" Mode="In" Type="Int32" />
       <Parameter Name="fechainicio" Mode="In" Type="DateTime" />
       <Parameter Name="fechafin" Mode="In" Type="DateTime" />
-      <Parameter Name="ident" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="ConsultarOpcionesRespuestaPreguntaSeleccion" ReturnType="Collection(Model1.ConsultarOpcionesRespuestaPreguntaSeleccion_Result)">
       <Parameter Name="Idcuestionario" Mode="In" Type="Int32" />
@@ -2099,15 +2095,11 @@
       <Parameter Name="visible" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="AgregarSlider" ReturnType="Collection(Int32)">
-      <Parameter Name="titulo" Mode="In" Type="String" />
-      <Parameter Name="enunciado" Mode="In" Type="String" />
       <Parameter Name="imagenslider" Mode="In" Type="String" />
       <Parameter Name="url" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="EditarSlider" ReturnType="Collection(Int32)">
       <Parameter Name="Idslider" Mode="In" Type="Int32" />
-      <Parameter Name="titulo" Mode="In" Type="String" />
-      <Parameter Name="enunciado" Mode="In" Type="String" />
       <Parameter Name="imagenslider" Mode="In" Type="String" />
       <Parameter Name="url" Mode="In" Type="String" />
     </FunctionImport>
@@ -2410,6 +2402,7 @@
     <Property Type="Int32" Name="TotalLibrosPublicados" Nullable="true" />
     <Property Type="Int32" Name="TotalLibrosProceso" Nullable="true" />
     <Property Type="String" Name="detalleperiodo" Nullable="true" />
+    <Property Type="Int32" Name="idperiodo" Nullable="true" />
     <Property Type="Int32" Name="LibrosxCarrera" Nullable="true" />
     <Property Type="Int32" Name="TotalCarreras" Nullable="true" />
   </ComplexType>
@@ -2421,6 +2414,7 @@
     <Property Type="Int32" Name="TotalLibrosPublicados" Nullable="true" />
     <Property Type="Int32" Name="TotalLibrosProceso" Nullable="true" />
     <Property Type="Int32" Name="detalleyear" Nullable="true" />
+    <Property Type="Int32" Name="idyear" Nullable="true" />
     <Property Type="Int32" Name="LibrosxCarrera" Nullable="true" />
     <Property Type="Int32" Name="TotalCarreras" Nullable="true" />
   </ComplexType>
@@ -2431,6 +2425,7 @@
     <Property Type="Int32" Name="Totalvistaslibrosxa" Nullable="true" />
     <Property Type="Int32" Name="Totalvistasxcarrera" Nullable="true" />
     <Property Type="Int32" Name="detalleyear" Nullable="true" />
+    <Property Type="Int32" Name="idyear" Nullable="true" />
   </ComplexType>
   <ComplexType Name="VistasLibrosxYears_Result">
     <Property Type="Int32" Name="IDyear" Nullable="false" />
@@ -3258,7 +3253,6 @@
     <Property Type="Int32" Name="Ordenperiodo" Nullable="true" />
     <Property Type="DateTime" Name="Fechainicio" Nullable="true" Precision="23" />
     <Property Type="DateTime" Name="Fechafin" Nullable="true" Precision="23" />
-    <Property Type="Int32" Name="Identificador" Nullable="true" />
   </ComplexType>
   <ComplexType Name="ListarYearPeriodo_Result">
     <Property Type="Int32" Name="IDyear" Nullable="false" />
@@ -3536,8 +3530,6 @@
   </ComplexType>
   <ComplexType Name="VerSliders_Result">
     <Property Type="Int32" Name="IDSlider" Nullable="false" />
-    <Property Type="String" Name="Titulo" Nullable="true" />
-    <Property Type="String" Name="Enunciado" Nullable="true" />
     <Property Type="String" Name="ImagenSlider" Nullable="true" />
     <Property Type="String" Name="Urlslider" Nullable="true" />
   </ComplexType>

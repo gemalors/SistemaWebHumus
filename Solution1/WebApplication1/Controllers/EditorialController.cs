@@ -164,6 +164,7 @@ namespace WebApplication1.Controllers
 
         public ActionResult Error()
         {
+            ViewBag.DatosEditorial = conexDatosEditorial.VerDatosContactoEditorial();
             return View();
         }
 
@@ -498,7 +499,7 @@ namespace WebApplication1.Controllers
                
                 mail.From = new MailAddress("edicionesHU@gmail.com");
                 mail.To.Add("edicionesHU@gmail.com");
-                mail.Subject = "Mensaje desde Sitio Web";
+                mail.Subject = "Mensaje desde Página Web";
                 //mail.Attachments.Add(new Attachment(path));
               
 

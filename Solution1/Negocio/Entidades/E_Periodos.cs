@@ -13,7 +13,7 @@ namespace Negocio.Entidades
 
 
         public int IDperiodo { get; set; }
-        public int? Identificador { get; set; }
+      
         public string Detalleperiodo { get; set; }
         public int? Ordenperiodo { get; set; }
         public DateTime? Fechainicio { get; set; }

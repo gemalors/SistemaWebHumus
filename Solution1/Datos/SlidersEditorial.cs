@@ -15,8 +15,6 @@ namespace Datos
     public partial class SlidersEditorial
     {
         public int IDSlider { get; set; }
-        public string Titulo { get; set; }
-        public string Enunciado { get; set; }
         public string ImagenSlider { get; set; }
         public string Urlslider { get; set; }
         public Nullable<bool> EliminadoSlider { get; set; }

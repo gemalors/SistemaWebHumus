@@ -71,8 +71,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="@Url.Action("Busqueda", "Editorial")" style="color: black;"><i class="fa fa-sliders">   Búsqueda Filtrada</a></i>
                         </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="@Url.Action("Titulos", "Editorial")" title="Libros" style="color: #4DBB6D"><i class="fa fa-book"> Libros</i> </a>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="@Url.Action("Titulos", "Editorial")" title="Libros" style="color: black"><i class="fa fa-book"> Libros</i> </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="@Url.Action("Noticias", "Editorial")" style="color: black;"><i class="fa fa-newspaper-o"> Noticias</a></i>
@@ -99,12 +99,15 @@
 
 
 
+
+
     <div class="single-services">
         <div class="container">
 
 
             @foreach (var item in ViewBag.LibroDetalle)
             {
+            <div class="col-md-12">
                 <div class="row" id="tabs">
                     <div class="col-md-4">
                         <ul>
@@ -286,76 +289,76 @@
                     </div>
                 </div>
 
+            </div>
+                    }
+                </div>
 
-            }
-        </div>
 
+                <!-- .modal-ver cita de libro -->
+                <div class="modal fade " id="modal-default">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <p class="modal-title font-16 text-blue"><b>Referencia bibliográfica</b></p>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group row text-muted">
 
-        <!-- .modal-ver cita de libro -->
-        <div class="modal fade " id="modal-default">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <p class="modal-title font-16 text-blue"><b>Referencia bibliográfica</b></p>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group row text-muted">
+                                    <p class="text-primary" style="margin-left:2%">APA 7ma edición</p>
+                                    <div class="col-sm-12">
 
-                            <p class="text-primary" style="margin-left:2%">APA 7ma edición</p>
-                            <div class="col-sm-12">
+                                        @{
+                                            int cont = 0;
 
-                                @{
-                                    int cont = 0;
-
-                                    foreach (var itema in ViewBag.Autores)
-                                    {
-                                        if (ViewBag.Autores.Count > 1)
-                                        {
-                                            if (cont == ViewBag.Autores.Count - 1)
+                                            foreach (var itema in ViewBag.Autores)
                                             {
-                                                <span>&</span>
+                                                if (ViewBag.Autores.Count > 1)
+                                                {
+                                                    if (cont == ViewBag.Autores.Count - 1)
+                                                    {
+                                                        <span>&</span>
+                                                    }
+
+                                                }
+
+
+                                                <span> @itema.ApellidoPrimero, @itema.inicialnombre.,</span>
+
+                                                cont++;
+
+
                                             }
+                                            foreach (var item in ViewBag.CitaLibro)
+                                            {
+                                                <span> (@item.Fechapublica). @item.Titulo. @item.Editorial. @item.UrlAcceso </span>
 
-                                        }
-
-
-                                        <span> @itema.ApellidoPrimero, @itema.inicialnombre.,</span>
-
-                                        cont++;
-
-
-                                    }
-                                    foreach (var item in ViewBag.CitaLibro)
-                                    {
-                                        <span> (@item.Fechapublica). @item.Titulo. @item.Editorial. @item.UrlAcceso </span>
-
-                                    }}
+                                            }}
 
 
 
 
 
 
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer justify-content-between">
+                                <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Cerrar</button>
 
                             </div>
                         </div>
+                        <!-- /.modal-content -->
                     </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-sm btn-primary" data-dismiss="modal">Cerrar</button>
-
-                    </div>
+                    <!-- /.modal-dialog -->
                 </div>
-                <!-- /.modal-content -->
+
+
+
             </div>
-            <!-- /.modal-dialog -->
-        </div>
-
-
-
-    </div>
 
     <br>  <br>
 
@@ -390,7 +393,7 @@
 
                     </div>
                     <div class="col-md-3 footer-item last-item">
-                        <p style="color: #4DBB6D"><i class="fa fa-envelope-o"></i> Contactenos</p>
+                        <p style="color: #4DBB6D"><i class="fa fa-envelope-o"></i> Contáctenos</p>
                         <p>@item.Email </p>
 
 

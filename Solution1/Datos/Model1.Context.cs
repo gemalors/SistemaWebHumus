@@ -2395,7 +2395,7 @@ namespace Datos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarYearPeriodo_Result>("ListarYearPeriodo");
         }
     
-        public virtual ObjectResult<Nullable<int>> RegistroPeriodo(string detalleperiodo, Nullable<int> ordenperiodo, Nullable<System.DateTime> fechainicio, Nullable<System.DateTime> fechafin, Nullable<int> ident)
+        public virtual ObjectResult<Nullable<int>> RegistroPeriodo(string detalleperiodo, Nullable<int> ordenperiodo, Nullable<System.DateTime> fechainicio, Nullable<System.DateTime> fechafin)
         {
             var detalleperiodoParameter = detalleperiodo != null ?
                 new ObjectParameter("detalleperiodo", detalleperiodo) :
@@ -2413,11 +2413,7 @@ namespace Datos
                 new ObjectParameter("fechafin", fechafin) :
                 new ObjectParameter("fechafin", typeof(System.DateTime));
     
-            var identParameter = ident.HasValue ?
-                new ObjectParameter("ident", ident) :
-                new ObjectParameter("ident", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("RegistroPeriodo", detalleperiodoParameter, ordenperiodoParameter, fechainicioParameter, fechafinParameter, identParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("RegistroPeriodo", detalleperiodoParameter, ordenperiodoParameter, fechainicioParameter, fechafinParameter);
         }
     
         public virtual ObjectResult<ConsultarOpcionesRespuestaPreguntaSeleccion_Result> ConsultarOpcionesRespuestaPreguntaSeleccion(Nullable<int> idcuestionario)
@@ -3129,16 +3125,8 @@ namespace Datos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ListarRespuestasRequerimientoxTipoProceso_Result>("ListarRespuestasRequerimientoxTipoProceso", idtipoprocesoParameter, visibleParameter);
         }
     
-        public virtual ObjectResult<Nullable<int>> AgregarSlider(string titulo, string enunciado, string imagenslider, string url)
+        public virtual ObjectResult<Nullable<int>> AgregarSlider(string imagenslider, string url)
         {
-            var tituloParameter = titulo != null ?
-                new ObjectParameter("titulo", titulo) :
-                new ObjectParameter("titulo", typeof(string));
-    
-            var enunciadoParameter = enunciado != null ?
-                new ObjectParameter("enunciado", enunciado) :
-                new ObjectParameter("enunciado", typeof(string));
-    
             var imagensliderParameter = imagenslider != null ?
                 new ObjectParameter("imagenslider", imagenslider) :
                 new ObjectParameter("imagenslider", typeof(string));
@@ -3147,23 +3135,15 @@ namespace Datos
                 new ObjectParameter("url", url) :
                 new ObjectParameter("url", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("AgregarSlider", tituloParameter, enunciadoParameter, imagensliderParameter, urlParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("AgregarSlider", imagensliderParameter, urlParameter);
         }
     
-        public virtual ObjectResult<Nullable<int>> EditarSlider(Nullable<int> idslider, string titulo, string enunciado, string imagenslider, string url)
+        public virtual ObjectResult<Nullable<int>> EditarSlider(Nullable<int> idslider, string imagenslider, string url)
         {
             var idsliderParameter = idslider.HasValue ?
                 new ObjectParameter("Idslider", idslider) :
                 new ObjectParameter("Idslider", typeof(int));
     
-            var tituloParameter = titulo != null ?
-                new ObjectParameter("titulo", titulo) :
-                new ObjectParameter("titulo", typeof(string));
-    
-            var enunciadoParameter = enunciado != null ?
-                new ObjectParameter("enunciado", enunciado) :
-                new ObjectParameter("enunciado", typeof(string));
-    
             var imagensliderParameter = imagenslider != null ?
                 new ObjectParameter("imagenslider", imagenslider) :
                 new ObjectParameter("imagenslider", typeof(string));
@@ -3172,7 +3152,7 @@ namespace Datos
                 new ObjectParameter("url", url) :
                 new ObjectParameter("url", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("EditarSlider", idsliderParameter, tituloParameter, enunciadoParameter, imagensliderParameter, urlParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("EditarSlider", idsliderParameter, imagensliderParameter, urlParameter);
         }
     
         public virtual ObjectResult<Nullable<int>> EliminarSlider(Nullable<int> idslider)

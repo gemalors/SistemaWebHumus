@@ -280,7 +280,6 @@
     <Property Name="Ordenperiodo" Type="int" />
     <Property Name="Fechainicio" Type="datetime" />
     <Property Name="Fechafin" Type="datetime" />
-    <Property Name="Identificador" Type="int" />
   </EntityType>
   <EntityType Name="PreguntaAbierta">
     <Key>
@@ -385,8 +384,6 @@
       <PropertyRef Name="IDSlider" />
     </Key>
     <Property Name="IDSlider" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Titulo" Type="nvarchar(max)" />
-    <Property Name="Enunciado" Type="nvarchar(max)" />
     <Property Name="ImagenSlider" Type="nvarchar(max)" />
     <Property Name="Urlslider" Type="nvarchar(max)" />
     <Property Name="EliminadoSlider" Type="bit" />
@@ -1630,7 +1627,6 @@
     <Parameter Name="ordenperiodo" Type="int" Mode="In" />
     <Parameter Name="fechainicio" Type="datetime" Mode="In" />
     <Parameter Name="fechafin" Type="datetime" Mode="In" />
-    <Parameter Name="ident" Type="int" Mode="In" />
   </Function>
   <Function Name="ConsultarOpcionesRespuestaPreguntaSeleccion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
     <Parameter Name="Idcuestionario" Type="int" Mode="In" />
@@ -1842,15 +1838,11 @@
     <Parameter Name="visible" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="AgregarSlider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SlidersEditorial">
-    <Parameter Name="titulo" Type="nvarchar(max)" Mode="In" />
-    <Parameter Name="enunciado" Type="nvarchar(max)" Mode="In" />
     <Parameter Name="imagenslider" Type="nvarchar(max)" Mode="In" />
     <Parameter Name="url" Type="nvarchar(max)" Mode="In" />
   </Function>
   <Function Name="EditarSlider" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="SlidersEditorial">
     <Parameter Name="Idslider" Type="int" Mode="In" />
-    <Parameter Name="titulo" Type="nvarchar(max)" Mode="In" />
-    <Parameter Name="enunciado" Type="nvarchar(max)" Mode="In" />
     <Parameter Name="imagenslider" Type="nvarchar(max)" Mode="In" />
     <Parameter Name="url" Type="nvarchar(max)" Mode="In" />
   </Function>

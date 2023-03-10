@@ -14,8 +14,6 @@ namespace Datos
     public partial class VerSliders_Result
     {
         public int IDSlider { get; set; }
-        public string Titulo { get; set; }
-        public string Enunciado { get; set; }
         public string ImagenSlider { get; set; }
         public string Urlslider { get; set; }
     }

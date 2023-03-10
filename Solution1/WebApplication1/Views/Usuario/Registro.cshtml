@@ -563,22 +563,21 @@
                                                 <div class="row" style="margin-bottom:5%">
                                                     <div class="row">
                                                        
-                                                        @using (Html.BeginForm("Registro", "Usuario", FormMethod.Get))
-                                                        {
+                                                      
                                                             <div class="form-group row">
                                                                 <div class="col-sm-3 col-form-label text-muted"></div>
                                                                 <div class="col-6">
                                                                     <div class="input-field mt-0 mb-0 ">
-                                                                        <input type="text" class="form-control" id="busca" name="busca" placeholder="Buscar usuario...">
+                                                                        <input type="text" class="form-control" id="cedu" name="cedu" placeholder="Buscar usuario...">
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-3">
-                                                                    <button type="submit" class="btn btn-info" title="Buscar usuario"><i class="fas fa-fas fa-search"> Buscar</i></button>
+                                                                    <button type="button" class="btn btn-info" title="Buscar usuario" id="busca"><i class="fas fa-fas fa-search"> Buscar</i></button>
 
                                                                 </div>
 
                                                             </div>
-                                                        }
+                                                        
 
                                                     </div>
 
@@ -589,26 +588,21 @@
 
                                                     <!--Formulario de registro de datos de usuario-->
 
-                                                    @*@if (ViewBag.Id == 0)
-                                                    {
-                                                        <p class="text-secondary">No hay resultados para mostrar...</p>
-                                                    }*@
+                                                 
 
-                                                    @foreach (var itemu in Model)
-                                                    {
-
-                                                        using (Html.BeginForm("Create", "Usuario", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+                                                   
+                                                        @using (Html.BeginForm("Create", "Usuario", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
                                                         {
 
 
                                                             @*<form class="form-horizontal">*@
 
-                                                            <input type="hidden" class="form-control" id="Iduser" name="Iduser" value="@itemu.IDusuario">
+                                                            <input type="hidden" class="form-control" id="Iduser" name="Iduser" >
                                                             <div class="form-group row">
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                                 <label for="inputName" class="col-sm-4 col-form-label text-info">Usuario:</label>
                                                                 <div class="col-sm-6">
-                                                                    <input type="text" class="required form-control" id="Username" name="Username" placeholder="Usuario" required="" value="@itemu.Username">
+                                                                    <input type="text" class="required form-control" id="Username" name="Username" placeholder="Usuario" required="" >
                                                                 </div>
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                             </div>
@@ -616,7 +610,7 @@
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                                 <label for="inputName" class="col-sm-4 col-form-label text-info">Primer nombre:</label>
                                                                 <div class="col-sm-6">
-                                                                    <input type="text" class="required form-control" id="Nombre1" name="Nombre1" placeholder="Primer nombre..." required="" value="@itemu.PrimerNombre">
+                                                                    <input type="text" class="required form-control" id="Nombre1" name="Nombre1" placeholder="Primer nombre..." required="" >
                                                                 </div>
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                             </div>
@@ -624,7 +618,7 @@
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                                 <label for="inputName" class="col-sm-4 col-form-label text-info">Segundo nombre:</label>
                                                                 <div class="col-sm-6">
-                                                                    <input type="text" class="required form-control" id="Nombre2" name="Nombre2" placeholder="Segundo nombre..."  value="@itemu.SegundoNombre">
+                                                                    <input type="text" class="required form-control" id="Nombre2" name="Nombre2" placeholder="Segundo nombre..."  >
                                                                 </div>
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                             </div>
@@ -633,7 +627,7 @@
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                                 <label for="inputName" class="col-sm-4 col-form-label text-info">Primer apellido:</label>
                                                                 <div class="col-sm-6">
-                                                                    <input type="text" class="required form-control" id="ApellidoP" name="ApellidoP" placeholder="Primer apellido..." required="" value="@itemu.ApellidoPrimero">
+                                                                    <input type="text" class="required form-control" id="ApellidoP" name="ApellidoP" placeholder="Primer apellido..." required="" >
                                                                 </div>
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                             </div>
@@ -641,7 +635,7 @@
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                                 <label for="inputName" class="col-sm-4 col-form-label text-info">Segundo apellido:</label>
                                                                 <div class="col-sm-6">
-                                                                    <input type="text" class="required form-control" id="ApellidoS" name="ApellidoS" placeholder="Segundo apellido..."  value="@itemu.ApellidoSegundo">
+                                                                    <input type="text" class="required form-control" id="ApellidoS" name="ApellidoS" placeholder="Segundo apellido..." >
                                                                 </div>
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                             </div>
@@ -649,7 +643,7 @@
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                                 <label for="inputEmail" class="col-sm-4 col-form-label text-info">Email:</label>
                                                                 <div class="col-sm-6">
-                                                                    <input type="email" class="required form-control" id="Email" name="Email" placeholder="Email" required="" value="@itemu.Email">
+                                                                    <input type="email" class="required form-control" id="Email" name="Email" placeholder="Email" required="" >
                                                                 </div>
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                             </div>
@@ -657,7 +651,7 @@
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                                 <label for="inputName2" class="col-sm-4 col-form-label text-info">Teléfono:</label>
                                                                 <div class="col-sm-6">
-                                                                    <input type="text" class="required form-control" id="Telefono" name="Telefono" placeholder="Teléfono" value="@itemu.Telefono" required="">
+                                                                    <input type="text" class="required form-control" id="Telefono" name="Telefono" placeholder="Teléfono"  required="">
                                                                 </div>
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                             </div>
@@ -665,7 +659,7 @@
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                                 <label for="inputName" class="col-sm-4 col-form-label text-info ">Dirección:</label>
                                                                 <div class="col-sm-6">
-                                                                    <input type="text" class="required form-control" id="Direccion" name="Direccion" placeholder="Dirección" value="@itemu.Direccion" required="">
+                                                                    <input type="text" class="required form-control" id="Direccion" name="Direccion" placeholder="Dirección"  required="">
                                                                 </div>
                                                                 <div class="col-sm-1 col-form-label text-muted"></div>
                                                             </div>
@@ -694,7 +688,7 @@
                                                         }
 
 
-                                                    }
+                                                    
 
 
                                                 </div>
@@ -917,11 +911,72 @@
 
 
 
+    <script>
+        $(function () {
 
+            $('#busca').click(function () {
+
+                consultar();
+            });
+
+
+        });
+
+
+        function consultar() {
+
+            var cedu = document.getElementById('cedu').value;
+
+            var data = {
+                'ced': cedu,
+            };
+
+              $.ajax({
+
+                url: "@Url.Action("ObtenerDatos", "Usuario")",
+                type: 'GET',
+                dataType: 'json',
+                data: data,
+                success: function (obj) {
+                 
+
+                        $.each(obj, function (idx, item) {
+
+                            document.getElementById('Username').value = item.Username;
+                            document.getElementById('Nombre1').value = item.PrimerNombre;
+                            document.getElementById('Nombre2').value = item.SegundoNombre;
+                            document.getElementById('ApellidoP').value = item.ApellidoPrimero;
+                            document.getElementById('ApellidoS').value = item.ApellidoSegundo;
+                            document.getElementById('Email').value = item.Email;
+                            document.getElementById('Telefono').value = item.Telefono;
+                            document.getElementById('Direccion').value = item.Direccion;
+
+                        });
+                    
+                     if (obj == 0) {
+                        $('#TempData[ERROR2]').ready(function () {
+                            toastr.warning('@TempData["ERROR2"]', 'Usuario no encontrado.'
+                            )
+                        });
+                    }
+
+                  },
+
+
+            })
+        };
+
+
+
+
+    </script>
 
 
 
     <script>
+
+
+
 
          function Salir() {
 

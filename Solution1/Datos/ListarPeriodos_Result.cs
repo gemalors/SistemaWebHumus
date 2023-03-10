@@ -18,6 +18,5 @@ namespace Datos
         public Nullable<int> Ordenperiodo { get; set; }
         public Nullable<System.DateTime> Fechainicio { get; set; }
         public Nullable<System.DateTime> Fechafin { get; set; }
-        public Nullable<int> Identificador { get; set; }
     }
 }

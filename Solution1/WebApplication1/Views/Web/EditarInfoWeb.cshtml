@@ -88,23 +88,8 @@
 
                     <div class="card-body">
                         <input type="hidden" class="form-control" id="Id1" name="Id1">
-                        <div class="form-group row">
-            <label for="fname"
-                   class="col-lg-2 text-start control-label col-form-label text-info">Título:</label>
-            <div class="col-lg-10">
-                <input type="text" class="form-control" id="titulo1" name="titulo1">
-            </div>
-        </div>
-                        <div class="form-group row">
-                            <label for="lname" class="col-lg-2 text-start control-label col-form-label text-info">
 
-                                Descripción:
-                            </label>
-                            <div class="col-lg-10">
-                                <textarea type="text" class="form-control" id="enunciado1" name="enunciado1" rows="5" cols="5"></textarea>
 
-                            </div>
-                        </div>
                         <div class="form-group row">
                             <label for="lname" class="col-lg-2 text-start control-label col-form-label text-info">
 
@@ -439,23 +424,23 @@
                     {
                     <div class="card-body">
 
-                        <div class="form-group row">
-            <label for="fname"
-                   class="col-lg-2 text-start control-label col-form-label text-info">Título:</label>
-            <div class="col-lg-10">
-                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título...">
-            </div>
-        </div>
-                        <div class="form-group row">
-            <label for="lname" class="col-lg-2 text-start control-label col-form-label text-info">
+                        @*<div class="form-group row">
+                        <label for="fname"
+                               class="col-lg-2 text-start control-label col-form-label text-info">Título:</label>
+                        <div class="col-lg-10">
+                            <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título...">
+                        </div>
+                    </div>*@
+                        @*<div class="form-group row">
+                        <label for="lname" class="col-lg-2 text-start control-label col-form-label text-info">
 
-                Descripción:
-            </label>
-            <div class="col-lg-10">
-                <textarea type="text" class="form-control" id="enunciado" name="enunciado" rows="5" cols="5" placeholder="Descripción..."></textarea>
+                            Descripción:
+                        </label>
+                        <div class="col-lg-10">
+                            <textarea type="text" class="form-control" id="enunciado" name="enunciado" rows="5" cols="5" placeholder="Descripción..."></textarea>
 
-            </div>
-        </div>
+                        </div>
+                    </div>*@
                     <div class="form-group row">
                         <label for="lname" class="col-lg-2 text-start control-label col-form-label text-info">
 
@@ -1647,13 +1632,13 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="el-card-content">
-                                                                    <h4 class="mb-0">@item1.Titulo</h4> <p class="text-secondary text-justify">
+                                                                    @*<h4 class="mb-0">@item1.Titulo</h4> <p class="text-secondary text-justify">
                                                                         @item1.Enunciado
-                                                                    </p>
+                                                                    </p>*@
                                                                     <hr />
 
                                                                     <div class="tools">
-                                                                        <i class="fas fa-edit text-success" title="Editar slider" onclick="EditSlider(@item1.IDSlider,'@item1.Titulo','@item1.Enunciado','@item1.ImagenSlider','@item1.Urlslider')" data-bs-toggle="modal" data-bs-target="#exampleModal1"></i>
+                                                                        <i class="fas fa-edit text-success" title="Editar slider" onclick="EditSlider(@item1.IDSlider,'@item1.ImagenSlider','@item1.Urlslider')" data-bs-toggle="modal" data-bs-target="#exampleModal1"></i>
                                                                         <i class="fas fa-trash text-danger" title="Eliminar slider" onclick="EliminarSlider(@item1.IDSlider)"></i>
                                                                     </div>
 
@@ -2224,11 +2209,11 @@
 
 
 
-    function EditSlider(IDSlider, Titulo, Enunciado, ImagenSlider, Urlslider) {
+    function EditSlider(IDSlider, ImagenSlider, Urlslider) {
 
                 document.getElementById('Id1').value = IDSlider;
-                document.getElementById('titulo1').value = Titulo;
-                document.getElementById('enunciado1').value = Enunciado;
+                ////document.getElementById('titulo1').value = Titulo;
+                ////document.getElementById('enunciado1').value = Enunciado;
                 document.getElementById('imagen1').value = ImagenSlider;
                 document.getElementById('url1').value = Urlslider;
 

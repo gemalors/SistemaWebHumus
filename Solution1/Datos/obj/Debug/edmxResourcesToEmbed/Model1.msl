@@ -300,7 +300,6 @@
           <ScalarProperty Name="Ordenperiodo" ColumnName="Ordenperiodo" />
           <ScalarProperty Name="Fechainicio" ColumnName="Fechainicio" />
           <ScalarProperty Name="Fechafin" ColumnName="Fechafin" />
-          <ScalarProperty Name="Identificador" ColumnName="Identificador" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -413,8 +412,6 @@
       <EntityTypeMapping TypeName="Model1.SlidersEditorial">
         <MappingFragment StoreEntitySet="SlidersEditorial">
           <ScalarProperty Name="IDSlider" ColumnName="IDSlider" />
-          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
-          <ScalarProperty Name="Enunciado" ColumnName="Enunciado" />
           <ScalarProperty Name="ImagenSlider" ColumnName="ImagenSlider" />
           <ScalarProperty Name="Urlslider" ColumnName="Urlslider" />
           <ScalarProperty Name="EliminadoSlider" ColumnName="EliminadoSlider" />
@@ -822,6 +819,7 @@
           <ScalarProperty Name="TotalLibrosPublicados" ColumnName="TotalLibrosPublicados" />
           <ScalarProperty Name="TotalLibrosProceso" ColumnName="TotalLibrosProceso" />
           <ScalarProperty Name="detalleperiodo" ColumnName="detalleperiodo" />
+          <ScalarProperty Name="idperiodo" ColumnName="idperiodo" />
           <ScalarProperty Name="LibrosxCarrera" ColumnName="LibrosxCarrera" />
           <ScalarProperty Name="TotalCarreras" ColumnName="TotalCarreras" />
         </ComplexTypeMapping>
@@ -837,6 +835,7 @@
           <ScalarProperty Name="TotalLibrosPublicados" ColumnName="TotalLibrosPublicados" />
           <ScalarProperty Name="TotalLibrosProceso" ColumnName="TotalLibrosProceso" />
           <ScalarProperty Name="detalleyear" ColumnName="detalleyear" />
+          <ScalarProperty Name="idyear" ColumnName="idyear" />
           <ScalarProperty Name="LibrosxCarrera" ColumnName="LibrosxCarrera" />
           <ScalarProperty Name="TotalCarreras" ColumnName="TotalCarreras" />
         </ComplexTypeMapping>
@@ -851,6 +850,7 @@
           <ScalarProperty Name="Totalvistaslibrosxa" ColumnName="Totalvistaslibrosxa" />
           <ScalarProperty Name="Totalvistasxcarrera" ColumnName="Totalvistasxcarrera" />
           <ScalarProperty Name="detalleyear" ColumnName="detalleyear" />
+          <ScalarProperty Name="idyear" ColumnName="idyear" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
@@ -1995,7 +1995,6 @@
           <ScalarProperty Name="Ordenperiodo" ColumnName="Ordenperiodo" />
           <ScalarProperty Name="Fechainicio" ColumnName="Fechainicio" />
           <ScalarProperty Name="Fechafin" ColumnName="Fechafin" />
-          <ScalarProperty Name="Identificador" ColumnName="Identificador" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
@@ -2393,8 +2392,6 @@
       <ResultMapping>
         <ComplexTypeMapping TypeName="Model1.VerSliders_Result">
           <ScalarProperty Name="IDSlider" ColumnName="IDSlider" />
-          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
-          <ScalarProperty Name="Enunciado" ColumnName="Enunciado" />
           <ScalarProperty Name="ImagenSlider" ColumnName="ImagenSlider" />
           <ScalarProperty Name="Urlslider" ColumnName="Urlslider" />
         </ComplexTypeMapping>

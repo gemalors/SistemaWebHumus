@@ -554,11 +554,14 @@ namespace WebApplication1.Controllers
 
 
                     //FileStream fs = new FileStream("D:/Copia-Sistema/SistemaHumus/Solution1/WebApplication1/Files/Reportes/Informe-Evaluación-Par-Académico-"+IDlibro+".pdf", FileMode.Create);
-               
 
+                    string path = Server.MapPath("~/Files/Documents/");
                     string NombreDoc = IDlibro + "_" + fecha1 + "_" + "Informe-Evaluación-Par-Académico.pdf";
 
-                    FileStream fs = new FileStream("D:/Copia-Sistema/SistemaHumus/Solution1/WebApplication1/Files/Documents/" + NombreDoc, FileMode.Create);
+                    //FileStream fs = new FileStream("D:/Copia-Sistema/SistemaHumus/Solution1/WebApplication1/Files/Documents/" + NombreDoc, FileMode.Create);
+
+
+                    FileStream fs = new FileStream(path + NombreDoc, FileMode.Create);
 
 
 
@@ -2241,7 +2244,8 @@ namespace WebApplication1.Controllers
                 {
                     if (item1.EstadoDocu == "Pendiente revisar" && item1.Visibleadmin==true)
                     {
-                        path = @"D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\Files\Documents\" + item1.Documento;
+                        path = Server.MapPath("~/Files/Documents/") + item1.Documento;
+                        //path = @"D:\Copia-Sistema\SistemaHumus\Solution1\WebApplication1\Files\Documents\" + item1.Documento;
                         mail.Attachments.Add(new Attachment(path));
                     }
                 }

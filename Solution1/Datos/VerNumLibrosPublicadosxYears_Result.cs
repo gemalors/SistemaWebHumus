@@ -20,6 +20,7 @@ namespace Datos
         public Nullable<int> TotalLibrosPublicados { get; set; }
         public Nullable<int> TotalLibrosProceso { get; set; }
         public Nullable<int> detalleyear { get; set; }
+        public Nullable<int> idyear { get; set; }
         public Nullable<int> LibrosxCarrera { get; set; }
         public Nullable<int> TotalCarreras { get; set; }
     }

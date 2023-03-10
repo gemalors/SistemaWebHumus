@@ -5,6 +5,7 @@ namespace WebApplication1
 {
     public class RouteConfig
     {
+
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
@@ -19,7 +20,7 @@ namespace WebApplication1
             //    defaults: new { controller = "Cuestionario", action = "PublicarCuestionario", Idevaluador = UrlParameter.Optional, Id= UrlParameter.Optional}
             //); solo para vistas 
 
-
+           
 
 
 
@@ -28,6 +29,7 @@ namespace WebApplication1
               url: "{controller}/{action}/{id}/{id1}",
               defaults: new { controller = "Reporte", action = "EvaluacionParAcademico", Idcuestionario = UrlParameter.Optional, Id = UrlParameter.Optional }
           );
+
 
 
             routes.MapRoute(
@@ -62,6 +64,10 @@ namespace WebApplication1
              url: "{controller}/{action}/{id}/{id1}",
              defaults: new { controller = "Proceso", action = "VerProcesoAdmin", Idlibro = UrlParameter.Optional, Idproceso = UrlParameter.Optional }
            );
+
+
+
+            //routes.RouteHandler = new UnencriptedRouteHandler();
 
             routes.MapRoute(
              name: "VerProcesoAutor",

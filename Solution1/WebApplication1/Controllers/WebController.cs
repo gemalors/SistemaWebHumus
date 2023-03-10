@@ -309,7 +309,7 @@ namespace WebApplication1.Controllers
 
         //Función para registrar datos de slider en página web
         [HttpPost]
-        public ActionResult RegistroSlider(string titulo, string enunciado,string url, HttpPostedFileBase imagen)
+        public ActionResult RegistroSlider(string url, HttpPostedFileBase imagen)
         {
             string fecha1 = System.DateTime.Now.ToString("dd-MM-yyyy" + "H-mm");
             int r = 0;
@@ -329,7 +329,7 @@ namespace WebApplication1.Controllers
               
 
 
-                r = conexSliders.AgregarSlider(titulo,enunciado,Filename,url);
+                r = conexSliders.AgregarSlider(Filename,url);
 
                 if (r ==1)
                 {
@@ -355,7 +355,7 @@ namespace WebApplication1.Controllers
 
         //Función para editar datos de slider en página web
         [HttpPost]
-        public ActionResult EditarSlider(int Id1, string titulo1, string enunciado1, string url1, HttpPostedFileBase imagen, string imagen1)
+        public ActionResult EditarSlider(int Id1, string url1, HttpPostedFileBase imagen, string imagen1)
         {
             string fecha1 = System.DateTime.Now.ToString("dd-MM-yyyy" + "H-mm");
             int r = 0;
@@ -391,7 +391,7 @@ namespace WebApplication1.Controllers
                 
 
 
-                r = conexSliders.EditarSlider(Id1,titulo1, enunciado1, Filename, url1);
+                r = conexSliders.EditarSlider(Id1, Filename, url1);
 
                 if (r ==1)
                 {
