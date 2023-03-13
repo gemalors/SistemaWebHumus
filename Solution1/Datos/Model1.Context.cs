@@ -2487,7 +2487,7 @@ namespace Datos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("EditarOpcionRespuestaPreguntaSeleccion", idoprespParameter, descripcionoprespParameter);
         }
     
-        public virtual ObjectResult<Nullable<int>> EditarPregunta(Nullable<int> idpreg, Nullable<int> idc, Nullable<int> idtipopreg, string descripcionpreg, Nullable<bool> obligatorio, string leyendasup, string tiposopciones)
+        public virtual ObjectResult<Nullable<int>> EditarPregunta(Nullable<int> idpreg, Nullable<int> idc, Nullable<int> idtipopreg, string descripcionpreg, Nullable<bool> obligatorio, string leyendasup, string tiposopciones, Nullable<int> orden)
         {
             var idpregParameter = idpreg.HasValue ?
                 new ObjectParameter("Idpreg", idpreg) :
@@ -2517,7 +2517,11 @@ namespace Datos
                 new ObjectParameter("tiposopciones", tiposopciones) :
                 new ObjectParameter("tiposopciones", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("EditarPregunta", idpregParameter, idcParameter, idtipopregParameter, descripcionpregParameter, obligatorioParameter, leyendasupParameter, tiposopcionesParameter);
+            var ordenParameter = orden.HasValue ?
+                new ObjectParameter("orden", orden) :
+                new ObjectParameter("orden", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("EditarPregunta", idpregParameter, idcParameter, idtipopregParameter, descripcionpregParameter, obligatorioParameter, leyendasupParameter, tiposopcionesParameter, ordenParameter);
         }
     
         public virtual ObjectResult<Nullable<int>> EditarPreguntaAbierta(Nullable<int> idtipodato, Nullable<int> idpregA, Nullable<bool> especificarRango, string valormax, string valormin)

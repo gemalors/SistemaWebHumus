@@ -32,6 +32,327 @@ namespace WebApplication1.Controllers
 
 
 
+        //Función para visualizar cuestionario registrado en pdf
+        public ActionResult Respuestaprueba(int Idcuestionario)
+        {
+
+
+            if (Session["Type"] == null)
+            {
+                TempData["ERRORD"] = "No tiene acceso a esta sección del sistema. Inicia sesión";
+                return RedirectToAction("Login", "Usuario");
+            }
+
+            int Iduser = Convert.ToInt32(Session["Id"]);
+
+            string titulol = "";
+            string titulo = "";
+            string descripcioncuestionario = "";
+            int Idt = 0;
+            string user = "";
+            string tipouser = "Evaluador";
+            string fecha = System.DateTime.Now.ToString("dd/MM/yyyy");
+
+            string NombresUser = Session["Nombres"].ToString();
+
+            try
+            {
+
+
+
+             
+
+                foreach (var item in conexCuestionario.VerCuestionario(Idcuestionario, tipouser))
+                {
+                    titulo = item.Nombre;
+                    descripcioncuestionario = item.Descripcion;
+                    Idt = Convert.ToInt32(item.Idtipousuario);
+                }
+
+
+                MemoryStream ms = new MemoryStream();
+                Document document = new Document(iTextSharp.text.PageSize.A4, 85.0394f, 85.0394f, 170.079f, 85.0394f);
+                PdfWriter pw = PdfWriter.GetInstance(document, ms);
+
+                string pathImage = Server.MapPath("/ImagesWeb/LG.png");
+                string logoespam = Server.MapPath("/ImagesWeb/espamlogoe1.png");
+                string Image2escudo = Server.MapPath("/ImagesWeb/escudo2.png");
+                pw.PageEvent = new HeaderFooter1(Image2escudo, logoespam, pathImage, titulo);
+
+          
+
+
+
+
+
+                document.Open();
+
+          
+
+                var fontparrafo = FontFactory.GetFont("Times New Roman", 12, 0, BaseColor.BLACK);
+                var fontresp = FontFactory.GetFont("Times New Roman", 12, 0, BaseColor.DARK_GRAY);
+                var fontpreg = FontFactory.GetFont(FontFactory.TIMES_BOLD, 12, 0, BaseColor.BLACK);
+
+        
+                string descrip = descripcioncuestionario.Replace("<p>", "");
+                descrip = descrip.Replace("</p>", "\n");
+                descrip = descrip.Replace("<br>", "\n");
+
+
+
+                document.Add(new Paragraph(descrip, fontparrafo) { Alignment = Element.ALIGN_JUSTIFIED });
+                document.Add(new Paragraph("\n"));
+
+
+
+                var tb1 = new PdfPTable(new float[] { 40f, 70f }) { WidthPercentage = 100f };
+                var colt1 = new PdfPCell(new Phrase("TÍTULO DEL LIBRO:", fontpreg)) { BorderWidthRight = 0, BorderWidthBottom = 0, BorderWidthTop = 0, BorderWidthLeft = 0 };
+                var colt2 = new PdfPCell(new Phrase(titulol, fontparrafo)) { BorderWidthLeft = 0, BorderWidthBottom = 0, BorderWidthRight = 0, BorderWidthTop = 0, HorizontalAlignment = Element.ALIGN_LEFT, PaddingLeft = -25 };
+
+                tb1.AddCell(colt1);
+                tb1.AddCell(colt2);
+
+
+                document.Add(tb1);
+
+
+
+
+
+                //preguntas registradas
+                foreach (var item1 in conexPreg.ConsultarPreguntas(Idcuestionario))
+                {
+                    document.Add(new Paragraph("\n"));
+                    document.Add(new Paragraph(item1.LeyendaSuperior, fontparrafo) { Alignment = Element.ALIGN_JUSTIFIED });
+
+
+                    document.Add(new Paragraph(item1.Orden + ". " + item1.Descripcion, fontparrafo) { Alignment = Element.ALIGN_JUSTIFIED });
+
+
+
+             
+
+
+                    if (item1.Idtipopregunta == 2)
+                    {
+                        if (item1.TiposOpciones == "Opciones y respuestas")
+                        {
+                            foreach (var item3 in conexPreg.VerPreguntaSeleccion(Idcuestionario))
+                            {
+                                if (item1.IDpregunta == item3.Idpregunta)
+                                {
+                                    document.Add(new Paragraph("- " + item3.descripOpcpreg, fontparrafo) { Alignment = Element.ALIGN_LEFT });
+                
+                                }
+                            }
+                        }
+
+                        
+
+                    }
+
+
+
+
+                    if (item1.Idtipopregunta == 3)
+                    {
+                        if (item1.TiposOpciones == "Opciones y respuestas")
+                        {
+                            foreach (var item3 in conexPreg.VerPreguntaSeleccion(Idcuestionario))
+                            {
+                                if (item1.IDpregunta == item3.Idpregunta)
+                                {
+                                    document.Add(new Paragraph("- " + item3.descripOpcpreg, fontparrafo) { Alignment = Element.ALIGN_LEFT });
+
+                                    foreach (var item4 in conexCuestionario.VerRespuestaPregOpcionesTipo1(Iduser, Idcuestionario, 0))
+                                    {
+                                        if (item1.IDpregunta == item4.Idpregunta)
+                                        {
+
+                                            document.Add(new Paragraph("  " + item4.DescripcionOpcionRespuesta, fontresp) { Alignment = Element.ALIGN_JUSTIFIED });
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        //if (item1.TiposOpciones == "Solo respuestas")
+                        //{
+                        //    foreach (var item5 in conexCuestionario.VerRespuestaPregOpcionesTipo2(Iduser, Idcuestionario, Ida))
+                        //    {
+                        //        if (item1.IDpregunta == item5.Idpregunta)
+                        //        {
+                        //            document.Add(new Paragraph("- " + item5.DescripcionOpcionRespuesta, fontresp) { Alignment = Element.ALIGN_JUSTIFIED });
+                        //        }
+                        //    }
+                        //}
+
+                    }
+
+
+
+
+                    if (item1.Idtipopregunta == 4)
+                    {
+                        document.Add(new Paragraph("\n"));
+
+                        var tbp4 = new PdfPTable(new float[] { 100f }) { WidthPercentage = 100f };
+                        var colp4 = new PdfPCell(new Phrase("OBSERVACIONES", fontpreg)) { BorderWidthBottom = 0, BorderColor = BaseColor.BLACK, Padding = 5f, HorizontalAlignment = Element.ALIGN_CENTER };
+
+                        tbp4.AddCell(colp4);
+
+                        document.Add(tbp4);
+
+
+                        var fontresp1 = FontFactory.GetFont("Times New Roman", 11, 0, BaseColor.DARK_GRAY);
+
+
+
+                        foreach (var item6 in conexPreg.VerPreguntaObservaciones(Idcuestionario))
+                        {
+                            if (item1.IDpregunta == item6.Idpregunta)
+                            {
+                                //document.Add(new Paragraph("- " + item6.Detallepregobservacion, fontparrafo) { Alignment = Element.ALIGN_LEFT });
+                                if (item6.Respuestas == 0)
+                                {
+                                    var tbp = new PdfPTable(new float[] { 100f }) { WidthPercentage = 100f };
+                                    var colp = new PdfPCell(new Phrase(item6.Detallepregobservacion, fontpreg)) { BorderColor = BaseColor.BLACK, BorderWidthBottom = 0, Padding = 5f, HorizontalAlignment = Element.ALIGN_LEFT };
+
+                                    tbp.AddCell(colp);
+
+                                    document.Add(tbp);
+                                }
+
+                                foreach (var item7 in conexCuestionario.VerRespuestaPregTipo4(Iduser, Idcuestionario, 0))
+                                {
+                                    if (item6.IDpreguntaObservaciones == item7.Idobservacionpreg)
+                                    {
+                                        if (item6.Respuestas == 0)
+                                        {
+
+
+                                            var tbpr4 = new PdfPTable(new float[] { 100f }) { WidthPercentage = 100f };
+                                            string nueva1 = item7.DescripcionRespuestaAbierta.Replace("<p>", "");
+                                            nueva1 = nueva1.Replace("</p>", "\n");
+                                            nueva1 = nueva1.Replace("<br>", "\n");
+
+                                            var p = tbpr4.AddCell(new PdfPCell(new Phrase(nueva1, fontresp1)) { BorderColor = BaseColor.BLACK, BorderWidthBottom = 0, BorderWidthTop = 0, Padding = 8f, HorizontalAlignment = Element.ALIGN_JUSTIFIED });
+                                            p.SetLeading(0, 1.5f);
+
+                                            tbpr4.AddCell(new PdfPCell(new Phrase("\n", fontresp1)) { BorderColor = BaseColor.BLACK, BorderWidthTop = 0, BorderWidthBottom = 0, HorizontalAlignment = Element.ALIGN_CENTER });
+
+                                            document.Add(tbpr4);
+
+                                        }
+                                        else
+                                        {
+
+                                            var tbpr4 = new PdfPTable(new float[] { 100f }) { WidthPercentage = 100f };
+
+                                            var p = tbpr4.AddCell(new PdfPCell(new Phrase(item7.titulorespabierta, fontpreg)) { BorderColor = BaseColor.BLACK, PaddingBottom = 3f, PaddingTop = 1f, PaddingLeft = 5f, BorderWidthBottom = 0, HorizontalAlignment = Element.ALIGN_JUSTIFIED });
+                                            p.SetLeading(0, 1.5f);
+
+
+                                            //replace
+                                            string nueva = item7.DescripcionRespuestaAbierta.Replace("<p>", "");
+                                            nueva = nueva.Replace("</p>", "\n");
+                                            nueva = nueva.Replace("<br>", "\n");
+
+
+                                            var p1 = tbpr4.AddCell(new PdfPCell(new Phrase(nueva, fontresp1)) { BorderColor = BaseColor.BLACK, BorderWidthBottom = 0, BorderWidthTop = 0, Padding = 8f, HorizontalAlignment = Element.ALIGN_JUSTIFIED });
+                                            p1.SetLeading(0, 1.5f);
+
+                                            tbpr4.AddCell(new PdfPCell(new Phrase("\n", fontresp1)) { BorderColor = BaseColor.BLACK, BorderWidthTop = 0, BorderWidthBottom = 0, HorizontalAlignment = Element.ALIGN_CENTER });
+
+                                            document.Add(tbpr4);
+
+
+
+                                        }
+
+                                    }
+                                }
+                            }
+
+
+
+
+
+
+                        }
+
+
+
+
+                    }
+
+
+
+
+
+
+
+                }
+               
+
+
+
+
+
+                var tbdatos = new PdfPTable(new float[] { 80f, 20f }) { WidthPercentage = 100f };
+                var col1 = new PdfPCell(new Phrase("Fecha:", fontpreg)) { BorderWidthRight = 0, BorderWidthBottom = 0, BorderColor = BaseColor.BLACK, Padding = 5f };
+                var col2 = new PdfPCell(new Phrase(fecha + " ", fontresp)) { BorderWidthLeft = 0, BorderWidthBottom = 0, BorderColor = BaseColor.BLACK, HorizontalAlignment = Element.ALIGN_RIGHT };
+
+                tbdatos.AddCell(col1);
+                tbdatos.AddCell(col2);
+
+                document.Add(tbdatos);
+
+
+
+                var tbprueba = new PdfPTable(new float[] { 100f }) { WidthPercentage = 100f };
+
+                tbprueba.AddCell(new PdfPCell(new Phrase(" Firma " + user + "/a:", fontpreg)) { BorderColor = BaseColor.BLACK, BorderWidthBottom = 0, VerticalAlignment = Element.ALIGN_LEFT });
+                tbprueba.AddCell(new PdfPCell(new Phrase("\n\n\n\n\n\n\n\n\n\n\n", fontresp)) { BorderColor = BaseColor.BLACK, BorderWidthBottom = 0, BorderWidthTop = 0, VerticalAlignment = Element.ALIGN_MIDDLE, Rowspan = 4 });
+                tbprueba.AddCell(new PdfPCell(new Phrase("__________________________________", fontparrafo)) { BorderColor = BaseColor.BLACK, BorderWidthBottom = 0, BorderWidthTop = 0, HorizontalAlignment = Element.ALIGN_CENTER });
+                tbprueba.AddCell(new PdfPCell(new Phrase(NombresUser, fontpreg)) { BorderColor = BaseColor.BLACK, BorderWidthBottom = 0, BorderWidthTop = 0, HorizontalAlignment = Element.ALIGN_CENTER });
+                tbprueba.AddCell(new PdfPCell(new Phrase("Administrador", fontpreg)) { BorderColor = BaseColor.BLACK, BorderWidthTop = 0, BorderWidthBottom = 0, HorizontalAlignment = Element.ALIGN_CENTER });
+                tbprueba.AddCell(new PdfPCell(new Phrase("\n", fontresp)) { BorderColor = BaseColor.BLACK, BorderWidthTop = 0, HorizontalAlignment = Element.ALIGN_CENTER });
+
+                document.Add(tbprueba);
+
+
+
+                document.Close();
+
+
+
+                byte[] bytesStream = ms.ToArray();
+
+                ms = new MemoryStream();
+                ms.Write(bytesStream, 0, bytesStream.Length);
+                ms.Position = 0;
+
+
+                return new FileStreamResult(ms, "application/pdf");
+            }
+            catch (Exception)
+            {
+                TempData["ERROR"] = "Algo salió mal";
+                return RedirectToAction("VerCuestionario", new RouteValueDictionary(new { controller = "Cuestionario", action = "VerCuestionario", Idcuestionario = Idcuestionario}));
+
+
+            }
+
+        }
+
+
+
+
+
+
+
+
 
 
 
@@ -45,17 +366,19 @@ namespace WebApplication1.Controllers
                 TempData["ERRORD"] = "No tiene acceso a esta sección del sistema. Inicia sesión";
                 return RedirectToAction("Login", "Usuario");
             }
-
+       
             int Iduser = Convert.ToInt32(Session["Id"]);
+          
             string titulol = "";
             string titulo = "";
             string descripcioncuestionario = "";
             int Idt = 0;
             string fecha = "";
             string NombresUser = "";
-            int Idproceso = 0;
+            int Idproceso = 169;
             string user = "";
             string tipouser = Session["Type"].ToString();
+         
 
 
             try
@@ -71,6 +394,7 @@ namespace WebApplication1.Controllers
 
 
                 ViewBag.DetalleAsigEvaluador = conexEvaluador.VerDetalleAsignacionEvaluador(Idproceso, Iduser);
+       
                 foreach (var item1 in ViewBag.DetalleAsigEvaluador)
                 {
 
@@ -1016,8 +1340,11 @@ namespace WebApplication1.Controllers
             int Iduser = Convert.ToInt32(Session["Id"]);
             string tipouser = Session["Type"].ToString();
 
+          
             int ntotal = 0;
             int nnuevas = 0;
+
+       
 
             int Id = Convert.ToInt32(Session["Id"]);
             ViewBag.Notificaciones = conexNotificacion.VerNotificacionesxIduser(Id);
@@ -1037,9 +1364,23 @@ namespace WebApplication1.Controllers
             ViewBag.Idcuestionario = Idcuestionario;
             ViewBag.PreguntaObservaciones = conexPreg.VerPreguntaObservaciones(Idcuestionario);
             ViewBag.PreguntaOpciones = conexPreg.VerPreguntaSeleccion(Idcuestionario);
-            //ViewBag.Cuestionario = conexCuestionario.VerCuestionario(Idcuestionario,tipouser);
+           
             ViewBag.Cuestionario = conexCuestionario.VerCuestionarioRegistrado(Idcuestionario);
             ViewBag.Preguntas = conexPreg.ConsultarPreguntas(Idcuestionario);
+
+
+            //--
+
+        
+            ViewBag.Idcuestionario = Idcuestionario;
+            ViewBag.Cuestionario = conexCuestionario.VerCuestionario(Idcuestionario, "Evaluador");
+           
+
+           
+           //---
+
+
+
             ViewBag.Usuario = conexUser.BuscarUsuario(Session["Username"].ToString());
             return View();
         }
@@ -1124,7 +1465,6 @@ namespace WebApplication1.Controllers
             ViewBag.Usuario = conexUser.BuscarUsuario(Session["Username"].ToString());
             return View();
         }
-
 
 
 
@@ -1230,6 +1570,10 @@ namespace WebApplication1.Controllers
             ViewBag.PreguntaOpciones = conexPreg.VerOpcionesdePreguntaSeleccion(Idpreg);
             ViewBag.Pregunta = conexPreg.VerPreguntaInsertada(Idpreg);
             ViewBag.TiposPreguntas = conexPreg.ListarTipodePregunta();
+
+
+
+
             foreach(var item in conexCuestionario.VerCuestionarioRegistrado(Idcuestionario))
             {
                 ViewBag.num = item.NumeroCuestionario;
@@ -1422,13 +1766,20 @@ namespace WebApplication1.Controllers
 
         //Función para editar pregunta
         [HttpPost]
-        public ActionResult EditarPregunta(int Idc, int Idpreg,string leyendasup, string descripcion, bool obligatorio, int idtipopreg, string especificar)
+        public ActionResult EditarPregunta(int Idc, int Idpreg,string leyendasup, int orden,string descripcion, bool obligatorio, int idtipopreg, string especificar)
         {
             int r = 0;
             try
             {
-              
-                r = conexPreg.EditarPregunta(Idpreg,Idc, idtipopreg, descripcion, obligatorio, leyendasup,especificar);
+                if (orden <= 0)
+                {
+                    TempData["ERROR2"] = "No se aceptan valores negativos, vuelva a intentarlo e ingrese el valor correcto.";
+                    return RedirectToAction("GestionarPreguntas", new RouteValueDictionary(new { controller = "Cuestionario", action = "GestionarPreguntas", Idcuestionario = Idc, Idpreg = Idpreg }));
+
+
+                }
+
+                r = conexPreg.EditarPregunta(Idpreg,Idc, idtipopreg, descripcion, obligatorio, leyendasup,especificar,orden);
 
                 if (r == 1)
                 {
@@ -1776,6 +2127,7 @@ namespace WebApplication1.Controllers
         {
             int numc = 1;
             int IdC ;
+          
             string asignado = "Evaluador";
             string tipo = "Evaluación";
             string fechac = fecha.ToString("dd/MM/yyyy");
@@ -1789,6 +2141,8 @@ namespace WebApplication1.Controllers
                 }
 
                 IdC = conexCuestionario.RegistrarCuestionario(nombre, descripcion, fechac,asignado,tipo,numc);
+               
+               
                 if (IdC == 1)
                 {
                     TempData["OK"] = "Cuestionario registrado correctamente";
@@ -1854,12 +2208,15 @@ namespace WebApplication1.Controllers
 
 
         //Función para registrar y editar respuestas a cuestionario-evaluación de pares académicos
+   
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult RegistrarRespuestasCuestionarioEA(int idc,int ida, int idresp,int idob, int idpregunta, string respabierta,string titulorespabierta, int identificadorTipoPregunta, int idopcionpreg, int idresplogica, string tipoOpciones, bool estado,int respuestas)
         {
 
             string fecha = System.DateTime.Now.ToString("dd/MM/yyyy");
             int user = Convert.ToInt32(Session["Id"]);
+        
             int r = 0;
             try
             {

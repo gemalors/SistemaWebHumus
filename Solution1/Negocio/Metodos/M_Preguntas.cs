@@ -190,7 +190,7 @@ namespace Negocio.Metodos
 
 
         //Función para editar pregunta
-        public int EditarPregunta(int Idpreg, int Idc, int Idtipopreg, string descripcionpreg, bool obligatorio, string leyendasup,string tiposopciones)
+        public int EditarPregunta(int Idpreg, int Idc, int Idtipopreg, string descripcionpreg, bool obligatorio, string leyendasup,string tiposopciones,int orden)
         {
 
 
@@ -200,7 +200,7 @@ namespace Negocio.Metodos
             try
             {
 
-                r = Convert.ToInt32(DB.EditarPregunta(Idpreg, Idc, Idtipopreg, descripcionpreg, obligatorio, leyendasup,tiposopciones).FirstOrDefault());
+                r = Convert.ToInt32(DB.EditarPregunta(Idpreg, Idc, Idtipopreg, descripcionpreg, obligatorio, leyendasup,tiposopciones, orden).FirstOrDefault());
             }
             catch (Exception)
             {

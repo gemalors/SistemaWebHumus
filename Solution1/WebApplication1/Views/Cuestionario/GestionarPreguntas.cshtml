@@ -78,109 +78,121 @@
                 @using (Html.BeginForm("EditarPregunta", "Cuestionario", FormMethod.Post, new { @class = "form-horizontal" }))
                 {
 
-                    <div class="card-body ">
-                        <div class="form-group row">
+                <div class="card-body ">
+                    <div class="form-group row">
 
-                            <div class="col-sm-9">
-                                <input type="hidden" class="form-control" id="Idc" name="Idc" value="@ViewBag.Idc">
-                                <input type="hidden" class="form-control" id="Idpreg" name="Idpreg">
-                            </div>
+                        <div class="col-sm-9">
+                            <input type="hidden" class="form-control" id="Idc" name="Idc" value="@ViewBag.Idc">
+                            <input type="hidden" class="form-control" id="Idpreg" name="Idpreg">
                         </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="fname"
-                                   class="col-sm-3 text-start control-label col-form-label text-info">Leyenda superior:</label>
-                            <div class="col-sm-9">
-                                <textarea type="text" class="form-control" id="leyendasup" name="leyendasup" placeholder="Leyenda superior de pregunta..." rows="5" cols="5"></textarea>
-                            </div>
+                    <div class="form-group row">
+                        <label for="fname"
+                               class="col-sm-3 text-start control-label col-form-label text-info">Leyenda superior:</label>
+                        <div class="col-sm-9">
+                            <textarea type="text" class="form-control" id="leyendasup" name="leyendasup" placeholder="Leyenda superior de pregunta..." rows="5" cols="5"></textarea>
                         </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lname" class="col-sm-3 text-start control-label col-form-label text-info">
 
-                        <div class="form-group row">
-                            <label for="lname" class="col-sm-3 text-start control-label col-form-label text-info">
+                            Orden:
+                        </label>
+                        <div class="col-sm-9">
 
-                                Descripción:
-                            </label>
-                            <div class="col-sm-9">
+                            <input type="number" class="form-control" id="orden" name="orden" placeholder="Orden de pregunta..." required="">
 
-                                <textarea type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripción de pregunta..." required="" rows="3" cols="3"></textarea>
-
-                            </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="fname"
-                                   class="col-sm-3 text-start control-label col-form-label text-info">Obligatoria:</label>
+                    </div>
 
 
-                            <div class="col-md-9">
+                    <div class="form-group row">
+                        <label for="lname" class="col-sm-3 text-start control-label col-form-label text-info">
 
-                                <div class="form-check">
-                                    <input type="radio" class="form-check-input"
-                                           id="obligatorio1" name="obligatorio" value="true" required="">
-                                    <label class="form-check-label mb-0 text-secondary" for="customControlValidation1">
-                                        Si
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" class="form-check-input"
-                                           id="obligatorio2" name="obligatorio" value="false" required="">
-                                    <label class="form-check-label mb-0 text-secondary" for="customControlValidation2">
-                                        No
-                                    </label>
-                                </div>
+                            Descripción:
+                        </label>
+                        <div class="col-sm-9">
 
-                            </div>
+                            <textarea type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Descripción de pregunta..." required="" rows="3" cols="3"></textarea>
+
                         </div>
-
-                        <div class="form-group row">
-                            <label for="fname"
-                                   class="col-sm-3 text-start control-label col-form-label text-info">Tipo de pregunta:</label>
-                            <div class="col-sm-9">
-                                <select id="idtipopreg" name="idtipopreg" class="required form-control" required="">
-                                    @foreach (var item1 in ViewBag.TiposPreguntas)
-                                    {
-                                        <option value="@item1.IDtipopregunta">@item1.tipopregunta</option>
-
-                                    }
+                    </div>
+                    <div class="form-group row">
+                        <label for="fname"
+                               class="col-sm-3 text-start control-label col-form-label text-info">Obligatoria:</label>
 
 
-                                </select>
+                        <div class="col-md-9">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input"
+                                       id="obligatorio1" name="obligatorio" value="true" required="">
+                                <label class="form-check-label mb-0 text-secondary" for="customControlValidation1">
+                                    Si
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input"
+                                       id="obligatorio2" name="obligatorio" value="false" required="">
+                                <label class="form-check-label mb-0 text-secondary" for="customControlValidation2">
+                                    No
+                                </label>
                             </div>
 
                         </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="fname"
-                                   class="col-sm-3 text-start control-label col-form-label text-info">Especificar opciones de respuesta:</label>
+                    <div class="form-group row">
+                        <label for="fname"
+                               class="col-sm-3 text-start control-label col-form-label text-info">Tipo de pregunta:</label>
+                        <div class="col-sm-9">
+                            <select id="idtipopreg" name="idtipopreg" class="required form-control" required="">
+                                @foreach (var item1 in ViewBag.TiposPreguntas)
+                                {
+                                    <option value="@item1.IDtipopregunta">@item1.tipopregunta</option>
+
+                                }
 
 
-                            <div class="col-md-9">
-
-                                <div class="form-check">
-                                    <input type="radio" class="form-check-input"
-                                           id="especificar1" name="especificar" value="Opciones y respuestas" required="">
-                                    <label class="form-check-label mb-0 text-secondary" for="customControlValidation1">
-                                        Opciones y respuestas
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" class="form-check-input"
-                                           id="especificar2" name="especificar" value="Solo respuestas" required="">
-                                    <label class="form-check-label mb-0 text-secondary" for="customControlValidation2">
-                                        Solo respuestas
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="radio" class="form-check-input"
-                                           id="especificar3" name="especificar" value="No aplica" required="">
-                                    <label class="form-check-label mb-0 text-secondary" for="customControlValidation3">
-                                        No aplica
-                                    </label>
-                                </div>
-
-                            </div>
+                            </select>
                         </div>
 
                     </div>
+
+                    <div class="form-group row">
+                        <label for="fname"
+                               class="col-sm-3 text-start control-label col-form-label text-info">Especificar opciones de respuesta:</label>
+
+
+                        <div class="col-md-9">
+
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input"
+                                       id="especificar1" name="especificar" value="Opciones y respuestas" required="">
+                                <label class="form-check-label mb-0 text-secondary" for="customControlValidation1">
+                                    Opciones y respuestas
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input"
+                                       id="especificar2" name="especificar" value="Solo respuestas" required="">
+                                <label class="form-check-label mb-0 text-secondary" for="customControlValidation2">
+                                    Solo respuestas
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input"
+                                       id="especificar3" name="especificar" value="No aplica" required="">
+                                <label class="form-check-label mb-0 text-secondary" for="customControlValidation3">
+                                    No aplica
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                         <button type="submit" class="btn btn-info" title="Guardar">Guardar</button>
@@ -1525,7 +1537,7 @@
                                                                 <label class="text-black"><b>Acciones</b></label>
                                                             </div>
                                                             <div style="margin-left:5%">
-                                                                <button type="button" onclick="EditPregunta(@item.IDpregunta,'@item.Descripcion','@item.LeyendaSuperior',@item.Idtipopregunta,Boolean(@item.Obligatorio),'@item.TiposOpciones')" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal2" title="Editar pregunta">
+                                                                <button type="button" onclick="EditPregunta(@item.IDpregunta,'@item.Descripcion','@item.LeyendaSuperior',@item.Idtipopregunta,Boolean(@item.Obligatorio),'@item.TiposOpciones', @item.Orden)" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal2" title="Editar pregunta">
                                                                     <i class="fas fa-pencil-alt">
                                                                     </i>
                                                                 </button>
@@ -2219,13 +2231,13 @@
 <script>
 
 
-    function EditPregunta(IDpregunta, Descripcion, LeyendaSuperior, Idtipopregunta, Obligatorio,TiposOpciones) {
+    function EditPregunta(IDpregunta, Descripcion, LeyendaSuperior, Idtipopregunta, Obligatorio,TiposOpciones,Orden) {
 
 
         document.getElementById('Idpreg').value = IDpregunta;
         document.getElementById('descripcion').value = Descripcion;
         document.getElementById('leyendasup').value = LeyendaSuperior;
-
+        document.getElementById('orden').value = Orden;
         document.getElementById('idtipopreg').value = Idtipopregunta;
 
         if (Obligatorio == true) {

@@ -154,7 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">
-      <Project>{c1337f7e-d957-4a4a-83e6-1577b67a6a45}</Project>
+      <Project>{4246539e-d4fd-4046-82f2-cff5a41e86c5}</Project>
       <Name>Datos</Name>
     </ProjectReference>
   </ItemGroup>

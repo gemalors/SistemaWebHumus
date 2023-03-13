@@ -1916,6 +1916,7 @@
       <Parameter Name="obligatorio" Mode="In" Type="Boolean" />
       <Parameter Name="leyendasup" Mode="In" Type="String" />
       <Parameter Name="tiposopciones" Mode="In" Type="String" />
+      <Parameter Name="orden" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="EditarPreguntaAbierta" ReturnType="Collection(Int32)">
       <Parameter Name="idtipodato" Mode="In" Type="Int32" />

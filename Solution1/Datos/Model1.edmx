@@ -1664,6 +1664,7 @@
           <Parameter Name="obligatorio" Type="bit" Mode="In" />
           <Parameter Name="leyendasup" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="tiposopciones" Type="nvarchar" Mode="In" />
+          <Parameter Name="orden" Type="int" Mode="In" />
         </Function>
         <Function Name="EditarPreguntaAbierta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Preguntas">
           <Parameter Name="idtipodato" Type="int" Mode="In" />
@@ -4080,6 +4081,7 @@
             <Parameter Name="obligatorio" Mode="In" Type="Boolean" />
             <Parameter Name="leyendasup" Mode="In" Type="String" />
             <Parameter Name="tiposopciones" Mode="In" Type="String" />
+            <Parameter Name="orden" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="EditarPreguntaAbierta" ReturnType="Collection(Int32)">
             <Parameter Name="idtipodato" Mode="In" Type="Int32" />

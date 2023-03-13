@@ -174,26 +174,29 @@
                                                             {
                                                                 foreach (var itempa in ViewBag.PreguntaAbierta)
                                                                 {
-                                                                    if (itempa.TipoHtml == "textarea")
+                                                                    if (itemp.IDpregunta == itempa.Idpregunta)
                                                                     {
+                                                                        if (itempa.TipoHtml == "textarea")
+                                                                        {
                                                                         <div class="form-group row">
                                                                             <div class="col-sm-12">
-                                                                                <textarea class="form-control" id="Idresp" name="Idresp" placeholder="Escriba aquí su respuesta..." style="height:300px; width:100%" onblur="GuardarRespuestaPregAbierta(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta,@itemc.IDcuestionario)"></textarea>
+                                                                                <textarea class="form-control" id="@itemp.IDpregunta" name="Idresp" placeholder="Escriba aquí su respuesta..." style="height:300px; width:100%" onblur="GuardarRespuestaPregAbierta(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta,@itemc.IDcuestionario)"></textarea>
 
 
                                                                             </div>
                                                                         </div>
-                                                                    }
-                                                                    else
-                                                                    {
+                                                                        }
+                                                                        else
+                                                                        {
                                                                         <div class="form-group row">
                                                                             <div class="col-sm-12">
 
-                                                                                <input type="@itempa.TipoHtml" class="form-control" id="Idresp" name="Idresp" placeholder="Escriba aquí su respuesta..." onblur="GuardarRespuestaPregAbierta(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta,@itemc.IDcuestionario)">
+                                                                                <input type="@itempa.TipoHtml" class="form-control" id="@itemp.IDpregunta" name="Idresp" placeholder="Escriba aquí su respuesta..." onblur="GuardarRespuestaPregAbierta(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta,@itemc.IDcuestionario)">
 
 
                                                                             </div>
                                                                         </div>
+                                                                        }
                                                                     }
                                                                 }
 
@@ -521,7 +524,7 @@
 <script>
     function GuardarRespuestaPregAbierta(IDpregunta, IdentificadorTipoPregunta,IDcuestionario) {
 
-        var Idresp = document.getElementById("Idresp");
+        var Idresp = document.getElementById(IDpregunta);
         var Ida =@ViewBag.Idasignacion;
         var Idresp1 = 0;
         var Tituloresp = null;
@@ -574,8 +577,7 @@
                             )
                         });
                     }
-                    @*window.location.href = "@Url.Action("VerCuestionario", new RouteValueDictionary(new { controller = "Cuestionario", action = "VerCuestionario", Idcuestionario = @ViewBag.Idcuestionario }))";
-                }*@
+                    
                 }
 
             })
@@ -644,8 +646,7 @@
                             )
                         });
                     }
-                    @*window.location.href = "@Url.Action("VerCuestionario", new RouteValueDictionary(new { controller = "Cuestionario", action = "VerCuestionario", Idcuestionario = @ViewBag.Idcuestionario }))";
-                }*@
+                    
                 }
 
 

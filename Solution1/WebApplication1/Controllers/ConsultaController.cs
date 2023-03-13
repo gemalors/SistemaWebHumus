@@ -693,16 +693,6 @@ namespace WebApplication1.Controllers
         {
 
 
-            //int idpe = 0;
-            //foreach (var item in conexconsulta.ListarConsultas())
-            //{
-            //    if (item.Identificador == 2 && item.Parametros == true)
-            //    {
-            //        idpe = Convert.ToInt32(item.Idparametro);
-            //    }
-            //}
-           //int r = conexconsulta.EditarConsulta(idconsulta, idparametro);
-            
            var lista = conexconsulta.ConsultarNumLibrosPublicadosxPeriodo(idparametro);
             
          
@@ -720,15 +710,7 @@ namespace WebApplication1.Controllers
         [HttpGet]
         public JsonResult ConsultarNumLibrosPublicadosxYear(int idparametro)
         {
-            //int idy = 0;
-            //foreach (var item in conexconsulta.ListarConsultas())
-            //{
-            //    if (item.Identificador == 3 && item.Parametros == true)
-            //    {
-            //        idy = Convert.ToInt32(item.Idparametro);
-            //    }
-            //}
-
+    
             
             var lista = conexconsulta.ConsultarNumLibrosPublicadosxYear(idparametro);
 

@@ -1,4 +1,6 @@
 ﻿
+
+
 @{
     Layout = null;
 }
@@ -236,11 +238,11 @@
 
 
                             @*//if (item9.Foto != null)
-                            //{
+                                //{
 
-                            //    //foto = Session["Foto"].ToString();
-                            //    foto = item9.Foto;
-                            //}*@
+                                //    //foto = Session["Foto"].ToString();
+                                //    foto = item9.Foto;
+                                //}*@
 
 
 
@@ -457,26 +459,26 @@
                         </li>
 
                         @*<li class="sidebar-item">
-                        <a class="sidebar-link has-arrow waves-effect waves-dark"
-                           href="javascript:void(0)" aria-expanded="false">
-                            <i class="mdi mdi-f493 mdi-settings"></i><span class="hide-menu">Configuraciones</span>
-                        </a>
-                        <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item">
-                                <a href="@Url.Action("EditperfilAdmin", "Usuario")" class="sidebar-link">
-                                    <i class="mdi mdi-f631 mdi-account-settings-variant"></i><span class="hide-menu">
-                                        Editar Perfil
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="@Url.Action("Logout", "Usuario")" class="sidebar-link">
-                                    <i class="mdi mdi-f012 mdi-account-off"></i><span class="hide-menu">
-                                        Cerrar Sesión
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>*@
+                            <a class="sidebar-link has-arrow waves-effect waves-dark"
+                               href="javascript:void(0)" aria-expanded="false">
+                                <i class="mdi mdi-f493 mdi-settings"></i><span class="hide-menu">Configuraciones</span>
+                            </a>
+                            <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item">
+                                    <a href="@Url.Action("EditperfilAdmin", "Usuario")" class="sidebar-link">
+                                        <i class="mdi mdi-f631 mdi-account-settings-variant"></i><span class="hide-menu">
+                                            Editar Perfil
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-item">
+                                    <a href="@Url.Action("Logout", "Usuario")" class="sidebar-link">
+                                        <i class="mdi mdi-f012 mdi-account-off"></i><span class="hide-menu">
+                                            Cerrar Sesión
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>*@
 
                         <!--</ul>-->
                     </ul>
@@ -508,7 +510,7 @@
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     @*<li class="breadcrumb-item"><a href="#"></a></li>
-                                    <li class="breadcrumb-item active" aria-current="page"></li>*@
+                                        <li class="breadcrumb-item active" aria-current="page"></li>*@
                                 </ol>
                             </nav>
                         </div>
@@ -577,30 +579,37 @@
                                             </label>
                                         </div>
 
+
                                         //pregunta abierta
                                         if (itemp.IdentificadorTipoPregunta == 1)
                                         {
                                             foreach (var itempa in ViewBag.PreguntaAbierta)
                                             {
-                                                if (itempa.TipoHtml == "textarea")
+                                                if (itemp.IDpregunta == itempa.Idpregunta)
                                                 {
-                                                    <div class="form-group row">
-                                                        <div class="col-sm-12">
-                                                            <textarea class="form-control" id="Idresp" name="Idresp" placeholder="Escriba aquí su respuesta..." style="height:300px; width:100%" onblur="GuardarRespuestaPregAbierta(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta,@itemc.IDcuestionario)"></textarea>
+                                                    if (itempa.TipoHtml == "textarea")
+                                                    {
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-12">
+                                                                <textarea class="form-control" id="@itemp.IDpregunta" name="Idresp" placeholder="Escriba aquí su respuesta..." style="height:300px; width:100%" onblur="GuardarRespuestaPregAbierta(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta,@itemc.IDcuestionario)"></textarea>
 
+
+                                                            </div>
 
                                                         </div>
-                                                    </div>
-                                                }
-                                                else
-                                                {
-                                                    <div class="form-group row">
-                                                        <div class="col-sm-9">
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="form-group row">
+                                                            <div class="col-sm-12">
 
-                                                            <input type="@itempa.TipoHtml" class="form-control" id="Idresp" name="Idresp" placeholder="Escriba aquí su respuesta..." onblur="GuardarRespuestaPregAbierta(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta,@itemc.IDcuestionario)">
+                                                                <input type="@itempa.TipoHtml" class="form-control" id="@itemp.IDpregunta" name="Idresp" placeholder="Escriba aquí su respuesta..." onblur="GuardarRespuestaPregAbierta(@itemp.IDpregunta,@itemp.IdentificadorTipoPregunta,@itemc.IDcuestionario)">
 
+
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                    }
+
                                                 }
                                             }
 
@@ -783,13 +792,13 @@
 
 
                                                             <div>
-                                                                <button class="btn btn-outline-info"><i class="fa fas- fas fa-plus-circle"></i> Agregar respuesta</button>
+                                                                <button class="btn btn-outline-info"><i class="fa fas- fas fa-plus-circle"></i> Agregar respuestas</button>
                                                             </div>
 
                                                         }
                                                         else
                                                         {
-                                                            <textarea class="form-control" id="Idresp" name="Idresp" placeholder="@itempo.Leyendainferior.." style="height:300px; width:100%" onblur="GuardarRespuestaPregAbierta()"></textarea>
+                                                            <textarea class="form-control" id="Idresp" name="Idresp" placeholder="@itempo.Leyendainferior.." style="height:300px; width:100%" ></textarea>
 
                                                         }
 
@@ -833,9 +842,9 @@
                                 <!-- /.col -->
                                 <div class="col-6">
 
-                                    @*<a href="@Url.Action("Respuestaprueba", new RouteValueDictionary(new { controller = "Reporte", action = "Respuestaprueba", Idcuestionario = itemc.IDcuestionario,Id=Session["Id"] }))" class="btn btn-primary float-right" style="margin-right: 5px;">
-                                        <i class="fas fa-download"></i> Finalizar
-                                    </a>*@
+                                    <a href="@Url.Action("Respuestaprueba", new RouteValueDictionary(new { controller = "Cuestionario", action = "Respuestaprueba", Idcuestionario = itemc.IDcuestionario }))" class="btn btn-outline-info float-right" style="margin-right: 5px;" target="_blank">
+                                            <i class="fas fa-download"></i> Ver PDF
+                                        </a>
                                 </div>
                                 <!-- /.col -->
                             </div>
@@ -905,9 +914,9 @@
     <script src="~/Recursos/Plantilla/dist/js/sweetalert2.all.min.js"></script>
     <script src="~/Recursos/Plantilla/plugins/sweetalert2/sweetalert2.min.js"></script>
 
-   
-   
-  
+
+
+
 
 
     <script>
@@ -966,6 +975,7 @@
 
 
 
+
 @{
 
 
@@ -997,7 +1007,7 @@
     }
 
 
-   
+
 
 
 }
